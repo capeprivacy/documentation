@@ -1,0 +1,18 @@
+site_name: Documentation
+dev_addr: '127.0.0.1:8080'
+extra_css: 
+    - assets/css/custom.css
+theme:  
+    custom_dir: overrides 
+    favicon: assets/images/favicon.ico
+    features:
+        - tabs
+    language: en
+    logo: assets/images/cp-logo.png
+    name: material
+    palette:
+        primary: white
+nav:
+    - Home: index.md
+
+
