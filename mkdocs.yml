@@ -1,5 +1,6 @@
 site_name: Documentation
 dev_addr: '127.0.0.1:8080'
+repo_url: https://github.com/capeprivacy/documentation.git
 extra_css: 
     - assets/css/custom.css
 theme:  
