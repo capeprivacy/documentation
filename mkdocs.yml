@@ -14,5 +14,13 @@ theme:
         primary: white
 nav:
     - Home: index.md
+    - Libraries: 
+        - Introduction: libraries/index.md
+        - Cape Python API: libraries/cape-python-api.md
+plugins:
+    - monorepo
+markdown_extensions:
+    - admonition
+    - codehilite
 
 
