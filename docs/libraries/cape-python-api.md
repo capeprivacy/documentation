@@ -13,7 +13,7 @@ The Cape Python API allows you to write data privacy policies and data transform
 
 ## Quickstart
 
-### Write a policy
+### Write the policy
 
 The data policy file defines the target data and permissions. It is written in YAML. The Cape Python API library reads the `.yaml` policy file and applies the policies to Pandas dataframes.
 
@@ -25,7 +25,7 @@ spec:
     version: 1
     label: test_policy
     rules:
-    # The last transactions should match the entity passed below
+    # The last part of the target name (in this case, 'transactions') should match the entity passed to apply_policies() in the next section
     - target: records:transactions.transactions
         action: read
         effect: allow
@@ -46,7 +46,7 @@ spec:
 ```
 
 
-## Apply the policy
+### Apply the policy
 
 To apply the policy `.yaml` to your data, you must run a script that defines which policy you apply to which data target.
 
@@ -64,7 +64,7 @@ df = cape.apply_policies([policy], "transactions", df)
 print(df.head())
 ```
 
-## Run your transformations
+### Run your transformations
 
 You can choose when in your data process to run your transformation scripts.
 

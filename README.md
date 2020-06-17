@@ -46,9 +46,3 @@ You can now view the docs at `localhost:8080`.
 * American English
 * UI elements are bold
 * We are writing for data scientists. Be clear. Be formal.
-
-## Debs notes to herself
-
-pydoc-markdown using the mkdocs options can be used to create MkDocs-compatible sites from the Python code comments (choose the docs repo as the build dest)
-Spotify's mono-repo plugin allows you to combo these in theory, but there's currently a bug: https://github.com/spotify/mkdocs-monorepo-plugin/issues/20
-Still to solve: currently would involve manual steps (build in each code repo) Assume this can be scripted though.
