@@ -5,7 +5,7 @@
 Prerequisites:
 
 * git
-* Python (currently using 3.8.3)
+* Python (currently using 3.7 due to [Netlify limitations](https://github.com/netlify/build-image/blob/xenial/included_software.md))
 * pip
 * venv
 
