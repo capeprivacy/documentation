@@ -19,10 +19,14 @@ nav:
         - Introduction: libraries/index.md
         - Cape Python API: 
             - Quickstart: libraries/cape-python/cape-python-api.md
+            - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
     - Best practices:
         - Introduction: best-practices/index.md
         - Running transformations: best-practices/running-transformations.md
+    - Release notes:
+        - Introduction: release-notes/index.md
+        - June 2020: release-notes/26062020.md
 plugins:
     - monorepo
     - search:

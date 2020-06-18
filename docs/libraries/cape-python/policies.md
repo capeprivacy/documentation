@@ -22,16 +22,16 @@ spec:
         # The last part of the name (in this example, "transactions") 
         # must match the entity name in the policy application script.
         - target: records:transactions.transactions
-            # Optional. Default: "read".
-            # The action taken by the identity (user or service)
-            action: read
-            # Required. Accepted values are "allow" or "deny".
-            # Grant or deny permission for the identity to perform the action
-            effect: allow
-            # Optional. Boolean. Default: false.
-            # Specifies whether or not this rule supersedes other rules when determining whether an action is allowed.
-            sudo: false
-            transformations:
+        # Optional. Default: "read".
+        # The action taken by the identity (user or service)
+        action: read
+        # Required. Accepted values are "allow" or "deny".
+        # Grant or deny permission for the identity to perform the action
+        effect: allow
+        # Optional. Boolean. Default: false.
+        # Specifies whether or not this rule supersedes other rules when determining whether an action is allowed.
+        sudo: false
+        transformations:
             # This example shows an unnamed transformation.
             # It tells the policy runner to:
             # (1) Target a field named "fruit"
@@ -46,7 +46,7 @@ spec:
             # It tells the policy runner to apply the plusTen transformation to the "amount" field.
             - field: amount
                 named: plusTen
-            # Optional. Limit the target fields based on field values.
-            - where:
-                fruit: [apple]
+        # Optional. Limit the target fields based on field values.
+        - where:
+            fruit: [apple]
 ```

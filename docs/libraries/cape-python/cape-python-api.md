@@ -75,4 +75,4 @@ Create a `test_transformation.py` file in your project, with the following conte
 
 ### Run your transformations
 
-You can choose where in your workflow to run your transformation scripts. Refer to [Best practices - Running transformations](../best-practices/running-transformations.md) for guidance.
+You can choose where in your workflow to run your transformation scripts. Refer to [Best practices - Running transformations](../../best-practices/running-transformations.md) for guidance.
