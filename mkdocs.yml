@@ -17,11 +17,22 @@ nav:
     - Home: index.md
     - Libraries: 
         - Introduction: libraries/index.md
-        - Cape Python API: libraries/cape-python-api.md
+        - Cape Python API: 
+            - Quickstart: libraries/cape-python/cape-python-api.md
+            - Transformations: libraries/cape-python/transformations.md
+    - Best practices:
+        - Introduction: best-practices/index.md
+        - Running transformations: best-practices/running-transformations.md
 plugins:
     - monorepo
+    - search:
+        prebuild_index: true
 markdown_extensions:
     - admonition
     - codehilite
+    - pymdownx.tabbed
+    - pymdownx.superfences
+    - toc:
+        permalink: "#"
 
 

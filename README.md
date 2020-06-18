@@ -46,3 +46,4 @@ You can now view the docs at `localhost:8080`.
 * American English
 * UI elements are bold
 * We are writing for data scientists. Be clear. Be formal.
+* Cape Privacy is singular
