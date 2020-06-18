@@ -28,9 +28,9 @@ spec:
         # Required. Accepted values are "allow" or "deny".
         # Grant or deny permission for the identity to perform the action
         effect: allow
-        # Optional. Boolean. Default: false.
-        # Specifies whether or not this rule supersedes other rules when determining whether an action is allowed.
-        sudo: false
+        # Optional. Limit the target fields based on field values. [TODO: check final version]
+        - where:
+            fruit: [apple]
         transformations:
             # This example shows an unnamed transformation.
             # It tells the policy runner to:
@@ -46,7 +46,5 @@ spec:
             # It tells the policy runner to apply the plusTen transformation to the "amount" field.
             - field: amount
                 named: plusTen
-        # Optional. Limit the target fields based on field values.
-        - where:
-            fruit: [apple]
+
 ```

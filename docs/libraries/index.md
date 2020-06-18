@@ -1,6 +1,6 @@
 # Introduction
 
-Cape Privacy provide libraries that allow you to:
+Cape Privacy provides libraries that allow you to:
 
 * Write data security policies in YAML format.
 * Create scripts that apply your policies to your data.
