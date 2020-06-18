@@ -28,22 +28,22 @@ spec:
     # The last part of the target name (in this case, "fruit") 
     # must match the entity passed to apply_policies() in the next section
     - target: records:groceries.fruit
-    action: read
-    effect: allow
-    transformations:
-        # Tells the policy runner to apply the transformation plusN 
-        # with the specified arguments
-        - field: fruit
-            function: plusN
-            args:
-                n:
-                    value: 1
-        # Tells the policy runner to apply another plusN transformation
-        - field: fruit
-            function: plusN
-            args:
-                n:
-                    value: 2
+      action: read
+      effect: allow
+      transformations:
+           # Tells the policy runner to apply the transformation plusN 
+           # with the specified arguments
+           - field: fruit
+             function: plusN
+             args:
+                 n:
+                     value: 1
+           # Tells the policy runner to apply another plusN transformation
+           - field: fruit
+             function: plusN
+             args:
+                 n:
+                     value: 2
 ```
 
 
