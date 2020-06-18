@@ -25,25 +25,25 @@ spec:
     version: 1
     label: test_policy
     rules:
-    # The last part of the target name (in this case, 'transactions') 
+    # The last part of the target name (in this case, "fruit") 
     # must match the entity passed to apply_policies() in the next section
-    - target: records:transactions.transactions
+    - target: records:groceries.fruit
     action: read
     effect: allow
     transformations:
-    # Tells the policy runner to apply the transformation plusN 
-    # with the specified arguments
-    - field: value
-        function: plusN
-        args:
-            n:
-                value: 1
-    # Tells the policy runner to apply another plusN transformation
-    - field: value
-        function: plusN
-        args:
-            n:
-                value: 2
+        # Tells the policy runner to apply the transformation plusN 
+        # with the specified arguments
+        - field: fruit
+            function: plusN
+            args:
+                n:
+                    value: 1
+        # Tells the policy runner to apply another plusN transformation
+        - field: fruit
+            function: plusN
+            args:
+                n:
+                    value: 2
 ```
 
 
@@ -60,7 +60,7 @@ Create a `test_transformation.py` file in your project, with the following conte
     import numpy as np
     import cape
 
-    df = pd.DataFrame(np.ones(5,), columns=["value"])
+    df = pd.DataFrame(np.ones(5,), columns=["fruit"])
     policy = cape.parse_policy("test_policy.yaml")
     df = cape.apply_policies([policy], "transactions", df)
 
@@ -69,6 +69,7 @@ Create a `test_transformation.py` file in your project, with the following conte
 
 === "Spark"
     ```python
+    [TODO - coming soon]
     ```
 
 

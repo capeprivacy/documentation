@@ -1,6 +1,6 @@
 # Transformations
 
-The Cape Python API has four built-in transformations.
+The Cape Python API has four built-in transformation functions.
 
 ## Pertubation
 
@@ -12,11 +12,11 @@ The PlusN transformation adds `n` to a data field.
 
 ``` yaml
 # This example tells the policy runner to:
-# (1) Target a field named "value"
+# (1) Target a field named "fruit"
 # (2) Apply the transformation plusN 
 # (3) Assign a value of 1 to n
 transformations:
-    - field: value
+    - field: fruit
         function: plusN
         args:
             n:
