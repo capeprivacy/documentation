@@ -17,8 +17,8 @@ The PlusN transformation adds `n` to a data field.
 # (3) Assign a value of 1 to n
 transformations:
     - field: fruit
-        function: plusN
-        args:
+      function: plusN
+      args:
             n:
                 value: 1
 ```

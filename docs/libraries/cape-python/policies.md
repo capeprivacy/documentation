@@ -32,16 +32,23 @@ spec:
         - where:
             fruit: [apple]
         transformations:
+          # Optional. Default: "read".
+          # The action taken by the identity (user or service)
+          action: read
+          # Required. Accepted values are "allow" or "deny".
+          # Grant or deny permission for the identity to perform the action
+          effect: allow
+          transformations:
             # This example shows an unnamed transformation.
             # It tells the policy runner to:
             # (1) Target a field named "fruit"
             # (2) Apply the transformation plusN 
             # (3) Assign a value of 1 to n
             - field: fruit
-                function: plusN
-                args:
-                    n:
-                        value: 1
+              function: plusN
+              args:
+                      n:
+                          value: 1
             # This example shows a named transformation.
             # It tells the policy runner to apply the plusTen transformation to the "amount" field.
             - field: amount
