@@ -27,25 +27,16 @@ spec:
     version: 1
     label: test_policy
     rules:
-    # The last part of the target name (in this case, "fruit") 
-    # must match the entity passed to apply_policies() in the next section
-    - target: records:groceries.fruit
-      action: read
-      effect: allow
-      transformations:
-           # Tells the policy runner to apply the transformation plusN 
-           # with the specified arguments
-           - field: fruit
-             function: plusN
-             args:
-                 n:
-                     value: 1
-           # Tells the policy runner to apply another plusN transformation
-           - field: fruit
-             function: plusN
-             args:
-                 n:
-                     value: 2
+    # Set the column name
+    - match: weight
+      actions:
+        - transform:
+            # This example shows an unnamed transformation.
+            # It tells the policy runner to:
+            # (1) Apply the transformation NumericRounding 
+            # (2) 
+            type: NumericRounding
+            precision: [TODO]
 ```
 
 
@@ -64,7 +55,7 @@ Create a `test_transformation.py` file in your project, with the following conte
 
     df = pd.DataFrame(np.ones(5,), columns=["fruit"])
     policy = cape.parse_policy("test_policy.yaml")
-    df = cape.apply_policies([policy], "transactions", df)
+    df = cape.apply_policies([policy], "fruit", df)
 
     print(df.head())
     ```
