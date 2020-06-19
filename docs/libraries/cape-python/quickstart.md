@@ -38,7 +38,7 @@ spec:
             # (1) Apply the transformation NumericRounding 
             # (2) 
             type: NumericRounding
-            precision: [TODO]
+            precision: 1
 ```
 
 

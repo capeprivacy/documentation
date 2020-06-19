@@ -59,7 +59,7 @@ policy:
                     # (1) Apply the transformation NumericRounding 
                     # (2) 
                     type: NumericRounding
-                    precision: [TODO]
+                    precision: 1
 ```
 
 ## Where
@@ -83,4 +83,3 @@ where: fruit == 'apple' or fruit == 'orange'
 # ((fruit == 'apple') and (amount > 50)) or (fruit == 'orange')
 where: fruit == 'apple' and amount > 50 or fruit == 'orange'
 ```
-
