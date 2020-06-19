@@ -1,5 +1,7 @@
 # Transformations
 
+Transformations are functions that alter your data, ensuring it is free of sensitive information.
+
 Cape Python has five built-in transformation functions. This document describes what they do, and provides an example of how to use each transformation in your policy.
 
 ## DatePertubation

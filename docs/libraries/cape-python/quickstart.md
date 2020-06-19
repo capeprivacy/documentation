@@ -24,11 +24,11 @@ The data policy file defines the target data and permissions. It is written in Y
 Create a `test_policy.yaml` file in your project, with the following content:
 
 ```yaml
-label: test_policy
-spec:
+policy:
     version: 1
     label: test_policy
     rules:
+    - target: groceries
     # Set the column name
     - match: weight
       actions:
@@ -36,7 +36,7 @@ spec:
             # This example shows an unnamed transformation.
             # It tells the policy runner to:
             # (1) Apply the transformation NumericRounding 
-            # (2) 
+            # (2) Round to one decimal place
             type: NumericRounding
             precision: 1
 ```
