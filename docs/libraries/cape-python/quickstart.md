@@ -11,7 +11,9 @@ You can view the source code in the [Cape Python GitHub Repository](https://gith
 
 ## Installation 
 
-[TODO: pending whether it gets published to pip etc.]
+```shell
+pip install cape-privacy
+```
 
 ## Quickstart
 
