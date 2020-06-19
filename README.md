@@ -47,3 +47,7 @@ You can now view the docs at `localhost:8080`.
 * UI elements are bold
 * We are writing for data scientists. Be clear. Be formal.
 * Cape Privacy is singular
+
+## License
+
+Licensed under Apache License, Version 2.0 (see [LICENSE](./LICENSE) or http://www.apache.org/licenses/LICENSE-2.0). Copyright as specified in [NOTICE](./NOTICE).

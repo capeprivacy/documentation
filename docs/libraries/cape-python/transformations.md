@@ -1,6 +1,6 @@
 # Transformations
 
-The Cape Python API has four built-in transformation functions.
+Cape Python has four built-in transformation functions.
 
 ## Pertubation
 

@@ -1,6 +1,6 @@
 # Policies
 
-The Cape Python API requires data policies in YAML format. This example describes all the available YAML objects.
+Cape Python requires data policies in YAML format. This example describes all the available YAML objects.
 
 ``` yaml
 # Required. The policy name.
@@ -29,8 +29,7 @@ spec:
         # Grant or deny permission for the identity to perform the action
         effect: allow
         # Optional. Limit the target fields based on field values. [TODO: check final version]
-        - where:
-            fruit: [apple]
+        - where: fruit == "apple"
         transformations:
           # Optional. Default: "read".
           # The action taken by the identity (user or service)

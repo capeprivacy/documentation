@@ -18,7 +18,7 @@ nav:
     - Libraries: 
         - Introduction: libraries/index.md
         - Cape Python API: 
-            - Quickstart: libraries/cape-python/cape-python-api.md
+            - Quickstart: libraries/cape-python/quickstart.md
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
     - Best practices:
@@ -27,10 +27,10 @@ nav:
     - Release notes:
         - Introduction: release-notes/index.md
         - June 2020: release-notes/26062020.md
-plugins:
-    - monorepo
+plugins:    
     - search:
         prebuild_index: true
+    - monorepo
 markdown_extensions:
     - admonition
     - codehilite

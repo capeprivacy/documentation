@@ -1,6 +1,8 @@
 # Cape Python API
 
-The Cape Python API allows you to write data privacy policies and data transformations to integrate with [Pandas](https://pandas.pydata.org/) and [Spark](https://spark.apache.org/).
+Cape Python allows you to write data privacy policies and data transformations to integrate with [Pandas](https://pandas.pydata.org/) and [Spark](https://spark.apache.org/).
+
+You can view the source code in the [Cape Python GitHub Repository](https://github.com/capeprivacy/cape-python).
 
 ## Prerequisites
 
@@ -15,7 +17,7 @@ The Cape Python API allows you to write data privacy policies and data transform
 
 ### Write the policy
 
-The data policy file defines the target data and permissions. It is written in YAML. The Cape Python API library reads the `.yaml` policy file and applies the policies based on your [policy application script](#TODO).
+The data policy file defines the target data and permissions. It is written in YAML. Cape Python reads the `.yaml` policy file and applies the policies based on your [policy application script](#TODO).
 
 Create a `test_policy.yaml` file in your project, with the following content:
 
