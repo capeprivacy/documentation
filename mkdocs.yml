@@ -17,7 +17,7 @@ nav:
     - Home: index.md
     - Libraries: 
         - Introduction: libraries/index.md
-        - Cape Python API: 
+        - Cape Python: 
             - Quickstart: libraries/cape-python/quickstart.md
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
@@ -30,7 +30,6 @@ nav:
 plugins:    
     - search:
         prebuild_index: true
-    - monorepo
 markdown_extensions:
     - admonition
     - codehilite

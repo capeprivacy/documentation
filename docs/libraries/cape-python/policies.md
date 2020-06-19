@@ -1,56 +1,86 @@
 # Policies
 
-Cape Python requires data policies in YAML format. This example describes all the available YAML objects.
+The data policy defines the data you want to change, and the [transformations](transformations.md) you want to apply.
+
+Cape Python requires data policies in YAML format. This example describes all the available YAML objects:
 
 ``` yaml
-# Required. The policy name.
+# Required. The policy name. [TODO - is this here or inside the policy?]
 label: test_policy
 # Required. The policy specification object.
-spec:
+policy:
     # Required. The Cape Privacy specification version. Must be 1.
     version: 1
-    # Describe named transformations.
-    # Named transformations allow you to reuse a transformation with a set value throughout your policy.
+    # Describe named transformations. [TODO - may/may not be in this release]
+    # Named transformations allow you to reuse a transformation
+    # with a set value throughout your policy.
     transformations:
-        - name: plusTen
+        # This named transformation refers to a custom transformation
+        # It assumes you have written a transformation called plusN, 
+        # which accepts a single argument, "n".
+        - plusTen:
             type: plusN
-            args:
-                n:
-                    value: 10
+            n: 10
+        # This named transformation uses the built-in Tokenizer transformation
+        - my_tokenizer:
+            type: Tokenizer
+            token_length: 10
+            charset: ascii
+            key: "my secret"
     rules:
-        # Required. The target data entity. 
-        # The last part of the name (in this example, "transactions") 
-        # must match the entity name in the policy application script.
-        - target: records:transactions.transactions
-        # Optional. Default: "read".
-        # The action taken by the identity (user or service)
-        action: read
-        # Required. Accepted values are "allow" or "deny".
-        # Grant or deny permission for the identity to perform the action
-        effect: allow
-        # Optional. Limit the target fields based on field values. [TODO: check final version]
-        - where: fruit == "apple"
-        transformations:
-          # Optional. Default: "read".
-          # The action taken by the identity (user or service)
-          action: read
-          # Required. Accepted values are "allow" or "deny".
-          # Grant or deny permission for the identity to perform the action
-          effect: allow
-          transformations:
-            # This example shows an unnamed transformation.
-            # It tells the policy runner to:
-            # (1) Target a field named "fruit"
-            # (2) Apply the transformation plusN 
-            # (3) Assign a value of 1 to n
-            - field: fruit
-              function: plusN
-              args:
-                      n:
-                          value: 1
+        # Required. The column name.
+        - match: fruit
+            # Only match rows where the "amount" column has a value greater than 50
+            # For more details on using 'where', refer to the section below
+            where: amount > 50
+            actions:
             # This example shows a named transformation.
-            # It tells the policy runner to apply the plusTen transformation to the "amount" field.
-            - field: amount
-                named: plusTen
-
+            # It tells the policy runner to apply the my_tokenizer transformation
+            # to all fields in the "amount" column.
+            - transform:
+                name: my_tokenizer
+        - match: fruit
+            where: amount <= 50
+            actions:
+            # This example shows a named transformation.
+            # It tells the policy runner to apply the plusTen transformation
+            # to all fields in the "amount" column.
+            - transform:
+                name: plusTen
+        # Target rows in the fruit column where the value is "apple"
+        - match: weight
+            # Only target the "weight" values for rows where 
+            # the "fruit" column has a value of "apple"
+            where: fruit == 'apple'
+            actions:
+                - transform:
+                    # This example shows an unnamed transformation.
+                    # It tells the policy runner to:
+                    # (1) Apply the transformation NumericRounding 
+                    # (2) 
+                    type: NumericRounding
+                    precision: [TODO]
 ```
+
+## Where
+
+The `where` object behaves similarly to SQL queries. For example:
+
+```yaml
+# This matches rows where the fruit column has a value of "apple" 
+# and the " column has a value greater than 50
+where: fruit == 'apple' and amount > 50
+```
+
+```yaml
+# This matches rows where the fruit column has a value of "apple"
+# and rows where the fruit column has a value of "orange"
+where: fruit == 'apple' or fruit == 'orange'
+```
+
+```yaml
+# This has implicit brackets, which behave as follows:
+# ((fruit == 'apple') and (amount > 50)) or (fruit == 'orange')
+where: fruit == 'apple' and amount > 50 or fruit == 'orange'
+```
+
