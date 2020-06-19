@@ -54,6 +54,7 @@ The NumericRounding transformation rounds numeric values ([TODO - numbers, float
 # (2) [TODO]
 transform:
   type: NumericRounding
+  dtype: [TODO]
   precision: [TODO]
 ```
 
