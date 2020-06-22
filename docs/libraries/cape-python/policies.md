@@ -28,23 +28,23 @@ policy:
             charset: ascii
             key: "my secret"
     rules:
-        # Required. The table name.
-        - target: groceries
         # Required. The column name.
-        - match: fruit
-            actions:
-            # This example shows a named transformation.
-            # It tells the policy runner to apply the my_tokenizer transformation
-            # to all fields in the "amount" column.
-            - transform:
-                name: my_tokenizer
-        - match: fruit
-            actions:
-            # This example shows a named transformation.
-            # It tells the policy runner to apply the plusTen transformation
-            # to all fields in the "amount" column.
-            - transform:
-                name: plusTen
+        - match: 
+            name: fruit
+        actions:
+        # This example shows a named transformation.
+        # It tells the policy runner to apply the my_tokenizer transformation
+        # to all fields in the "amount" column.
+        - transform:
+            name: my_tokenizer
+        - match: 
+            name: fruit
+        actions:
+        # This example shows a named transformation.
+        # It tells the policy runner to apply the plusTen transformation
+        # to all fields in the "amount" column.
+        - transform:
+            name: plusTen
         # Target rows in the fruit column where the value is "apple"
         - match: weight
             actions:
@@ -52,7 +52,7 @@ policy:
                     # This example shows an unnamed transformation.
                     # It tells the policy runner to:
                     # (1) Apply the transformation NumericRounding 
-                    # (2) 
+                    # (2) Round to one decimal place
                     type: NumericRounding
                     precision: 1
 ```

@@ -6,69 +6,62 @@ Cape Python has five built-in transformation functions. This document describes 
 
 ## DatePertubation
 
-The DatePertubation transformation randomizes dates.
+The DatePertubation transformation adds random noise to dates. The amount of noise depends on the `min` and `max` values that you set in the policy.
 
 ``` yaml
 transform:
   type: DatePertubation
-  frequency: year
-  min: 0
-  max: 3
-  seed: none
+  frequency: < 'year' or 'month' >
+  min: < int or float >
+  max: < int or float >
+  # Optional. The base number to initialize the random number generator.
+  seed: < int >
 ```
 
 ## DateTruncation
 
-The DateTruncation transformation [TODO]
+The DateTruncation transformation shortens dates to a unit (year or month). Set the unit in `frequency`.
 
 ``` yaml
-# This example tells the policy runner to:
-# (1) Apply the transformation "DateTruncation" 
-# (2) [TODO]
 transform:
   type: DateTruncation
-  frequency: [TODO]
+  frequency: < 'year' or 'month' >
 ```
 
 ## NumericPertubation
 
-The NumericPertubation transformation [TODO]
+The NumericPertubation transformation adds random noise to numeric data sets. The amount of noise depends on the `min` and `max` values that you set in the policy.
 
 ``` yaml
-# This example tells the policy runner to:
-# (1) Apply the transformation "NumericPertubation" 
-# (2) [TODO]
 transform:
   type: NumericPertubation
-  dtype: [TODO]
-  min: [TODO]
-  max: [TODO]
-  seed: none
+  dtype: < Pandas Series type or Spark [TODO] >
+  min: < int or float >
+  max: < int or float >
+  # Optional. The base number to initialize the random number generator.
+  seed: < int >
 ```
 
 ## NumericRounding
 
-The NumericRounding transformation rounds numeric values ([TODO - numbers, floats . . . how will it handle being pointed at a string?])
+The NumericRounding transformation rounds numeric values to a given number of decimal places. Use `precision` to set the number of decimal places.
 
 ``` yaml
-# This example tells the policy runner to:
-# (1) Apply the transformation "NumericRounding" 
-# (2) [TODO]
 transform:
   type: NumericRounding
-  dtype: [TODO]
-  precision: [TODO]
+  dtype: < Pandas Series type or Spark [TODO] >
+  precision: < int >
 ```
 
 ## Tokenizer
 
-``` yaml
-# This example tells the policy runner to:
-# (1) Apply the tranformation "Tokenizer"
-# (2) 
+The Tokenizer transformation maps a string to a token to obfuscate it.
 
+``` yaml
 transform:
   type: Tokenizer
-  max_token_length: [TODO]
-  key: [TODO]
+  # Default is 64
+  max_token_length: < int or bytes >
+  # If unspecified, Cape Python uses a random byte string
+  key: < string or byte string >
 ```

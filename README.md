@@ -41,6 +41,32 @@ mkdocs serve
 
 You can now view the docs at `localhost:8080`.
 
+## Contribute to the docs - Cape Privacy team
+
+The main branch is live. All work should happen on another branch.
+
+1. Follow the steps to [Run the docs locally](run-the-docs-locally). Before editing, create a new branch.
+
+```
+git branch -b <branchName>
+```
+
+2. Make your edits.
+
+3. Push your branch:
+
+```
+git add *
+git commit -m "Describe your changes"
+git push --set-upstream origin <branchName>
+```
+
+4. Submit a pull request. Netlify automatically builds a demo of the site with your changes. Select **Details** next to **netlify/cp-docs-demo/deploy-preview** to view the demo. Try to have someone else review your work before merging.
+
+5. Merge the pull request. Netlify automatically detects changes to the main branch and rebuilds and redeploys the live documentation site.
+
+## Deploy the docs
+
 ## Style and tone
 
 * American English
