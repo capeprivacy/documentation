@@ -4,6 +4,19 @@ Data privacy is of increasing importance in the data science and data engineerin
 
 Cape Privacy's Python library aims to provide privacy techniques that work for data scientists and data engineers to properly do their work while also taking privacy and trust into account. Using this library will hopefully allow you to build more trustworthy and privacy-enhancing data science and therefore bring more trust and accountability into your organization. 
 
+### When to Use Cape Python
+
+Cape Privacy's Python library is a great tool to begin exploring privacy-enhancing techniques in your data science workflows. We recommend you take some time to explore how [policy]() works and what [transformations]() are available before using it in your daily workflows.
+
+Some use cases where this library is a good fit are:
+
+- Apache Spark jobs that move data from a more sensitive data store to a data lake or shared data store
+- Creating a clean and pre-processed dataset to share with the data science team for exploratory data analysis (EDA)
+- Automating data science and analytics scripts with attention to privacy
+- Working on sensitive data as part of initial model development (for exploring data in preparation to develop a model)
+
+In the current version (0.1.0) of this library, we do not recommend this library for training machine learning models on sensitive data. Techniques for training models on sensitive data will be considered for future releases of Cape Python.
+
 ### Explore Privacy Enhancement via Transformations
 
 We encourage you to take a look through the [transformations]() available and determine which is a good fit for your data science needs. In our initial release, we have included some basic transformations that fit the needs to quite a few privacy protections. We recommend their use in the following situations:
