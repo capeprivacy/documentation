@@ -11,7 +11,9 @@ You can view the source code in the [Cape Python GitHub Repository](https://gith
 
 ## Installation 
 
-[TODO: pending whether it gets published to pip etc.]
+```shell
+pip install cape-privacy
+```
 
 ## Quickstart
 
@@ -22,30 +24,21 @@ The data policy file defines the target data and permissions. It is written in Y
 Create a `test_policy.yaml` file in your project, with the following content:
 
 ```yaml
-label: test_policy
-spec:
+policy:
     version: 1
     label: test_policy
     rules:
-    # The last part of the target name (in this case, "fruit") 
-    # must match the entity passed to apply_policies() in the next section
-    - target: records:groceries.fruit
-      action: read
-      effect: allow
-      transformations:
-           # Tells the policy runner to apply the transformation plusN 
-           # with the specified arguments
-           - field: fruit
-             function: plusN
-             args:
-                 n:
-                     value: 1
-           # Tells the policy runner to apply another plusN transformation
-           - field: fruit
-             function: plusN
-             args:
-                 n:
-                     value: 2
+    - target: groceries
+    # Set the column name
+    - match: weight
+      actions:
+        - transform:
+            # This example shows an unnamed transformation.
+            # It tells the policy runner to:
+            # (1) Apply the transformation NumericRounding 
+            # (2) Round to one decimal place
+            type: NumericRounding
+            precision: 1
 ```
 
 
@@ -64,7 +57,7 @@ Create a `test_transformation.py` file in your project, with the following conte
 
     df = pd.DataFrame(np.ones(5,), columns=["fruit"])
     policy = cape.parse_policy("test_policy.yaml")
-    df = cape.apply_policies([policy], "transactions", df)
+    df = cape.apply_policies([policy], "fruit", df)
 
     print(df.head())
     ```

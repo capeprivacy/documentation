@@ -1,32 +1,74 @@
 # Transformations
 
-Cape Python has four built-in transformation functions.
+Transformations are functions that alter your data, ensuring it is free of sensitive information.
 
-## Pertubation
+Cape Python has five built-in transformation functions. This document describes what they do, and provides an example of how to use each transformation in your policy.
 
-The Pertubation transformation [TODO]
+## DatePertubation
 
-## PlusN
+The DatePertubation transformation randomizes dates.
 
-The PlusN transformation adds `n` to a data field.
+``` yaml
+transform:
+  type: DatePertubation
+  frequency: year
+  min: 0
+  max: 3
+  seed: none
+```
+
+## DateTruncation
+
+The DateTruncation transformation [TODO]
 
 ``` yaml
 # This example tells the policy runner to:
-# (1) Target a field named "fruit"
-# (2) Apply the transformation plusN 
-# (3) Assign a value of 1 to n
-transformations:
-    - field: fruit
-      function: plusN
-      args:
-            n:
-                value: 1
+# (1) Apply the transformation "DateTruncation" 
+# (2) [TODO]
+transform:
+  type: DateTruncation
+  frequency: [TODO]
 ```
 
-## Rounding
+## NumericPertubation
 
-The Rounding transformation [TODO]
+The NumericPertubation transformation [TODO]
+
+``` yaml
+# This example tells the policy runner to:
+# (1) Apply the transformation "NumericPertubation" 
+# (2) [TODO]
+transform:
+  type: NumericPertubation
+  dtype: [TODO]
+  min: [TODO]
+  max: [TODO]
+  seed: none
+```
+
+## NumericRounding
+
+The NumericRounding transformation rounds numeric values ([TODO - numbers, floats . . . how will it handle being pointed at a string?])
+
+``` yaml
+# This example tells the policy runner to:
+# (1) Apply the transformation "NumericRounding" 
+# (2) [TODO]
+transform:
+  type: NumericRounding
+  dtype: [TODO]
+  precision: [TODO]
+```
 
 ## Tokenizer
 
-The Tokenizer transformation [TODO]
+``` yaml
+# This example tells the policy runner to:
+# (1) Apply the tranformation "Tokenizer"
+# (2) 
+
+transform:
+  type: Tokenizer
+  max_token_length: [TODO]
+  key: [TODO]
+```
