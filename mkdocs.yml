@@ -5,7 +5,7 @@ extra_css:
     - assets/css/custom.css
 theme:  
     custom_dir: overrides 
-    favicon: assets/images/favicon.ico
+    favicon: assets/images/favicon-32x32.png
     features:
         - tabs
     language: en
