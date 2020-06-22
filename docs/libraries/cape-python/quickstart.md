@@ -9,6 +9,7 @@ You can view the source code in the [Cape Python GitHub Repository](https://gith
 * Python 3.6 or above
 * Cape Privacy recommends using a virtual environment such as [venv](https://docs.python.org/3/library/venv.html) or [conda](https://www.anaconda.com/products/individual).
 
+
 ## Installation 
 
 ```shell
@@ -30,7 +31,8 @@ policy:
     rules:
     - target: groceries
     # Set the column name
-    - match: weight
+    - match: 
+        name: weight
       actions:
         - transform:
             # This example shows an unnamed transformation.
@@ -55,15 +57,21 @@ Create a `test_transformation.py` file in your project, with the following conte
     import numpy as np
     import cape
 
-    df = pd.DataFrame(np.ones(5,), columns=["fruit"])
+    # Create a simple DataFrame
+    df = pd.DataFrame([10, 15, 23], columns=["weight"])
+    # Load the privacy policy
     policy = cape.parse_policy("test_policy.yaml")
-    df = cape.apply_policies([policy], "fruit", df)
-
+    # Apply the policy to the DataFrame
+    df = cape.apply_policies([policy], df)
+    # Output the altered data
     print(df.head())
     ```
 
 === "Spark"
     ```python
+    import pyspark as 
+    import numpy as np
+    import cape
     [TODO - coming soon]
     ```
 

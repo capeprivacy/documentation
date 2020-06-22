@@ -57,24 +57,3 @@ policy:
                     precision: 1
 ```
 
-## Where
-
-The `where` object behaves similarly to SQL queries. For example:
-
-```yaml
-# This matches rows where the fruit column has a value of "apple" 
-# and the " column has a value greater than 50
-where: fruit == 'apple' and amount > 50
-```
-
-```yaml
-# This matches rows where the fruit column has a value of "apple"
-# and rows where the fruit column has a value of "orange"
-where: fruit == 'apple' or fruit == 'orange'
-```
-
-```yaml
-# This has implicit brackets, which behave as follows:
-# ((fruit == 'apple') and (amount > 50)) or (fruit == 'orange')
-where: fruit == 'apple' and amount > 50 or fruit == 'orange'
-```
