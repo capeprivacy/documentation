@@ -21,9 +21,9 @@ policy:
         - plusTen:
             type: plusN
             n: 10
-        # This named transformation uses the built-in Tokenizer transformation
+        # This named transformation uses the built-in tokenizer transformation
         - my_tokenizer:
-            type: Tokenizer
+            type: tokenizer
             token_length: 10
             charset: ascii
             key: "my secret"
@@ -51,9 +51,9 @@ policy:
                 - transform:
                     # This example shows an unnamed transformation.
                     # It tells the policy runner to:
-                    # (1) Apply the transformation NumericRounding 
+                    # (1) Apply the transformation numeric-rounding 
                     # (2) Round to one decimal place
-                    type: NumericRounding
+                    type: numeric-rounding
                     precision: 1
 ```
 

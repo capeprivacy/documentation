@@ -6,67 +6,67 @@ Cape Python has five built-in transformation functions. This document describes 
 
 
 
-## DatePertubation
+## Date pertubation
 
-The DatePertubation transformation adds random noise to dates. The amount of noise depends on the `min` and `max` values that you set in the policy.
+The `date-pertubation` transformation adds random noise to dates. The amount of noise depends on the `min` and `max` values that you set in the policy.
 
 ``` yaml
 transform:
-  type: DatePertubation
-  frequency: < 'year' or 'month' >
-  min: < int or float >
-  max: < int or float >
+  type: date-pertubation
+  frequency: <'year' or 'month'>
+  min: <int or float>
+  max: <int or float>
   # Optional. The base number to initialize the random number generator.
-  seed: < int >
+  seed: <int>
 ```
 
-## DateTruncation
+## Date truncation
 
-The DateTruncation transformation shortens dates to a unit (year or month). Set the unit in `frequency`.
+The `date-truncation` transformation shortens dates to a unit (year or month). Set the unit in `frequency`.
 
 ``` yaml
 transform:
-  type: DateTruncation
-  frequency: < 'year' or 'month' >
+  type: date-truncation
+  frequency: <'year' or 'month'>
 ```
 
-## NumericPertubation
+## Numeric pertubation
 
-The NumericPertubation transformation adds random noise to numeric data sets. The amount of noise depends on the `min` and `max` values that you set in the policy.
+The `numeric-pertubation` transformation adds random noise to numeric data sets. The amount of noise depends on the `min` and `max` values that you set in the policy.
 
 ``` yaml
 transform:
-  type: NumericPertubation
-  dtype: < Pandas Series type or Spark [TODO] >
-  min: < int or float >
-  max: < int or float >
+  type: numeric-pertubation
+  dtype: <Pandas Series type or Spark [TODO]>
+  min: <int or float>
+  max: <int or float>
   # Optional. The base number to initialize the random number generator.
-  seed: < int >
+  seed: <int>
 ```
 
-## NumericRounding
+## Numeric rounding
 
-The NumericRounding transformation rounds numeric values to a given number of decimal places. Use `precision` to set the number of decimal places.
+The `numeric-rounding` transformation rounds numeric values to a given number of decimal places. Use `precision` to set the number of decimal places.
 
 ``` yaml
 transform:
-  type: NumericRounding
-  dtype: < Pandas Series type or Spark [TODO] >
-  precision: < int >
+  type: numeric-rounding
+  dtype: <Pandas Series type or Spark [TODO]>
+  precision: <int>
 ```
 
 ## Tokenizer
 
-The Tokenizer transformation maps a string to a token to obfuscate it.
+The `tokenizer` transformation maps a string to a token to obfuscate it.
 
 !!! warning
     Linkable tokenization for sensitive data is vulnerable to privacy attacks. Cape privacy does not recommend sharing tokenized data with preserved linkability with untrusted or outside parties. Cape Python does not support anonymized transformations.
 
 ``` yaml
 transform:
-  type: Tokenizer
+  type: tokenizer
   # Default is 64
-  max_token_length: < int or bytes >
+  max_token_length: <int or bytes>
   # If unspecified, Cape Python uses a random byte string
-  key: < string or byte string >
+  key: <string or byte string>
 ```

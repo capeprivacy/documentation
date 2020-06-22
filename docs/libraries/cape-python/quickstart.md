@@ -36,9 +36,9 @@ policy:
         - transform:
             # This example shows an unnamed transformation.
             # It tells the policy runner to:
-            # (1) Apply the transformation NumericRounding 
+            # (1) Apply the transformation numeric-rounding 
             # (2) Round to one decimal place
-            type: NumericRounding
+            type: numeric-rounding
             precision: 1
 ```
 
@@ -53,11 +53,10 @@ Create a `test_transformation.py` file in your project, with the following conte
 === "Pandas"
     ```python
     import pandas as pd
-    import numpy as np
     import cape
 
-    # Create a simple DataFrame
-    df = pd.DataFrame([10, 15, 23], columns=["weight"])
+    # Create a simple Pandas DataFrame
+    df = pd.DataFrame([114.432, 134.622, 142.984], columns=["weight"])
     # Load the privacy policy
     policy = cape.parse_policy("test_policy.yaml")
     # Apply the policy to the DataFrame
@@ -68,10 +67,22 @@ Create a `test_transformation.py` file in your project, with the following conte
 
 === "Spark"
     ```python
-    import pyspark as 
-    import numpy as np
-    import cape
-    [TODO - coming soon]
+    from pyspark import sql
+    import cape_privacy
+
+    sess_builder = sql.SparkSession.builder
+    sess_builder = sess_builder.appName('cape.examples.rounding')
+    sess_builder = sess_builder.config('spark.sql.execution.arrow.enabled', 'true')
+    sess = sess_builder.getOrCreate()
+
+    # Create a simple Spark DataFrame
+    df = sess.createDataFrame([114.432, 134.622, 142.984], "double").toDF("weight")
+    # Load the privacy policy
+    policy = cape_privacy.parse_policy("test_policy.yaml")
+    # Apply the policy to the DataFrame
+    df = cape_privacy.apply_policies([policy], df)
+    # Output the altered data
+    print(df.show())
     ```
 
 
