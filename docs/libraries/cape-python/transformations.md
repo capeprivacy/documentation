@@ -4,6 +4,8 @@ Transformations are functions that alter your data, ensuring it is free of sensi
 
 Cape Python has five built-in transformation functions. This document describes what they do, and provides an example of how to use each transformation in your policy.
 
+
+
 ## DatePertubation
 
 The DatePertubation transformation adds random noise to dates. The amount of noise depends on the `min` and `max` values that you set in the policy.
@@ -56,6 +58,9 @@ transform:
 ## Tokenizer
 
 The Tokenizer transformation maps a string to a token to obfuscate it.
+
+!!! warning
+Linkable tokenization for sensitive data is vulnerable to privacy attacks. Cape privacy does not recommend sharing tokenized data with preserved linkability with untrusted or outside parties. Cape Python does not support anonymized transformations. We recommend [OpenDP](https://github.com/opendifferentialprivacy/) as a library to help with anonymization.
 
 ``` yaml
 transform:

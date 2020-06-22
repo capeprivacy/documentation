@@ -17,7 +17,8 @@ nav:
     - Home: index.md
     - Libraries: 
         - Introduction: libraries/index.md
-        - Cape Python: 
+        - Cape Python:
+            - Introduction: libraries/cape-python/index.md
             - Quickstart: libraries/cape-python/quickstart.md
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
