@@ -1,6 +1,6 @@
 # Welcome to Cape Privacy's documentation
 
-Cape Privacy helps teams share data and make decisions for safer and more powerful data science. 
+Cape Privacy offers data scientists and data engineers a policy-based interface for applying privacy-enhancing techniques across several popular Python libraries to protect sensitive data during the data science life cycle.
 
 This documentation site includes:
 
