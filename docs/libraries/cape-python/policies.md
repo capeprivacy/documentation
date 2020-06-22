@@ -11,16 +11,10 @@ policy:
     label: test_policy
     # Required. The Cape Privacy specification version. Must be 1.
     version: 1
-    # Describe named transformations. [TODO - may/may not be in this release]
+    # Configure your named transformations.
     # Named transformations allow you to reuse a transformation
     # with a set value throughout your policy.
     transformations:
-        # This named transformation refers to a custom transformation
-        # It assumes you have written a transformation called plusN, 
-        # which accepts a single argument, "n".
-        - plusTen:
-            type: plusN
-            n: 10
         # This named transformation uses the built-in tokenizer transformation
         - my_tokenizer:
             type: tokenizer
@@ -39,12 +33,6 @@ policy:
             name: my_tokenizer
         - match: 
             name: fruit
-        actions:
-        # This example shows a named transformation.
-        # It tells the policy runner to apply the plusTen transformation
-        # to all fields in the "amount" column.
-        - transform:
-            name: plusTen
         # Target rows in the fruit column where the value is "apple"
         - match: weight
             actions:

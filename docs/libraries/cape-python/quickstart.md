@@ -20,7 +20,7 @@ pip install cape-privacy
 
 ### Write the policy
 
-The data policy file defines the target data and permissions. It is written in YAML. Cape Python reads the `.yaml` policy file and applies the policies based on your [policy application script](#TODO).
+The data policy file defines the target data and permissions. It is written in YAML. Cape Python reads the `.yaml` policy file and applies the policies based on your [policy application script](#write-the-policy-application-script).
 
 Create a `test_policy.yaml` file in your project, with the following content:
 
