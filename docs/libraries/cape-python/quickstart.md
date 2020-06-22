@@ -1,6 +1,6 @@
 # Cape Python API
 
-This guide walks through a simple example using Cape Python with both Pandas or Spark.
+This guide walks through an example of using Cape Python with both Pandas or Spark.
 
 ## Prerequisites
 
@@ -9,6 +9,8 @@ This guide walks through a simple example using Cape Python with both Pandas or 
 
 
 ## Installation 
+
+You can install Cape Python with pip:
 
 ```shell
 pip install cape-privacy
