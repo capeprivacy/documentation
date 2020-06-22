@@ -15,6 +15,6 @@ The 0.10.0 release includes five transformations that provide some common privac
 | EDA | Tokenization  | Rounding or pertubation | Tokenization 
 | Analytics | Tokenization  | Rounding or pertubation | -
 | ML development | - | Rounding or pertubation | Tokenization
-| ML training/serving | Raw data | Raw data | Raw data
+| ML training/serving | No transformation | No transformation | No transformation
 
 Cape Privacy will support more use cases through additional transformations in future releases.

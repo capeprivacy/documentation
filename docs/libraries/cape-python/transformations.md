@@ -60,7 +60,7 @@ transform:
 The Tokenizer transformation maps a string to a token to obfuscate it.
 
 !!! warning
-Linkable tokenization for sensitive data is vulnerable to privacy attacks. Cape privacy does not recommend sharing tokenized data with preserved linkability with untrusted or outside parties. Cape Python does not support anonymized transformations. We recommend [OpenDP](https://github.com/opendifferentialprivacy/) as a library to help with anonymization.
+    Linkable tokenization for sensitive data is vulnerable to privacy attacks. Cape privacy does not recommend sharing tokenized data with preserved linkability with untrusted or outside parties. Cape Python does not support anonymized transformations. We recommend [OpenDP](https://github.com/opendifferentialprivacy/) as a library to help with anonymization.
 
 ``` yaml
 transform:
