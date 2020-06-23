@@ -58,7 +58,7 @@ The `numeric-rounding` transformation rounds numeric values to a given number of
 The `tokenizer` transformation maps a string to a token to obfuscate it.
 
 !!! warning
-    Linkable tokenization for sensitive data is vulnerable to privacy attacks. Cape privacy does not recommend sharing tokenized data with preserved linkability with untrusted or outside parties. Cape Python does not support anonymized transformations.
+    Linkable tokenization for sensitive data is vulnerable to privacy attacks. Cape Privacy does not recommend sharing tokenized data with preserved linkability with untrusted or outside parties. Cape Python does not support anonymized transformations.
 
 ``` yaml
 - transform:
