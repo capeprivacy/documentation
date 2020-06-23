@@ -14,9 +14,9 @@ version: 1
 # with a set value throughout your policy.
 transformations:
     # This named transformation uses the built-in tokenizer transformation
-    - my_tokenizer:
+    - name: my_tokenizer
       type: tokenizer
-      max_token_length: 10
+      max_token_len: 10
       key: "my secret"
 rules:
     # Required. The column name.

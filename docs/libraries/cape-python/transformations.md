@@ -64,7 +64,7 @@ The `tokenizer` transformation maps a string to a token to obfuscate it.
 - transform:
     type: tokenizer
     # Default is 64
-    max_token_length: <int or bytes>
+    max_token_len: <int or bytes>
     # If unspecified, Cape Python uses a random byte string
     key: <string or byte string>
 ```
