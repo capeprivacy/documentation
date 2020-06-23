@@ -1,5 +1,7 @@
 # Documentation
 
+View the documentation: http://docs.capeprivacy.com
+
 ## Run the docs locally
 
 Prerequisites:
@@ -65,7 +67,6 @@ git push --set-upstream origin <branchName>
 
 5. Merge the pull request. Netlify automatically detects changes to the main branch and rebuilds and redeploys the live documentation site.
 
-## Deploy the docs
 
 ## Style and tone
 
@@ -73,6 +74,8 @@ git push --set-upstream origin <branchName>
 * UI elements are bold
 * We are writing for data scientists. Be clear. Be formal.
 * Cape Privacy is singular
+* Headings should be sentence case
+* Avoid passive voice and weasel words.
 
 ## License
 

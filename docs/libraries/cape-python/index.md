@@ -8,7 +8,7 @@ You can view the source code in the [Cape Python GitHub Repository](https://gith
 
 Review the [transformations](transformations.md) and decide which are a good fit for your data science needs. 
 
-The 0.10.0 release includes five transformations that provide some common privacy protections. 
+The 0.1.0 release includes five transformations that provide some common privacy protections. 
 
 | Use case  | Text data | Numeric data | Inconsistent data
 | ------------- | ------------- | --------------- | -----------

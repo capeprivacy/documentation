@@ -25,15 +25,12 @@ policy:
         # Required. The column name.
         - match: 
             name: fruit
-        actions:
-        # This example shows a named transformation.
-        # It tells the policy runner to apply the my_tokenizer transformation
-        # to all fields in the "amount" column.
-        - transform:
-            name: my_tokenizer
-        - match: 
-            name: fruit
-        # Target rows in the fruit column where the value is "apple"
+            actions:
+            # This example shows a named transformation.
+            # It tells the policy runner to apply the my_tokenizer transformation
+            # to all fields in the "fruit" column.
+            - transform:
+                name: my_tokenizer
         - match: weight
             actions:
                 - transform:

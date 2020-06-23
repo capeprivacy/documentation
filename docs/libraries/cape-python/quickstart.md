@@ -53,7 +53,7 @@ Create a `test_transformation.py` file in your project, with the following conte
 === "Pandas"
     ```python
     import pandas as pd
-    import cape cape_privacy
+    import cape_privacy
 
     # Create a simple Pandas DataFrame
     df = pd.DataFrame([114.432, 134.622, 142.984], columns=["weight"])
