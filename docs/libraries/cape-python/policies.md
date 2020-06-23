@@ -31,7 +31,8 @@ policy:
             # to all fields in the "fruit" column.
             - transform:
                 name: my_tokenizer
-        - match: weight
+        - match: 
+            name: weight
             actions:
                 - transform:
                     # This example shows an unnamed transformation.
