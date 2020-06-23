@@ -52,8 +52,8 @@ Create a `test-transformation.py` file in your project, with the following conte
 
 === "Pandas"
     ```python
-    import pandas as pd
     import cape_privacy as cape
+    import pandas as pd    
 
     # Create a simple Pandas DataFrame
     df = pd.DataFrame([114.432, 134.622, 142.984], columns=["weight"])
@@ -67,8 +67,8 @@ Create a `test-transformation.py` file in your project, with the following conte
 
 === "Spark"
     ```python
-    from pyspark import sql
     import cape_privacy as cape
+    from pyspark import sql    
 
     sess_builder = sql.SparkSession.builder
     sess_builder = sess_builder.appName('cape.examples.rounding')
