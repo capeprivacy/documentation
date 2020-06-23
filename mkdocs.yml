@@ -1,0 +1,42 @@
+site_name: Documentation
+dev_addr: '127.0.0.1:8080'
+repo_url: https://github.com/capeprivacy/documentation.git
+extra_css: 
+    - assets/css/custom.css
+theme:  
+    custom_dir: overrides 
+    favicon: assets/images/favicon-32x32.png
+    features:
+        - tabs
+    language: en
+    logo: assets/images/cp-logo.png
+    name: material
+    palette:
+        primary: white
+nav:
+    - Home: index.md
+    - Libraries: 
+        - Introduction: libraries/index.md
+        - Cape Python:
+            - Overview: libraries/cape-python/index.md
+            - Quickstart: libraries/cape-python/quickstart.md
+            - Policies: libraries/cape-python/policies.md
+            - Transformations: libraries/cape-python/transformations.md
+    - Best practices:
+        - Introduction: best-practices/index.md
+        - Running transformations: best-practices/running-transformations.md
+    - Release notes:
+        - Introduction: release-notes/index.md
+        - June 2020: release-notes/26062020.md
+plugins:    
+    - search:
+        prebuild_index: true
+markdown_extensions:
+    - admonition
+    - codehilite
+    - pymdownx.tabbed
+    - pymdownx.superfences
+    - toc:
+        permalink: "#"
+
+

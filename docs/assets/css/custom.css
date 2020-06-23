@@ -1,0 +1,18 @@
+.md-search__input {
+    border-radius: 50px;
+}
+
+:root {
+
+
+  /* CP vars */
+    --color-black: #000;
+    --color-border-gray: #c4c4c4;
+    --color-gray: #f5f5f5;
+    --color-white: #fff;
+    --color-underroos: #eb658b;
+    --color-privacy-purple: #a0089b;
+    --color-blue-steel: #357bf5;
+    --color-dark-night: #040042;
+    --color-krypton: #21c3cf;
+}
