@@ -16,7 +16,7 @@ transformations:
     # This named transformation uses the built-in tokenizer transformation
     - my_tokenizer:
       type: tokenizer
-      token_length: 10
+      max_token_length: 10
       key: "my secret"
 rules:
     # Required. The column name.
