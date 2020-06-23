@@ -11,7 +11,7 @@ The `date-pertubation` transformation adds random noise to dates. The amount of 
 ``` yaml
 - transform:
     type: date-pertubation
-    frequency: <'year' or 'month'>
+    frequency: <one of: 'year', 'month', 'day', 'hour', 'minute', 'second'>
     min: <int or float>
     max: <int or float>
     # Optional. The base number to initialize the random number generator.
@@ -25,7 +25,7 @@ The `date-truncation` transformation shortens dates to a unit (year or month). S
 ``` yaml
 - transform:
     type: date-truncation
-    frequency: <'year' or 'month'>
+    frequency: <one of: 'year', 'month', 'day', 'hour', 'minute', 'second'>
 ```
 
 ## Numeric pertubation
