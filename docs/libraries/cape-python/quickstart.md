@@ -5,7 +5,7 @@ This guide walks through an example of using Cape Python with both Pandas or Spa
 ## Prerequisites
 
 * Python 3.6 or above
-* Cape Privacy recommends using a virtual environment such as [venv](https://docs.python.org/3/library/venv.html) or [conda](https://www.anaconda.com/products/individual).
+* Cape Privacy recommends using a virtual environment such as [venv](https://docs.python.org/3/library/venv.html).
 
 
 ## Installation 
@@ -25,9 +25,9 @@ The data policy file defines the target data and permissions. It is written in Y
 Create a `test_policy.yaml` file in your project, with the following content:
 
 ```yaml
-policy:
+policy:    
+    label: perturb-value-field
     version: 1
-    label: test_policy
     rules:
     # Set the column name
     - match: 
@@ -53,14 +53,14 @@ Create a `test_transformation.py` file in your project, with the following conte
 === "Pandas"
     ```python
     import pandas as pd
-    import cape
+    import cape cape_privacy
 
     # Create a simple Pandas DataFrame
     df = pd.DataFrame([114.432, 134.622, 142.984], columns=["weight"])
     # Load the privacy policy
-    policy = cape.parse_policy("test_policy.yaml")
+    policy = cape_privacy.parse_policy("test_policy.yaml")
     # Apply the policy to the DataFrame
-    df = cape.apply_policies([policy], df)
+    df = cape_privacy.apply_policy(policy, df, inplace=False)
     # Output the altered data
     print(df.head())
     ```
@@ -80,7 +80,7 @@ Create a `test_transformation.py` file in your project, with the following conte
     # Load the privacy policy
     policy = cape_privacy.parse_policy("test_policy.yaml")
     # Apply the policy to the DataFrame
-    df = cape_privacy.apply_policies([policy], df)
+    df = cape_privacy.apply_policy(policy, df, inplace=false)
     # Output the altered data
     print(df.show())
     ```
