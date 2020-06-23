@@ -17,7 +17,6 @@ transformations:
     - my_tokenizer:
       type: tokenizer
       token_length: 10
-      charset: ascii
       key: "my secret"
 rules:
     # Required. The column name.
