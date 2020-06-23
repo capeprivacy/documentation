@@ -38,6 +38,7 @@ rules:
             # (1) Apply the transformation numeric-rounding 
             # (2) Round to one decimal place
             type: numeric-rounding
+            dtype: Double
             precision: 1
 ```
 
