@@ -19,7 +19,6 @@ The `date-perturbation` transformation adds random noise to dates. The amount of
     seed: <int>
 ```
 
-Note that the Spark implementation of date perturbation currently does not support seeding.
 
 ## Date truncation
 
