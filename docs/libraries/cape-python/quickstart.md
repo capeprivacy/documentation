@@ -80,7 +80,7 @@ Create a `test-transformation.py` file in your project, with the following conte
     # Load the privacy policy
     policy = cape.parse_policy("test-policy.yaml")
     # Apply the policy to the DataFrame
-    df = cape.apply_policy(policy, df, inplace=false)
+    df = cape.apply_policy(policy, df, inplace=False)
     # Output the altered data
     print(df.show())
     ```
