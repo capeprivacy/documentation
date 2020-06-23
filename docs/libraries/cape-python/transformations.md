@@ -15,6 +15,7 @@ The `date-perturbation` transformation adds random noise to dates. The amount of
     min: <int or float>
     max: <int or float>
     # Optional. The base number to initialize the random number generator.
+    # Pandas only (Spark does not currently support seeding)
     seed: <int>
 ```
 
