@@ -1,6 +1,6 @@
 # Cape Python API
 
-This guide walks through an example of using Cape Python with both Pandas or Spark.
+This guide walks through an example of using Cape Python with either Pandas or Spark.
 
 ## Prerequisites
 
@@ -22,11 +22,11 @@ pip install cape-privacy
 
 The data policy file defines the target data and permissions. It is written in YAML. Cape Python reads the `.yaml` policy file and applies the policies based on your [policy application script](#write-the-policy-application-script).
 
-Create a `test_policy.yaml` file in your project, with the following content:
+Create a `test-policy.yaml` file in your project, with the following content:
 
 ```yaml
 policy:    
-    label: perturb-value-field
+    label: test-policy
     version: 1
     rules:
     # Set the column name
@@ -47,7 +47,7 @@ policy:
 
 To apply the policy `.yaml` to your data, you must run a script that defines which policy you apply to which data target.
 
-Create a `test_transformation.py` file in your project, with the following content:
+Create a `test-transformation.py` file in your project, with the following content:
 
 
 === "Pandas"
@@ -58,7 +58,7 @@ Create a `test_transformation.py` file in your project, with the following conte
     # Create a simple Pandas DataFrame
     df = pd.DataFrame([114.432, 134.622, 142.984], columns=["weight"])
     # Load the privacy policy
-    policy = cape.parse_policy("test_policy.yaml")
+    policy = cape.parse_policy("test-policy.yaml")
     # Apply the policy to the DataFrame
     df = cape.apply_policy(policy, df, inplace=False)
     # Output the altered data
@@ -78,7 +78,7 @@ Create a `test_transformation.py` file in your project, with the following conte
     # Create a simple Spark DataFrame
     df = sess.createDataFrame([114.432, 134.622, 142.984], "double").toDF("weight")
     # Load the privacy policy
-    policy = cape.parse_policy("test_policy.yaml")
+    policy = cape.parse_policy("test-policy.yaml")
     # Apply the policy to the DataFrame
     df = cape.apply_policy(policy, df, inplace=false)
     # Output the altered data
@@ -91,7 +91,7 @@ Create a `test_transformation.py` file in your project, with the following conte
 The quickstart example creates a dataset programatically, so you can run the policy application script and view the output:
 
 ```shell
-python test_transformation.py
+python test-transformation.py
 ```
 
 !!! note

@@ -1,6 +1,6 @@
 # Applying transformations to your data
 
-The Cape Privacy's libraries include built-in transformations. This document provides recommendations on how to use them. We encourage community contributions to this guidance as the transformation techniques grow.
+Cape Privacy's libraries include built-in transformations. This document provides recommendations on how to use them. We encourage community contributions to this guidance as the transformation techniques grow.
 
 ## Recommendations
 
