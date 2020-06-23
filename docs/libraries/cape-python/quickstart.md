@@ -24,22 +24,22 @@ The data policy file defines the target data and permissions. It is written in Y
 
 Create a `test-policy.yaml` file in your project, with the following content:
 
-```yaml
-policy:    
-    label: test-policy
-    version: 1
-    rules:
-    # Set the column name
-    - match: 
-        name: weight
-      actions:
-        - transform:
-            # This example shows an unnamed transformation.
-            # It tells the policy runner to:
-            # (1) Apply the transformation numeric-rounding 
-            # (2) Round to one decimal place
-            type: numeric-rounding
-            precision: 1
+```yaml  
+label: test-policy
+version: 1
+rules:
+# Set the column name
+- match: 
+    name: weight
+    actions:
+    - transform:
+        # This example shows an unnamed transformation.
+        # It tells the policy runner to:
+        # (1) Apply the transformation numeric-rounding 
+        # (2) Round to one decimal place
+        type: numeric-rounding
+        dtype: Double
+        precision: 1
 ```
 
 
