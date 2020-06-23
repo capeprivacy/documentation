@@ -17,29 +17,29 @@ policy:
     transformations:
         # This named transformation uses the built-in tokenizer transformation
         - my_tokenizer:
-            type: tokenizer
-            token_length: 10
-            charset: ascii
-            key: "my secret"
+          type: tokenizer
+          token_length: 10
+          charset: ascii
+          key: "my secret"
     rules:
         # Required. The column name.
         - match: 
             name: fruit
-            actions:
-                # This example shows a named transformation.
-                # It tells the policy runner to apply the my_tokenizer transformation
-                # to all fields in the "fruit" column.
-                - transform:
-                    name: my_tokenizer
+          actions:
+            # This example shows a named transformation.
+            # It tells the policy runner to apply the my_tokenizer transformation
+            # to all fields in the "fruit" column.
+            - transform:
+                name: my_tokenizer
         - match: 
             name: weight
-            actions:
-                - transform:
-                    # This example shows an unnamed transformation.
-                    # It tells the policy runner to:
-                    # (1) Apply the transformation numeric-rounding 
-                    # (2) Round to one decimal place
-                    type: numeric-rounding
-                    precision: 1
+          actions:
+            - transform:
+                # This example shows an unnamed transformation.
+                # It tells the policy runner to:
+                # (1) Apply the transformation numeric-rounding 
+                # (2) Round to one decimal place
+                type: numeric-rounding
+                precision: 1
 ```
 
