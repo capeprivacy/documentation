@@ -53,14 +53,14 @@ Create a `test_transformation.py` file in your project, with the following conte
 === "Pandas"
     ```python
     import pandas as pd
-    import cape_privacy
+    import cape_privacy as cape
 
     # Create a simple Pandas DataFrame
     df = pd.DataFrame([114.432, 134.622, 142.984], columns=["weight"])
     # Load the privacy policy
-    policy = cape_privacy.parse_policy("test_policy.yaml")
+    policy = cape.parse_policy("test_policy.yaml")
     # Apply the policy to the DataFrame
-    df = cape_privacy.apply_policy(policy, df, inplace=False)
+    df = cape.apply_policy(policy, df, inplace=False)
     # Output the altered data
     print(df.head())
     ```
@@ -68,7 +68,7 @@ Create a `test_transformation.py` file in your project, with the following conte
 === "Spark"
     ```python
     from pyspark import sql
-    import cape_privacy
+    import cape_privacy as cape
 
     sess_builder = sql.SparkSession.builder
     sess_builder = sess_builder.appName('cape.examples.rounding')
@@ -78,9 +78,9 @@ Create a `test_transformation.py` file in your project, with the following conte
     # Create a simple Spark DataFrame
     df = sess.createDataFrame([114.432, 134.622, 142.984], "double").toDF("weight")
     # Load the privacy policy
-    policy = cape_privacy.parse_policy("test_policy.yaml")
+    policy = cape.parse_policy("test_policy.yaml")
     # Apply the policy to the DataFrame
-    df = cape_privacy.apply_policy(policy, df, inplace=false)
+    df = cape.apply_policy(policy, df, inplace=false)
     # Output the altered data
     print(df.show())
     ```
