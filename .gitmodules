@@ -1,0 +1,3 @@
+[submodule "cape-python"]
+	path = cape-python
+	url = https://github.com/capeprivacy/cape-python.git

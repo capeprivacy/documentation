@@ -1,0 +1,51 @@
+Module cape_privacy.pandas.transformations.tokenizer
+====================================================
+
+Classes
+-------
+
+`Tokenizer(max_token_len: int = None, key: str = None)`
+:   Tokenizer: map a string to a token to obfuscate it.
+    
+    When applying the Tokenizer to a Pandas Series of type string,
+    each value gets mapped to a token (hexadecimal string).
+    If a value is repeated several times across the series, it always
+    get mapped to the same token in order to maintain the count.
+    A value can be mapped to different tokens by setting the key to a
+    different value.
+    
+    Example:
+        ```
+        s = pd.Series(['A'])
+        tokenize = Tokenizer(max_token_len=5, key='secret')
+        tokenize(s) # pd.Series(['40a1e'])
+        ```
+    
+    Attributes:
+        max_token_len (int or bytes): control the token length (default
+            length is 64)
+        key: expect a string or byte string. if not specified, key will
+            be set to a random byte string.
+
+    ### Ancestors (in MRO)
+
+    * cape_privacy.pandas.transformations.base.Transformation
+    * cape_privacy.pandas.transformations.base.AbstractTransformation
+
+    ### Class variables
+
+    `identifier`
+    :
+
+    `type_signature`
+    :
+
+    ### Instance variables
+
+    `key`
+    :
+
+    ### Methods
+
+    `to_token(self, x)`
+    :
