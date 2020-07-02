@@ -1,0 +1,32 @@
+- API documentation: 
+    - cape_privacy: libraries/cape-python/api/cape_privacy/index.md
+    - cape_privacy.pandas: 
+        - pandas: libraries/cape-python/api/cape_privacy/pandas/index.md
+        - pandas.dtypes: libraries/cape-python/api/cape_privacy/pandas/dtypes.md
+        - pandas.transformations: 
+            - base: libraries/cape-python/api/cape_privacy/pandas/transformations/base.md
+            - column_redact: libraries/cape-python/api/cape_privacy/pandas/transformations/column_redact.md
+            - perturbation: libraries/cape-python/api/cape_privacy/pandas/transformations/perturbation.md
+            - rounding: libraries/cape-python/api/cape_privacy/pandas/transformations/rounding.md
+            - row_redcat: libraries/cape-python/api/cape_privacy/pandas/transformations/row_redact.md
+            - tokenizer: libraries/cape-python/api/cape_privacy/pandas/transformations/tokenizer.md
+        - pandas.registry: libraries/cape-python/api/cape_privacy/pandas/registry.md
+    - cape_privacy.policy:
+        - policy: libraries/cape-python/api/cape_privacy/policy/index.md
+        - policy.data: libraries/cape-python/api/cape_privacy/policy/data.md
+        - policy.exceptions: libraries/cape-python/api/cape_privacy/policy/exceptions.md
+        - policy.policy: libraries/cape-python/api/cape_privacy/policy/policy.md
+    - cape_privacy.spark: 
+        - spark: libraries/cape-python/api/cape_privacy/spark/index.md
+        - spark.dtypes: libraries/cape-python/api/cape_privacy/spark/dtypes.md
+        - spark.transformations: 
+            - base: libraries/cape-python/api/cape_privacy/spark/transformations/base.md
+            - perturbation: libraries/cape-python/api/cape_privacy/spark/transformations/perturbation.md
+            - redaction: libraries/cape-python/api/cape_privacy/spark/transformations/redaction.md
+            - rounding: libraries/cape-python/api/cape_privacy/spark/transformations/rounding.md
+            - tokenizer: libraries/cape-python/api/cape_privacy/spark/transformations/tokenizer.md
+        - spark.registry: libraries/cape-python/api/cape_privacy/spark/registry.md
+        - spark.utils: libraries/cape-python/api/cape_privacy/spark/utils.md
+    - cape_privacy.utils:
+        - utils: libraries/cape-python/api/cape_privacy/utils/index.md
+        - utils.typecheck: libraries/cape-python/api/cape_privacy/utils/typecheck.md

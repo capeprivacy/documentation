@@ -22,13 +22,7 @@ nav:
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
             - API documentation: 
-                - cape_privacy: libraries/cape-python/api/cape_privacy/index.md
-                - cape_privacy.pandas: 
-                    - pandas: libraries/cape-python/api/cape_privacy/pandas/index.md
-                    - cape_privacy.pandas.transformations: 
-                        - transformations: libraries/cape-python/api/cape_privacy/pandas/transformations/index.md
-                        - base: libraries/cape-python/api/cape_privacy/pandas/transformations/base.md
-                        - column_redact: libraries/cape-python/api/cape_privacy/pandas/transformations/column_redact.md
+                - V1.1: '!include ./pythonv1/mkdocs.yml'
     - Best practices:
         - Introduction: best-practices/index.md
         - Running transformations: best-practices/running-transformations.md
@@ -37,6 +31,7 @@ nav:
         - June 2020: release-notes/26062020.md
 plugins:    
     - search
+    - monorepo
 markdown_extensions:
     - admonition
     - codehilite
