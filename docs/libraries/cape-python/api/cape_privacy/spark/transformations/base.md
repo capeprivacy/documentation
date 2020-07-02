@@ -7,32 +7,32 @@ Classes
 `AbstractTransformation()`
 :   
 
-    ### Descendants
+### Descendants
 
-    * cape_privacy.spark.transformations.base.Transformation
+* cape_privacy.spark.transformations.base.Transformation
 
-    ### Instance variables
+### Instance variables
 
-    `dtype`
-    :
+`dtype`
+:
 
 `Transformation(dtype: pyspark.sql.types.DataType)`
 :   
 
-    ### Ancestors (in MRO)
+### Ancestors (in MRO)
 
-    * cape_privacy.spark.transformations.base.AbstractTransformation
+* cape_privacy.spark.transformations.base.AbstractTransformation
 
-    ### Descendants
+### Descendants
 
-    * cape_privacy.spark.registry_test.MockTransformation
-    * cape_privacy.spark.transformations.perturbation.DatePerturbation
-    * cape_privacy.spark.transformations.perturbation.NumericPerturbation
-    * cape_privacy.spark.transformations.rounding.DateTruncation
-    * cape_privacy.spark.transformations.rounding.NumericRounding
-    * cape_privacy.spark.transformations.tokenizer.Tokenizer
+* cape_privacy.spark.registry_test.MockTransformation
+* cape_privacy.spark.transformations.perturbation.DatePerturbation
+* cape_privacy.spark.transformations.perturbation.NumericPerturbation
+* cape_privacy.spark.transformations.rounding.DateTruncation
+* cape_privacy.spark.transformations.rounding.NumericRounding
+* cape_privacy.spark.transformations.tokenizer.Tokenizer
 
-    ### Instance variables
+### Instance variables
 
-    `dtype`
-    :
+`dtype`
+:

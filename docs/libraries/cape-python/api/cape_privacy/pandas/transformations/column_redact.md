@@ -6,14 +6,14 @@ Classes
 
 `ColumnRedact(columns: List[str])`
 :   Redacts columns.
-    
-    Attributes:
-        columns: The columns to redact.
 
-    ### Class variables
+Attributes:
+columns: The columns to redact.
 
-    `identifier`
-    :
+### Class variables
 
-    `type_signature`
-    :
+`identifier`
+:
+
+`type_signature`
+:

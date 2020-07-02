@@ -13,18 +13,18 @@ Sub-modules
 Functions
 ---------
 
-    
+
 `parse_policy(p: str)`
 :   Parses a policy yaml file.
-    
-    The passed in string can either be a path to a local file or
-    a URL pointing to a file. If it is a URL then requests attempts to download it.
-    
-    Args:
-        p: a path string or a URL string
-    
-    Returns:
-        The Policy object initialized by the yaml.
+
+The passed in string can either be a path to a local file or
+a URL pointing to a file. If it is a URL then requests attempts to download it.
+
+Args:
+p: a path string or a URL string
+
+Returns:
+The Policy object initialized by the yaml.
 
 Classes
 -------
@@ -32,27 +32,27 @@ Classes
 `NamedTransformNotFound(...)`
 :   Common base class for all non-exit exceptions.
 
-    ### Ancestors (in MRO)
+### Ancestors (in MRO)
 
-    * builtins.Exception
-    * builtins.BaseException
+* builtins.Exception
+* builtins.BaseException
 
 `Policy(label: str, version: int = 1, rules: List[cape_privacy.policy.data.Rule] = [], transformations: List[cape_privacy.policy.data.NamedTransform] = [])`
 :   Top level policy object.
-    
-    The top level policy object holds the all of the relevant information
-    for applying policy to data.
-    
-    Attributes:
-        label: The label of the policy.
-        version: The version of the policy.
-        rules: List of rules that will be applied to a data frame.
-        transformations: The named transformations for this policy.
+
+The top level policy object holds the all of the relevant information
+for applying policy to data.
+
+Attributes:
+label: The label of the policy.
+version: The version of the policy.
+rules: List of rules that will be applied to a data frame.
+transformations: The named transformations for this policy.
 
 `TransformNotFound(...)`
 :   Common base class for all non-exit exceptions.
 
-    ### Ancestors (in MRO)
+### Ancestors (in MRO)
 
-    * builtins.Exception
-    * builtins.BaseException
+* builtins.Exception
+* builtins.BaseException

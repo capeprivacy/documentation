@@ -6,29 +6,29 @@ Classes
 
 `ColumnRedact(columns: List[str])`
 :   Redacts columns from a Spark dataframe.
-    
-    Attributes:
-        columns: Which columns are redacted.
 
-    ### Class variables
+Attributes:
+columns: Which columns are redacted.
 
-    `identifier`
-    :
+### Class variables
 
-    `type_signature`
-    :
+`identifier`
+:
+
+`type_signature`
+:
 
 `RowRedact(condition: str)`
 :   Redacts rows satisfying some condition from a Spark DataFrame.
-    
-    Attributes:
-        condition: When this condition evaluates to True for a row, that row
-            will be dropped.
 
-    ### Class variables
+Attributes:
+condition: When this condition evaluates to True for a row, that row
+will be dropped.
 
-    `identifier`
-    :
+### Class variables
 
-    `type_signature`
-    :
+`identifier`
+:
+
+`type_signature`
+:

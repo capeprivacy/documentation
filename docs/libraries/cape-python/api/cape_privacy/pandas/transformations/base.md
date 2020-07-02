@@ -7,31 +7,31 @@ Classes
 `AbstractTransformation()`
 :   
 
-    ### Descendants
+### Descendants
 
-    * cape_privacy.pandas.transformations.base.Transformation
+* cape_privacy.pandas.transformations.base.Transformation
 
-    ### Instance variables
+### Instance variables
 
-    `dtype`
-    :
+`dtype`
+:
 
 `Transformation(dtype)`
 :   
 
-    ### Ancestors (in MRO)
+### Ancestors (in MRO)
 
-    * cape_privacy.pandas.transformations.base.AbstractTransformation
+* cape_privacy.pandas.transformations.base.AbstractTransformation
 
-    ### Descendants
+### Descendants
 
-    * cape_privacy.pandas.transformations.perturbation.DatePerturbation
-    * cape_privacy.pandas.transformations.perturbation.NumericPerturbation
-    * cape_privacy.pandas.transformations.rounding.DateTruncation
-    * cape_privacy.pandas.transformations.rounding.NumericRounding
-    * cape_privacy.pandas.transformations.tokenizer.Tokenizer
+* cape_privacy.pandas.transformations.perturbation.DatePerturbation
+* cape_privacy.pandas.transformations.perturbation.NumericPerturbation
+* cape_privacy.pandas.transformations.rounding.DateTruncation
+* cape_privacy.pandas.transformations.rounding.NumericRounding
+* cape_privacy.pandas.transformations.tokenizer.Tokenizer
 
-    ### Instance variables
+### Instance variables
 
-    `dtype`
-    :
+`dtype`
+:

@@ -7,7 +7,7 @@ View the documentation: http://docs.capeprivacy.com
 Prerequisites:
 
 * git
-* Python (currently using 3.7 due to [Netlify limitations](https://github.com/netlify/build-image/blob/xenial/included_software.md))
+* Python 64bit (currently using 3.7 due to [Netlify limitations](https://github.com/netlify/build-image/blob/xenial/included_software.md)).
 * pip
 * venv
 

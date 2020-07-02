@@ -6,14 +6,14 @@ Classes
 
 `RowRedact(condition: str)`
 :   Redacts rows based on the condition.
-    
-    Attributes:
-        condition: The condition to be passed into the query function.
 
-    ### Class variables
+Attributes:
+condition: The condition to be passed into the query function.
 
-    `identifier`
-    :
+### Class variables
 
-    `type_signature`
-    :
+`identifier`
+:
+
+`type_signature`
+:

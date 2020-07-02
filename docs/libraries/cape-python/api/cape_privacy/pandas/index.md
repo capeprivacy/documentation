@@ -11,6 +11,6 @@ Sub-modules
 Functions
 ---------
 
-    
+
 `transformer(transformation: cape_privacy.pandas.transformations.base.Transformation, df: pandas.core.frame.DataFrame, field_name: str)`
 :

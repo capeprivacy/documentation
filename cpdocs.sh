@@ -3,18 +3,21 @@
 # Update all submodules to latest version of main branch
 git submodule update --remote
 
-apis=(cape-python)
-for i in $apis;
-do (
-echo $i;
-cd $i;
-rm -r ../docs/libraries/${i}/api
+# Generate the Cape Python docs
+api=cape-python
+echo $api
+cd $api
 # Generate docs with pdoc and output to the correct section of the docs website
-pdoc --output-dir ../docs/libraries/${i}/api cape_privacy --force;
-
-#TODO: strip leading whitespace
-)
+pdoc3 --output-dir ../docs/libraries/cape-python/api cape_privacy --force
+# Strip leading whitespace
+cd ../docs/libraries/cape-python/api
+for f in $(find cape_privacy -name '*.md')
+    do (
+    echo $f
+    sed -i 's/^[[:space:]]*//g' $f
+    )
 done
+
 
 
 

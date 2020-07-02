@@ -36,7 +36,6 @@ nav:
         - Introduction: release-notes/index.md
         - June 2020: release-notes/26062020.md
 plugins:    
-    - monorepo
     - search
 markdown_extensions:
     - admonition

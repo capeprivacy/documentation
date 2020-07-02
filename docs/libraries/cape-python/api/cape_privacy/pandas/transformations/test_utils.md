@@ -6,15 +6,15 @@ Classes
 
 `PlusN(n: int = 1)`
 :   A sample transform that adds n to a specific field.
-    
-    Attributes:
-        field: The field that this transform will be applied to.
-        n: The value to add to the field.
 
-    ### Class variables
+Attributes:
+field: The field that this transform will be applied to.
+n: The value to add to the field.
 
-    `identifier`
-    :
+### Class variables
 
-    `type_signature`
-    :
+`identifier`
+:
+
+`type_signature`
+:
