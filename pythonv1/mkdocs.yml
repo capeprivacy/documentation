@@ -1,6 +1,0 @@
-docs_dir: docs
-nav:
-- cape_privacy: cape_privacy.md
-- cape_privacy.pandas:
-  - pandas.registry: cape_privacy.pandas\pandas.registry.md
-site_name: Cape-Python-API

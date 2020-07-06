@@ -1,0 +1,20 @@
+loaders:
+  - type: python
+    search_path: [cape-python]
+processors:
+  - type: filter
+  - type: smart
+type: mkdocs
+site_name: Cape-Python-API
+content_directory_name: docs
+output_directory: pythonv1
+pages:
+  - title: cape_privacy
+    source: 'cape-python/README.md'
+  - title: cape_privacy.pandas
+    contents:
+    - cape_privacy.pandas
+    children:
+      - title: pandas.registry
+        contents:
+        - cape_privacy.pandas.registr*
