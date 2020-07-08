@@ -42,10 +42,10 @@ renderer:
       children:
         - title: data
           contents: 
-          - cape_privacy.policy.data*
+          - cape_privacy.polic*.data*
         - title: policy
           contents: 
-          - cape_privacy.policy.polic*
+          - cape_privacy.polic*.polic*
     - title: cape_privacy.spark
       children:
         - title: dtypes
