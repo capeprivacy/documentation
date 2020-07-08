@@ -6,7 +6,7 @@ processors:
   - type: smart
 renderer:
   type: mkdocs
-  site_name: Cape-Python-API
+  site_name: pythonv1
   content_directory_name: docs
   output_directory: pythonv1
   clean_render: true

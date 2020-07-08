@@ -21,4 +21,4 @@ nav:
     - redaction: cape_privacy.spark\transformations\redaction.md
     - rounding: cape_privacy.spark\transformations\rounding.md
     - tokenizer: cape_privacy.spark\transformations\tokenizer.md
-site_name: Cape-Python-API
+site_name: pythonv1
