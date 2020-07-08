@@ -88,6 +88,3 @@ for applying policy to data.
 - `rules` - List of rules that will be applied to a data frame.
 - `transformations` - The named transformations for this policy.
 
-<a name=".cape_privacy.polic.data_test"></a>
-# cape\_privacy.polic.data\_test
-

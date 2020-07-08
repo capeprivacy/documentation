@@ -30,6 +30,3 @@ Redacts rows satisfying some condition from a Spark DataFrame.
 - `condition` - When this condition evaluates to True for a row, that row
   will be dropped.
 
-<a name=".cape_privacy.spark.transformations.redaction_test"></a>
-# cape\_privacy.spark.transformations.redaction\_test
-

@@ -36,6 +36,3 @@ specified by frequency.
 
 - `frequency` _string_ - expect to be 'year' or 'month'
 
-<a name=".cape_privacy.spark.transformations.rounding_test"></a>
-# cape\_privacy.spark.transformations.rounding\_test
-

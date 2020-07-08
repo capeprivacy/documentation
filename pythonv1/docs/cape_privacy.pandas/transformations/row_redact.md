@@ -27,6 +27,3 @@ Redacts rows using Dataframe.query.
 DataFrame.query returns all the fields that it matches so
 we negate it here to get the opposite.
 
-<a name=".cape_privacy.pandas.transformations.row_redact_test"></a>
-# cape\_privacy.pandas.transformations.row\_redact\_test
-

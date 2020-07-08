@@ -53,6 +53,3 @@ Map a Pandas Series to tokens.
   A Pandas Series with a list of tokens represented as hexadecimal
   strings.
 
-<a name=".cape_privacy.pandas.transformations.tokenizer_test"></a>
-# cape\_privacy.pandas.transformations.tokenizer\_test
-

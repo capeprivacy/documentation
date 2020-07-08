@@ -61,6 +61,3 @@ each frequency is drawn from the internal [min_freq, max_freq).
 - `max` _int, int list_ - the frequency value will be less than max
   seed (int), optional: a seed to initialize the random generator
 
-<a name=".cape_privacy.pandas.transformations.perturbation_test"></a>
-# cape\_privacy.pandas.transformations.perturbation\_test
-

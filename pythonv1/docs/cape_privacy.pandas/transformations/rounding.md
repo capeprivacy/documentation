@@ -70,6 +70,3 @@ or month) specified by frequency.
 
 - `frequency` _string_ - expect to be 'year' or 'month'
 
-<a name=".cape_privacy.pandas.transformations.rounding_test"></a>
-# cape\_privacy.pandas.transformations.rounding\_test
-

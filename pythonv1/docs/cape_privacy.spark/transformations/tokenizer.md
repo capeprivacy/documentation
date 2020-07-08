@@ -25,6 +25,3 @@ different value.
 - `key` - expect a string or byte string. if not specified, key will
   be set to a random byte string.
 
-<a name=".cape_privacy.spark.transformations.tokenizer_test"></a>
-# cape\_privacy.spark.transformations.tokenizer\_test
-

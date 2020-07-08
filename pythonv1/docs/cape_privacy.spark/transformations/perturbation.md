@@ -43,6 +43,3 @@ Note that seeds are currently not supported.
 - `min` _int, int list_ - the frequency value will be greater or equal to min
 - `max` _int, int list_ - the frequency value will be less than max
 
-<a name=".cape_privacy.spark.transformations.perturbation_test"></a>
-# cape\_privacy.spark.transformations.perturbation\_test
-
