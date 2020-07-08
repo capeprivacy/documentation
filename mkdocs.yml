@@ -21,8 +21,7 @@ nav:
             - Quickstart: libraries/cape-python/quickstart.md
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
-            - API documentation: 
-                - V1.1: '!include ./pythonv1/mkdocs.yml'
+            - API documentation: '!include ./pythonv1/mkdocs.yml'
     - Best practices:
         - Introduction: best-practices/index.md
         - Running transformations: best-practices/running-transformations.md
