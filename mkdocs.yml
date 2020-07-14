@@ -21,6 +21,8 @@ nav:
             - Quickstart: libraries/cape-python/quickstart.md
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
+            - API documentation: 
+                - v1: '!include ./pythonv1/mkdocs.yml'
     - Best practices:
         - Introduction: best-practices/index.md
         - Running transformations: best-practices/running-transformations.md
@@ -28,8 +30,8 @@ nav:
         - Introduction: release-notes/index.md
         - June 2020: release-notes/26062020.md
 plugins:    
-    - search:
-        prebuild_index: true
+    - search
+    - monorepo
 markdown_extensions:
     - admonition
     - codehilite

@@ -1,0 +1,24 @@
+docs_dir: docs
+nav:
+- README: readme.md
+- cape_privacy.pandas:
+  - dtypes: cape_privacy.pandas/dtypes.md
+  - registry: cape_privacy.pandas/registry.md
+  - transformations:
+    - column_redact: cape_privacy.pandas/transformations/column_redact.md
+    - perturbation: cape_privacy.pandas/transformations/perturbation.md
+    - rounding: cape_privacy.pandas/transformations/rounding.md
+    - row_redact: cape_privacy.pandas/transformations/row_redact.md
+    - tokenizer: cape_privacy.pandas/transformations/tokenizer.md
+- cape_privacy.policy:
+  - data: cape_privacy.policy/data.md
+  - policy: cape_privacy.policy/policy.md
+- cape_privacy.spark:
+  - dtypes: cape_privacy.spark/dtypes.md
+  - registry: cape_privacy.spark/registry.md
+  - transformations:
+    - perturbation: cape_privacy.spark/transformations/perturbation.md
+    - redaction: cape_privacy.spark/transformations/redaction.md
+    - rounding: cape_privacy.spark/transformations/rounding.md
+    - tokenizer: cape_privacy.spark/transformations/tokenizer.md
+site_name: pythonv1

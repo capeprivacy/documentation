@@ -1,0 +1,85 @@
+loaders:
+  - type: python
+    search_path: [cape-python]
+processors:
+  - type: filter
+  - type: smart
+renderer:
+  type: mkdocs
+  site_name: pythonv1
+  content_directory_name: docs
+  output_directory: pythonv1
+  clean_render: true
+  pages:
+    - title: README
+      source: 'cape-python/README.md'
+    - title: cape_privacy.pandas
+      children:
+        - title: dtypes
+          contents:
+          - cape_privacy.pandas.dtypes
+          - cape_privacy.pandas.dtypes.*
+        - title: registry
+          contents:
+          - cape_privacy.pandas.registry
+          - cape_privacy.pandas.registry.*
+        - title: transformations
+          children:
+            - title: column_redact
+              contents:
+              - cape_privacy.pandas.transformations.column_redact
+              - cape_privacy.pandas.transformations.column_redact.*
+            - title: perturbation
+              contents:
+              - cape_privacy.pandas.transformations.perturbation
+              - cape_privacy.pandas.transformations.perturbation.*
+            - title: rounding
+              contents:
+              - cape_privacy.pandas.transformations.rounding
+              - cape_privacy.pandas.transformations.rounding.*
+            - title: row_redact
+              contents:
+              - cape_privacy.pandas.transformations.row_redact
+              - cape_privacy.pandas.transformations.row_redact.*
+            - title: tokenizer
+              contents:
+              - cape_privacy.pandas.transformations.tokenizer
+              - cape_privacy.pandas.transformations.tokenizer.*
+    - title: cape_privacy.policy
+      children:
+        - title: data
+          contents: 
+          - cape_privacy.policy.data
+          - cape_privacy.policy.data.*
+        - title: policy
+          contents: 
+          - cape_privacy.policy.policy
+          - cape_privacy.policy.policy.*
+    - title: cape_privacy.spark
+      children:
+        - title: dtypes
+          contents:
+          - cape_privacy.spark.dtypes
+          - cape_privacy.spark.dtypes.*
+        - title: registry
+          contents:
+          - cape_privacy.spark.registry
+          - cape_privacy.spark.registry.*
+        - title: transformations
+          children:
+            - title: perturbation
+              contents:
+              - cape_privacy.spark.transformations.perturbation
+              - cape_privacy.spark.transformations.perturbation.*
+            - title: redaction
+              contents:
+              - cape_privacy.spark.transformations.redaction
+              - cape_privacy.spark.transformations.redaction.*
+            - title: rounding
+              contents:
+              - cape_privacy.spark.transformations.rounding
+              - cape_privacy.spark.transformations.rounding.*
+            - title: tokenizer
+              contents:
+              - cape_privacy.spark.transformations.tokenizer
+              - cape_privacy.spark.transformations.tokenizer.*
