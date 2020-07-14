@@ -1,7 +1,7 @@
-<a name=".cape_privacy.pandas.registr"></a>
-# cape\_privacy.pandas.registr
+<a name="cape_privacy.pandas.registry"></a>
+# cape\_privacy.pandas.registry
 
-<a name=".cape_privacy.pandas.registr.get"></a>
+<a name="cape_privacy.pandas.registry.get"></a>
 #### get
 
 ```python
@@ -14,7 +14,7 @@ Returns the constructor for the given key.
 
 - `transformation` - The key of transformation to retrieve.
 
-<a name=".cape_privacy.pandas.registr.register"></a>
+<a name="cape_privacy.pandas.registry.register"></a>
 #### register
 
 ```python
@@ -27,7 +27,4 @@ Registers a new transformation constructor under the label provided.
 
 - `label` - The label that will be used as the key in the registry
 - `ctor` - The transformation constructor
-
-<a name=".cape_privacy.pandas.registry_test"></a>
-# cape\_privacy.pandas.registry\_test
 

@@ -1,12 +1,11 @@
-<a name=".cape_privacy.pandas.transformations.perturbation"></a>
+<a name="cape_privacy.pandas.transformations.perturbation"></a>
 # cape\_privacy.pandas.transformations.perturbation
 
-<a name=".cape_privacy.pandas.transformations.perturbation.NumericPerturbation"></a>
+<a name="cape_privacy.pandas.transformations.perturbation.NumericPerturbation"></a>
 ## NumericPerturbation Objects
 
 ```python
-class NumericPerturbation(base.Transformation):
- |  NumericPerturbation(dtype: dtypes.Numerics, min: Union[int, float], max: Union[int, float], seed: Optional[int] = None)
+class NumericPerturbation(base.Transformation)
 ```
 
 Add uniform random noise to a numeric Pandas series
@@ -15,7 +14,7 @@ Mask a numeric Pandas series by adding uniform random
 noise to each value. The amount of noise is drawn from
 the interval [min, max).
 
-**Examples**:
+**Example**:
 
   ```
   s = pd.Series([0, 1, 2, 3, 4])
@@ -31,12 +30,11 @@ the interval [min, max).
 - `max` _int, float_ - the values generated will be less than max
   seed (int), optional: a seed to initialize the random generator
 
-<a name=".cape_privacy.pandas.transformations.perturbation.DatePerturbation"></a>
+<a name="cape_privacy.pandas.transformations.perturbation.DatePerturbation"></a>
 ## DatePerturbation Objects
 
 ```python
-class DatePerturbation(base.Transformation):
- |  DatePerturbation(frequency: StrTuple, min: IntTuple, max: IntTuple, seed: Optional[int] = None)
+class DatePerturbation(base.Transformation)
 ```
 
 Add uniform random noise to a Pandas series of timestamps
@@ -45,7 +43,7 @@ Mask a Pandas series by adding uniform random noise to the
 specified frequencies of timestamps. The amount of noise for
 each frequency is drawn from the internal [min_freq, max_freq).
 
-**Examples**:
+**Example**:
 
   ```
   s = pd.Series([datetime.date(year=2020, month=2, day=15)])

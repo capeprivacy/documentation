@@ -21,8 +21,8 @@ renderer:
           - cape_privacy.pandas.dtypes.*
         - title: registry
           contents:
-          - cape_privacy.pandas.registr*
-          - cape_privacy.pandas.registr*.*
+          - cape_privacy.pandas.registry
+          - cape_privacy.pandas.registry.*
         - title: transformations
           children:
             - title: column_redact
@@ -49,12 +49,12 @@ renderer:
       children:
         - title: data
           contents: 
-          - cape_privacy.polic*.data
-          - cape_privacy.polic*.data.*
+          - cape_privacy.policy.data
+          - cape_privacy.policy.data.*
         - title: policy
           contents: 
-          - cape_privacy.polic*.polic*
-          - cape_privacy.polic*.polic*.*
+          - cape_privacy.policy.policy
+          - cape_privacy.policy.policy.*
     - title: cape_privacy.spark
       children:
         - title: dtypes
@@ -63,8 +63,8 @@ renderer:
           - cape_privacy.spark.dtypes.*
         - title: registry
           contents:
-          - cape_privacy.spark.registr*
-          - cape_privacy.spark.registr*.*
+          - cape_privacy.spark.registry
+          - cape_privacy.spark.registry.*
         - title: transformations
           children:
             - title: perturbation

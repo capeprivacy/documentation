@@ -1,12 +1,11 @@
-<a name=".cape_privacy.pandas.transformations.row_redact"></a>
+<a name="cape_privacy.pandas.transformations.row_redact"></a>
 # cape\_privacy.pandas.transformations.row\_redact
 
-<a name=".cape_privacy.pandas.transformations.row_redact.RowRedact"></a>
+<a name="cape_privacy.pandas.transformations.row_redact.RowRedact"></a>
 ## RowRedact Objects
 
 ```python
-class RowRedact():
- |  RowRedact(condition: str) -> None
+class RowRedact()
 ```
 
 Redacts rows based on the condition.
@@ -15,7 +14,7 @@ Redacts rows based on the condition.
 
 - `condition` - The condition to be passed into the query function.
 
-<a name=".cape_privacy.pandas.transformations.row_redact.RowRedact.__call__"></a>
+<a name="cape_privacy.pandas.transformations.row_redact.RowRedact.__call__"></a>
 #### \_\_call\_\_
 
 ```python

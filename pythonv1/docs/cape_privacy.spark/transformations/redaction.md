@@ -1,12 +1,11 @@
-<a name=".cape_privacy.spark.transformations.redaction"></a>
+<a name="cape_privacy.spark.transformations.redaction"></a>
 # cape\_privacy.spark.transformations.redaction
 
-<a name=".cape_privacy.spark.transformations.redaction.ColumnRedact"></a>
+<a name="cape_privacy.spark.transformations.redaction.ColumnRedact"></a>
 ## ColumnRedact Objects
 
 ```python
-class ColumnRedact():
- |  ColumnRedact(columns: List[str])
+class ColumnRedact()
 ```
 
 Redacts columns from a Spark dataframe.
@@ -15,12 +14,11 @@ Redacts columns from a Spark dataframe.
 
 - `columns` - Which columns are redacted.
 
-<a name=".cape_privacy.spark.transformations.redaction.RowRedact"></a>
+<a name="cape_privacy.spark.transformations.redaction.RowRedact"></a>
 ## RowRedact Objects
 
 ```python
-class RowRedact():
- |  RowRedact(condition: str)
+class RowRedact()
 ```
 
 Redacts rows satisfying some condition from a Spark DataFrame.

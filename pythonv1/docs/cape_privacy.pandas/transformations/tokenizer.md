@@ -1,12 +1,11 @@
-<a name=".cape_privacy.pandas.transformations.tokenizer"></a>
+<a name="cape_privacy.pandas.transformations.tokenizer"></a>
 # cape\_privacy.pandas.transformations.tokenizer
 
-<a name=".cape_privacy.pandas.transformations.tokenizer.Tokenizer"></a>
+<a name="cape_privacy.pandas.transformations.tokenizer.Tokenizer"></a>
 ## Tokenizer Objects
 
 ```python
-class Tokenizer(base.Transformation):
- |  Tokenizer(max_token_len: int = None, key: str = None)
+class Tokenizer(base.Transformation)
 ```
 
 Tokenizer: map a string to a token to obfuscate it.
@@ -18,7 +17,7 @@ get mapped to the same token in order to maintain the count.
 A value can be mapped to different tokens by setting the key to a
 different value.
 
-**Examples**:
+**Example**:
 
   ```
   s = pd.Series(['A'])
@@ -34,7 +33,7 @@ different value.
 - `key` - expect a string or byte string. if not specified, key will
   be set to a random byte string.
 
-<a name=".cape_privacy.pandas.transformations.tokenizer.Tokenizer.__call__"></a>
+<a name="cape_privacy.pandas.transformations.tokenizer.Tokenizer.__call__"></a>
 #### \_\_call\_\_
 
 ```python

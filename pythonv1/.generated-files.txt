@@ -1,0 +1,17 @@
+md5 4d0d198488d395ccf4d41dbeb433c3df docs\readme.md
+md5 f4352898f1c05470e965de0d258d2ed8 docs\cape_privacy.pandas\dtypes.md
+md5 31274fc1c44bf4b6139f7ee8fecd9a25 docs\cape_privacy.pandas\registry.md
+md5 05a2d0db9855b8b5677b0975f65464c7 docs\cape_privacy.pandas\transformations\column_redact.md
+md5 4ab3301b5f4bc01c69ba75d0fd1ece5e docs\cape_privacy.pandas\transformations\perturbation.md
+md5 757798b15aba12736fd776410d7d4b10 docs\cape_privacy.pandas\transformations\rounding.md
+md5 08bc98f5b040982a462bbec2b19a9352 docs\cape_privacy.pandas\transformations\row_redact.md
+md5 9b5843756fcd92f269424bb816095207 docs\cape_privacy.pandas\transformations\tokenizer.md
+md5 48203578996b473daeb1c6db185cd1a3 docs\cape_privacy.policy\data.md
+md5 b2017c72612577e17af7fa30c62603d9 docs\cape_privacy.policy\policy.md
+md5 a7b3fcea608c542a5c33b3a377dad230 docs\cape_privacy.spark\dtypes.md
+md5 3a129004fef3a31dd75c71a9eb0a2365 docs\cape_privacy.spark\registry.md
+md5 da5bd9544bf598df1a6362c72e74aae8 docs\cape_privacy.spark\transformations\perturbation.md
+md5 efd6d80b240ffe4c69f72ef48197dc82 docs\cape_privacy.spark\transformations\redaction.md
+md5 dea3bb6fbf27f013ddae80802586b4d6 docs\cape_privacy.spark\transformations\rounding.md
+md5 a8e503913ea32993dbee3f5454b38497 docs\cape_privacy.spark\transformations\tokenizer.md
+md5 fddb8eedfca6ee4b4ca446644f645807 mkdocs.yml

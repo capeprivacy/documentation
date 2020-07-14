@@ -1,12 +1,11 @@
-<a name=".cape_privacy.spark.transformations.perturbation"></a>
+<a name="cape_privacy.spark.transformations.perturbation"></a>
 # cape\_privacy.spark.transformations.perturbation
 
-<a name=".cape_privacy.spark.transformations.perturbation.NumericPerturbation"></a>
+<a name="cape_privacy.spark.transformations.perturbation.NumericPerturbation"></a>
 ## NumericPerturbation Objects
 
 ```python
-class NumericPerturbation(base.Transformation):
- |  NumericPerturbation(dtype: dtypes.DType, min: (int, float), max: (int, float), seed: Optional[int] = None)
+class NumericPerturbation(base.Transformation)
 ```
 
 Add uniform random noise to a numeric series
@@ -21,12 +20,11 @@ The amount of noise is drawn from the interval [min, max).
 - `max` _int, float_ - the values generated will be less than max
   seed (int), optional: a seed to initialize the random generator
 
-<a name=".cape_privacy.spark.transformations.perturbation.DatePerturbation"></a>
+<a name="cape_privacy.spark.transformations.perturbation.DatePerturbation"></a>
 ## DatePerturbation Objects
 
 ```python
-class DatePerturbation(base.Transformation):
- |  DatePerturbation(frequency: StrTuple, min: IntTuple, max: IntTuple)
+class DatePerturbation(base.Transformation)
 ```
 
 Add uniform random noise to a Pandas series of timestamps

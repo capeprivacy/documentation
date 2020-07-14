@@ -1,7 +1,7 @@
-<a name=".cape_privacy.spark.registr"></a>
-# cape\_privacy.spark.registr
+<a name="cape_privacy.spark.registry"></a>
+# cape\_privacy.spark.registry
 
-<a name=".cape_privacy.spark.registr.get"></a>
+<a name="cape_privacy.spark.registry.get"></a>
 #### get
 
 ```python
@@ -14,7 +14,7 @@ Returns the constructor for the given key.
 
 - `transformation` - The key of transformation to retrieve.
 
-<a name=".cape_privacy.spark.registr.register"></a>
+<a name="cape_privacy.spark.registry.register"></a>
 #### register
 
 ```python
@@ -27,7 +27,4 @@ Registers a new transformation constructor under the label provided.
 
 - `label` - The label that will be used as the key in the registry
 - `ctor` - The transformation constructor
-
-<a name=".cape_privacy.spark.registry_test"></a>
-# cape\_privacy.spark.registry\_test
 

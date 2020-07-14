@@ -1,12 +1,11 @@
-<a name=".cape_privacy.spark.transformations.tokenizer"></a>
+<a name="cape_privacy.spark.transformations.tokenizer"></a>
 # cape\_privacy.spark.transformations.tokenizer
 
-<a name=".cape_privacy.spark.transformations.tokenizer.Tokenizer"></a>
+<a name="cape_privacy.spark.transformations.tokenizer.Tokenizer"></a>
 ## Tokenizer Objects
 
 ```python
-class Tokenizer(base.Transformation):
- |  Tokenizer(max_token_len=None, key=None)
+class Tokenizer(base.Transformation)
 ```
 
 Tokenizer: map a string to a token to obfuscate it.

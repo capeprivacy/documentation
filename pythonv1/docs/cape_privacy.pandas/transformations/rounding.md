@@ -1,12 +1,11 @@
-<a name=".cape_privacy.pandas.transformations.rounding"></a>
+<a name="cape_privacy.pandas.transformations.rounding"></a>
 # cape\_privacy.pandas.transformations.rounding
 
-<a name=".cape_privacy.pandas.transformations.rounding.NumericRounding"></a>
+<a name="cape_privacy.pandas.transformations.rounding.NumericRounding"></a>
 ## NumericRounding Objects
 
 ```python
-class NumericRounding(base.Transformation):
- |  NumericRounding(dtype: dtypes.Numerics, precision: int)
+class NumericRounding(base.Transformation)
 ```
 
 Reduce the precision of a numeric Pandas Series
@@ -14,7 +13,7 @@ Reduce the precision of a numeric Pandas Series
 Round each value in the Pandas Series to the given number
 of digits.
 
-**Examples**:
+**Example**:
 
   ```
   s = pd.Series([1.384])
@@ -28,7 +27,7 @@ of digits.
 - `dtypes` _dtypes.Numerics_ - Pandas Series type.
 - `precision` _int_ - set the number of digits.
 
-<a name=".cape_privacy.pandas.transformations.rounding.NumericRounding.__call__"></a>
+<a name="cape_privacy.pandas.transformations.rounding.NumericRounding.__call__"></a>
 #### \_\_call\_\_
 
 ```python
@@ -46,19 +45,18 @@ Round each value in the Pandas Series
 
   A Pandas Series with each value rounded
 
-<a name=".cape_privacy.pandas.transformations.rounding.DateTruncation"></a>
+<a name="cape_privacy.pandas.transformations.rounding.DateTruncation"></a>
 ## DateTruncation Objects
 
 ```python
-class DateTruncation(base.Transformation):
- |  DateTruncation(frequency: str)
+class DateTruncation(base.Transformation)
 ```
 
 Reduce the precision of a date Pandas Series
 Truncate each date in a Pandas Series to the unit (year
 or month) specified by frequency.
 
-**Examples**:
+**Example**:
 
   ```
   s = pd.Series([pd.Timestamp("2018-10-15")])

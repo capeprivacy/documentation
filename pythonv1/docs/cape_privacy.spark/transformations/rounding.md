@@ -1,12 +1,11 @@
-<a name=".cape_privacy.spark.transformations.rounding"></a>
+<a name="cape_privacy.spark.transformations.rounding"></a>
 # cape\_privacy.spark.transformations.rounding
 
-<a name=".cape_privacy.spark.transformations.rounding.NumericRounding"></a>
+<a name="cape_privacy.spark.transformations.rounding.NumericRounding"></a>
 ## NumericRounding Objects
 
 ```python
-class NumericRounding(base.Transformation):
- |  NumericRounding(dtype: dtypes.DType, precision: int)
+class NumericRounding(base.Transformation)
 ```
 
 Reduce the precision of a numeric series
@@ -19,12 +18,11 @@ of digits.
 - `dtypes` _dtypes.Numerics_ - series type.
 - `precision` _int_ - set the number of digits.
 
-<a name=".cape_privacy.spark.transformations.rounding.DateTruncation"></a>
+<a name="cape_privacy.spark.transformations.rounding.DateTruncation"></a>
 ## DateTruncation Objects
 
 ```python
-class DateTruncation(base.Transformation):
- |  DateTruncation(frequency: str)
+class DateTruncation(base.Transformation)
 ```
 
 Reduce the precision of a date series

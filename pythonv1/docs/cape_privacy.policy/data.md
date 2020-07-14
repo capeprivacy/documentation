@@ -1,5 +1,5 @@
-<a name=".cape_privacy.polic.data"></a>
-# cape\_privacy.polic.data
+<a name="cape_privacy.policy.data"></a>
+# cape\_privacy.policy.data
 
 Contains the policy classes that are initialized from a yaml policy file.
 
@@ -16,12 +16,11 @@ contain Transformations.
     # passes them in has keyword arguments.
     policy = Policy(**d)
 
-<a name=".cape_privacy.polic.data.Transform"></a>
+<a name="cape_privacy.policy.data.Transform"></a>
 ## Transform Objects
 
 ```python
-class Transform():
- |  Transform(field, name=None, type=None, **kwargs)
+class Transform()
 ```
 
 A actual transform that will be applied.
@@ -37,12 +36,11 @@ transform will look at both function and named and apply the relevant one.
 - `type` - The builtin transform that will be initialized.
 - `kwargs` - The rest of the arguments that will be passed to the transformation.
 
-<a name=".cape_privacy.polic.data.Rule"></a>
+<a name="cape_privacy.policy.data.Rule"></a>
 ## Rule Objects
 
 ```python
-class Rule():
- |  Rule(match, actions=[])
+class Rule()
 ```
 
 A rule contains actionable information of a policy.
@@ -52,12 +50,11 @@ A rule contains actionable information of a policy.
 - `match` - The match used to select a field to be transformed.
 - `actions` - The actions to take on a matched field.
 
-<a name=".cape_privacy.polic.data.NamedTransform"></a>
+<a name="cape_privacy.policy.data.NamedTransform"></a>
 ## NamedTransform Objects
 
 ```python
-class NamedTransform():
- |  NamedTransform(name, type, **kwargs)
+class NamedTransform()
 ```
 
 A named transformation that captures the args.
@@ -68,12 +65,11 @@ A named transformation that captures the args.
 - `type` - The builtin type (i.e. transform) that the named transform initializes to.
 - `kwargs` - The args that are captured by the named transform.
 
-<a name=".cape_privacy.polic.data.Policy"></a>
+<a name="cape_privacy.policy.data.Policy"></a>
 ## Policy Objects
 
 ```python
-class Policy():
- |  Policy(label: str, version: int = 1, rules: List[Rule] = [], transformations: List[NamedTransform] = [])
+class Policy()
 ```
 
 Top level policy object.

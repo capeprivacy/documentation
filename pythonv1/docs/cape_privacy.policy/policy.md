@@ -1,25 +1,5 @@
-<a name=".cape_privacy.polic.data.Policy"></a>
-## Policy Objects
-
-```python
-class Policy():
- |  Policy(label: str, version: int = 1, rules: List[Rule] = [], transformations: List[NamedTransform] = [])
-```
-
-Top level policy object.
-
-The top level policy object holds the all of the relevant information
-for applying policy to data.
-
-**Attributes**:
-
-- `label` - The label of the policy.
-- `version` - The version of the policy.
-- `rules` - List of rules that will be applied to a data frame.
-- `transformations` - The named transformations for this policy.
-
-<a name=".cape_privacy.polic.polic"></a>
-# cape\_privacy.polic.polic
+<a name="cape_privacy.policy.policy"></a>
+# cape\_privacy.policy.policy
 
 Utils for parsing policy and applying them.
 
@@ -51,7 +31,7 @@ Applying policy:
     df = pd.DataFrame(np.ones(5,), columns=["value"])
     df = apply_policy(policy, df)
 
-<a name=".cape_privacy.polic.polic.apply_policy"></a>
+<a name="cape_privacy.policy.policy.apply_policy"></a>
 #### apply\_policy
 
 ```python
@@ -83,7 +63,7 @@ DataFrame that conforms to the Policy.
   a Transformation or NamedTransformation that is unrecognized in the
   Transformation registry.
 
-<a name=".cape_privacy.polic.polic.parse_policy"></a>
+<a name="cape_privacy.policy.policy.parse_policy"></a>
 #### parse\_policy
 
 ```python
@@ -103,10 +83,4 @@ a URL pointing to a file. If it is a URL then requests attempts to download it.
 **Returns**:
 
   The Policy object initialized by the yaml.
-
-<a name=".cape_privacy.polic.policy_test"></a>
-# cape\_privacy.polic.policy\_test
-
-<a name=".cape_privacy.polic.policy_test_fixtures"></a>
-# cape\_privacy.polic.policy\_test\_fixtures
 
