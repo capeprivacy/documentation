@@ -14,6 +14,10 @@ theme:
         primary: white
 nav:
     - Home: index.md
+    - Cape:
+        - Overview: cape-core/index.md
+        - Installation: cape-core/installation.md
+        - CLI reference: cape-core/cli.md
     - Libraries: 
         - Introduction: libraries/index.md
         - Cape Python:
