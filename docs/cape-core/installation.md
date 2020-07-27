@@ -24,7 +24,7 @@ Before you deploy Cape Coordinator, you will need:
 # helm repo add cape https://capeprivacy-charts.storage.googleapis.com/
 ```
 
-### Install the helm chart
+### Install the Helm Chart
 
 To install Cape Coordinator using the default values, use the following helm command:
 
@@ -90,4 +90,3 @@ To delete the deployment and its history:
 ```shell
 helm delete --purge cape-coordinator
 ```
-
