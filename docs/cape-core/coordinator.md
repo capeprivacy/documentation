@@ -1,43 +1,45 @@
-# Installation guide
+# Install Cape Coordinator
+
+This document describes how to deploy Cape Coordinator to Kubernetes. It assumes you are familiar with Kubernetes and Helm, and can configure your deployment environment.
 
 ## Prerequisites
 
-Before you deploy Cape Coordinator, you will need:
+To deploy Cape Coordinator, you need:
 
-* a kubernetes cluster
-* a functioning helm installation
-* a postgres database
+* A Kubernetes cluster (1.16+)
+* A Helm installation (3.0+)
+* A PostgreSQL database (11.0+)
 
-> If you don't already have an environment to deploy Cape into, check out these guides to set up
+> If you don't already have an environment to deploy Cape Coordinator into, refer to these guides to set up
 > a local testing environment:
 >
 > - Kubernetes-in-Docker (Quick Start)[https://kind.sigs.k8s.io/docs/user/quick-start/]
 > - Helm: (Quickstart Guide)[https://helm.sh/docs/intro/quickstart/]
 > - PostgreSQL: (Bitnami Helm Chart)[https://github.com/bitnami/charts/tree/master/bitnami/postgresql#installing-the-chart]
 
-## Installing Cape via Helm
+## Installing Cape Coordinator with Helm
 
-### Add the Cape Helm Charts repository
+### Add the Cape Helm charts repository
 
-```bash
-# helm repo remove cape
-# helm repo add cape https://capeprivacy-charts.storage.googleapis.com/
+```shell
+helm repo remove cape
+helm repo add cape https://capeprivacy-charts.storage.googleapis.com/
 ```
 
-### Install the Helm Chart
+### Install the Helm chart
 
 To install Cape Coordinator using the default values, use the following `helm` command:
 
-```bash
-# helm install cape-coordinator cape/coordinator
+```shell
+helm install cape-coordinator cape/coordinator
 ```
 
-The helm chart supports many options that allow you to customize the Cape Coordinator deployment to suit your environment. For more information about these option, see the Configuration section below.
+The Helm chart supports many options that allow you to customize the Cape Coordinator deployment to suit your environment. For more information about these options, refer to [Configuration](#configuration).
 
 ## Configuration
 
 The following table lists common configurable parameters of the chart and
-their default values. See values.yaml for all available options.
+their default values. See `values.yaml` for all available options.
 
 |       Parameter                        |           Description                                                                                                                   |                         Default                                             |
 |----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|

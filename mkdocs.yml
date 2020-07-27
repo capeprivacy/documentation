@@ -14,10 +14,11 @@ theme:
         primary: white
 nav:
     - Home: index.md
-    - Cape:
+    - Cape Core:
         - Overview: cape-core/index.md
-        - Installation: cape-core/installation.md
-        - CLI reference: cape-core/cli.md
+        - Coordinator: cape-core/coordinator.md
+        - CLI installation: cape-core/cli-install.md
+        - CLI usage: cape-core/cli-usage.md
     - Libraries: 
         - Introduction: libraries/index.md
         - Cape Python:
@@ -32,6 +33,7 @@ nav:
         - Running transformations: best-practices/running-transformations.md
     - Release notes:
         - Introduction: release-notes/index.md
+        - July 2020: release-notes/30072020.md
         - June 2020: release-notes/26062020.md
 plugins:    
     - search
