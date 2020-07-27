@@ -14,8 +14,11 @@ theme:
         primary: white
 nav:
     - Home: index.md
+    - Understand Cape:
+        - Introduction: understand/index.md
+        - Workflow: understand/workflow.md
     - Cape Core:
-        - Overview: cape-core/index.md
+        - Introduction: cape-core/index.md
         - Coordinator: cape-core/coordinator.md
         - CLI installation: cape-core/cli-install.md
         - CLI usage: cape-core/cli-usage.md
