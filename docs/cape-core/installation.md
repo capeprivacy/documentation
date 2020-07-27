@@ -26,7 +26,7 @@ Before you deploy Cape Coordinator, you will need:
 
 ### Install the Helm Chart
 
-To install Cape Coordinator using the default values, use the following helm command:
+To install Cape Coordinator using the default values, use the following `helm` command:
 
 ```bash
 # helm install cape-coordinator cape/coordinator
