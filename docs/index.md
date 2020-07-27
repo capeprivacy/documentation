@@ -4,6 +4,7 @@ Cape Privacy offers data scientists and data engineers a policy-based interface 
 
 This documentation site includes:
 
+* A guide to help you [understand the different elements of Cape Privacy](/understand/), including workflows and architecture.
 * How to install and use [Cape Core](/cape-core/) services and tools.
 * Information on how to use Cape Privacy's [code libraries](/libraries/).
 * [Best practice](/best-practices/) guidance on integrating Cape Privacy into your data workflow.
