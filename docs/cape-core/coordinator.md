@@ -28,24 +28,25 @@ curl -O https://github.com/capeprivacy/cape/releases/download/v0.1.0/capeprivacy
 tar xf capeprivacy-cape-v0.0.1.tgz
 
 # Create the database schema
-cape update /path/to/schema/files/
+CAPE_DB_URL=postgres://postgres:postgrespw@localhost:5432/cape cape update /path/to/schema/files/
 
 # Configure the Cape Coordinator server component
 cape coordinator configure
 ```
 
-Cape will ask you for information about your installation, such as a port and database URL. For this example, use port 8181 and the following db URL: `postgres://cape:capepw@localhost/cape`
+Cape will ask you for information about your installation, such as a port and database URL. For this example, use port 8181 and the following db URL: `postgres://cape:capepw@localhost:5432/cape`
 
 When this process completes, it will create a file called `config.yaml`. You can start the coordinator with this command:
 
 ```shell
-cape coordinator start --file config.yaml
+CAPE_USER_NAME=cape_user CAPE_USER_EMAIL=cape_user@mycape.com CAPE_USER_PASSWORD=capecape cape coordinator start --file config.yaml
 ```
 
 In another terminal, you can now configure the Cape CLI and log into Cape.
 
 ```shell
-cape setup local http://localhost:8181
+cape clusters add local http://localhost:8181
+cape clusters use local
 cape login
 ```
 
