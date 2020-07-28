@@ -8,7 +8,7 @@ This guide walks through an example of using Cape Python with either Pandas or S
 * Cape Privacy recommends using a virtual environment such as [venv](https://docs.python.org/3/library/venv.html).
 
 
-## Installation 
+## Installation
 
 You can install Cape Python with pip:
 
@@ -24,18 +24,18 @@ The data policy file defines the target data and permissions. It is written in Y
 
 Create a `test-policy.yaml` file in your project, with the following content:
 
-```yaml  
+```yaml
 label: test-policy
 version: 1
 rules:
 # Set the column name
-- match: 
+- match:
     name: weight
-    actions:
+  actions:
     - transform:
         # This example shows an unnamed transformation.
         # It tells the policy runner to:
-        # (1) Apply the transformation numeric-rounding 
+        # (1) Apply the transformation numeric-rounding
         # (2) Round to one decimal place
         type: numeric-rounding
         dtype: Double
@@ -53,7 +53,7 @@ Create a `test-transformation.py` file in your project, with the following conte
 === "Pandas"
     ```python
     import cape_privacy as cape
-    import pandas as pd    
+    import pandas as pd
 
     # Create a simple Pandas DataFrame
     df = pd.DataFrame([114.432, 134.622, 142.984], columns=["weight"])
@@ -68,7 +68,7 @@ Create a `test-transformation.py` file in your project, with the following conte
 === "Spark"
     ```python
     import cape_privacy as cape
-    from pyspark import sql    
+    from pyspark import sql
 
     sess_builder = sql.SparkSession.builder
     sess_builder = sess_builder.appName('cape.examples.rounding')
