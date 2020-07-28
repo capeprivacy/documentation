@@ -45,8 +45,8 @@ CAPE_USER_NAME=cape_user CAPE_USER_EMAIL=cape_user@mycape.com CAPE_USER_PASSWORD
 In another terminal, you can now configure the Cape CLI and log into Cape.
 
 ```shell
-cape clusters add local http://localhost:8181
-cape clusters use local
+cape config clusters add local http://localhost:8181
+cape config clusters use local
 cape login
 ```
 
