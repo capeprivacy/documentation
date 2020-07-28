@@ -1,4 +1,64 @@
-# Install Cape Coordinator
+# Install Cape Coordinator via the Command-Line
+
+## Set up Postgres for Cape
+
+On MacOS:
+
+```shell
+# Install Postgres
+brew install postgres
+
+# Create a Cape user
+createuser cape --createdb
+
+# Create a Cape database
+createdb cape -U cape
+```
+
+## Download Cape
+
+```shell
+# Download the Cape binary
+curl -O https://github.com/capeprivacy/cape/releases/download/v0.1.0/capeprivacy-cape-v0.0.1.tgz
+tar xf capeprivacy-cape-v0.0.1.tgz
+chmod +x cape
+
+# Download and extract the database schema files
+curl -O https://github.com/capeprivacy/cape/releases/download/v0.1.0/capeprivacy-cape-postgres-v0.0.1.tgz
+tar xf capeprivacy-cape-v0.0.1.tgz
+
+# Create the database schema
+cape update /path/to/schema/files/
+
+# Configure the Cape Coordinator server component
+cape coordinator configure
+```
+
+Cape will ask you for information about your installation, such as a port and database URL. For this example, use port 8181 and the following db URL: `postgres://cape:capepw@localhost/cape`
+
+When this process completes, it will create a file called `config.yaml`. You can start the coordinator with this command:
+
+```shell
+cape coordinator start --file config.yaml
+```
+
+In another terminal, you can now configure the Cape CLI and log into Cape.
+
+```shell
+cape setup local http://localhost:8181
+cape login
+```
+
+At this point you can begin exploring Cape:
+
+```shell
+cape projects list
+```
+
+For more information about using your Cape installation check out [here](https://link.to/more/amazing/docs).
+
+
+# Install Cape Coordinator via Helm
 
 This document describes how to deploy Cape Coordinator to Kubernetes. It assumes you are familiar with Kubernetes and Helm, and can configure your deployment environment.
 
