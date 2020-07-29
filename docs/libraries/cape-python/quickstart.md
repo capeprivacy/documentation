@@ -95,4 +95,4 @@ python test-transformation.py
 ```
 
 !!! note
-    You can choose where in your workflow to run your transformation scripts. Refer to [Best practices - Running transformations](../../best-practices/running-transformations.md) for guidance.
+    You can choose where in your workflow to run your transformation scripts. Refer to [Best practices - Running transformations](/understand/best-practices/running-transformations.md) for guidance.

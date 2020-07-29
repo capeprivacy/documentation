@@ -1,6 +1,4 @@
-# Cape CLI
-
-## Installation
+#  Cape CLI installation
 
 Binaries are available for Windows 10, Linux and macOS. [Download here](https://github.com/capeprivacy/cape/releases).
 

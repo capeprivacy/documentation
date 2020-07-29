@@ -17,15 +17,21 @@ nav:
     - Understand Cape:
         - Introduction: understand/index.md
         - Architecture: understand/architecture.md
-        - Workflow: understand/workflow.md
+        - Best practices:
+            - Overview: understand/best-practices/index.md
+            - Running transformations: understand/best-practices/running-transformations.md
+        - Support matrix: understand/support.md
+        - Roadmap: understand/roadmap.md
     - Cape Core:
         - Introduction: cape-core/index.md
+        - CLI:
+            - Overview: cape-core/cli/index.md
+            - Installation: cape-core/cli/installation.md
+            - Usage: cape-core/cli/usage.md
         - Coordinator:
             - Overview: cape-core/coordinator/index.md
             - Deploy to Kubernetes: cape-core/coordinator/kubernetes.md
             - Install with the CLI: cape-core/coordinator/local-cli.md
-        - CLI installation: cape-core/cli-install.md
-        - CLI usage: cape-core/cli-usage.md
     - Libraries: 
         - Introduction: libraries/index.md
         - Cape Python:
@@ -36,9 +42,6 @@ nav:
             - Transformations: libraries/cape-python/transformations.md
             - API documentation: 
                 - v1: '!include ./pythonv1/mkdocs.yml'
-    - Best practices:
-        - Introduction: best-practices/index.md
-        - Running transformations: best-practices/running-transformations.md
     - Release notes:
         - Introduction: release-notes/index.md
         - July 2020: release-notes/30072020.md
