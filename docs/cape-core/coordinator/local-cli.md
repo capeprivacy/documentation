@@ -41,12 +41,12 @@ All Windows instructions assume you are using PowerShell.
     3. Do not launch StackBuilder when the installation finishes.
     4. Create a user. When prompted, enter the postgres user password that you created during installation.
     ```shell
-    # Create a user named cape. When prompted, set a password and make a note of it.
+    # Create a user named cape.
     createuser -U postgres --createdb --pwprompt cape
     ```
-    5. Create a database. When prompted, enter the user password you created in the previous step.
-    # Create a database. PostgreSQL will ask for the password you created in the previous step.
+    5. Create a database. When prompted, enter the user password you created in the previous step.     
     ```shell
+    # Create a database.
     createdb -U cape cape
     ```
 
