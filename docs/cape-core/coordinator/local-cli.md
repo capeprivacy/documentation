@@ -6,6 +6,8 @@ This document describes how to install and run Cape Coordinator on your local ma
 
 The following instructions include how to install PostgreSQL with a package manager for Linux and macOS, and using a GUI installer for Windows. For alternative PostgreSQL installation methods, refer to the [PostgreSQL downloads page](https://www.postgresql.org/download/).
 
+All Windows instructions assume you are using PowerShell.
+
 === "Linux"
     ```shell
     # Install PostgreSQL
@@ -31,7 +33,7 @@ The following instructions include how to install PostgreSQL with a package mana
     createdb -U cape cape
     ```
 
-=== "Windows"
+=== "Windows (PowerShell)"
     We recommend using the GUI installer for PostgreSQL on Windows. There is also a [Chocolatey package](https://chocolatey.org/packages/postgresql) available.
 
     1. Download the installer from [PostgreSQL Windows installers](https://www.postgresql.org/download/windows/).
@@ -63,16 +65,25 @@ The following instructions include how to install PostgreSQL with a package mana
     tar xf capeprivacy-cape-postgres-v0.0.1.tgz
 
     # Create the database schema
-    CAPE_DB_URL=postgres://postgres:postgrespw@localhost:5432/cape cape update /path/to/schema/files/
+    CAPE_DB_URL=postgres://postgres:postgrespw@localhost:5432/cape 
+    cape update /path/to/schema/files/
 
     # Configure the Cape Coordinator server component
     cape coordinator configure
     ```
-=== "Windows"
+=== "Windows (PowerShell)"
     1. Download the Windows installer from [Cape releases](https://github.com/capeprivacy/cape/releases).
     2. Unzip the installer.
     3. Copy the unzipped directory to a location of your choice.
     4. Add the directory to your `PATH`. Refer to [Add to Windows PATH environment variable](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/) for help.
+    5. If you are still using the same PowerShell window as in the previous section, run `refreshenv` to load the updated `PATH`.
+    5. Download the database schema files from [TODO]
+    6. Unzip the files.
+    7. Run the following command to set up the database:
+    ```shell
+    $env:CAPE_DB_URL='postgres://postgres:postgrespw@localhost:5432/cape' 
+    cape update path\to\schema\directory
+    ```
 
 Cape asks you for information about your installation. For this example, use port 8181 and the following database URL: `postgres://cape:capepw@localhost:5432/cape`
 

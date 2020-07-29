@@ -12,9 +12,9 @@ To deploy Cape Coordinator, you need:
 
 If you don't already have an environment to deploy Cape Coordinator into, refer to these guides to set up a local testing environment:
 
-* Kubernetes-in-Docker (Quick Start)[https://kind.sigs.k8s.io/docs/user/quick-start/]
-* Helm: (Quickstart Guide)[https://helm.sh/docs/intro/quickstart/]
-* PostgreSQL: (Bitnami Helm Chart)[https://github.com/bitnami/charts/tree/master/bitnami/postgresql#installing-the-chart]
+* Kubernetes-in-Docker [Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start/)
+* Helm: [Quickstart Guide](https://helm.sh/docs/intro/quickstart/)
+* PostgreSQL: [Bitnami Helm Chart](https://github.com/bitnami/charts/tree/master/bitnami/postgresql#installing-the-chart)
 
 
 
