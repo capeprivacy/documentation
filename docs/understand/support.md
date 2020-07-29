@@ -24,7 +24,10 @@ We expect Cape Coordinator to work with the following:
 
 We test against the following:
 
+* Kubernetes 1.18
+* Helm 3.2
 * PostgreSQL 11.7
+
 
 ## Python environments
 
