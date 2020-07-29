@@ -7,10 +7,10 @@ This document provides information about supported operating systems, language v
 We expect Cape Privacy services and libraries to work on:
 
 * Linux (all distros)
-* macOS
+* macOS [TODO: min version?]
 * Windows 10
 
-The following table shows which operating systems we test against:
+We test against the following operating systems:
 
 ## Python environments
 
