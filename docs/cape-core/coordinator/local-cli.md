@@ -82,7 +82,7 @@ All Windows instructions assume you are using PowerShell.
     7. Run the following command to set up the database:
     ```shell
     $env:CAPE_DB_URL='postgres://postgres:postgrespw@localhost:5432/cape' 
-    cape update path\to\schema\directory
+    cape update path\to\schema\directory [TODO: breaks here - resume tomorrow]
     ```
 
 Cape asks you for information about your installation. For this example, use port 8181 and the following database URL: `postgres://cape:capepw@localhost:5432/cape`
