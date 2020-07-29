@@ -10,6 +10,7 @@ Cape Privacy currently offers three components:
 * [Cape Python](/libraries/cape-python/). The first Cape Privacy library to be released, providing Python-based data transformations for Pandas and Apache Spark (PySpark).
 * The [command line interface](/cape-core/cli/). A CLI to allow users to interact with Cape Coordinator.
 
+
 ## Roadmap
 
 More services and libraries are coming soon. Refer to the [roadmap](/understand/roadmap.md) for more information.
