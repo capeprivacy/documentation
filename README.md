@@ -109,7 +109,7 @@ If you need help using Cape, you can:
 * Submit an issue.
 * Talk to us on our [community Slack](https://join.slack.com/t/capecommunity/shared_invite/zt-f8jeskkm-r9_FD0o4LkuQqhJSa~~IQA).
 
-Please file [feature requests](https://github.com/capeprivacy/documentation/issues/new?template=feature_request.md) and 
+Please file documentation [feature requests](https://github.com/capeprivacy/documentation/issues/new?template=feature_request.md) and 
 [bug reports](https://github.com/capeprivacy/documentation/issues/new?template=bug_report.md) as GitHub issues.
 
 ## Community
@@ -119,6 +119,10 @@ Please file [feature requests](https://github.com/capeprivacy/documentation/issu
 ### Contributing
 
 View our [contributing](CONTRIBUTING.md) guide for more information.
+
+### Code of conduct
+
+Our [code of conduct](https://capeprivacy.com/conduct/) is included on the Cape Privacy website. All community members are expected to follow it. Please refer to that page for information on how to report problems.
 
 ## License
 

@@ -20,7 +20,10 @@ nav:
         - Workflow: understand/workflow.md
     - Cape Core:
         - Introduction: cape-core/index.md
-        - Coordinator: cape-core/coordinator.md
+        - Coordinator:
+            - Overview: cape-core/coordinator/index.md
+            - Deploy to Kubernetes: cape-core/coordinator/kubernetes.md
+            - Install with the CLI: cape-core/coordinator/local-cli.md
         - CLI installation: cape-core/cli-install.md
         - CLI usage: cape-core/cli-usage.md
     - Libraries: 
@@ -28,6 +31,7 @@ nav:
         - Cape Python:
             - Overview: libraries/cape-python/index.md
             - Quickstart: libraries/cape-python/quickstart.md
+            - Coordinator quickstart: libraries/cape-python/coordinator-quickstart.md
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
             - API documentation: 

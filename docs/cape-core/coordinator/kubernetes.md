@@ -1,4 +1,4 @@
-# Install Cape Coordinator
+# Install Cape Coordinator with Helm
 
 This document describes how to deploy Cape Coordinator to Kubernetes. It assumes you are familiar with Kubernetes and Helm, and can configure your deployment environment.
 
@@ -10,23 +10,22 @@ To deploy Cape Coordinator, you need:
 * A Helm installation (3.0+)
 * A PostgreSQL database (11.0+)
 
-> If you don't already have an environment to deploy Cape Coordinator into, refer to these guides to set up
-> a local testing environment:
->
-> - Kubernetes-in-Docker (Quick Start)[https://kind.sigs.k8s.io/docs/user/quick-start/]
-> - Helm: (Quickstart Guide)[https://helm.sh/docs/intro/quickstart/]
-> - PostgreSQL: (Bitnami Helm Chart)[https://github.com/bitnami/charts/tree/master/bitnami/postgresql#installing-the-chart]
+If you don't already have an environment to deploy Cape Coordinator into, refer to these guides to set up a local testing environment:
 
-## Installing Cape Coordinator with Helm
+* Kubernetes-in-Docker (Quick Start)[https://kind.sigs.k8s.io/docs/user/quick-start/]
+* Helm: (Quickstart Guide)[https://helm.sh/docs/intro/quickstart/]
+* PostgreSQL: (Bitnami Helm Chart)[https://github.com/bitnami/charts/tree/master/bitnami/postgresql#installing-the-chart]
 
-### Add the Cape Helm charts repository
+
+
+## Add the Cape Helm charts repository
 
 ```shell
 helm repo remove cape
 helm repo add cape https://capeprivacy-charts.storage.googleapis.com/
 ```
 
-### Install the Helm chart
+## Install the Helm chart
 
 To install Cape Coordinator using the default values, use the following `helm` command:
 
@@ -81,7 +80,7 @@ their default values. See `values.yaml` for all available options.
 
 Specify each parameter using the `--set[-file] key=value[,key=value]` argument to `helm install`.
 
-## Uninstallation
+## Uninstall
 
 ```shell
 helm delete cape-coordinator
