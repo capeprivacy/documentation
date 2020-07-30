@@ -1,6 +1,6 @@
 # Cape CLI
 
-This section includes an [installation guide](/cape-core/cli/installation/) and [usage guide](/cape-core/cli/usage/) for Cape CLI.
+This section includes an [installation guide](/cape-core/cli/installation/), [usage examples](/cape-core/cli/usage/), and a [reference](/cape-core/cli/reference/) for Cape CLI.
 
 ## About Cape CLI
 

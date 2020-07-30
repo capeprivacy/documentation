@@ -32,6 +32,7 @@ nav:
             - Overview: understand/best-practices/index.md
             - Running transformations: understand/best-practices/running-transformations.md
         - Support matrix: understand/support.md
+        - User roles: understand/user-roles.md
         - Roadmap: understand/roadmap.md
     - Cape Core:
         - Introduction: cape-core/index.md
