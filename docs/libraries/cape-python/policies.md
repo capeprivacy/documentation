@@ -1,6 +1,6 @@
 # Policies
 
-The data policy defines the data you want to change, and the [transformations](transformations.md) you want to apply.
+The data policy defines the data you want to change, and the [transformations](/libraries/cape-python/transformations/) or [redactions](/libraries/cape-python/redactions/) you want to apply.
 
 Cape Python requires data policies in YAML format. This example describes all the available YAML objects:
 

@@ -25,20 +25,44 @@ extra:
       link: https://github.com/capeprivacy
 nav:
     - Home: index.md
+    - Understand Cape:
+        - Introduction: understand/index.md
+        - Architecture: understand/architecture.md
+        - Best practices:
+            - Overview: understand/best-practices/index.md
+            - Running transformations: understand/best-practices/running-transformations.md
+        - Support matrix: understand/support.md
+        - User roles: understand/user-roles.md
+        - Roadmap: understand/roadmap.md
+    - Cape Core:
+        - Introduction: cape-core/index.md
+        - CLI:
+            - Overview: cape-core/cli/index.md
+            - Installation: cape-core/cli/installation.md
+            - Usage: 
+                - Introduction: cape-core/cli/usage/index.md
+                - Create a user: cape-core/cli/usage/create-user.md
+                - Create a project: cape-core/cli/usage/create-project.md
+                - Add a policy: cape-core/cli/usage/add-policy.md
+                - Suggest policy change:  cape-core/cli/usage/suggest-policy.md
+        - Coordinator:
+            - Overview: cape-core/coordinator/index.md
+            - Deploy to Kubernetes: cape-core/coordinator/kubernetes.md
+            - Install with the CLI: cape-core/coordinator/local-cli.md
     - Libraries: 
         - Introduction: libraries/index.md
         - Cape Python:
             - Overview: libraries/cape-python/index.md
             - Quickstart: libraries/cape-python/quickstart.md
+            - Coordinator quickstart: libraries/cape-python/coordinator-quickstart.md
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
+            - Redactions: libraries/cape-python/redactions.md
             - API documentation: 
                 - v1: '!include ./pythonv1/mkdocs.yml'
-    - Best practices:
-        - Introduction: best-practices/index.md
-        - Running transformations: best-practices/running-transformations.md
     - Release notes:
         - Introduction: release-notes/index.md
+        - July 2020: release-notes/30072020.md
         - June 2020: release-notes/26062020.md
 plugins:    
     - search

@@ -2,117 +2,36 @@
 
 View the documentation: http://docs.capeprivacy.com
 
-## Run the docs locally - quickstart
+For information on running the docs locally, contributing to the docs, and details about the docs tooling, refer to [Contributing](./CONTRIBUTING.md).
 
-Prerequisites:
+## About Cape Privacy
 
-* git
-* Python 64bit (currently using 3.7 due to [Netlify limitations](https://github.com/netlify/build-image/blob/xenial/included_software.md)).
-* pip
-* venv
+[Cape Privacy](https://capeprivacy.com) helps teams share data and make decisions for safer and more powerful data science. Learn more at [capeprivacy.com](https://capeprivacy.com).
 
-1. Clone this repo:
+## Help and resources
 
-```
-git clone https://github.com/capeprivacy/documentation.git
-```
+If you need help using Cape, you can:
 
-2. In the `documentation` directory, create a virtual environment with [venv](https://docs.python.org/3/library/venv.html#module-venv):
+* View the [documentation](https://docs.capeprivacy.com/).
+* Submit an issue.
+* Talk to us on our [community Slack](https://join.slack.com/t/capecommunity/shared_invite/zt-f8jeskkm-r9_FD0o4LkuQqhJSa~~IQA).
 
-```
-python -m venv ./venv
-```
+Please file documentation [feature requests](https://github.com/capeprivacy/documentation/issues/new?template=feature_request.md) and 
+[bug reports](https://github.com/capeprivacy/documentation/issues/new?template=bug_report.md) as GitHub issues.
 
-3. Activate the virtual environment. The exact command depends on your shell:
+## Community
 
-```
-# Powershell
-./venv/Scripts/activate.ps1
+Some of our documentation contributors:
 
-# Bash
-. venv/Scripts/activate
-```
+[![](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/images/0)](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/links/0)[![](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/images/1)](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/links/1)[![](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/images/2)](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/links/2)[![](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/images/3)](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/links/3)[![](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/images/4)](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/links/4)[![](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/images/5)](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/links/5)[![](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/images/6)](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/links/6)[![](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/images/7)](https://sourcerer.io/fame/justin1121/capeprivacy/documentation/links/7)
 
-4. Install the [Material theme](https://squidfunk.github.io/mkdocs-material/), [MkDocs](https://www.mkdocs.org/) and [Pydoc-markdown](https://github.com/NiklasRosenstein/pydoc-markdown):
+### Contributing
 
-```
-pip install -r requirements.txt
-```
+View our [contributing](CONTRIBUTING.md) guide for more information.
 
-5. To view the docs locally:
+### Code of conduct
 
-```
-mkdocs serve
-```
-
-You can now view the docs at `localhost:8080`. 
-
-Note that this does not autogenerate the latest code documentation. Refer to [Understand the docs tooling](#understand-the-docs-tooling) for detailed information on the documentation setup, and [Contribute to the docs](#contribute-to-the-docs) for the steps to edit and add content.
-
-## Contribute to the docs
-
-This section describes how to edit the handwritten docs website content.
-
-The main branch is live. All work should happen on another branch.
-
-1. Follow steps 1-4 from [Run the docs locally](#run-the-docs-locally). Before editing, create a new branch:
-
-```
-git branch -b <branchName>
-```
-
-2. Make your edits.
-
-3. Ensure you have the latest content from the code repos:
-
-```
-# Run this in `/documentation`, using a Bash shell. If you are on Windows, you can use Git Bash.
-
-./cpdocs.sh
-```
-
-> **Note:** if there are new files, or names have changed, you must update `pydoc-markdown.yaml`.
-
-4. Push your branch:
-
-```
-git add *
-git commit -m "Describe your changes"
-git push --set-upstream origin <branchName>
-```
-
-5. Submit a pull request. Netlify automatically builds a demo of the site with your changes. Select **Details** next to **netlify/cp-docs-demo/deploy-preview** to view the demo. Try to have someone else review your work before merging.
-
-5. Merge the pull request. Netlify automatically detects changes to the main branch and rebuilds and redeploys the live documentation site.
-
-
-## Style and tone
-
-* American English
-* UI elements are bold
-* We are writing for data scientists. Be clear. Be formal.
-* Cape Privacy is singular
-* Headings should be sentence case
-* Avoid passive voice and weasel words.
-
-## Understand the docs tooling
-
-This section provides background information on the project setup and tooling. For instructions on how to contribute and run the docs site, refer to [Contribute to the docs](#contribute-to-the-docs).
-
-> **Note:** the `cpdocs.sh` script assembles all the components described here. Most of the time you can just run this script. However, if you need to change the setup, use this section to understand how the components work together.
-
-The documentation website comprises:
-
-* Content written in Markdown, in the documentation repository. This includes most of the introductory material, best practices guides, and similar. 
-* Content written as code comments or docstrings in the Cape Privacy code. To include this in the website, we use git submodules, a tool for each language to generate markdown from code comments, and a Bash script to bring everything together.
-
-
-
-### Cape Python autogeneration
-
-1. The [Cape Python](https://github.com/capeprivacy/cape-python) repo is a submodule in this project. 
-2. We use [Pydoc-markdown](https://github.com/NiklasRosenstein/pydoc-markdown) to generate Markdown files from the Cape Python docstrings. Use `pydoc-markdown.yml` to configure the tool, and set up the navigation.
-3. The [Monorepo](https://github.com/spotify/mkdocs-monorepo-plugin) plugin allows us to include the site generated by Pydoc-markdown in our docs site. This is configured in the main `mkdocs.yml`.
+Our [code of conduct](https://capeprivacy.com/conduct/) is included on the Cape Privacy website. All community members are expected to follow it. Please refer to that page for information on how to report problems.
 
 ## License
 
