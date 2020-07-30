@@ -39,7 +39,9 @@ nav:
         - CLI:
             - Overview: cape-core/cli/index.md
             - Installation: cape-core/cli/installation.md
-            - Usage: cape-core/cli/usage.md
+            - Usage: 
+                - Introduction: cape-core/cli/usage/index.md
+                - Suggest policy change:  cape-core/cli/usage/suggest-policy.md
         - Coordinator:
             - Overview: cape-core/coordinator/index.md
             - Deploy to Kubernetes: cape-core/coordinator/kubernetes.md
