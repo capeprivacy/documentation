@@ -53,11 +53,11 @@ All Windows instructions assume you are using PowerShell.
 
 ## Download and set up Cape Coordinator
 
-=== "MacOS"
+=== "Linux"
     ```shell
     # Download the Cape binary
-    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Darwin_x86_64.tar.gz
-    tar xf cape_0.0.1_Darwin_x86_64.tar.gz
+    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Linux_x86_64.tar.gz
+    tar xf cape_0.0.1_Linux_x86_64.tar.gz
     chmod +x cape
 
     # Download and extract the database schema files
@@ -87,11 +87,11 @@ All Windows instructions assume you are using PowerShell.
     cape coordinator start --file config.yaml
     ```
 
-=== "Linux"
+=== "MacOS"
     ```shell
     # Download the Cape binary
-    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Linux_x86_64.tar.gz
-    tar xf cape_0.0.1_Linux_x86_64.tar.gz
+    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Darwin_x86_64.tar.gz
+    tar xf cape_0.0.1_Darwin_x86_64.tar.gz
     chmod +x cape
 
     # Download and extract the database schema files
