@@ -56,13 +56,13 @@ All Windows instructions assume you are using PowerShell.
 === "Linux and macOS"
     ```shell
     # Download the Cape binary
-    curl -O https://github.com/capeprivacy/cape/releases/download/v0.1.0/capeprivacy-cape-v0.0.1.tgz
+    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-v0.0.1.tgz
     tar xf capeprivacy-cape-v0.0.1.tgz
     chmod +x cape
 
     # Download and extract the database schema files
-    curl -O https://github.com/capeprivacy/cape/releases/download/v0.1.0/capeprivacy-cape-postgres-v0.0.1.tgz
-    tar xf capeprivacy-cape-postgres-v0.0.1.tgz
+    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip
+    tar xf capeprivacy-cape-postgres-v0.0.1.zip
 
     # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
     CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape 
@@ -88,12 +88,12 @@ All Windows instructions assume you are using PowerShell.
     ```
     
 === "Windows (PowerShell)"
-    1. Download the Windows installer from [Cape releases](https://github.com/capeprivacy/cape/releases).
+    1. Download the Windows installer `.zip` from [Cape releases](https://github.com/capeprivacy/cape/releases).
     2. Unzip the installer.
     3. Copy the unzipped directory to a location of your choice.
     4. Add the directory to your `PATH`. Refer to [Add to Windows PATH environment variable](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/) for help.
     5. If you are still using the same PowerShell window as in the previous section, run `refreshenv` to load the updated `PATH`.
-    5. Download the database schema files from [TODO]
+    5. Download the database schema files: [capeprivacy-cape-postgres-v0.0.1.zip](https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip)
     6. Unzip the files.
     7. Run the following command to set up the database. Replace `<PASSWORD>` with the password you created when installing PostgreSQL.
     ```shell
