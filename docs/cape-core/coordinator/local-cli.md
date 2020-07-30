@@ -60,13 +60,17 @@ All Windows instructions assume you are using PowerShell.
     tar xf cape_0.0.1_Linux_x86_64.tar.gz
     chmod +x ./cape
 
+    # Add cape to your PATH. 
+    # Check the method for your Linux distro.
+    # If you skip this step, replace cape with ./cape in subsequent commands.
+
     # Download and extract the database schema files
     curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip
     unzip capeprivacy-cape-postgres-v0.0.1.zip
 
     # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
     CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape
-    ./cape update coordinator/migrations/
+    cape update coordinator/migrations/
 
     # Configure the Cape Coordinator server component
     cape coordinator configure
@@ -96,13 +100,17 @@ All Windows instructions assume you are using PowerShell.
     tar xf cape_0.0.1_Darwin_x86_64.tar.gz
     chmod +x ./cape
 
+    # Add cape to your PATH. 
+    # Check the method for your system.
+    # If you skip this step, replace cape with ./cape in subsequent commands.
+
     # Download and extract the database schema files
     curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip
     unzip capeprivacy-cape-postgres-v0.0.1.zip
 
     # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
     CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape
-    ./cape update coordinator/migrations/
+    cape update coordinator/migrations/
 
     # Configure the Cape Coordinator server component
     cape coordinator configure
@@ -161,7 +169,7 @@ All Windows instructions assume you are using PowerShell.
 
 ## Configure the CLI and log in to Cape
 
-Open a new terminal or PowerShell window, and run the following commands. If you used a port other than `8080` when setting up Cape Coordinator, make sure to use your port number.
+Open a new terminal or PowerShell window, and run the following commands. If you used a port other than `8080` when setting up Cape Coordinator, make sure to use your port number. You need the email and password you set in the previous section.
 
 ```shell
 # Configure the Cape CLI
