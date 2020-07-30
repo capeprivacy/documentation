@@ -4,7 +4,7 @@ This document describes how to install and run Cape Coordinator on your local ma
 
 ## Set up PostgreSQL for Cape
 
-The following instructions include how to install PostgreSQL with a package manager for Linux and macOS, and using a GUI installer for Windows. For alternative PostgreSQL installation methods, refer to the [PostgreSQL downloads page](https://www.postgresql.org/download/).
+The following instructions include how to install PostgreSQL with a package manager for Linux and macOS, and using a GUI installer for Windows. For alternative PostgreSQL installation methods, refer to the [PostgreSQL downloads page](https://www.postgresql.org/download/). Postgresql version 11.0+ is required.
 
 All Windows instructions assume you are using PowerShell.
 
