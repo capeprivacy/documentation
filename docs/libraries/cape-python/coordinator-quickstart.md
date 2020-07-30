@@ -1,15 +1,15 @@
 # Cape Python API with Coordinator
 
-This document describes how to use Cape Python with Cape Coordinator. It builds on the [Cape Python quickstart guide](/libraries/cape-python/quickstart.md) and the [Cape Coordinator](/cape-core/coordinator/) installation guides. 
+This document describes how to use Cape Python with Cape Coordinator. It builds on the [Cape Python quickstart guide](/libraries/cape-python/quickstart/) and the [Cape Coordinator](/cape-core/coordinator/) installation guides. 
 
 ## Quickstart
 
 ### Prerequisites
 
 * [Cape Coordinator](/cape-core/coordinator/) installed. You need the password and email that you set during Cape Coordinator installation.
-* [Cape Python](/libraries/cape-python/quickstart.md#installation) installed.
+* [Cape Python](/libraries/cape-python/quickstart/#installation) installed.
 
-We recommend working through the [Cape Python quickstart guide](/libraries/cape-python/quickstart.md) and reading the [Cape Coordinator](/cape-core/coordinator/) documentation before following the steps below.
+We recommend working through the [Cape Python quickstart guide](/libraries/cape-python/quickstart/) and reading the [Cape Coordinator](/cape-core/coordinator/) documentation before following the steps below.
 
 ### Create your first project
 
@@ -76,7 +76,7 @@ Copy the token from the CLI. You will need it in the next section.
 
 ### Write the policy application script
 
-The following script is very similar to the [Cape Python quickstart guide](/libraries/cape-python/quickstart.md), except in this
+The following script is very similar to the [Cape Python quickstart guide](/libraries/cape-python/quickstart/), except in this
 case we're connecting to Cape Coordinator to retrieve the policy.
 
 Create a `coordinator-policy.py` file in your project, with the following content:

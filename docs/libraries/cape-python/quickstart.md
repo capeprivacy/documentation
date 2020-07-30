@@ -1,10 +1,10 @@
 # Cape Python API
 
-This guide walks through an example of using Cape Python with either Pandas or Spark.
+This guide provides an example of using Cape Python with either Pandas or Spark.
 
 ## Prerequisites
 
-* Python 3.6 or above
+* Python 3.6 or above.
 * Cape Privacy recommends using a virtual environment such as [venv](https://docs.python.org/3/library/venv.html).
 
 
@@ -95,4 +95,4 @@ python test-transformation.py
 ```
 
 !!! note
-    You can choose where in your workflow to run your transformation scripts. Refer to [Best practices - Running transformations](/understand/best-practices/running-transformations.md) for guidance.
+    You can choose where in your workflow to run your transformation scripts. Refer to [Best practices - Running transformations](/understand/best-practices/running-transformations/) for guidance.

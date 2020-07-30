@@ -1,6 +1,6 @@
 # Support matrix
 
-This document provides information about supported operating systems, language versions and other dependencies.
+This document provides information about supported operating systems, language versions, and other dependencies.
 
 ## Operating systems
 

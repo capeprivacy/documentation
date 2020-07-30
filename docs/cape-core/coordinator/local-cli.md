@@ -1,6 +1,6 @@
 # Install and run Cape Coordinator using the Cape CLI
 
-This document describes how to install and run Cape Coordinator on your local machine, using the Cape CLI. This setup allows you to try out Cape Coordinator without going through the full [Kubernetes deployment process](/cape-core/coordinator/kubernetes.md).
+This document describes how to install and run Cape Coordinator on your local machine, using the Cape CLI. This setup allows you to try out Cape Coordinator without going through the full [Kubernetes deployment process](/cape-core/coordinator/kubernetes/).
 
 ## Set up PostgreSQL for Cape
 
@@ -71,6 +71,11 @@ All Windows instructions assume you are using PowerShell.
     # Configure the Cape Coordinator server component
     cape coordinator configure
     ```
+
+    Cape asks you for information about your installation. For this example, use port 8181 and the following database URL: `postgres://cape:capepw@localhost:5432/cape`
+
+    When this process completes, it creates a file called `config.yaml`.
+    
 === "Windows (PowerShell)"
     1. Download the Windows installer from [Cape releases](https://github.com/capeprivacy/cape/releases).
     2. Unzip the installer.
@@ -88,18 +93,18 @@ All Windows instructions assume you are using PowerShell.
     cape coordinator configure
     ```
 
-Cape asks you for information about your installation. For this example, use port 8181 and the following database URL: `postgres://cape:capepw@localhost:5432/cape`
+    Cape asks you for information about your installation. For this example, use port 8181 and the following database URL: `postgres://cape:capepw@localhost:5432/cape`
 
-When this process completes, it creates a file called `config.yaml`. 
+    When this process completes, it creates a file called `config.yaml`. 
 
-Start the coordinator with this command:
+    Start the coordinator with this command:
 
-```shell
-$env:CAPE_USER_NAME='cape_user'
-$env:CAPE_USER_EMAIL='cape_user@mycape.com'
-$env:CAPE_USER_PASSWORD='capecape'
-cape coordinator start --file config.yaml
-```
+    ```shell
+    $env:CAPE_USER_NAME='cape_user'
+    $env:CAPE_USER_EMAIL='cape_user@mycape.com'
+    $env:CAPE_USER_PASSWORD='capecape'
+    cape coordinator start --file config.yaml
+    ```
 
 ## Configure the CLI and log into Cape
 
@@ -119,4 +124,4 @@ At this point you can begin exploring Cape:
 cape projects list
 ```
 
-For more information about using your Cape installation check out [here](https://link.to/more/amazing/docs).
+For more information about using your Cape installation check out [the CLI usage guide](/cape-core/cli/usage/) and a tutorial on [using the Coordinator with Cape Python](/libraries/cape-python/coordinator-quickstart/).

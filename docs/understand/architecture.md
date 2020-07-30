@@ -13,4 +13,4 @@ Cape Privacy currently offers three components:
 
 ## Roadmap
 
-More services and libraries are coming soon. Refer to the [roadmap](/understand/roadmap.md) for more information.
+More services and libraries are coming soon. Refer to the [roadmap](/understand/roadmap/) for more information.

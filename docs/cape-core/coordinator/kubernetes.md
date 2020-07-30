@@ -2,6 +2,8 @@
 
 This document describes how to deploy Cape Coordinator to Kubernetes. It assumes you are familiar with Kubernetes and Helm, and can configure your deployment environment.
 
+You need to install [Cape CLI](/cape-core/cli/installation.md) separately to interact with Coordinator.
+
 ## Prerequisites
 
 To deploy Cape Coordinator, you need:

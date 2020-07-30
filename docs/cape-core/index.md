@@ -7,4 +7,4 @@ Cape Core currently comprises:
 * [Cape Coordinator](/cape-core/coordinator/): a service for managing data privacy policies.
 * [Cape CLI](/cape-core/cli/): a command line interface to allow users to interact with Cape services.
 
-We will add more services and tools in future releases. Refer to our [roadmap](/understand/roadmap.md) for more information.
+We will add more services and tools in future releases. Refer to our [roadmap](/understand/roadmap/) for more information.

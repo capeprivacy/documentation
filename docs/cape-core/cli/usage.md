@@ -154,7 +154,7 @@ Update a projects attributes
 
 **--name**="": The name of the project
 
-## roles
+### roles
 
 Commands for querying information about roles and modifying them
 
