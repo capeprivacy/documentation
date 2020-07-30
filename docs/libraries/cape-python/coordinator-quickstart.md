@@ -67,7 +67,7 @@ You'll see output like:
 ```shell
 A token for cape_user@mycape.com has been created!
 
-Token:    201ch0g5y6ufk08g312vjqjfhw,ASFltSt93kEN803HrxNO0sGDWjERl0FsrA
+Token:    <REDACTED TOKEN>
 
 ‼ Remember: Please keep the token safe and share it only over secure channels.
 ```
