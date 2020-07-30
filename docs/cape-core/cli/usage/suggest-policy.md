@@ -6,8 +6,7 @@ Users with the `policy-contributor` or `policy-owner` [role types](/understand/u
 2. Write the new policy.
 3. Submit the policy for approval:
 ```shell
-cape projects policy create --from-spec
- <PATH_TO_YOUR_POLICY_FILE> "<TITLE>" "<DESCRIPTION>"
+cape projects policy create --from-spec <PATH_TO_YOUR_POLICY_FILE> "<TITLE>" "<DESCRIPTION>"
 ```
 4. Project owners can review the suggestion:
 ```shell
