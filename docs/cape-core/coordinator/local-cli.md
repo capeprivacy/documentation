@@ -64,17 +64,28 @@ All Windows instructions assume you are using PowerShell.
     curl -O https://github.com/capeprivacy/cape/releases/download/v0.1.0/capeprivacy-cape-postgres-v0.0.1.tgz
     tar xf capeprivacy-cape-postgres-v0.0.1.tgz
 
-    # Create the database schema
-    CAPE_DB_URL=postgres://postgres:postgrespw@localhost:5432/cape 
+    # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
+    CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape 
     cape update /path/to/schema/files/
 
     # Configure the Cape Coordinator server component
     cape coordinator configure
     ```
 
-    Cape asks you for information about your installation. For this example, use port 8181 and the following database URL: `postgres://cape:capepw@localhost:5432/cape`
+    Cape asks you for information about your installation. For this example, use port 8181.
 
     When this process completes, it creates a file called `config.yaml`.
+
+    Set user details, then start the coordinator. Make a note of the values you set for each field.
+
+    ```shell
+    CAPE_USER_NAME=<USERNAME>
+    CAPE_USER_EMAIL=<EMAIL>
+    # The password must be eight characters minimum
+    CAPE_USER_PASSWORD=<PASSWORD>
+    # Start the coordinator
+    cape coordinator start --file config.yaml
+    ```
     
 === "Windows (PowerShell)"
     1. Download the Windows installer from [Cape releases](https://github.com/capeprivacy/cape/releases).
@@ -84,29 +95,31 @@ All Windows instructions assume you are using PowerShell.
     5. If you are still using the same PowerShell window as in the previous section, run `refreshenv` to load the updated `PATH`.
     5. Download the database schema files from [TODO]
     6. Unzip the files.
-    7. Run the following command to set up the database:
+    7. Run the following command to set up the database. Replace `<PASSWORD>` with the password you created when installing PostgreSQL.
     ```shell
-    $env:CAPE_DB_URL='postgres://postgres:postgrespw@localhost:5432/cape' 
-    cape update path\to\schema\directory
+    $env:CAPE_DB_URL='postgres://postgres:<PASSSWORD>@localhost:5432/cape' 
+    cape update path\to\schema\files
 
     # Configure the Cape Coordinator server component
     cape coordinator configure
     ```
 
-    Cape asks you for information about your installation. For this example, use port 8181 and the following database URL: `postgres://cape:capepw@localhost:5432/cape`
+    Cape asks you for information about your installation. For this example, use port 8181.
 
     When this process completes, it creates a file called `config.yaml`. 
 
-    Start the coordinator with this command:
+    Set user details, then start the coordinator. Make a note of the values you set for each field.
 
     ```shell
-    $env:CAPE_USER_NAME='cape_user'
-    $env:CAPE_USER_EMAIL='cape_user@mycape.com'
-    $env:CAPE_USER_PASSWORD='capecape'
+    $env:CAPE_USER_NAME='<USERNAME>'
+    $env:CAPE_USER_EMAIL='<EMAIL>'
+    # The password must be eight characters minimum
+    $env:CAPE_USER_PASSWORD='<PASSWORD>'
+    # Start the coordinator
     cape coordinator start --file config.yaml
     ```
 
-## Configure the CLI and log into Cape
+## Configure the CLI and log in to Cape
 
 Open a new terminal, and run the following commands:
 
