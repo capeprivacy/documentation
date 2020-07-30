@@ -1,4 +1,4 @@
-# Introduction
+# Libraries
 
 Cape Privacy provides libraries that allow you to:
 
