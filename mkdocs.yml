@@ -51,6 +51,7 @@ nav:
             - Coordinator quickstart: libraries/cape-python/coordinator-quickstart.md
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
+            - Redactions: libraries/cape-python/redactions.md
             - API documentation: 
                 - v1: '!include ./pythonv1/mkdocs.yml'
     - Release notes:
