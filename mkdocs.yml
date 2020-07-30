@@ -43,6 +43,7 @@ nav:
                 - Introduction: cape-core/cli/usage/index.md
                 - Create a user: cape-core/cli/usage/create-user.md
                 - Create a project: cape-core/cli/usage/create-project.md
+                - Add a policy: cape-core/cli/usage/add-policy.md
                 - Suggest policy change:  cape-core/cli/usage/suggest-policy.md
         - Coordinator:
             - Overview: cape-core/coordinator/index.md
