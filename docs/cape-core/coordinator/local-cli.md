@@ -53,16 +53,50 @@ All Windows instructions assume you are using PowerShell.
 
 ## Download and set up Cape Coordinator
 
-=== "Linux and macOS"
+=== "MacOS"
     ```shell
     # Download the Cape binary
-    curl -O https://github.com/capeprivacy/cape/releases/download/v0.1.0/capeprivacy-cape-v0.0.1.tgz
-    tar xf capeprivacy-cape-v0.0.1.tgz
+    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Darwin_x86_64.tar.gz
+    tar xf cape_0.0.1_Darwin_x86_64.tar.gz
     chmod +x cape
 
     # Download and extract the database schema files
-    curl -O https://github.com/capeprivacy/cape/releases/download/v0.1.0/capeprivacy-cape-postgres-v0.0.1.tgz
-    tar xf capeprivacy-cape-postgres-v0.0.1.tgz
+    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip
+    unzip capeprivacy-cape-postgres-v0.0.1.tgz
+
+    # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
+    CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape
+    cape update /path/to/schema/files/
+
+    # Configure the Cape Coordinator server component
+    cape coordinator configure
+    ```
+
+    Cape asks you for information about your installation. For this example, use port 8080.
+
+    When this process completes, it creates a file called `config.yaml`.
+
+    Set user details, then start the coordinator. Make a note of the values you set for each field.
+
+    ```shell
+    CAPE_USER_NAME=<USERNAME>
+    CAPE_USER_EMAIL=<EMAIL>
+    # The password must be eight characters minimum
+    CAPE_USER_PASSWORD=<PASSWORD>
+    # Start the coordinator
+    cape coordinator start --file config.yaml
+    ```
+
+=== "Linux"
+    ```shell
+    # Download the Cape binary
+    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Linux_x86_64.tar.gz
+    tar xf cape_0.0.1_Linux_x86_64.tar.gz
+    chmod +x cape
+
+    # Download and extract the database schema files
+    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip
+    unzip capeprivacy-cape-postgres-v0.0.1.zip
 
     # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
     CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape
@@ -93,7 +127,7 @@ All Windows instructions assume you are using PowerShell.
     3. Copy the unzipped directory to a location of your choice.
     4. Add the directory to your `PATH`. Refer to [Add to Windows PATH environment variable](https://helpdeskgeek.com/windows-10/add-windows-path-environment-variable/) for help.
     5. If you are still using the same PowerShell window as in the previous section, run `refreshenv` to load the updated `PATH`.
-    5. Download the database schema files from [TODO]
+    5. Download the database schema files from https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip
     6. Unzip the files.
     7. Run the following command to set up the database. Replace `<PASSWORD>` with the password you created when installing PostgreSQL.
     ```shell
