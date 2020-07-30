@@ -58,7 +58,7 @@ All Windows instructions assume you are using PowerShell.
     # Download the Cape binary
     curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Linux_x86_64.tar.gz
     tar xf cape_0.0.1_Linux_x86_64.tar.gz
-    chmod +x cape
+    chmod +x ./cape
 
     # Download and extract the database schema files
     curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip
@@ -66,7 +66,7 @@ All Windows instructions assume you are using PowerShell.
 
     # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
     CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape
-    cape update /path/to/schema/files/
+    ./cape update coordinator/migrations/
 
     # Configure the Cape Coordinator server component
     cape coordinator configure
@@ -92,7 +92,7 @@ All Windows instructions assume you are using PowerShell.
     # Download the Cape binary
     curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Darwin_x86_64.tar.gz
     tar xf cape_0.0.1_Darwin_x86_64.tar.gz
-    chmod +x cape
+    chmod +x ./cape
 
     # Download and extract the database schema files
     curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip
@@ -100,7 +100,7 @@ All Windows instructions assume you are using PowerShell.
 
     # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
     CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape
-    cape update /path/to/schema/files/
+    ./cape update coordinator/migrations/
 
     # Configure the Cape Coordinator server component
     cape coordinator configure
