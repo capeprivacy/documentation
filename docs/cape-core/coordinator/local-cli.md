@@ -74,9 +74,9 @@ All Windows instructions assume you are using PowerShell.
 
     Cape asks you for information about your installation. For this example, use port 8080.
 
-    When this process completes, it creates a file called `config.yaml`.
+    When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
 
-    Set user details, then start the coordinator. Make a note of the values you set for each field.
+    Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
 
     ```shell
     CAPE_USER_NAME=<USERNAME>
@@ -110,9 +110,9 @@ All Windows instructions assume you are using PowerShell.
 
     Cape asks you for information about your installation. For this example, use port 8080.
 
-    When this process completes, it creates a file called `config.yaml`.
+    When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
 
-    Set user details, then start the coordinator. Make a note of the values you set for each field.
+    Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
 
     ```shell
     CAPE_USER_NAME=<USERNAME>
@@ -144,9 +144,9 @@ All Windows instructions assume you are using PowerShell.
 
     Cape asks you for information about your installation. For this example, use port 8080.
 
-    When this process completes, it creates a file called `config.yaml`.
+    When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
 
-    Set user details, then start the coordinator. Make a note of the values you set for each field.
+    Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
 
     ```shell
     $env:CAPE_USER_NAME='<USERNAME>'
@@ -161,7 +161,7 @@ All Windows instructions assume you are using PowerShell.
 
 ## Configure the CLI and log in to Cape
 
-Open a new terminal, and run the following commands:
+Open a new terminal or PowerShell window, and run the following commands. If you used a port other than `8080` when setting up Cape Coordinator, make sure to use your port number.
 
 ```shell
 # Configure the Cape CLI
@@ -171,10 +171,6 @@ cape config clusters use local
 cape login
 ```
 
-At this point you can begin exploring Cape:
+At this point you can begin exploring Cape. Refer to the [usage tutorials](/cape-core/cli/usage/) for your next steps.
 
-```shell
-cape projects list
-```
-
-For more information about using your Cape installation check out [the CLI usage guide](/cape-core/cli/usage/) and a tutorial on [using the Coordinator with Cape Python](/libraries/cape-python/coordinator-quickstart/).
+For more information about using your Cape installation check out [the CLI usage tutorials](/cape-core/cli/usage/) and a tutorial on [using the Coordinator with Cape Python](/libraries/cape-python/coordinator-quickstart/).
