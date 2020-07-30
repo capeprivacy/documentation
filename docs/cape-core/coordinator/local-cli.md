@@ -82,7 +82,10 @@ All Windows instructions assume you are using PowerShell.
     7. Run the following command to set up the database:
     ```shell
     $env:CAPE_DB_URL='postgres://postgres:postgrespw@localhost:5432/cape' 
-    cape update path\to\schema\directory [TODO: breaks here - resume tomorrow]
+    cape update path\to\schema\directory
+
+    # Configure the Cape Coordinator server component
+    cape coordinator configure
     ```
 
 Cape asks you for information about your installation. For this example, use port 8181 and the following database URL: `postgres://cape:capepw@localhost:5432/cape`
@@ -92,7 +95,10 @@ When this process completes, it creates a file called `config.yaml`.
 Start the coordinator with this command:
 
 ```shell
-CAPE_USER_NAME=cape_user CAPE_USER_EMAIL=cape_user@mycape.com CAPE_USER_PASSWORD=capecape cape coordinator start --file config.yaml
+$env:CAPE_USER_NAME='cape_user'
+$env:CAPE_USER_EMAIL='cape_user@mycape.com'
+$env:CAPE_USER_PASSWORD='capecape'
+cape coordinator start --file config.yaml
 ```
 
 ## Configure the CLI and log into Cape
