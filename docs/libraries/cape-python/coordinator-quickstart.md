@@ -1,6 +1,6 @@
 # Cape Python API with Coordinator
 
-This document describes how to use Cape Python with Cape Coordinator. It builds on the [Cape Python quickstart guide](/libraries/cape-python/quickstart/) and the [Cape Coordinator](/cape-core/coordinator/) installation guides. 
+This document describes how to use Cape Python with Cape Coordinator. It builds on the [Cape Python quickstart guide](/libraries/cape-python/quickstart/) and the [Cape Coordinator](/cape-core/coordinator/) installation guides.
 
 ## Quickstart
 
@@ -67,7 +67,7 @@ You'll see output like:
 ```shell
 A token for cape_user@mycape.com has been created!
 
-Token:    201ch0g5y6ufk08g312vjqjfhw,ASFltSt93kEN803HrxNO0sGDWjERl0FsrA
+Token:    <REDACTED TOKEN>
 
 ‼ Remember: Please keep the token safe and share it only over secure channels.
 ```
@@ -86,9 +86,9 @@ import cape_privacy as cape
 import pandas as pd
 
 # In the Coordinator installation instructions you should have run the
-# Coordinator on port 8181. If not, edit the line below with the proper
+# Coordinator on port 8080. If not, edit the line below with the proper
 # port.
-client = cape.Client("http://localhost:8181")
+client = cape.Client("http://localhost:8080")
 client.login("<PASTE TOKEN HERE>")
 
 p_dict = client.get_policy("first-project")
@@ -105,7 +105,7 @@ Make sure to replace `<PASTE TOKEN HERE>` with your API token.
 
 ### Run your transformations
 
-In `coordinator-policy.py` we create a dataset programatically, so there are no further steps to load a dataset. 
+In `coordinator-policy.py` we create a dataset programatically, so there are no further steps to load a dataset.
 
 Run the policy application script and view the output:
 
