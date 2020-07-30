@@ -1,5 +1,6 @@
 site_name: Documentation
 dev_addr: '127.0.0.1:8080'
+copyright: Cape Privacy, Inc.
 extra_css: 
     - assets/css/custom.css
 theme:  
@@ -7,11 +8,21 @@ theme:
     favicon: assets/images/favicon-32x32.png
     features:
         - tabs
+    font:
+        text: Inter
     language: en
     logo: assets/images/cp-logo.png
     name: material
     palette:
         primary: white
+extra:
+    social:
+    - icon: fontawesome/brands/linkedin-in
+      link: https://www.linkedin.com/company/capeprivacy
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/capeprivacy
+    - icon: fontawesome/brands/github
+      link: https://github.com/capeprivacy
 nav:
     - Home: index.md
     - Understand Cape:

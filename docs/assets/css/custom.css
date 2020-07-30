@@ -8,15 +8,27 @@
 
 :root {
 
-
   /* CP vars */
-    --color-black: #000;
-    --color-border-gray: #c4c4c4;
-    --color-gray: #f5f5f5;
-    --color-white: #fff;
-    --color-underroos: #eb658b;
-    --color-privacy-purple: #a0089b;
-    --color-blue-steel: #357bf5;
-    --color-dark-night: #040042;
-    --color-krypton: #21c3cf;
+  --color-black: #000;
+  --color-border-gray: #c4c4c4;
+  --color-gray: #f5f5f5;
+  --color-gray-background: #e5e5e5;
+  --color-white: #fff;
+  --color-underroos: #fd598a;
+  --color-privacy-purple: #ae009f;
+  --color-privacy-purple-half: #590071;
+  --color-purple-bright: #f500e0;
+  --color-blue-steel: #007afd;
+  --color-dark-night: #050045;
+  --color-dark-blue: #1f2038;
+  --color-midnight-blue: #223c70;
+  --color-krypton: #00c5d1;
+
+  --md-accent-fg-color: var(--color-privacy-purple);
+}
+
+:root > * {
+  --md-footer-bg-color: var(--color-dark-blue);
+  --md-footer-fg-color--light:  #fff;
+  --md-text-link-color: var(--color-privacy-purple-half);
 }
