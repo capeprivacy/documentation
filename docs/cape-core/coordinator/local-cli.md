@@ -81,10 +81,10 @@ All Windows instructions assume you are using PowerShell.
     Set user details, then start the coordinator. Make a note of the values you set for each field.
 
     ```shell
-    CAPE_USER_NAME=<USERNAME>
-    CAPE_USER_EMAIL=<EMAIL>
+    export CAPE_USER_NAME=<USERNAME>
+    export CAPE_USER_EMAIL=<EMAIL>
     # The password must be eight characters minimum
-    CAPE_USER_PASSWORD=<PASSWORD>
+    export CAPE_USER_PASSWORD=<PASSWORD>
     # Start the coordinator
     ./cape coordinator start --file config.yaml
     ```
@@ -117,10 +117,10 @@ All Windows instructions assume you are using PowerShell.
     Set user details, then start the coordinator. Make a note of the values you set for each field.
 
     ```shell
-    CAPE_USER_NAME=<USERNAME>
-    CAPE_USER_EMAIL=<EMAIL>
+    export CAPE_USER_NAME=<USERNAME>
+    export CAPE_USER_EMAIL=<EMAIL>
     # The password must be eight characters minimum
-    CAPE_USER_PASSWORD=<PASSWORD>
+    export CAPE_USER_PASSWORD=<PASSWORD>
     # Start the coordinator
     ./cape coordinator start --file config.yaml
     ```
