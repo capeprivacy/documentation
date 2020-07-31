@@ -1,6 +1,6 @@
 # Suggest a policy change
 
-Users with the `policy-contributor` or `policy-owner` [role types](/understand/user-roles/) can suggest changes to privacy policy through the CLI. This workflow changes the policy attached to a project. 
+Users with the `project-contributor` or `project-owner` [role types](/understand/user-roles/) can suggest changes to privacy policy through the CLI. This workflow changes the policy attached to a project.
 
 1. Create a policy `YAML` file. This can be a new file, or a copy of an existing policy.
 2. Write the new policy.
