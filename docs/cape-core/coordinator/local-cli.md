@@ -70,7 +70,7 @@ All Windows instructions assume you are using PowerShell.
 
     # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
     CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape
-    cape update coordinator/migrations/
+    cape update coordinator\migrations\
 
     # Configure the Cape Coordinator server component
     cape coordinator configure
@@ -83,10 +83,10 @@ All Windows instructions assume you are using PowerShell.
     Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
 
     ```shell
-    CAPE_USER_NAME=<USERNAME>
-    CAPE_USER_EMAIL=<EMAIL>
+    export CAPE_USER_NAME=<USERNAME>
+    export CAPE_USER_EMAIL=<EMAIL>
     # The password must be eight characters minimum
-    CAPE_USER_PASSWORD=<PASSWORD>
+    export CAPE_USER_PASSWORD=<PASSWORD>
     # Start the coordinator
     cape coordinator start --file config.yaml
     ```
@@ -110,23 +110,23 @@ All Windows instructions assume you are using PowerShell.
 
     # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
     CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape
-    cape update coordinator/migrations/
+    cape update coordinator\migrations\
 
     # Configure the Cape Coordinator server component
     cape coordinator configure
     ```
 
-    Cape asks you for information about your installation. For this example, use port 8080.
+    Cape asks you for information about your installation. For this example, use port `8080`.
 
     When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
 
     Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
 
     ```shell
-    CAPE_USER_NAME=<USERNAME>
-    CAPE_USER_EMAIL=<EMAIL>
+    export CAPE_USER_NAME=<USERNAME>
+    export CAPE_USER_EMAIL=<EMAIL>
     # The password must be eight characters minimum
-    CAPE_USER_PASSWORD=<PASSWORD>
+    export CAPE_USER_PASSWORD=<PASSWORD>
     # Start the coordinator
     cape coordinator start --file config.yaml
     ```
@@ -144,13 +144,13 @@ All Windows instructions assume you are using PowerShell.
     7. Run the following command to set up the database. Replace `<PASSWORD>` with the password you created when installing PostgreSQL.
     ```shell
     $env:CAPE_DB_URL='postgres://postgres:<PASSSWORD>@localhost:5432/cape'
-    cape update path\to\schema\files
+    cape update coordinator/migrations
 
     # Configure the Cape Coordinator server component
     cape coordinator configure
     ```
 
-    Cape asks you for information about your installation. For this example, use port 8080.
+    Cape asks you for information about your installation. For this example, use port `8080`.
 
     When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
 
