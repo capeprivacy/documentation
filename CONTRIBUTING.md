@@ -62,8 +62,6 @@ This section describes how to edit the handwritten docs website content.
 
 The main branch is live. All work should happen on another branch.
 
-Follow steps 1-4 from [Run the docs locally](#run-the-docs-locally) to be able to preview the docs locally.
-
 ### Submitting a pull request
 
 To contribute, [fork](https://help.github.com/articles/fork-a-repo/) Cape Python, commit your changes, and [open a pull request](https://help.github.com/articles/using-pull-requests/).
