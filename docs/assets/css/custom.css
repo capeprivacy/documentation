@@ -1,3 +1,7 @@
+.highlight .c1 {
+  color: var(--color-privacy-purple);
+}
+
 .md-search__input {
     border-radius: 50px;
 }
@@ -24,7 +28,7 @@
   --color-midnight-blue: #223c70;
   --color-krypton: #00c5d1;
 
-  --md-accent-fg-color: var(--color-privacy-purple);
+  --md-accent-fg-color: var(--color-privacy-purple-half);
 }
 
 :root > * {
