@@ -9,27 +9,29 @@ The following instructions include how to install PostgreSQL with a package mana
 All Windows instructions assume you are using PowerShell.
 
 === "Linux"
+    1. Install PostgreSQL. Refer to the guidance for your distribution: [PostgreSQL downloads](https://www.postgresql.org/download/).
+    2. Create a user:
     ```shell
-    # Install PostgreSQL
-    # Refer to the guidance for your distribution: https://www.postgresql.org/download/
-
-    # Create a Cape user
-    createuser --createdb cape
-
-    # Create a Cape database
+    # Create a user named cape
+    createuser -U postgres --createdb --pwprompt cape
+    ```
+    3. Create a Cape database:
+    ```shell
     createdb -U cape cape
     ```
 
 === "MacOS"
+    1. Install Postgres. This requires Homebrew: https://brew.sh/
     ```shell
-    # Install Postgres
-    # Requires Homebrew: https://brew.sh/
     brew install postgres
-
-    # Create a Cape user
-    createuser --createdb cape
-
-    # Create a Cape database
+    ```
+    2. Create a user: 
+    ```shell
+    # Create a user named cape.
+    createuser -U postgres --createdb --pwprompt cape
+    ```
+    3. Create a Cape database:
+    ```shell
     createdb -U cape cape
     ```
 
@@ -53,26 +55,26 @@ All Windows instructions assume you are using PowerShell.
 
 ## Download and set up Cape Coordinator
 
-=== "Linux"
+=== "Linux"    
+    1. Download the Cape binary
     ```shell
-    # Download the Cape binary
     curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Linux_x86_64.tar.gz
     tar xf cape_0.0.1_Linux_x86_64.tar.gz
     chmod +x ./cape
-
-    # Add cape to your PATH. 
-    # Check the method for your Linux distro.
-    # If you skip this step, replace cape with ./cape in subsequent commands.
-
-    # Download and extract the database schema files
+    ```
+    2. Add cape to your PATH. Check the method for your Linux distro. If you skip this step, replace cape with `./cape` in subsequent commands.
+    3. Download and extract the database schema files:
+    ```shell
     curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip
     unzip capeprivacy-cape-postgres-v0.0.1.zip
-
-    # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
+    ```
+    4. Create the database schema. Replace `<PASSWORD>` with your postgres user password.
+    ```shell
     CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape
     cape update coordinator\migrations\
-
-    # Configure the Cape Coordinator server component
+    ```
+    5. Configure the Cape Coordinator server component:
+    ```shell
     cape coordinator configure
     ```
 
@@ -94,25 +96,25 @@ All Windows instructions assume you are using PowerShell.
     Cape Coordinator is now running in this window. If you close the terminal, or attempt further commands, you will stop Cape Coordinator.
 
 === "MacOS"
+    1. Download the Cape binary
     ```shell
-    # Download the Cape binary
-    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Darwin_x86_64.tar.gz
-    tar xf cape_0.0.1_Darwin_x86_64.tar.gz
+    curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/cape_0.0.1_Linux_x86_64.tar.gz
+    tar xf cape_0.0.1_Linux_x86_64.tar.gz
     chmod +x ./cape
-
-    # Add cape to your PATH. 
-    # Check the method for your system.
-    # If you skip this step, replace cape with ./cape in subsequent commands.
-
-    # Download and extract the database schema files
+    ```
+    2. Add cape to your PATH. Check the method for your system. If you skip this step, replace cape with `./cape` in subsequent commands.
+    3. Download and extract the database schema files:
+    ```shell
     curl -O https://github.com/capeprivacy/cape/releases/download/v0.0.1/capeprivacy-cape-postgres-v0.0.1.zip
     unzip capeprivacy-cape-postgres-v0.0.1.zip
-
-    # Create the database schema. Replace `<PASSWORD>` with your postgres user password.
+    ```
+    4. Create the database schema. Replace `<PASSWORD>` with your postgres user password.
+    ```shell
     CAPE_DB_URL=postgres://postgres:<PASSWORD>@localhost:5432/cape
     cape update coordinator\migrations\
-
-    # Configure the Cape Coordinator server component
+    ```
+    5. Configure the Cape Coordinator server component:
+    ```shell
     cape coordinator configure
     ```
 
