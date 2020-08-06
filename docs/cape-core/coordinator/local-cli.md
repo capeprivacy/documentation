@@ -77,13 +77,8 @@ All Windows instructions assume you are using PowerShell.
     ```shell
     cape coordinator configure
     ```
-
-    Cape asks you for information about your installation. For this example, use port 8080.
-
-    When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
-
-    Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
-
+    6. Cape asks you for information about your installation. For this example, use port `8080`. When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
+    7. Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
     ```shell
     export CAPE_USER_NAME=<USERNAME>
     export CAPE_USER_EMAIL=<EMAIL>
@@ -117,13 +112,8 @@ All Windows instructions assume you are using PowerShell.
     ```shell
     cape coordinator configure
     ```
-
-    Cape asks you for information about your installation. For this example, use port `8080`.
-
-    When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
-
-    Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
-
+    6. Cape asks you for information about your installation. For this example, use port `8080`. When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
+    7. Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
     ```shell
     export CAPE_USER_NAME=<USERNAME>
     export CAPE_USER_EMAIL=<EMAIL>
@@ -151,13 +141,8 @@ All Windows instructions assume you are using PowerShell.
     # Configure the Cape Coordinator server component
     cape coordinator configure
     ```
-
-    Cape asks you for information about your installation. For this example, use port `8080`.
-
-    When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
-
-    Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
-
+    8. Cape asks you for information about your installation. For this example, use port `8080`. When this process completes, it creates a file called `config.yaml`. You can edit this file to change the inital configuration.
+    9. Set user details, then start the coordinator. Make a note of the values you set for each field. You will use these to log in to Cape Coordinator.
     ```shell
     $env:CAPE_USER_NAME='<USERNAME>'
     $env:CAPE_USER_EMAIL='<EMAIL>'
