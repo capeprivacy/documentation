@@ -69,8 +69,10 @@ plugins:
     - monorepo
 markdown_extensions:
     - admonition
-    - codehilite
+    - pymdownx.highlight:
+        use_pygments: true
     - pymdownx.tabbed
+    - pymdownx.snippets
     - pymdownx.superfences
     - toc:
         permalink: "#"

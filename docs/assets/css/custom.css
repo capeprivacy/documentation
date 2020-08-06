@@ -1,7 +1,3 @@
-.highlight .c1 {
-  color: var(--color-privacy-purple);
-}
-
 .md-search__input {
     border-radius: 50px;
 }
@@ -11,7 +7,6 @@
 }
 
 :root {
-
   /* CP vars */
   --color-black: #000;
   --color-border-gray: #c4c4c4;
@@ -27,12 +22,13 @@
   --color-dark-blue: #1f2038;
   --color-midnight-blue: #223c70;
   --color-krypton: #00c5d1;
-
-  --md-accent-fg-color: var(--color-privacy-purple-half);
 }
 
 :root > * {
+  --md-typeset-a-color: var(--color-privacy-purple-half);
+  --md-accent-fg-color: var(--color-privacy-purple-half);
   --md-footer-bg-color: var(--color-dark-blue);
   --md-footer-fg-color--light:  #fff;
   --md-text-link-color: var(--color-privacy-purple-half);
+  --md-code-hl-comment-color: var(--color-privacy-purple);
 }

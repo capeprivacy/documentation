@@ -1,4 +1,4 @@
-mkdocs-material==5.4.0
+mkdocs-material==5.5.3
 mkdocs-monorepo-plugin==0.4.9
 pydoc-markdown==3.2.0
 
