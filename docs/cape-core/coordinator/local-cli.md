@@ -88,7 +88,8 @@ All Windows instructions assume you are using PowerShell.
     cape coordinator start --file config.yaml
     ```
 
-    Cape Coordinator is now running in this window. If you close the terminal, or attempt further commands, you will stop Cape Coordinator.
+    !!! note
+        Cape Coordinator is now running in this window. If you close the terminal, or attempt further commands, you will stop Cape Coordinator.
 
 === "MacOS"
     1. Download the Cape binary
@@ -123,7 +124,8 @@ All Windows instructions assume you are using PowerShell.
     cape coordinator start --file config.yaml
     ```
 
-    Cape Coordinator is now running in this window. If you close the terminal, or attempt further commands, you will stop Cape Coordinator.
+    !!! note
+        Cape Coordinator is now running in this window. If you close the terminal, or attempt further commands, you will stop Cape Coordinator.
 
 === "Windows (PowerShell)"
     1. Download the Windows installer `.zip` from [Cape releases](https://github.com/capeprivacy/cape/releases).
@@ -151,8 +153,9 @@ All Windows instructions assume you are using PowerShell.
     # Start the coordinator
     cape coordinator start --file config.yaml
     ```
-
-    Cape Coordinator is now running in this window. If you close the terminal, or attempt further commands, you will stop Cape Coordinator.
+    
+    !!! note
+        Cape Coordinator is now running in this window. If you close the terminal, or attempt further commands, you will stop Cape Coordinator.
 
 ## Configure the CLI and log in to Cape
 
