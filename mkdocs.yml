@@ -1,10 +1,10 @@
 site_name: Documentation
 dev_addr: '127.0.0.1:8080'
 copyright: Cape Privacy, Inc.
-extra_css: 
+extra_css:
     - assets/css/custom.css
-theme:  
-    custom_dir: overrides 
+theme:
+    custom_dir: overrides
     favicon: assets/images/favicon-32x32.png
     features:
         - tabs
@@ -31,15 +31,21 @@ nav:
         - Best practices:
             - Overview: understand/best-practices/index.md
             - Running transformations: understand/best-practices/running-transformations.md
+        - Features & Concepts:
+            - Overview: understand/features/index.md
+            - Users: understand/features/users.md
+            - Roles: understand/features/roles.md
+            - Projects: understand/features/projects.md
+            - Policy: understand/features/policy.md
+            - Auditing: understand/features/auditing.md
         - Support matrix: understand/support.md
-        - User roles: understand/user-roles.md
         - Roadmap: understand/roadmap.md
     - Cape Core:
         - Introduction: cape-core/index.md
         - CLI:
             - Overview: cape-core/cli/index.md
             - Installation: cape-core/cli/installation.md
-            - Usage: 
+            - Usage:
                 - Introduction: cape-core/cli/usage/index.md
                 - Create a user: cape-core/cli/usage/create-user.md
                 - Create a project: cape-core/cli/usage/create-project.md
@@ -49,7 +55,7 @@ nav:
             - Overview: cape-core/coordinator/index.md
             - Deploy to Kubernetes: cape-core/coordinator/kubernetes.md
             - Install with the CLI: cape-core/coordinator/local-cli.md
-    - Libraries: 
+    - Libraries:
         - Introduction: libraries/index.md
         - Cape Python:
             - Overview: libraries/cape-python/index.md
@@ -58,13 +64,13 @@ nav:
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
             - Redactions: libraries/cape-python/redactions.md
-            - API documentation: 
+            - API documentation:
                 - v1: '!include ./pythonv1/mkdocs.yml'
     - Release notes:
         - Introduction: release-notes/index.md
         - July 2020: release-notes/30072020.md
         - June 2020: release-notes/26062020.md
-plugins:    
+plugins:
     - search
     - monorepo
 markdown_extensions:
@@ -76,5 +82,3 @@ markdown_extensions:
     - pymdownx.superfences
     - toc:
         permalink: "#"
-
-
