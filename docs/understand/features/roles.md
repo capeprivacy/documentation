@@ -1,10 +1,10 @@
-# User roles
+# Roles
 
 In Cape, there are two contexts you can operate in:
 
  1. Global commands: these are things that affect how cape functions in your entire organization. For example, creating a user.
  2. Project commands: these are things that only affect the specific project you are operating on. For example, setting a policy on a project.
- 
+
  Within each of these spaces, there are different roles that you can have.
 
  Globally, you can either be an `admin`, or a `user`. Admins can do anything in the system. It is much like
