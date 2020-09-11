@@ -4,7 +4,7 @@ Projects are the building block for Policy within Cape. In the real world, most
 data access is granted depending on the use case and what the user is trying
 to achieve. Cape groups all of those different use cases into projects.
 
-For example, if you are a data scientist working for a bank in department A who is
+For example, if you are a data scientist working for a bank in the fraud department who is
 tasked with creating a model to detect fraud. You may be able to train a better
 model if you can use other customer data that belongs to department B. In this context,
 you would create a project for this use case, and grant access (with whatever privacy
