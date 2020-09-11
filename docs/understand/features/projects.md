@@ -6,7 +6,7 @@ to achieve. Cape groups all of those different use cases into projects.
 
 For example, if you are a data scientist working for a bank in the fraud department who is
 tasked with creating a model to detect fraud. You may be able to train a better
-model if you can use other customer data that belongs to department B. In this context,
+model if you can use other customer data that belongs to the sales department. In this context,
 you would create a project for this use case, and grant access (with whatever privacy
 guarantees you need) to the scientists tasked with training a model.
 
