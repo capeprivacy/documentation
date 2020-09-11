@@ -2,7 +2,7 @@
 
 All user actions in Cape are captured and viewable in the audit log. Examples
 of a tracked action include getting a [policy](./policy.md), logging in,
-creating a new [project](./project.md), etc.
+and creating a new [project](./project.md).
 
 You must be a global `admin` to view the audit log.
 
