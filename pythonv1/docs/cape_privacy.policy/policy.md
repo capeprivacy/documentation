@@ -67,20 +67,43 @@ DataFrame that conforms to the Policy.
 #### parse\_policy
 
 ```python
-parse_policy(p: str)
+parse_policy(p: Union[str, Dict[Any, Any]]) -> data.Policy
 ```
 
-Parses a policy yaml file.
+Parses a policy YAML file.
 
-The passed in string can either be a path to a local file or
-a URL pointing to a file. If it is a URL then requests attempts to download it.
+The passed in string can either be a path to a local file,
+a URL pointing to a file or a dictionary representing the policy.
+If it is a URL then requests attempts to download it.
 
 **Arguments**:
 
-- `p` - a path string or a URL string
+- `p` - a path string, a URL string or a dictionary representing the
+  policy.
   
 
 **Returns**:
 
-  The Policy object initialized by the yaml.
+  The Policy object initialized by the YAML.
+
+<a name="cape_privacy.policy.policy.reverse"></a>
+#### reverse
+
+```python
+reverse(policy: data.Policy) -> data.Policy
+```
+
+Turns reversible tokenizations into token reversers
+
+If any named transformations contain a reversible tokenization transformation
+this helper function turns them into token reverser transformations.
+
+**Arguments**:
+
+- `policy` - Top level policy object.
+  
+
+**Returns**:
+
+  The modified policy.
 
