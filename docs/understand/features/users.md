@@ -1,6 +1,6 @@
 # Users
 
-Users in cape exists much like users in other applications. All actions performed
+Users in Cape are much like users in other applications. All actions performed
 within Cape must be performed by an authenticated user.
 
 Users have the following attributes:
