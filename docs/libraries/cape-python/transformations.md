@@ -70,3 +70,25 @@ The `tokenizer` transformation maps a string to a token to obfuscate it.
     # If unspecified, Cape Python uses a random byte string
     key: <string or byte string>
 ```
+
+## ReversibleTokenizer
+
+The `ReversibleTokenizer` transformation maps a sting to a token to obfuscate it. However, when using the `ReversibleTokenizer`, the tokens can be reverted back to their plaintext form by using the `TokenReverser`.
+
+```yaml
+- transform:
+    type: reversible-tokenizer
+    # If unspecified, Cape Python uses a random byte string
+    key: <string or byte string>
+```
+
+## TokenReverser
+
+The `TokenReverser` is designed to be used with the `ReversibleTokenizer`. The `TokenReverser` reverts tokens produced by the `ReversibleTokenizer` back to their plaintext form.
+
+```yaml
+- transform:
+    type: token-reverser
+    # If unspecified, Cape Python uses a random byte string
+    key: <string or byte string>
+```
