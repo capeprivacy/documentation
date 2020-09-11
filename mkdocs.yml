@@ -64,6 +64,8 @@ nav:
             - Policies: libraries/cape-python/policies.md
             - Transformations: libraries/cape-python/transformations.md
             - Redactions: libraries/cape-python/redactions.md
+            - Tutorials:
+                - Reversible Tokenization: libraries/cape-python/tutorials/reversible-tokenization.md
             - API documentation:
                 - v1: '!include ./pythonv1/mkdocs.yml'
     - Release notes:
