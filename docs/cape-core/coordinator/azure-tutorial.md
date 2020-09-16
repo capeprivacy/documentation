@@ -132,7 +132,7 @@ Next, create a `values.yaml` file with all of your settings.
 image:
   pullPolicy: Always
   pullSecrets:
-    - capeRegistryCredentials
+    - cape-registry-credentials
 service:
   type: "LoadBalancer"
   portName: cape-enterprise
