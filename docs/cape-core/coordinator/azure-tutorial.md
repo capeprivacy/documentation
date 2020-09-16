@@ -96,6 +96,18 @@ Next you will configure an application to grant your Cape deployment permission 
 
 4. Select __User__ and then __User.Read__
 
+### Generate Client secrets
+
+1. In the left-hand pane, select __Certificates & secrets__
+
+2. Select __New client secret__
+
+3. Enter 'cape-coordinator' in the Description field
+
+4. Select __Add__
+
+5. Copy the Value of the created secret for the helm configuration below.
+
 ### Grant permission to enable Azure Key Vault integration
 
 1. Click on something in the Azure portal
