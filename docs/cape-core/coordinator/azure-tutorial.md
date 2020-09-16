@@ -109,7 +109,7 @@ Next you will configure an application to grant your Cape deployment permission 
 In your terminal, create an image pull secret using the following command:
 
 ```
-kubectl create secret docker-registry capeRegistryCredentials \
+kubectl create secret docker-registry cape-registry-credentials \
   --docker-server=<path-to-registry-server> \
   --docker-username=<registry-user-name> \
   --docker-password=<registry-user-password> \
