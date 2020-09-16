@@ -24,7 +24,7 @@ Once you're signed in to Azure portal, you will need to create a Kubernetes clus
 
     ![Create a resource](/assets/images/azure/create_resource.png)
 
-2. Select __Container__ then __Kubernetes Cluster__
+2. Select __Container__ then __Kubernetes service__
 
     ![Create a cluster](/assets/images/azure/create_cluster.png)
 
