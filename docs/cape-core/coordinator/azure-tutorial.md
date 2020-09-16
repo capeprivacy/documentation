@@ -42,11 +42,13 @@ Once you're signed in to Azure portal, you will need to create a Kubernetes clus
 az aks get-credentials --resource-group <group> --name <cluster name>
 ```
 
-## Create an Azure Database for Postgres
+## Create an Azure Database for PostgreSQL
 
 Next you'll need a database to store configuration information about.
 
 > For more detailed information about creating and using an Azure Database for Postgresql, refer to the official documentation [here](https://docs.microsoft.com/en-us/azure/postgresql/).
+
+### Create an Azure Database for PostgreSQL server
 
 1. From the Azure portal, select __Create a resource__
 
@@ -65,6 +67,48 @@ Next you'll need a database to store configuration information about.
 6. Select __Review and create__
 
 7. Select __Create__
+
+### Create a firewall rule to allow access to the database
+
+1. Select __Connection security__
+
+2. For __Allow access to Azure services__ select __Yes__
+
+3. Select __Add current client IP address__
+
+4. Click __Save__
+
+### Create a database for Cape Coordinator
+
+From your terminal, connect to the server you just created:
+
+```
+psql postgresql://<admin user>%40<server name>@<server name>.postgres.database.azure.com:5432/postgres?ssl=true
+```
+
+Create the database
+
+```
+CREATE DATABASE cape;
+```
+
+Create a cape user
+
+```
+CREATE USER cape WITH PASSWORD 'capecape';
+```
+
+Grant the `cape` user access to the new database
+
+```
+GRANT ALL PRIVILEGES ON DATABASE "cape" to cape;
+```
+  
+Exit psql
+
+```
+\q
+```
 
 ## Create an Application in Active Directory
 
