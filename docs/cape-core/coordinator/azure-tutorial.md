@@ -182,14 +182,6 @@ Next you will configure an application to grant your Cape deployment permission 
 
 5. Copy the Value of the created secret for the helm configuration below.
 
-### Grant permission to enable Azure Key Vault integration
-
-1. Click on something in the Azure portal
-
-2. ...
-
-3. Profit!!
-
 ## Create a Registry Secret to Access a Private Repository
 
 In your terminal, create an image pull secret using the following command:
