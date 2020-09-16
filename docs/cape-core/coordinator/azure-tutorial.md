@@ -64,6 +64,8 @@ Next you'll need a database to store configuration information about.
 
 6. Select __Review and create__
 
+7. Select __Create__
+
 ## Create an Application in Active Directory
 
 Next you will configure an application to grant your Cape deployment permission to access Azure resources for AzureAD authentication and Azure Key Vault Key Management.
