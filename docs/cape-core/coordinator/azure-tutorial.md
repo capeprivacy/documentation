@@ -110,6 +110,36 @@ Exit psql
 \q
 ```
 
+## Create a Key Vault for use by Cape Coordinator
+
+1. From the Azure portal select __Create a resource__
+
+2. Use the search box to find and select "Key Vault"
+
+3. Select __Create__
+
+4. Select the Resource Group you created earlier
+
+5. Give the Key Vault a name
+
+6. Select __Review + create__
+
+7. Select __Create__
+
+8. When the deployment is complete, select __Go to resource__
+
+### Create a root key for Cape Coordinator
+
+1. Select __Keys__
+
+2. Select __Generate/Import__
+
+3. Give the new key a name
+
+4. Select __Create__
+
+5. Note your Vault URI and key name. These will be used to configure Cape Coordinator below.
+
 ## Create an Application in Active Directory
 
 Next you will configure an application to grant your Cape deployment permission to access Azure resources for AzureAD authentication and Azure Key Vault Key Management.
