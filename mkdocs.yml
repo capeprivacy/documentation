@@ -55,6 +55,11 @@ nav:
             - Overview: cape-core/coordinator/index.md
             - Deploy to Kubernetes: cape-core/coordinator/kubernetes.md
             - Install with the CLI: cape-core/coordinator/local-cli.md
+    - Cape Enterprise:
+        - Introduction: cape-enterprise/index.md
+        - Coordinator:
+            - Overview: cape-enterprise/coordinator/index.md
+            - Configure AzureAD: cape-enterprise/coordinator/azuread.md
     - Libraries:
         - Introduction: libraries/index.md
         - Cape Python:
