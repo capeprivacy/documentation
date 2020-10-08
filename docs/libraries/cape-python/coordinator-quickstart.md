@@ -37,7 +37,7 @@ rules:
 # Set the column name
 - match:
     name: weight
-    actions:
+  actions:
     - transform:
         # This example shows an unnamed transformation.
         # It tells the policy runner to:
