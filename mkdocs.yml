@@ -68,6 +68,14 @@ nav:
                 - Reversible Tokenization: libraries/cape-python/tutorials/reversible-tokenization.md
             - API documentation:
                 - v1: '!include ./pythonv1/mkdocs.yml'
+        - Cape DS:
+            - Overview: libraries/cape-ds/index.md
+            - Usage:
+                - Login: 'libraries/cape-ds/usage/login.md'
+                - Projects: 'libraries/cape-ds/usage/project.md'
+                - DataViews: 'libraries/cape-ds/usage/dataview.md'
+                - Jobs: 'libraries/cape-ds/usage/job.md'
+            - Reference: libraries/cape-ds/reference.md
     - Release notes:
         - Introduction: release-notes/index.md
         - July 2020: release-notes/30072020.md
@@ -75,6 +83,12 @@ nav:
 plugins:
     - search
     - monorepo
+    - mkdocstrings:
+        handlers:
+            python:
+                setup_commands:
+                    - import sys
+                    - sys.path.append("ref-src")
 markdown_extensions:
     - admonition
     - pymdownx.highlight:
