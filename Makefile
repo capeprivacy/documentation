@@ -16,3 +16,6 @@ dsdocs:
 	mv $(CODE_SRC)/cape-ds/docs/img/ docs/libraries/cape-ds/
 	mv $(CODE_SRC)/cape-ds/docs/usage/ docs/libraries/cape-ds/
 	mv $(CODE_SRC)/cape-ds/docs/tutorials/ docs/libraries/cape-ds/
+
+build:
+	mkdocs build
