@@ -75,6 +75,8 @@ nav:
                 - Projects: 'libraries/cape-ds/usage/project.md'
                 - DataViews: 'libraries/cape-ds/usage/dataview.md'
                 - Jobs: 'libraries/cape-ds/usage/job.md'
+            - Tutorials:
+                - Train Linear Regression: libraries/cape-ds/tutorials/submit_linear_regression_job.md
             - Reference: libraries/cape-ds/reference.md
     - Release notes:
         - Introduction: release-notes/index.md

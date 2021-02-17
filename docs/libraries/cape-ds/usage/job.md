@@ -19,14 +19,6 @@ Default response:
 ```python
     my_project = c.get_project(id="project_123")
 
-    my_project.get_job(id="abc_123")
-```
-
-Default response:
-
-```shell
-    my_project = c.get_project(id="project_123")
-
     dataview_1 = my_project.get_dataview(uri="s3://my-data.csv")
     dataview_2 = my_project.get_dataview(uri="s3://my-data-2.csv")
 

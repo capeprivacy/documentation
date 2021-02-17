@@ -7,8 +7,6 @@
 - Create and query dataviews, or pointers to the data that you want to use to train a model using Cape's encrypted learning protocol.
 - Submit and track jobs.
 
-Learn more: https://docs.capeprivacy.com/
-
 ## Short Tutorial
 Access your Cape projects by creating a instance of the main `Cape` class:
 ``` 
