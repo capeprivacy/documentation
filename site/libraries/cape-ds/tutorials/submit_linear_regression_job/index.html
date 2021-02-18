@@ -1951,6 +1951,11 @@ All <code>DataViews</code> must be associated with an organization. This associa
     <span class="o">&gt;&gt;&gt;</span> <span class="n">metrics</span>
     <span class="p">{</span><span class="s1">&#39;r_squared_result&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.8804865768463074</span><span class="p">],</span> <span class="s1">&#39;mse_result&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">37.94773864746094</span><span class="p">]}</span>
 </code></pre></div>
+<p>If you are the model owner, the first value in the returned tuple will be populated with a numpy array of weights from your trained model.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To access model weights you'll need to <a href="/cape-ds/usage/job/#accessing-weights-as-a-model-owner-in-cape">inform <strong>cape-ds</strong> about your IAM authentication credentials</a>.</p>
+</div>
                 
               
               

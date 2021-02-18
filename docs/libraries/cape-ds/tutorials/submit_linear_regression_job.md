@@ -194,3 +194,8 @@ To view the weights and metrics of a job, use the [`get_results`](/reference/#ca
     >>> metrics
     {'r_squared_result': [0.8804865768463074], 'mse_result': [37.94773864746094]}
 ```
+
+If you are the model owner, the first value in the returned tuple will be populated with a numpy array of weights from your trained model.
+
+!!!note
+    To access model weights you'll need to [inform **cape-ds** about your IAM authentication credentials](/cape-ds/usage/job/#accessing-weights-as-a-model-owner-in-cape).

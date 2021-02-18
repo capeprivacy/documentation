@@ -1491,6 +1491,19 @@
     Get a Job's Results
   </a>
   
+    <nav class="md-nav" aria-label="Get a Job's Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-weights-as-a-model-owner-in-cape" class="md-nav__link">
+    Accessing Weights as a Model Owner in Cape
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1686,6 +1699,19 @@
     Get a Job's Results
   </a>
   
+    <nav class="md-nav" aria-label="Get a Job's Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-weights-as-a-model-owner-in-cape" class="md-nav__link">
+    Accessing Weights as a Model Owner in Cape
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1745,6 +1771,14 @@
 <div class="highlight"><pre><span></span><code>    <span class="o">(</span>array<span class="o">([</span><span class="m">12</span>.14955139,  <span class="m">1</span>.96560669<span class="o">])</span>,
     <span class="o">{</span><span class="s1">&#39;r_squared_result&#39;</span>: <span class="o">[</span><span class="m">0</span>.8804865768463074<span class="o">]</span>, <span class="s1">&#39;mse_result&#39;</span>: <span class="o">[</span><span class="m">37</span>.94773864746094<span class="o">]})</span>
 </code></pre></div>
+<h3 id="accessing-weights-as-a-model-owner-in-cape">Accessing Weights as a Model Owner in Cape<a class="headerlink" href="#accessing-weights-as-a-model-owner-in-cape" title="Permanent link">#</a></h3>
+<p><strong>cape-ds</strong> uses <a href="https://boto3.amazonaws.com/"><code>boto</code></a> to access the model weights in your S3 bucket. You'll need to inform <strong>cape-ds</strong> about your IAM authentication credentials. Cape expects values for the following AWS configuration keys: <code>AWS_ACCESS_KEY_ID</code>, <code>AWS_SECRET_ACCESS_KEY</code>, and <code>AWS_REGION</code>. </p>
+<p>You can set these keys as environment variables in the interpreter running <strong>cape-ds</strong>:
+<div class="highlight"><pre><span></span><code>    <span class="nb">export</span> <span class="nv">AWS_ACCESS_KEY_ID</span><span class="o">=</span>&lt;Access-Key&gt;
+    <span class="nb">export</span> <span class="nv">AWS_SECRET_ACCESS_KEY</span><span class="o">=</span>&lt;Secret-Key&gt;
+    <span class="nb">export</span> <span class="nv">AWS_REGION</span><span class="o">=</span>&lt;Region&gt;
+</code></pre></div></p>
+<p>Alternatively you can simply add these keys to your <a href="https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#configuration">AWS Configuration file</a>.</p>
                 
               
               
