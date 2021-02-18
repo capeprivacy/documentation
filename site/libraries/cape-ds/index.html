@@ -440,6 +440,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../understand/features/tokens/" title="Tokens" class="md-nav__link">
+      Tokens
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1720,11 +1732,11 @@
 <p><a href="https://codecov.io/gh/capeprivacy/cape-ds"><img alt="codecov" src="https://codecov.io/gh/capeprivacy/cape-ds/branch/main/graph/badge.svg?token=nimecXcQzo" /></a></p>
 <p><strong>cape-ds</strong> is a set of Python modules for interacting with your Cape data. Using cape-ds, you can:</p>
 <ul>
-<li>Create and query dataviews, or pointers to the data that you want to use to train a model using Cape's encrypted learning protocol.</li>
-<li>Submit and track jobs.</li>
+<li>Create and query <a href="/libraries/cape-ds/reference#dataviews">dataviews</a>, or pointers to the data that you want to use to train a model using Cape's encrypted learning protocol.</li>
+<li>Submit and track <a href="/libraries/cape-ds/reference#dataviews">jobs</a>, which are computational sessions which contain instructions for how to train your model.</li>
 </ul>
 <h2 id="short-tutorial">Short Tutorial<a class="headerlink" href="#short-tutorial" title="Permanent link">#</a></h2>
-<p>Access your Cape projects by creating a instance of the main <code>Cape</code> class:
+<p>Access your Cape projects by creating a instance of the main <a href="/libraries/cape-ds/reference#cape"><code>Cape</code></a> class:
 <div class="highlight"><pre><span></span><code>    from cape import Cape
 
     c = Cape()
@@ -1732,7 +1744,7 @@
 
     my_projects = c.list_projects()
 </code></pre></div></p>
-<p>Add dataviews to your project, review dataviews added by other organizations working in the project, and submit your job.
+<p>Add dataviews to your project, review dataviews added by other organizations collaborating with you in the project, and submit your job.
 <div class="highlight"><pre><span></span><code>    from cape import DataView, VerticalLinearRegressionJob
 
     data_view = DataView(name=&quot;my-data&quot;, uri=&quot;s3://my-data.csv&quot; owner_label=&quot;my-org&quot;)

@@ -34,3 +34,32 @@ Default response:
 ```shell
     VerticalLinearRegressionJob(id=abc_123, job_type=LINEAR_REGRESSION, status=Created)
 ```
+
+## Get a Job's Status
+
+```python
+    lr_job = my_project.get_job(id="abc_123")
+
+    lr_job.get_status()
+```
+
+Default response:
+
+```shell
+    Created
+```
+
+## Get a Job's Results
+
+```python
+    lr_job = my_project.get_job(id="abc_123")
+
+    weights, metrics = lr_job.get_results()
+```
+
+Default response:
+
+```shell
+    (array([12.14955139,  1.96560669]),
+    {'r_squared_result': [0.8804865768463074], 'mse_result': [37.94773864746094]})
+```

@@ -440,6 +440,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../understand/features/tokens/" title="Tokens" class="md-nav__link">
+      Tokens
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2104,7 +2116,7 @@
 </thead>
 <tbody>
 <tr>
-<td><code>List[cape-ds.cape.api.project.project.Project]</code></td>
+<td><code>str</code></td>
 <td>
 <p>A list of <code>Project</code> instances.</p>
 </td>
@@ -2455,7 +2467,7 @@
 <div class="doc doc-object doc-method">
 <h2 class="doc doc-heading" id="cape-ds.cape.api.project.project.Project.submit_job">
 
-<code class="highlight language-python"><span class="n">submit_job</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">job</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">submit_job</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">job</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span></code>
 
 
       <a class="headerlink" href="#cape-ds.cape.api.project.project.Project.submit_job" title="Permanent link">#</a></h2>
@@ -2681,6 +2693,7 @@ metrics: A dictionary of different metric values.</p>
 <div class="doc doc-object doc-class">
 <div class="doc doc-contents first">
 <p>Intializes a Job that can be submitted to Cape to train a Linear Regression Model.</p>
+<p>VerticalLinearRegressionJob is a child Class of <code>Job</code></p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2694,17 +2707,17 @@ metrics: A dictionary of different metric values.</p>
 <tbody>
 <tr>
 <td><code>x_train_dataview</code></td>
-<td><code></code></td>
+<td><code>Union[`DataView`, `DataView`List[str]]</code></td>
 <td>
-<p><code>DataView</code> that points to dataset that contains training set values.</p>
+<p><code>DataView</code> that points to a dataset that contains training set values.</p>
 </td>
 <td><em>required</em></td>
 </tr>
 <tr>
 <td><code>y_train_dataview</code></td>
-<td><code></code></td>
+<td><code>Union[`DataView`, `DataView`List[str]]</code></td>
 <td>
-<p><code>DataView</code> that points to dataset that contains target values.</p>
+<p><code>DataView</code> that points to a dataset that contains target values.</p>
 </td>
 <td><em>required</em></td>
 </tr>

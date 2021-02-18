@@ -1,7 +1,7 @@
 # API Reference
 
 ## Cape
-::: cape-ds.Cape
+::: cape-ds.cape.Cape
     handler: python
     selection:
         filters:
@@ -13,7 +13,7 @@
       show_root_toc_entry: false
 
 ## Project
-::: cape-ds.Project
+::: cape-ds.cape.Project
     handler: python
     selection:
         members:
@@ -29,7 +29,7 @@
       show_root_toc_entry: false
 
 ## DataView
-::: cape-ds.DataView
+::: cape-ds.cape.DataView
     handler: python
     selection:
         members:
@@ -40,7 +40,7 @@
       show_root_toc_entry: false
 
 ## Job
-::: cape-ds.Job
+::: cape-ds.cape.Job
     handler: python
     selection:
         members:
@@ -52,7 +52,7 @@
       show_root_toc_entry: false
 
 ## VerticalLinearRegressionJob
-::: cape-ds.VerticalLinearRegressionJob
+::: cape-ds.cape.VerticalLinearRegressionJob
     handler: python
     selection:
         filters:

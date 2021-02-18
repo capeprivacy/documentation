@@ -42,7 +42,7 @@ Initialize a `DataView` class and pass the instance to the `add_dataview` method
 ```python
     my_project = c.get_project(id="project_123")
 
-    data_view = DataView(name="my-data", uri="s3://my-data.csv", owner_label="my-org")
+    data_view = DataView(name="my-data", uri="https://storage.com/my-data.csv", owner_label="my-org")
     my_project.add_dataview(data_view)
 ```
 
@@ -52,11 +52,13 @@ Default response:
     DataView(id=dataview_123, name=my-data, location=s3://my-data.csv)
 ```
 
-By default, Cape attempts to look at your data and create a schema. 
+### Specifying a Schema for your DataView
 
-By inspecting the schema property, other data scientists that are added as contributors to the current project are able to identify which data columns should be trained against. 
+`DataView` schemas allow you to clarify the data types of your dataset. They will be visible for other project contributors - even ones from other organiations - to your project to query and inspect. By inspecting the schema property, other project contributors are able to identify which data columns should be used to train the model. 
 
-If you would prefer to specify your data's schema yourself, you can do so using the `schema` parameter. DataViews can be instatiated with a pandas series of type `pd.Series`:
+If you provide a dataset to Cape that is publically accessible via http, Cape will attempt to preview your data and create a schema. 
+
+However if your dataset is not publically accessible you'll have to specify your data's schema yourself. You can do so using the `schema` parameter. DataViews can be instatiated with a [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) Series schema of type [`dataframe.dftypes`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dtypes.html):
 
 ```python
     import pandas as pd
@@ -65,7 +67,7 @@ If you would prefer to specify your data's schema yourself, you can do so using 
     data_view = DataView(name="my-data", uri="s3://my-data.csv", schema=df.dtypes)
 ```
 
-DataViews can also be instantiated as a list of data types. Accepted schema data types include: `string`, `integer`, `number`, `datetime`, `any`.
+DataViews can also be instantiated as a list of data types. Accepted schema data types include: `string`, `integer`, `number`, `datetime`, and `any`.
 
 ```python
     schema = [{'name': 'col_1', 'schema_type': 'integer'}, {'name': 'col_2', 'schema_type': 'integer'}]

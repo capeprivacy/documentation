@@ -38,6 +38,7 @@ nav:
             - Projects: understand/features/projects.md
             - Policy: understand/features/policy.md
             - Auditing: understand/features/auditing.md
+            - Tokens: understand/features/tokens.md
         - Support matrix: understand/support.md
         - Roadmap: understand/roadmap.md
     - Cape Core:

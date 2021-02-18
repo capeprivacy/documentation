@@ -2,7 +2,7 @@
 
 To use Cape DS, you'll need to generate a [user token](/understand/features/tokens/). You'll use this token to authenticate requests to Cape.
 
-After setting up an account in [Cape](demo.capeprivacy.com), ensure you are
+After setting up an account in [Cape](https://demo.capeprivacy.com), ensure you are
 working within your user context and navigate to _Account Settings_ to generate a user token.
 
 ![](./img/create_user_token.gif)

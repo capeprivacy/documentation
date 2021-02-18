@@ -440,6 +440,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../understand/features/tokens/" title="Tokens" class="md-nav__link">
+      Tokens
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1467,6 +1479,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-a-jobs-status" class="md-nav__link">
+    Get a Job's Status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-a-jobs-results" class="md-nav__link">
+    Get a Job's Results
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1648,6 +1674,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-a-jobs-status" class="md-nav__link">
+    Get a Job's Status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-a-jobs-results" class="md-nav__link">
+    Get a Job's Results
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1687,6 +1727,23 @@
 </code></pre></div>
 <p>Default response:</p>
 <div class="highlight"><pre><span></span><code>    VerticalLinearRegressionJob<span class="o">(</span><span class="nv">id</span><span class="o">=</span>abc_123, <span class="nv">job_type</span><span class="o">=</span>LINEAR_REGRESSION, <span class="nv">status</span><span class="o">=</span>Created<span class="o">)</span>
+</code></pre></div>
+<h2 id="get-a-jobs-status">Get a Job's Status<a class="headerlink" href="#get-a-jobs-status" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>    <span class="n">lr_job</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_job</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;abc_123&quot;</span><span class="p">)</span>
+
+    <span class="n">lr_job</span><span class="o">.</span><span class="n">get_status</span><span class="p">()</span>
+</code></pre></div>
+<p>Default response:</p>
+<div class="highlight"><pre><span></span><code>    Created
+</code></pre></div>
+<h2 id="get-a-jobs-results">Get a Job's Results<a class="headerlink" href="#get-a-jobs-results" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>    <span class="n">lr_job</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_job</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;abc_123&quot;</span><span class="p">)</span>
+
+    <span class="n">weights</span><span class="p">,</span> <span class="n">metrics</span> <span class="o">=</span> <span class="n">lr_job</span><span class="o">.</span><span class="n">get_results</span><span class="p">()</span>
+</code></pre></div>
+<p>Default response:</p>
+<div class="highlight"><pre><span></span><code>    <span class="o">(</span>array<span class="o">([</span><span class="m">12</span>.14955139,  <span class="m">1</span>.96560669<span class="o">])</span>,
+    <span class="o">{</span><span class="s1">&#39;r_squared_result&#39;</span>: <span class="o">[</span><span class="m">0</span>.8804865768463074<span class="o">]</span>, <span class="s1">&#39;mse_result&#39;</span>: <span class="o">[</span><span class="m">37</span>.94773864746094<span class="o">]})</span>
 </code></pre></div>
                 
               
