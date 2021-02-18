@@ -169,11 +169,9 @@ To check the status of your submitted linear regression job, use the [`get_statu
     Success
 ```
 
-**TODO:** Add note about what to do if Job errors, note retry feature.
-
 ### Approving Jobs
 
-**TODO:** Need to what the workflow is here.
+**TODO:** Need to know what the workflow is here.
 
 ### Getting Weights and Metrics from Trained Model
 
