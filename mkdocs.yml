@@ -27,7 +27,9 @@ nav:
     - Home: index.md
     - Understand Cape:
         - Introduction: understand/index.md
-        - Architecture: understand/architecture.md
+        - Architecture: 
+            - Overview: understand/architecture/index.md
+            - Cape Workers: understand/architecture/cape-workers.md
         - Best practices:
             - Overview: understand/best-practices/index.md
             - Running transformations: understand/best-practices/running-transformations.md

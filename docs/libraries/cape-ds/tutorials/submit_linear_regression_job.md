@@ -13,7 +13,6 @@ We'll also use the [`cape-ds`](https://github.com/capeprivacy/cape-ds) Python li
 ```
 **TODO:** 
 - Docs on project/task roles (/understand/features/roles/)
-- Docs on workers
 ```
 ## Project Setup
 
@@ -23,7 +22,7 @@ First you'll need to create an organization at [demo.capeprivacy.com](https://de
 
 ![](../img/create_org.gif)
 
-Once you've created your organization, you can navigate to _Organization Settings_ and generate a token for your organization. You'll need this token to configure your worker.
+Once you've created your organization, you can navigate to _Organization Settings_ and generate a token for your organization. You'll need this token to [configure your worker](/understand/architecture/cape-workers).
 
 Take note of this value as you cannot recover it after you reload the page.
 
@@ -155,6 +154,9 @@ You can also specify which data columns the model should be trained on or evalua
     >>> )
 ```
 
+!!!note
+    In order for your linear regression job to train a model using Cape's encrypted learning protocol, you'll need to run your own Cape workers. Read [our documentation to get set up with Cape workers](/understand/architecture/cape-workers).
+
 ### Tracking Job Status
 
 After submitting your job, you should be able to see the status and details of your `Job` in the UI.
@@ -198,4 +200,4 @@ To view the weights and metrics of a job, use the [`get_results`](/reference/#ca
 If you are the model owner, the first value in the returned tuple will be populated with a numpy array of weights from your trained model.
 
 !!!note
-    To access model weights you'll need to [inform **cape-ds** about your IAM authentication credentials](/cape-ds/usage/job/#accessing-weights-as-a-model-owner-in-cape).
+    To access model weights you'll need to [inform **cape-ds** about your AWS IAM authentication credentials](/cape-ds/usage/job/#accessing-weights-as-a-model-owner-in-cape).

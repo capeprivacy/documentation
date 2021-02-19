@@ -282,10 +282,52 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../../understand/architecture/" title="Architecture" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
+    
+    <label class="md-nav__link" for="nav-2-2">
       Architecture
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Architecture" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Architecture
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../understand/architecture/" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../../understand/architecture/cape-workers/" title="Cape Workers" class="md-nav__link">
+      Cape Workers
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -1826,13 +1868,12 @@
 <p>We'll also use the <a href="https://github.com/capeprivacy/cape-ds"><code>cape-ds</code></a> Python library to create and review pointers to datasets or <a href="/libraries/cape-ds/reference#dataview"><code>DataViews</code></a>, and create and review <a href="/libraries/cape-ds/reference#job"><code>Jobs</code></a>, Cape Python objects that contain instructions for how to train a model using the data provided.
 <div class="highlight"><pre><span></span><code>**TODO:** 
 - Docs on project/task roles (/understand/features/roles/)
-- Docs on workers
 </code></pre></div></p>
 <h2 id="project-setup">Project Setup<a class="headerlink" href="#project-setup" title="Permanent link">#</a></h2>
 <h3 id="create-an-organization">Create an Organization<a class="headerlink" href="#create-an-organization" title="Permanent link">#</a></h3>
 <p>First you'll need to create an organization at <a href="https://demo.capeprivacy.com">demo.capeprivacy.com</a>.</p>
 <p><img alt="" src="../../img/create_org.gif" /></p>
-<p>Once you've created your organization, you can navigate to <em>Organization Settings</em> and generate a token for your organization. You'll need this token to configure your worker.</p>
+<p>Once you've created your organization, you can navigate to <em>Organization Settings</em> and generate a token for your organization. You'll need this token to <a href="/understand/architecture/cape-workers">configure your worker</a>.</p>
 <p>Take note of this value as you cannot recover it after you reload the page.</p>
 <h3 id="create-a-project">Create a Project<a class="headerlink" href="#create-a-project" title="Permanent link">#</a></h3>
 <p>Next, create a <a href="/libraries/cape-ds/reference#project"><code>Project</code></a> within one of the organizations you just created.</p>
@@ -1925,6 +1966,10 @@ All <code>DataViews</code> must be associated with an organization. This associa
     <span class="o">&gt;&gt;&gt;</span>     <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">dataview_2</span><span class="p">[</span><span class="s2">&quot;y_total_estimated_sales&quot;</span><span class="p">],</span>
     <span class="o">&gt;&gt;&gt;</span> <span class="p">)</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In order for your linear regression job to train a model using Cape's encrypted learning protocol, you'll need to run your own Cape workers. Read <a href="/understand/architecture/cape-workers">our documentation to get set up with Cape workers</a>.</p>
+</div>
 <h3 id="tracking-job-status">Tracking Job Status<a class="headerlink" href="#tracking-job-status" title="Permanent link">#</a></h3>
 <p>After submitting your job, you should be able to see the status and details of your <code>Job</code> in the UI.</p>
 <p><strong>TODO:</strong> Add GIF of Job/Job Details UI here.</p>
@@ -1954,7 +1999,7 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <p>If you are the model owner, the first value in the returned tuple will be populated with a numpy array of weights from your trained model.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To access model weights you'll need to <a href="/cape-ds/usage/job/#accessing-weights-as-a-model-owner-in-cape">inform <strong>cape-ds</strong> about your IAM authentication credentials</a>.</p>
+<p>To access model weights you'll need to <a href="/cape-ds/usage/job/#accessing-weights-as-a-model-owner-in-cape">inform <strong>cape-ds</strong> about your AWS IAM authentication credentials</a>.</p>
 </div>
                 
               
