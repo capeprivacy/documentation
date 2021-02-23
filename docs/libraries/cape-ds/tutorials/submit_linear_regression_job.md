@@ -2,18 +2,15 @@
 
 This tutorial will walk you through the process of training an encrypted linear regression model in collaboration with another organization using Cape Privacy. You'll learn how to:
 
-- Send datasets securely to Cape Cloud
-- Review the schemas of datasets belonging to collaborating organizations
-- Approve and reject model computation jobs 
-- View the metrics or weights of the trained model, depending on your role in the project
+- Send datasets securely to Cape Cloud.
+- Review the datasets schemas of other organizations in your project.
+- Approve and reject model computation jobs.
+- View the metrics or weights of the trained model, depending on your role in the project.
 
 We'll use the [Cape UI](https://demo.capeprivacy.com) to setup and review actvity in the project. 
 
 We'll also use the [`cape-ds`](https://github.com/capeprivacy/cape-ds) Python library to create and review pointers to datasets or [`DataViews`](/libraries/cape-ds/reference#dataview), and create and review [`Jobs`](/libraries/cape-ds/reference#job), Cape Python objects that contain instructions for how to train a model using the data provided.
-```
-**TODO:** 
-- Docs on project/task roles (/understand/features/roles/)
-```
+
 ## Project Setup
 
 ### Create an Organization
@@ -51,6 +48,7 @@ That is it for the UI for now! We'll return later to review and approve `DataVie
 
 Next we will setup `DataViews` and `Jobs` in `cape-ds`.
 
+## Working with the Cape DS Python Library
 ### Login to Cape DS
 
 Before you can make requests to Cape Cloud, you'll need to authenticate with the API. Follow [these instructions to authenticate](/libraries/cape-ds/usage/login) with our API using `cape-ds`. Once you've logged in successfully, you should see a success message.

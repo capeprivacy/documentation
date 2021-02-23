@@ -1578,6 +1578,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-the-cape-ds-python-library" class="md-nav__link">
+    Working with the Cape DS Python Library
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with the Cape DS Python Library">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#login-to-cape-ds" class="md-nav__link">
     Login to Cape DS
@@ -1786,6 +1799,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-the-cape-ds-python-library" class="md-nav__link">
+    Working with the Cape DS Python Library
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with the Cape DS Python Library">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#login-to-cape-ds" class="md-nav__link">
     Login to Cape DS
@@ -1859,16 +1885,13 @@
                 <h1 id="train-a-linear-regression-model-using-cape-dataviews-jobs">Train a Linear Regression Model using Cape DataViews &amp; Jobs<a class="headerlink" href="#train-a-linear-regression-model-using-cape-dataviews-jobs" title="Permanent link">#</a></h1>
 <p>This tutorial will walk you through the process of training an encrypted linear regression model in collaboration with another organization using Cape Privacy. You'll learn how to:</p>
 <ul>
-<li>Send datasets securely to Cape Cloud</li>
-<li>Review the schemas of datasets belonging to collaborating organizations</li>
-<li>Approve and reject model computation jobs </li>
-<li>View the metrics or weights of the trained model, depending on your role in the project</li>
+<li>Send datasets securely to Cape Cloud.</li>
+<li>Review the datasets schemas of other organizations in your project.</li>
+<li>Approve and reject model computation jobs.</li>
+<li>View the metrics or weights of the trained model, depending on your role in the project.</li>
 </ul>
 <p>We'll use the <a href="https://demo.capeprivacy.com">Cape UI</a> to setup and review actvity in the project. </p>
-<p>We'll also use the <a href="https://github.com/capeprivacy/cape-ds"><code>cape-ds</code></a> Python library to create and review pointers to datasets or <a href="/libraries/cape-ds/reference#dataview"><code>DataViews</code></a>, and create and review <a href="/libraries/cape-ds/reference#job"><code>Jobs</code></a>, Cape Python objects that contain instructions for how to train a model using the data provided.
-<div class="highlight"><pre><span></span><code>**TODO:** 
-- Docs on project/task roles (/understand/features/roles/)
-</code></pre></div></p>
+<p>We'll also use the <a href="https://github.com/capeprivacy/cape-ds"><code>cape-ds</code></a> Python library to create and review pointers to datasets or <a href="/libraries/cape-ds/reference#dataview"><code>DataViews</code></a>, and create and review <a href="/libraries/cape-ds/reference#job"><code>Jobs</code></a>, Cape Python objects that contain instructions for how to train a model using the data provided.</p>
 <h2 id="project-setup">Project Setup<a class="headerlink" href="#project-setup" title="Permanent link">#</a></h2>
 <h3 id="create-an-organization">Create an Organization<a class="headerlink" href="#create-an-organization" title="Permanent link">#</a></h3>
 <p>First you'll need to create an organization at <a href="https://demo.capeprivacy.com">demo.capeprivacy.com</a>.</p>
@@ -1888,6 +1911,7 @@ working within your user context and navigate to <em>Account Settings</em> to cr
 <p>Take note of this value as, like the user token, you cannot recover it after you reload the page.</p>
 <p>That is it for the UI for now! We'll return later to review and approve <code>DataViews</code> and <code>Jobs</code>. </p>
 <p>Next we will setup <code>DataViews</code> and <code>Jobs</code> in <code>cape-ds</code>.</p>
+<h2 id="working-with-the-cape-ds-python-library">Working with the Cape DS Python Library<a class="headerlink" href="#working-with-the-cape-ds-python-library" title="Permanent link">#</a></h2>
 <h3 id="login-to-cape-ds">Login to Cape DS<a class="headerlink" href="#login-to-cape-ds" title="Permanent link">#</a></h3>
 <p>Before you can make requests to Cape Cloud, you'll need to authenticate with the API. Follow <a href="/libraries/cape-ds/usage/login">these instructions to authenticate</a> with our API using <code>cape-ds</code>. Once you've logged in successfully, you should see a success message.</p>
 <div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Cape</span><span class="p">()</span>

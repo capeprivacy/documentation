@@ -44,7 +44,7 @@
         show_source: false
         show_root_toc_entry: false
 
-## cape.ob
+## cape.Job
 ::: cape-ds.cape.Job
     handler: python
     rendering:
