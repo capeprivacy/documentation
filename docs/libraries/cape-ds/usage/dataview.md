@@ -37,13 +37,13 @@ Default response:
 
 ## Add a data view to a project
 
-Initialize a `DataView` class and pass the instance to the `add_dataview` method.
+Initialize a `DataView` class and pass the instance to the `create_dataview` method.
 
 ```python
     my_project = c.get_project(id="project_123")
 
     data_view = DataView(name="my-data", uri="https://storage.com/my-data.csv", owner_label="my-org")
-    my_project.add_dataview(data_view)
+    my_project.create_dataview(data_view)
 ```
 
 Default response:
@@ -80,7 +80,7 @@ DataViews can also be instantiated as a list of data types. Accepted schema data
 ```python
     my_project = c.get_project(id="project_123")
 
-    my_project.remove_dataview(id="dataview_123")
+    my_project.delete_dataview(id="dataview_123")
 ```
 
 Default response:

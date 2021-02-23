@@ -20,15 +20,15 @@ Access your Cape projects by creating a instance of the main [`Cape`](/libraries
 
 Add dataviews to your project, review dataviews added by other organizations collaborating with you in the project, and submit your job.
 ```    
-    from cape import DataView, VerticalLinearRegressionJob
+    from cape import DataView, VerticallyPartitionedLinearRegression
 
     data_view = DataView(name="my-data", uri="s3://my-data.csv" owner_label="my-org")
     my_project = c.get_project("project_123")
-    my_project.add_dataview(data_view)
+    my_project.create_dataview(data_view)
 
     dvs = my_project.list_dataviews()
 
-    vlr_job = VerticalLinearRegressionJob(
+    vlr_job = VerticallyPartitionedLinearRegression(
         train_dataview_x=dvs[0],
         train_dataview_y=dvs[1]
     )

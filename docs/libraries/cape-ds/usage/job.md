@@ -11,7 +11,7 @@
 Default response:
 
 ```shell
-    VerticalLinearRegressionJob(id=abc_123, job_type=LINEAR_REGRESSION, status=Created)
+    VerticallyPartitionedLinearRegression(id=abc_123, job_type=LINEAR_REGRESSION, status=Created)
 ```
 
 ## Submit a job
@@ -22,7 +22,7 @@ Default response:
     dataview_1 = my_project.get_dataview(uri="s3://my-data.csv")
     dataview_2 = my_project.get_dataview(uri="s3://my-data-2.csv")
 
-    lr_job = VerticalLinearRegressionJob(
+    lr_job = VerticallyPartitionedLinearRegression(
         x_train_dataview=dataview_1,
         y_train_dataview=dataview_2,
     )
@@ -32,7 +32,7 @@ Default response:
 Default response:
 
 ```shell
-    VerticalLinearRegressionJob(id=abc_123, job_type=LINEAR_REGRESSION, status=Created)
+    VerticallyPartitionedLinearRegression(id=abc_123, job_type=LINEAR_REGRESSION, status=Created)
 ```
 
 ## Get a Job's Status

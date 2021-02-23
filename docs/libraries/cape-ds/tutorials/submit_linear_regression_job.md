@@ -78,7 +78,7 @@ Use the `list_projects` method defined on the main `Cape` class, to query a list
 	[Project(id=project_123, name=Sales Transactions, label=sales-transactions)]
 ```
 
-Once you have the project in-memory that you want to add a `DataView` to, you can initialize a `DataView` class and pass the instance to the `add_dataview` method.
+Once you have the project in-memory that you want to add a `DataView` to, you can initialize a `DataView` class and pass the instance to the `create_dataview` method.
 
 ```python
     >>> my_project = c.get_project(id="project_123")
@@ -89,7 +89,7 @@ Once you have the project in-memory that you want to add a `DataView` to, you ca
     >>>     uri="s3://my-data.csv", 
     >>>     owner_label="my-org"
     >>> )
-    >>> my_project.add_dataview(data_view)
+    >>> my_project.create_dataview(data_view)
 ```
 All `DataViews` must be associated with an organization. This association can be made by passing eiher an `owner_label` or an `owner_id` to the [`DataView`](/libraries/cape-ds/reference#cape.api.dataview.dataview.DataView.__init__) class instantiation.
 
@@ -138,17 +138,17 @@ Pass the `DataView` that contains training data to `x_train_dataview`, and the `
     >>> dataview_1 = my_project.get_dataview(id="01EY48")
     >>> dataview_2 = my_project.get_dataview(id="01EY49")
 
-    >>> lr_job = VerticalLinearRegressionJob(
+    >>> lr_job = VerticallyPartitionedLinearRegression(
     >>>     x_train_dataview=dataview_1,
     >>>     y_train_dataview=dataview_2,
     >>> )
     >>> my_project.submit_job(job=lr_job)
 ```
 
-You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticalLinearRegressionJob`](/libraries/cape-ds/reference#verticallinearregressionjob) class like so:
+You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/cape-ds/reference#VerticallyPartitionedLinearRegression) class like so:
 
 ```python
-    >>> lr_job = VerticalLinearRegressionJob(
+    >>> lr_job = VerticallyPartitionedLinearRegression(
     >>>     x_train_dataview=dataview_1["x_total_estimated_sales"],
     >>>     y_train_dataview=dataview_2["y_total_estimated_sales"],
     >>> )
@@ -163,7 +163,7 @@ After submitting your job, you should be able to see the status and details of y
 
 **TODO:** Add GIF of Job/Job Details UI here.
 
-To check the status of your submitted linear regression job, use the [`get_status`](/reference/#cape.api.job.job.Job.get_status) method:
+To check the status of your submitted linear regression job using Cape DS, use the [`get_status`](/reference/#cape.api.job.job.Job.get_status) method:
 ```python
     >>> lr_job = my_project.get_job(id="abc_123")
 
@@ -173,7 +173,14 @@ To check the status of your submitted linear regression job, use the [`get_statu
 
 ### Approving Jobs
 
-**TODO:** Need to know what the workflow is here.
+Before Cape can begin to train a linear regression model using the datasets submitted via `submit_job` method, both parties need to review and approve the Job.
+
+To approve, you'll need to head over to the UI and navigate to your Job's details page. Once you've reviewed the details of your Job are correct, you can click "Approve Job" to let Cape know the job looks good on your end.
+
+**TODO:** Add GIF of Job Approval UI flow here .
+
+!!!note
+    Before your job can run, both parties need to approve it.
 
 ### Getting Weights and Metrics from Trained Model
 

@@ -1797,11 +1797,11 @@
 <div class="highlight"><pre><span></span><code>    DataView<span class="o">(</span><span class="nv">id</span><span class="o">=</span>dataview_123, <span class="nv">name</span><span class="o">=</span>my-data, <span class="nv">location</span><span class="o">=</span>s3://my-data.csv<span class="o">)</span>
 </code></pre></div>
 <h2 id="add-a-data-view-to-a-project">Add a data view to a project<a class="headerlink" href="#add-a-data-view-to-a-project" title="Permanent link">#</a></h2>
-<p>Initialize a <code>DataView</code> class and pass the instance to the <code>add_dataview</code> method.</p>
+<p>Initialize a <code>DataView</code> class and pass the instance to the <code>create_dataview</code> method.</p>
 <div class="highlight"><pre><span></span><code>    <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
 
     <span class="n">data_view</span> <span class="o">=</span> <span class="n">DataView</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-data&quot;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;https://storage.com/my-data.csv&quot;</span><span class="p">,</span> <span class="n">owner_label</span><span class="o">=</span><span class="s2">&quot;my-org&quot;</span><span class="p">)</span>
-    <span class="n">my_project</span><span class="o">.</span><span class="n">add_dataview</span><span class="p">(</span><span class="n">data_view</span><span class="p">)</span>
+    <span class="n">my_project</span><span class="o">.</span><span class="n">create_dataview</span><span class="p">(</span><span class="n">data_view</span><span class="p">)</span>
 </code></pre></div>
 <p>Default response:</p>
 <div class="highlight"><pre><span></span><code>    DataView<span class="o">(</span><span class="nv">id</span><span class="o">=</span>dataview_123, <span class="nv">name</span><span class="o">=</span>my-data, <span class="nv">location</span><span class="o">=</span>s3://my-data.csv<span class="o">)</span>
@@ -1823,7 +1823,7 @@
 <h2 id="delete-a-dataview">Delete a DataView<a class="headerlink" href="#delete-a-dataview" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code>    <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
 
-    <span class="n">my_project</span><span class="o">.</span><span class="n">remove_dataview</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;dataview_123&quot;</span><span class="p">)</span>
+    <span class="n">my_project</span><span class="o">.</span><span class="n">delete_dataview</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;dataview_123&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>Default response:</p>
 <div class="highlight"><pre><span></span><code>    DataView <span class="o">(</span>dataview_123<span class="o">)</span> deleted

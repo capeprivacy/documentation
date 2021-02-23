@@ -1907,7 +1907,7 @@ working within your user context and navigate to <em>Account Settings</em> to cr
 
     <span class="p">[</span><span class="n">Project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">project_123</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">Sales</span> <span class="n">Transactions</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">sales</span><span class="o">-</span><span class="n">transactions</span><span class="p">)]</span>
 </code></pre></div>
-<p>Once you have the project in-memory that you want to add a <code>DataView</code> to, you can initialize a <code>DataView</code> class and pass the instance to the <code>add_dataview</code> method.</p>
+<p>Once you have the project in-memory that you want to add a <code>DataView</code> to, you can initialize a <code>DataView</code> class and pass the instance to the <code>create_dataview</code> method.</p>
 <p><div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
 
 
@@ -1916,7 +1916,7 @@ working within your user context and navigate to <em>Account Settings</em> to cr
     <span class="o">&gt;&gt;&gt;</span>     <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://my-data.csv&quot;</span><span class="p">,</span> 
     <span class="o">&gt;&gt;&gt;</span>     <span class="n">owner_label</span><span class="o">=</span><span class="s2">&quot;my-org&quot;</span>
     <span class="o">&gt;&gt;&gt;</span> <span class="p">)</span>
-    <span class="o">&gt;&gt;&gt;</span> <span class="n">my_project</span><span class="o">.</span><span class="n">add_dataview</span><span class="p">(</span><span class="n">data_view</span><span class="p">)</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">my_project</span><span class="o">.</span><span class="n">create_dataview</span><span class="p">(</span><span class="n">data_view</span><span class="p">)</span>
 </code></pre></div>
 All <code>DataViews</code> must be associated with an organization. This association can be made by passing eiher an <code>owner_label</code> or an <code>owner_id</code> to the <a href="/libraries/cape-ds/reference#cape.api.dataview.dataview.DataView.__init__"><code>DataView</code></a> class instantiation.</p>
 <p><strong>TODO:</strong> Add note about how you can find your org label.</p>
@@ -1954,14 +1954,14 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">dataview_1</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_dataview</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;01EY48&quot;</span><span class="p">)</span>
     <span class="o">&gt;&gt;&gt;</span> <span class="n">dataview_2</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_dataview</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;01EY49&quot;</span><span class="p">)</span>
 
-    <span class="o">&gt;&gt;&gt;</span> <span class="n">lr_job</span> <span class="o">=</span> <span class="n">VerticalLinearRegressionJob</span><span class="p">(</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">lr_job</span> <span class="o">=</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>
     <span class="o">&gt;&gt;&gt;</span>     <span class="n">x_train_dataview</span><span class="o">=</span><span class="n">dataview_1</span><span class="p">,</span>
     <span class="o">&gt;&gt;&gt;</span>     <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">dataview_2</span><span class="p">,</span>
     <span class="o">&gt;&gt;&gt;</span> <span class="p">)</span>
     <span class="o">&gt;&gt;&gt;</span> <span class="n">my_project</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">job</span><span class="o">=</span><span class="n">lr_job</span><span class="p">)</span>
 </code></pre></div>
-<p>You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the <a href="/libraries/cape-ds/reference#verticallinearregressionjob"><code>VerticalLinearRegressionJob</code></a> class like so:</p>
-<div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">lr_job</span> <span class="o">=</span> <span class="n">VerticalLinearRegressionJob</span><span class="p">(</span>
+<p>You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the <a href="/libraries/cape-ds/reference#VerticallyPartitionedLinearRegression"><code>VerticallyPartitionedLinearRegression</code></a> class like so:</p>
+<div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">lr_job</span> <span class="o">=</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>
     <span class="o">&gt;&gt;&gt;</span>     <span class="n">x_train_dataview</span><span class="o">=</span><span class="n">dataview_1</span><span class="p">[</span><span class="s2">&quot;x_total_estimated_sales&quot;</span><span class="p">],</span>
     <span class="o">&gt;&gt;&gt;</span>     <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">dataview_2</span><span class="p">[</span><span class="s2">&quot;y_total_estimated_sales&quot;</span><span class="p">],</span>
     <span class="o">&gt;&gt;&gt;</span> <span class="p">)</span>
@@ -1973,14 +1973,20 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <h3 id="tracking-job-status">Tracking Job Status<a class="headerlink" href="#tracking-job-status" title="Permanent link">#</a></h3>
 <p>After submitting your job, you should be able to see the status and details of your <code>Job</code> in the UI.</p>
 <p><strong>TODO:</strong> Add GIF of Job/Job Details UI here.</p>
-<p>To check the status of your submitted linear regression job, use the <a href="/reference/#cape.api.job.job.Job.get_status"><code>get_status</code></a> method:
+<p>To check the status of your submitted linear regression job using Cape DS, use the <a href="/reference/#cape.api.job.job.Job.get_status"><code>get_status</code></a> method:
 <div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">lr_job</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_job</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;abc_123&quot;</span><span class="p">)</span>
 
     <span class="o">&gt;&gt;&gt;</span> <span class="n">lr_job</span><span class="o">.</span><span class="n">get_status</span><span class="p">()</span>
     <span class="n">Success</span>
 </code></pre></div></p>
 <h3 id="approving-jobs">Approving Jobs<a class="headerlink" href="#approving-jobs" title="Permanent link">#</a></h3>
-<p><strong>TODO:</strong> Need to know what the workflow is here.</p>
+<p>Before Cape can begin to train a linear regression model using the datasets submitted via <code>submit_job</code> method, both parties need to review and approve the Job.</p>
+<p>To approve, you'll need to head over to the UI and navigate to your Job's details page. Once you've reviewed the details of your Job are correct, you can click "Approve Job" to let Cape know the job looks good on your end.</p>
+<p><strong>TODO:</strong> Add GIF of Job Approval UI flow here .</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before your job can run, both parties need to approve it.</p>
+</div>
 <h3 id="getting-weights-and-metrics-from-trained-model">Getting Weights and Metrics from Trained Model<a class="headerlink" href="#getting-weights-and-metrics-from-trained-model" title="Permanent link">#</a></h3>
 <p>Once your job has successfully completed, you can view the results of the trained model. </p>
 <p>Whether you can view the weights or metrics of the trained model (or both!) depends on the role you and your organization play in the project.</p>

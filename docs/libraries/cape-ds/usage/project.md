@@ -47,7 +47,7 @@ Default response:
 ## Delete a Project
 
 ```python
-    c.remove_project(id="project_123")
+    c.delete_project(id="project_123")
 ```
 
 Default response:

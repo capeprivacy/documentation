@@ -1787,15 +1787,15 @@
     my_projects = c.list_projects()
 </code></pre></div></p>
 <p>Add dataviews to your project, review dataviews added by other organizations collaborating with you in the project, and submit your job.
-<div class="highlight"><pre><span></span><code>    from cape import DataView, VerticalLinearRegressionJob
+<div class="highlight"><pre><span></span><code>    from cape import DataView, VerticallyPartitionedLinearRegression
 
     data_view = DataView(name=&quot;my-data&quot;, uri=&quot;s3://my-data.csv&quot; owner_label=&quot;my-org&quot;)
     my_project = c.get_project(&quot;project_123&quot;)
-    my_project.add_dataview(data_view)
+    my_project.create_dataview(data_view)
 
     dvs = my_project.list_dataviews()
 
-    vlr_job = VerticalLinearRegressionJob(
+    vlr_job = VerticallyPartitionedLinearRegression(
         train_dataview_x=dvs[0],
         train_dataview_y=dvs[1]
     )
