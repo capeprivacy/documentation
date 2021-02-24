@@ -1787,11 +1787,11 @@
     <span class="n">dataview_1</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_dataview</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://my-data.csv&quot;</span><span class="p">)</span>
     <span class="n">dataview_2</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_dataview</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://my-data-2.csv&quot;</span><span class="p">)</span>
 
-    <span class="n">lr_job</span> <span class="o">=</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>
+    <span class="n">vlr</span> <span class="o">=</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>
         <span class="n">x_train_dataview</span><span class="o">=</span><span class="n">dataview_1</span><span class="p">,</span>
         <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">dataview_2</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="n">my_project</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">job</span><span class="o">=</span><span class="n">lr_job</span><span class="p">)</span>
+    <span class="n">my_project</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">job</span><span class="o">=</span><span class="n">vlr</span><span class="p">)</span>
 </code></pre></div>
 <p>Default response:</p>
 <div class="highlight"><pre><span></span><code>    VerticallyPartitionedLinearRegression<span class="o">(</span><span class="nv">id</span><span class="o">=</span>abc_123, <span class="nv">job_type</span><span class="o">=</span>LINEAR_REGRESSION, <span class="nv">status</span><span class="o">=</span>Created<span class="o">)</span>

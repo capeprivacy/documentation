@@ -22,11 +22,11 @@ Default response:
     dataview_1 = my_project.get_dataview(uri="s3://my-data.csv")
     dataview_2 = my_project.get_dataview(uri="s3://my-data-2.csv")
 
-    lr_job = VerticallyPartitionedLinearRegression(
+    vlr = VerticallyPartitionedLinearRegression(
         x_train_dataview=dataview_1,
         y_train_dataview=dataview_2,
     )
-    my_project.submit_job(job=lr_job)
+    my_project.submit_job(job=vlr)
 ```
 
 Default response:

@@ -76,20 +76,14 @@ Use the `list_projects` method defined on the main `Cape` class, to query a list
 	[Project(id=project_123, name=Sales Transactions, label=sales-transactions)]
 ```
 
-Once you have the project in-memory that you want to add a `DataView` to, you can initialize a `DataView` class and pass the instance to the `create_dataview` method.
+To create a [`DataView`](/libraries/cape-ds/reference#cape.api.dataview.dataview.DataView.__init__) and add it to your project, simply call the `create_dataview` method defined on the `Project` class.
 
 ```python
     >>> my_project = c.get_project(id="project_123")
 
-    
-    >>> data_view = DataView(
-    >>>     name="my-data", 
-    >>>     uri="s3://my-data.csv", 
-    >>>     owner_label="my-org"
-    >>> )
-    >>> my_project.create_dataview(data_view)
+    >>> my_project.create_dataview(name="my-data", uri="s3://my-data.csv", owner_label="my-org")
 ```
-All `DataViews` must be associated with an organization. This association can be made by passing eiher an `owner_label` or an `owner_id` to the [`DataView`](/libraries/cape-ds/reference#cape.api.dataview.dataview.DataView.__init__) class instantiation.
+All `DataViews` must be associated with an organization. This association can be made by passing eiher an `owner_label` or an `owner_id` to the `create_dataview` method.
 
 **TODO:** Add note about how you can find your org label.
 
@@ -136,17 +130,17 @@ Pass the `DataView` that contains training data to `x_train_dataview`, and the `
     >>> dataview_1 = my_project.get_dataview(id="01EY48")
     >>> dataview_2 = my_project.get_dataview(id="01EY49")
 
-    >>> lr_job = VerticallyPartitionedLinearRegression(
+    >>> vlr = VerticallyPartitionedLinearRegression(
     >>>     x_train_dataview=dataview_1,
     >>>     y_train_dataview=dataview_2,
     >>> )
-    >>> my_project.submit_job(job=lr_job)
+    >>> my_project.submit_job(job=vlr)
 ```
 
 You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/cape-ds/reference#VerticallyPartitionedLinearRegression) class like so:
 
 ```python
-    >>> lr_job = VerticallyPartitionedLinearRegression(
+    >>> vlr = VerticallyPartitionedLinearRegression(
     >>>     x_train_dataview=dataview_1["x_total_estimated_sales"],
     >>>     y_train_dataview=dataview_2["y_total_estimated_sales"],
     >>> )
