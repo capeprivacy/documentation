@@ -67,3 +67,11 @@ Set this to the AWS Region you would like to send the request to.
 
 !!!Note
 	These AWS configuration variables line up with the AWS CLI environment variables. For up-to-date info on these variables, refer to the [AWS documentation](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html).
+
+## (Optional) Configure your container to restart automatically
+
+Add the flag `--restart unless-stopped` to your docker command-line when launching your container to have it restart automatically. Alternatively, use a process manager like [supervisor](http://supervisord.org/) or [systemd](https://freedesktop.org/wiki/Software/systemd/) if you need more control. For more information, refer to the [Docker documentation](https://docs.docker.com/config/containers/start-containers-automatically/).
+
+## (Optional) Send your logs to an aggregation service like AWS CloudWatch
+
+It is highly recommended that you send container logs to a log aggregation service. For example, if the worker is running in an AWS environment, the Docker daemon or the individual container can send logs directly to AWS CloudWatch. See [here](https://docs.docker.com/config/containers/logging/awslogs/) for detailed documentation, along with other drivers provided by docker.
