@@ -24,6 +24,7 @@ Starting your Cape worker is as simple as running a Docker image using `docker r
 ```
 
 In this command:
+
 - `cape-worker` is the name you want to assign your container.
 - `my-cape-org-token` is your [Cape organization token](/understand/features/tokens).
 - `s3-bucket-location` is the URI of the S3 bucket that you would like Cape to write the results of the computation to.
