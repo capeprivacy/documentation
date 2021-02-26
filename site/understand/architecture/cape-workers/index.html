@@ -1745,10 +1745,12 @@
                 <h1 id="cape-workers">Cape Workers<a class="headerlink" href="#cape-workers" title="Permanent link">#</a></h1>
 <p>Cape workers are Docker images that can be built and run in the environment of your choice.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
-<p><a href="https://docs.docker.com/">Docker</a>
-A Cape Cloud Account
-A Cape Cloud <a href="/understand/features/tokens">organization token</a>
-An S3 bucket for retrieving data</p>
+<ul>
+<li><a href="https://docs.docker.com/">Docker</a></li>
+<li>A Cape Cloud Account</li>
+<li>A Cape Cloud <a href="/understand/features/tokens">organization token</a></li>
+<li>An S3 bucket for retrieving data</li>
+</ul>
 <h3 id="supported-sha-commits">Supported SHA Commits<a class="headerlink" href="#supported-sha-commits" title="Permanent link">#</a></h3>
 <p><code>bcc4e3b</code></p>
 <h2 id="starting-your-cape-worker-instance">Starting your <code>cape-worker</code> instance<a class="headerlink" href="#starting-your-cape-worker-instance" title="Permanent link">#</a></h2>
@@ -1765,10 +1767,6 @@ An S3 bucket for retrieving data</p>
 - <code>my-cape-org-token</code> is your <a href="/understand/features/tokens">Cape organization token</a>.
 - <code>s3-bucket-location</code> is the URI of the S3 bucket that you would like Cape to write the results of the computation to.
 - <code>sha-1234567</code> is the commit SHA specifying the commit you would like to use to run your worker.</p>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-</div>
-<p>Provide CloudFormation Template</p>
                 
               
               
