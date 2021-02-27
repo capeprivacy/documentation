@@ -21,7 +21,7 @@ First you'll need to create an organization at [demo.capeprivacy.com](https://de
 
 Once you've created your organization, you can navigate to _Organization Settings_ and generate a token for your organization. You'll need this token to [configure your worker](/understand/architecture/cape-workers).
 
-![](../img/create-org.gif)
+![](../img/org-token.gif)
 
 Take note of this value as you cannot recover it after you reload the page.
 
