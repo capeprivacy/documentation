@@ -433,6 +433,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#optional-configure-your-container-to-restart-automatically" class="md-nav__link">
+    (Optional) Configure your container to restart automatically
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-send-your-logs-to-an-aggregation-service-like-aws-cloudwatch" class="md-nav__link">
+    (Optional) Send your logs to an aggregation service like AWS CloudWatch
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1822,6 +1836,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#optional-configure-your-container-to-restart-automatically" class="md-nav__link">
+    (Optional) Configure your container to restart automatically
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-send-your-logs-to-an-aggregation-service-like-aws-cloudwatch" class="md-nav__link">
+    (Optional) Send your logs to an aggregation service like AWS CloudWatch
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1891,6 +1919,10 @@
 <p class="admonition-title">Note</p>
 <p>These AWS configuration variables line up with the AWS CLI environment variables. For up-to-date info on these variables, refer to the <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html">AWS documentation</a>.</p>
 </div>
+<h2 id="optional-configure-your-container-to-restart-automatically">(Optional) Configure your container to restart automatically<a class="headerlink" href="#optional-configure-your-container-to-restart-automatically" title="Permanent link">#</a></h2>
+<p>Add the flag <code>--restart unless-stopped</code> to your docker command-line when launching your container to have it restart automatically. Alternatively, use a process manager like <a href="http://supervisord.org/">supervisor</a> or <a href="https://freedesktop.org/wiki/Software/systemd/">systemd</a> if you need more control. For more information, refer to the <a href="https://docs.docker.com/config/containers/start-containers-automatically/">Docker documentation</a>.</p>
+<h2 id="optional-send-your-logs-to-an-aggregation-service-like-aws-cloudwatch">(Optional) Send your logs to an aggregation service like AWS CloudWatch<a class="headerlink" href="#optional-send-your-logs-to-an-aggregation-service-like-aws-cloudwatch" title="Permanent link">#</a></h2>
+<p>It is highly recommended that you send container logs to a log aggregation service. For example, if the worker is running in an AWS environment, the Docker daemon or the individual container can send logs directly to AWS CloudWatch. See <a href="https://docs.docker.com/config/containers/logging/awslogs/">here</a> for detailed documentation, along with other drivers provided by docker.</p>
                 
               
               

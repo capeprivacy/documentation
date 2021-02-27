@@ -1886,7 +1886,7 @@
 <p>This tutorial will walk you through the process of training an encrypted linear regression model in collaboration with another organization using Cape Privacy. You'll learn how to:</p>
 <ul>
 <li>Send datasets securely to Cape Cloud.</li>
-<li>Review the datasets schemas of other organizations in your project.</li>
+<li>Review the dataset schemas of other organizations in your project.</li>
 <li>Approve and reject model computation jobs.</li>
 <li>View the metrics or weights of the trained model, depending on your role in the project.</li>
 </ul>
@@ -1895,19 +1895,20 @@
 <h2 id="project-setup">Project Setup<a class="headerlink" href="#project-setup" title="Permanent link">#</a></h2>
 <h3 id="create-an-organization">Create an Organization<a class="headerlink" href="#create-an-organization" title="Permanent link">#</a></h3>
 <p>First you'll need to create an organization at <a href="https://demo.capeprivacy.com">demo.capeprivacy.com</a>.</p>
-<p><img alt="" src="../../img/create_org.gif" /></p>
+<p><img alt="" src="../../img/create-org.gif" /></p>
 <p>Once you've created your organization, you can navigate to <em>Organization Settings</em> and generate a token for your organization. You'll need this token to <a href="/understand/architecture/cape-workers">configure your worker</a>.</p>
+<p><img alt="" src="../../img/create-org.gif" /></p>
 <p>Take note of this value as you cannot recover it after you reload the page.</p>
 <h3 id="create-a-project">Create a Project<a class="headerlink" href="#create-a-project" title="Permanent link">#</a></h3>
 <p>Next, create a <a href="/libraries/cape-ds/reference#project"><code>Project</code></a> within one of the organizations you just created.</p>
 <p><code>Projects</code> serve as the context in which you can define and review <code>Jobs</code> with other organizations.</p>
-<p><img alt="" src="../../img/create_project.gif" /></p>
+<p><img alt="" src="../../img/create-project.gif" /></p>
 <p>Add organizations to your project in order to begin collaborating with them on training a model.</p>
-<p><img alt="" src="../../img/add_org.gif" /></p>
+<p><img alt="" src="../../img/add-org.gif" /></p>
 <h3 id="get-a-user-token">Get a User Token<a class="headerlink" href="#get-a-user-token" title="Permanent link">#</a></h3>
 <p>Finally, we will need a <a href="/understand/features/tokens/">user token</a> to authenticate against <code>cape-ds</code>. Ensure you are
 working within your user context and navigate to <em>Account Settings</em> to create a token.</p>
-<p><img alt="" src="../../img/create_user_token.gif" /></p>
+<p><img alt="" src="../../img/user-token.gif" /></p>
 <p>Take note of this value as, like the user token, you cannot recover it after you reload the page.</p>
 <p>That is it for the UI for now! We'll return later to review and approve <code>DataViews</code> and <code>Jobs</code>. </p>
 <p>Next we will setup <code>DataViews</code> and <code>Jobs</code> in <code>cape-ds</code>.</p>
@@ -1923,13 +1924,13 @@ working within your user context and navigate to <em>Account Settings</em> to cr
 <p>Use the <code>list_projects</code> method defined on the main <code>Cape</code> class, to query a list of projects that belong to your organization.</p>
 <div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">my_projects</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">list_projects</span><span class="p">()</span>
 
-    <span class="n">PROJECT</span> <span class="n">ID</span>   <span class="n">NAME</span>                <span class="n">LABEL</span>
-    <span class="o">-----------</span>  <span class="o">------------------</span>  <span class="o">------------------</span>
-    <span class="n">project_123</span>  <span class="n">Sales</span> <span class="n">Transactions</span>  <span class="n">sales</span><span class="o">-</span><span class="n">transactions</span>
+    <span class="n">PROJECT</span> <span class="n">ID</span>   <span class="n">NAME</span>                     <span class="n">LABEL</span>
+    <span class="o">-----------</span>  <span class="o">-----------------------</span>  <span class="o">-----------------------</span>
+    <span class="n">project_123</span>  <span class="n">Default</span> <span class="n">Risk</span> <span class="n">Assessment</span>  <span class="n">default</span><span class="o">-</span><span class="n">risk</span><span class="o">-</span><span class="n">assessment</span>
 
     <span class="o">&gt;&gt;&gt;</span> <span class="n">my_projects</span>
 
-    <span class="p">[</span><span class="n">Project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">project_123</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">Sales</span> <span class="n">Transactions</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">sales</span><span class="o">-</span><span class="n">transactions</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">Project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">project_123</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">Default</span> <span class="n">Risk</span> <span class="n">Assessment</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">default</span><span class="o">-</span><span class="n">risk</span><span class="o">-</span><span class="n">assessment</span><span class="p">)]</span>
 </code></pre></div>
 <p>To create a <a href="/libraries/cape-ds/reference#cape.api.dataview.dataview.DataView.__init__"><code>DataView</code></a> and add it to your project, simply call the <code>create_dataview</code> method defined on the <code>Project</code> class.</p>
 <p><div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
@@ -1937,7 +1938,10 @@ working within your user context and navigate to <em>Account Settings</em> to cr
     <span class="o">&gt;&gt;&gt;</span> <span class="n">my_project</span><span class="o">.</span><span class="n">create_dataview</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-data&quot;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://my-data.csv&quot;</span><span class="p">,</span> <span class="n">owner_label</span><span class="o">=</span><span class="s2">&quot;my-org&quot;</span><span class="p">)</span>
 </code></pre></div>
 All <code>DataViews</code> must be associated with an organization. This association can be made by passing eiher an <code>owner_label</code> or an <code>owner_id</code> to the <code>create_dataview</code> method.</p>
-<p><strong>TODO:</strong> Add note about how you can find your org label.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use the <code>organization</code> attribute on your <code>Project</code> class instance to verify the metadata of organizations that are contributing to the project.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Unless your dataset is publically accessible, you'll need to <a href="/libraries/cape-ds/usage/dataview#specifying-a-schema-for-your-dataview">specify your schema</a>.</p>
@@ -1949,10 +1953,10 @@ All <code>DataViews</code> must be associated with an organization. This associa
 
     <span class="o">&gt;&gt;&gt;</span> <span class="n">dataviews</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">list_dataviews</span><span class="p">()</span>
 
-    <span class="n">DATAVIEW</span> <span class="n">ID</span>  <span class="n">NAME</span>           <span class="n">LOCATION</span>         <span class="n">OWNER</span>
-    <span class="o">-----------</span>  <span class="o">-------------</span>  <span class="o">---------------</span>  <span class="o">-----------</span>
-    <span class="mi">01</span><span class="n">EY48</span>       <span class="n">armazorn</span><span class="o">-</span><span class="n">data</span>  <span class="n">s3</span><span class="p">:</span><span class="o">//</span><span class="n">mydata</span><span class="o">.</span><span class="n">csv</span>  <span class="n">armazorn</span> <span class="p">(</span><span class="n">You</span><span class="p">)</span>
-    <span class="mi">01</span><span class="n">EY49</span>       <span class="n">gorgle</span><span class="o">-</span><span class="n">data</span>                     <span class="n">gorgle</span> 
+    <span class="n">DATAVIEW</span> <span class="n">ID</span>  <span class="n">NAME</span>          <span class="n">LOCATION</span>         <span class="n">OWNER</span>
+    <span class="o">-----------</span>  <span class="o">------------</span>  <span class="o">---------------</span>  <span class="o">-------------</span>
+    <span class="mi">01</span><span class="n">EY48</span>       <span class="n">orgacle</span><span class="o">-</span><span class="n">data</span>  <span class="n">s3</span><span class="p">:</span><span class="o">//</span><span class="n">mydata</span><span class="o">.</span><span class="n">csv</span>  <span class="n">orgacle</span> <span class="p">(</span><span class="n">You</span><span class="p">)</span>
+    <span class="mi">01</span><span class="n">EY49</span>       <span class="n">atlas</span><span class="o">-</span><span class="n">data</span>                     <span class="n">atlas</span> 
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1961,11 +1965,13 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <p>You can also inspect the schema of each dataview in your project in order to see the data types of the columns, and to assess which data columns should be used to train the linear regression model.</p>
 <div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">dataviews</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">schema</span>
     <span class="p">{</span>
-        <span class="s1">&#39;transaction_date&#39;</span><span class="p">:</span> <span class="s1">&#39;datetime&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="s1">&#39;string&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;total_estimated_sales&#39;</span><span class="p">:</span> <span class="s1">&#39;integer&#39;</span>
+        <span class="s1">&#39;debt equity ratio&#39;</span><span class="p">:</span> <span class="s1">&#39;number&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;operating margin&#39;</span><span class="p">:</span> <span class="s1">&#39;number&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;working capital&#39;</span><span class="p">:</span> <span class="s1">&#39;integer&#39;</span>
     <span class="p">}</span>
 </code></pre></div>
+<p>You can also review the dataviews added to your project in the UI.</p>
+<p><img alt="" src="../../img/add-dataview.gif" /></p>
 <h3 id="submitting-a-linear-regression-job">Submitting a Linear Regression Job<a class="headerlink" href="#submitting-a-linear-regression-job" title="Permanent link">#</a></h3>
 <p>Now that we've added our own <code>DataView</code> to the project, and vetted the <code>DataView</code> of our collaborator, we are ready to submit our Cape linear regression job.</p>
 <p>Pass the <code>DataView</code> that contains training data to <code>x_train_dataview</code>, and the <code>DataView</code> that contains the target values to <code>y_train_dataview</code>.</p>
@@ -1976,13 +1982,16 @@ All <code>DataViews</code> must be associated with an organization. This associa
     <span class="o">&gt;&gt;&gt;</span>     <span class="n">x_train_dataview</span><span class="o">=</span><span class="n">dataview_1</span><span class="p">,</span>
     <span class="o">&gt;&gt;&gt;</span>     <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">dataview_2</span><span class="p">,</span>
     <span class="o">&gt;&gt;&gt;</span> <span class="p">)</span>
+
     <span class="o">&gt;&gt;&gt;</span> <span class="n">my_project</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">job</span><span class="o">=</span><span class="n">vlr</span><span class="p">)</span>
 </code></pre></div>
 <p>You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the <a href="/libraries/cape-ds/reference#VerticallyPartitionedLinearRegression"><code>VerticallyPartitionedLinearRegression</code></a> class like so:</p>
-<div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">vlr</span> <span class="o">=</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>
-    <span class="o">&gt;&gt;&gt;</span>     <span class="n">x_train_dataview</span><span class="o">=</span><span class="n">dataview_1</span><span class="p">[</span><span class="s2">&quot;x_total_estimated_sales&quot;</span><span class="p">],</span>
-    <span class="o">&gt;&gt;&gt;</span>     <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">dataview_2</span><span class="p">[</span><span class="s2">&quot;y_total_estimated_sales&quot;</span><span class="p">],</span>
+<div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>
+    <span class="o">&gt;&gt;&gt;</span>     <span class="n">x_train_dataview</span><span class="o">=</span><span class="n">dataview_1</span><span class="p">[</span><span class="s2">&quot;debt equity ratio&quot;</span><span class="p">],</span>
+    <span class="o">&gt;&gt;&gt;</span>     <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">dataview_2</span><span class="p">[</span><span class="s2">&quot;debt equity ratio&quot;</span><span class="p">],</span>
     <span class="o">&gt;&gt;&gt;</span> <span class="p">)</span>
+
+    <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span><span class="n">x_train_dataview</span><span class="o">=</span><span class="n">Orgacle</span> <span class="n">Dataview</span><span class="p">[</span><span class="s1">&#39;debt equity ratio&#39;</span><span class="p">],</span> <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">Atlas</span> <span class="n">Dataview</span><span class="p">[</span><span class="s1">&#39;debt equity ratio&#39;</span><span class="p">])</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1990,7 +1999,7 @@ All <code>DataViews</code> must be associated with an organization. This associa
 </div>
 <h3 id="tracking-job-status">Tracking Job Status<a class="headerlink" href="#tracking-job-status" title="Permanent link">#</a></h3>
 <p>After submitting your job, you should be able to see the status and details of your <code>Job</code> in the UI.</p>
-<p><strong>TODO:</strong> Add GIF of Job/Job Details UI here.</p>
+<p><img alt="" src="../../img/job-details.gif" /></p>
 <p>To check the status of your submitted linear regression job using Cape DS, use the <a href="/reference/#cape.api.job.job.Job.get_status"><code>get_status</code></a> method:
 <div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">lr_job</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_job</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;abc_123&quot;</span><span class="p">)</span>
 
@@ -2000,7 +2009,7 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <h3 id="approving-jobs">Approving Jobs<a class="headerlink" href="#approving-jobs" title="Permanent link">#</a></h3>
 <p>Before Cape can begin to train a linear regression model using the datasets submitted via <code>submit_job</code> method, both parties need to review and approve the Job.</p>
 <p>To approve, you'll need to head over to the UI and navigate to your Job's details page. Once you've reviewed the details of your Job are correct, you can click "Approve Job" to let Cape know the job looks good on your end.</p>
-<p><strong>TODO:</strong> Add GIF of Job Approval UI flow here .</p>
+<p><img alt="" src="../../img/approve-job.gif" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Before your job can run, both parties need to approve it.</p>
@@ -2008,7 +2017,6 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <h3 id="getting-weights-and-metrics-from-trained-model">Getting Weights and Metrics from Trained Model<a class="headerlink" href="#getting-weights-and-metrics-from-trained-model" title="Permanent link">#</a></h3>
 <p>Once your job has successfully completed, you can view the results of the trained model. </p>
 <p>Whether you can view the weights or metrics of the trained model (or both!) depends on the role you and your organization play in the project.</p>
-<p><strong>TODO:</strong> Need to elaborate on project/task roles, link to seperate documentation about this.</p>
 <p>To view the weights and metrics of a job, use the <a href="/reference/#cape.api.job.job.Job.get_results"><code>get_results</code></a> method:</p>
 <div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">lr_job</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_job</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;abc_123&quot;</span><span class="p">)</span>
 

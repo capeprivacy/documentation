@@ -3,7 +3,7 @@
 This tutorial will walk you through the process of training an encrypted linear regression model in collaboration with another organization using Cape Privacy. You'll learn how to:
 
 - Send datasets securely to Cape Cloud.
-- Review the datasets schemas of other organizations in your project.
+- Review the dataset schemas of other organizations in your project.
 - Approve and reject model computation jobs.
 - View the metrics or weights of the trained model, depending on your role in the project.
 
@@ -17,9 +17,11 @@ We'll also use the [`cape-ds`](https://github.com/capeprivacy/cape-ds) Python li
 
 First you'll need to create an organization at [demo.capeprivacy.com](https://demo.capeprivacy.com).
 
-![](../img/create_org.gif)
+![](../img/create-org.gif)
 
 Once you've created your organization, you can navigate to _Organization Settings_ and generate a token for your organization. You'll need this token to [configure your worker](/understand/architecture/cape-workers).
+
+![](../img/create-org.gif)
 
 Take note of this value as you cannot recover it after you reload the page.
 
@@ -29,18 +31,18 @@ Next, create a [`Project`](/libraries/cape-ds/reference#project) within one of t
 
 `Projects` serve as the context in which you can define and review `Jobs` with other organizations.
 
-![](../img/create_project.gif)
+![](../img/create-project.gif)
 
 Add organizations to your project in order to begin collaborating with them on training a model.
 
-![](../img/add_org.gif)
+![](../img/add-org.gif)
 
 ### Get a User Token
 
 Finally, we will need a [user token](/understand/features/tokens/) to authenticate against `cape-ds`. Ensure you are
 working within your user context and navigate to _Account Settings_ to create a token.
 
-![](../img/create_user_token.gif)
+![](../img/user-token.gif)
 
 Take note of this value as, like the user token, you cannot recover it after you reload the page.
 
@@ -67,13 +69,13 @@ Use the `list_projects` method defined on the main `Cape` class, to query a list
 ```python
     >>> my_projects = c.list_projects()
 
-    PROJECT ID   NAME                LABEL
-    -----------  ------------------  ------------------
-    project_123  Sales Transactions  sales-transactions
+    PROJECT ID   NAME                     LABEL
+    -----------  -----------------------  -----------------------
+    project_123  Default Risk Assessment  default-risk-assessment
 
 	>>> my_projects
 
-	[Project(id=project_123, name=Sales Transactions, label=sales-transactions)]
+	[Project(id=project_123, name=Default Risk Assessment, label=default-risk-assessment)]
 ```
 
 To create a [`DataView`](/libraries/cape-ds/reference#cape.api.dataview.dataview.DataView.__init__) and add it to your project, simply call the `create_dataview` method defined on the `Project` class.
@@ -85,7 +87,8 @@ To create a [`DataView`](/libraries/cape-ds/reference#cape.api.dataview.dataview
 ```
 All `DataViews` must be associated with an organization. This association can be made by passing eiher an `owner_label` or an `owner_id` to the `create_dataview` method.
 
-**TODO:** Add note about how you can find your org label.
+!!! note
+    Use the `organization` attribute on your `Project` class instance to verify the metadata of organizations that are contributing to the project.
 
 !!! note
     Unless your dataset is publically accessible, you'll need to [specify your schema](/libraries/cape-ds/usage/dataview#specifying-a-schema-for-your-dataview).
@@ -101,10 +104,10 @@ Use the `list_dataviews` method defined on the `Project` class to inspect the na
 
     >>> dataviews = my_project.list_dataviews()
 
-    DATAVIEW ID  NAME           LOCATION         OWNER
-    -----------  -------------  ---------------  -----------
-    01EY48       armazorn-data  s3://mydata.csv  armazorn (You)
-    01EY49       gorgle-data                     gorgle 
+    DATAVIEW ID  NAME          LOCATION         OWNER
+    -----------  ------------  ---------------  -------------
+    01EY48       orgacle-data  s3://mydata.csv  orgacle (You)
+    01EY49       atlas-data                     atlas 
 ```
 
 !!! note
@@ -115,11 +118,16 @@ You can also inspect the schema of each dataview in your project in order to see
 ```python
     >>> dataviews[1].schema
     {
-        'transaction_date': 'datetime', 
-        'state': 'string', 
-        'total_estimated_sales': 'integer'
+        'debt equity ratio': 'number',
+        'operating margin': 'number',
+        'working capital': 'integer'
     }
 ```
+
+You can also review the dataviews added to your project in the UI.
+
+![](../img/add-dataview.gif)
+
 ### Submitting a Linear Regression Job
 
 Now that we've added our own `DataView` to the project, and vetted the `DataView` of our collaborator, we are ready to submit our Cape linear regression job.
@@ -134,16 +142,19 @@ Pass the `DataView` that contains training data to `x_train_dataview`, and the `
     >>>     x_train_dataview=dataview_1,
     >>>     y_train_dataview=dataview_2,
     >>> )
+
     >>> my_project.submit_job(job=vlr)
 ```
 
 You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/cape-ds/reference#VerticallyPartitionedLinearRegression) class like so:
 
 ```python
-    >>> vlr = VerticallyPartitionedLinearRegression(
-    >>>     x_train_dataview=dataview_1["x_total_estimated_sales"],
-    >>>     y_train_dataview=dataview_2["y_total_estimated_sales"],
+    >>> VerticallyPartitionedLinearRegression(
+    >>>     x_train_dataview=dataview_1["debt equity ratio"],
+    >>>     y_train_dataview=dataview_2["debt equity ratio"],
     >>> )
+
+    VerticallyPartitionedLinearRegression(x_train_dataview=Orgacle Dataview['debt equity ratio'], y_train_dataview=Atlas Dataview['debt equity ratio'])
 ```
 
 !!!note
@@ -153,7 +164,7 @@ You can also specify which data columns the model should be trained on or evalua
 
 After submitting your job, you should be able to see the status and details of your `Job` in the UI.
 
-**TODO:** Add GIF of Job/Job Details UI here.
+![](../img/job-details.gif)
 
 To check the status of your submitted linear regression job using Cape DS, use the [`get_status`](/reference/#cape.api.job.job.Job.get_status) method:
 ```python
@@ -169,7 +180,7 @@ Before Cape can begin to train a linear regression model using the datasets subm
 
 To approve, you'll need to head over to the UI and navigate to your Job's details page. Once you've reviewed the details of your Job are correct, you can click "Approve Job" to let Cape know the job looks good on your end.
 
-**TODO:** Add GIF of Job Approval UI flow here .
+![](../img/approve-job.gif)
 
 !!!note
     Before your job can run, both parties need to approve it.
@@ -179,8 +190,6 @@ To approve, you'll need to head over to the UI and navigate to your Job's detail
 Once your job has successfully completed, you can view the results of the trained model. 
 
 Whether you can view the weights or metrics of the trained model (or both!) depends on the role you and your organization play in the project.
-
-**TODO:** Need to elaborate on project/task roles, link to seperate documentation about this.
 
 To view the weights and metrics of a job, use the [`get_results`](/reference/#cape.api.job.job.Job.get_results) method:
 
