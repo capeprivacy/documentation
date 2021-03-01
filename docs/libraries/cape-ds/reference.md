@@ -32,6 +32,15 @@
         show_source: false
         show_root_toc_entry: false
 
+## cape.Organization
+::: cape-ds.cape.api.organization.organization.Organization
+    handler: python
+    rendering:
+        heading_level: 4
+        show_root_heading: false
+        show_source: false
+        show_root_toc_entry: false
+
 ## cape.DataView
 ::: cape-ds.cape.DataView
     handler: python
@@ -46,6 +55,15 @@
 
 ## cape.Job
 ::: cape-ds.cape.Job
+    handler: python
+    rendering:
+        heading_level: 4
+        show_root_heading: false
+        show_source: false
+        show_root_toc_entry: false
+
+## cape.Task
+::: cape-ds.cape.api.task.task.Task
     handler: python
     rendering:
         heading_level: 4

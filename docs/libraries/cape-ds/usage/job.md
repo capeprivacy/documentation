@@ -1,19 +1,5 @@
 # Managing Jobs
 
-## Get a Job
-
-```python
-    my_project = c.get_project(id="project_123")
-
-    my_project.get_job(id="abc_123")
-```
-
-Default response:
-
-```shell
-    VerticallyPartitionedLinearRegression(id=abc_123, job_type=LINEAR_REGRESSION, status=Created)
-```
-
 ## Submit a job
 
 ```python
@@ -32,7 +18,7 @@ Default response:
 Default response:
 
 ```shell
-    VerticallyPartitionedLinearRegression(id=abc_123, job_type=LINEAR_REGRESSION, status=Created)
+    Job(id=abc_123, job_type=LINEAR_REGRESSION, status=Created)
 ```
 
 ## Get a Job's Status
@@ -65,7 +51,7 @@ Default response:
 ```
 
 ### Accessing Weights as a Model Owner in Cape
-**cape-ds** uses [`boto`](https://boto3.amazonaws.com/) to access the model weights in your S3 bucket. You'll need to inform **cape-ds** about your IAM authentication credentials. Cape expects values for the following AWS configuration keys: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION`. 
+**cape-ds** uses [`boto`](https://boto3.amazonaws.com/) to access the model weights in your S3 bucket. You'll need to inform cape-ds about your IAM authentication credentials. Cape expects values for the following AWS configuration keys: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION`. 
 
 You can set these keys as environment variables in the interpreter running **cape-ds**:
 ```shell

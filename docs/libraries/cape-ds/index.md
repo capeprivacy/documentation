@@ -4,11 +4,11 @@
 
 **cape-ds** is a set of Python modules for interacting with your Cape data. Using cape-ds, you can:
 
-- Create and query [dataviews](/libraries/cape-ds/reference#dataviews), or pointers to the data that you want to use to train a model using Cape's encrypted learning protocol.
-- Submit and track [jobs](/libraries/cape-ds/reference#dataviews), which are computational sessions which contain instructions for how to train your model.
+- Create and query [dataviews](/libraries/cape-ds/reference#capedataview), or pointers to the data that you want to use to train a model using Cape's encrypted learning protocol.
+- Submit and track [jobs](/libraries/cape-ds/reference#capedataview), which are computational sessions which contain instructions for how to train your model.
 
 ## Short Tutorial
-Access your Cape projects by creating a instance of the main [`Cape`](/libraries/cape-ds/reference#cape) class:
+Access your Cape projects by creating a instance of the main [`Cape`](/libraries/cape-ds/reference#capecape) class:
 ``` 
     from cape import Cape
 

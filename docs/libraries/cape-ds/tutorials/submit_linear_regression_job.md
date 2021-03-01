@@ -9,7 +9,7 @@ This tutorial will walk you through the process of training an encrypted linear 
 
 We'll use the [Cape UI](https://demo.capeprivacy.com) to setup and review actvity in the project. 
 
-We'll also use the [`cape-ds`](https://github.com/capeprivacy/cape-ds) Python library to create and review pointers to datasets or [`DataViews`](/libraries/cape-ds/reference#dataview), and create and review [`Jobs`](/libraries/cape-ds/reference#job), Cape Python objects that contain instructions for how to train a model using the data provided.
+We'll also use the [`cape-ds`](https://github.com/capeprivacy/cape-ds) Python library to create and review pointers to datasets or [`DataViews`](/libraries/cape-ds/reference#capedataview), and create [`Tasks`](/libraries/cape-ds/reference#capetask), Cape Python objects that contain instructions for how to train a model using the data provided, and review [`Jobs`](/libraries/cape-ds/reference#capejob), in order to track the status of the training, and view the results of the trained model.
 
 ## Project Setup
 
@@ -27,7 +27,7 @@ Take note of this value as you cannot recover it after you reload the page.
 
 ### Create a Project
 
-Next, create a [`Project`](/libraries/cape-ds/reference#project) within one of the organizations you just created.
+Next, create a [`Project`](/libraries/cape-ds/reference#capeproject) within one of the organizations you just created.
 
 `Projects` serve as the context in which you can define and review `Jobs` with other organizations.
 
@@ -78,7 +78,7 @@ Use the `list_projects` method defined on the main `Cape` class, to query a list
 	[Project(id=project_123, name=Default Risk Assessment, label=default-risk-assessment)]
 ```
 
-To create a [`DataView`](/libraries/cape-ds/reference#cape.api.dataview.dataview.DataView.__init__) and add it to your project, simply call the `create_dataview` method defined on the `Project` class.
+To create a [`DataView`](/libraries/cape-ds/reference#capedataview) and add it to your project, simply call the `create_dataview` method defined on the `Project` class.
 
 ```python
     >>> my_project = c.get_project(id="project_123")
@@ -146,7 +146,7 @@ Pass the `DataView` that contains training data to `x_train_dataview`, and the `
     >>> my_project.submit_job(job=vlr)
 ```
 
-You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/cape-ds/reference#VerticallyPartitionedLinearRegression) class like so:
+You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/cape-ds/reference#capeverticallypartitionedlinearregression) class like so:
 
 ```python
     >>> VerticallyPartitionedLinearRegression(
@@ -208,4 +208,4 @@ To view the weights and metrics of a job, use the [`get_results`](/reference/#ca
 If you are the model owner, the first value in the returned tuple will be populated with a numpy array of weights from your trained model.
 
 !!!note
-    To access model weights you'll need to [inform **cape-ds** about your AWS IAM authentication credentials](/cape-ds/usage/job/#accessing-weights-as-a-model-owner-in-cape).
+    To access model weights you'll need to [inform **cape-ds** about your AWS IAM authentication credentials](libraries/cape-ds/usage/job/#accessing-weights-as-a-model-owner-in-cape).

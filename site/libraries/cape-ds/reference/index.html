@@ -2175,8 +2175,7 @@
 <h2 id="capeproject">cape.Project<a class="headerlink" href="#capeproject" title="Permanent link">#</a></h2>
 <div class="doc doc-object doc-class">
 <div class="doc doc-contents first">
-<p>Projects are business contexts in which we can add DataViews and submit Jobs.</p>
-<p>Multiple organizations can collaborate on one Project.</p>
+<p>Projects are the business contexts in which you collaborate with other organizations or Cape users to train models.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2237,7 +2236,7 @@
 <td><em>required</em></td>
 </tr>
 <tr>
-<td><code>data_views</code></td>
+<td><code>dataviews</code></td>
 <td><code>list</code></td>
 <td>
 <p>Returned list of <code>DataViews</code> added to the <code>Project</code>.</p>
@@ -2562,8 +2561,7 @@ A string value for each column's datatype. Possible datatypes:
 <h2 id="capedataview">cape.DataView<a class="headerlink" href="#capedataview" title="Permanent link">#</a></h2>
 <div class="doc doc-object doc-class">
 <div class="doc doc-contents first">
-<p>Dataview objects keep track of the business logic around datasets.</p>
-<p>An attribute on: <a href="#cape-ds.cape.api.dataview.dataview.DataView--#capeproject"><code>Project</code></a>.</p>
+<p>Dataviews store metadata around datasets, including namely a pointer to the dataset's location.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
