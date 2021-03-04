@@ -17,6 +17,7 @@ Prerequisites:
 * Python 64bit (currently using 3.7 due to [Netlify limitations](https://github.com/netlify/build-image/blob/xenial/included_software.md)).
 * pip
 * venv
+* [Make](https://www.gnu.org/software/make/)
 
 1. Clone this repo:
 
@@ -43,7 +44,13 @@ python -m venv ./venv
 4. Install the [Material theme](https://squidfunk.github.io/mkdocs-material/), [MkDocs](https://www.mkdocs.org/) and [Pydoc-markdown](https://github.com/NiklasRosenstein/pydoc-markdown):
 
 ```
-pip install -r requirements.txt
+make boostrap
+```
+
+If you would like to update the reference documentation for a Cape library, run:
+
+```
+make dsdocs
 ```
 
 5. To view the docs locally:
@@ -56,11 +63,19 @@ You can now view the docs at `localhost:8080`.
 
 Note that this does not autogenerate the latest code documentation. Refer to [Understand the docs tooling](#understand-the-docs-tooling) for detailed information on the documentation setup.
 
+
 ## Contribute to the docs
 
 This section describes how to edit the handwritten docs website content.
 
 The main branch is live. All work should happen on another branch.
+
+To publish the latest updates to the documentation run:
+```
+make build
+```
+
+This will create a bundled static site in the `/site` directory. Check this directory in to source control.
 
 ### Submitting a pull request
 

@@ -27,7 +27,9 @@ nav:
     - Home: index.md
     - Understand Cape:
         - Introduction: understand/index.md
-        - Architecture: understand/architecture.md
+        - Architecture: 
+            - Overview: understand/architecture/index.md
+            - Cape Workers: understand/architecture/cape-workers.md
         - Best practices:
             - Overview: understand/best-practices/index.md
             - Running transformations: understand/best-practices/running-transformations.md
@@ -38,26 +40,22 @@ nav:
             - Projects: understand/features/projects.md
             - Policy: understand/features/policy.md
             - Auditing: understand/features/auditing.md
+            - Tokens: understand/features/tokens.md
         - Support matrix: understand/support.md
         - Roadmap: understand/roadmap.md
-    - Cape Core:
-        - Introduction: cape-core/index.md
-        - CLI:
-            - Overview: cape-core/cli/index.md
-            - Installation: cape-core/cli/installation.md
-            - Usage:
-                - Introduction: cape-core/cli/usage/index.md
-                - Create a user: cape-core/cli/usage/create-user.md
-                - Create a project: cape-core/cli/usage/create-project.md
-                - Add a policy: cape-core/cli/usage/add-policy.md
-                - Suggest policy change:  cape-core/cli/usage/suggest-policy.md
-        - Coordinator:
-            - Overview: cape-core/coordinator/index.md
-            - Deploy to Kubernetes: cape-core/coordinator/kubernetes.md
-            - Install with the CLI: cape-core/coordinator/local-cli.md
     - Libraries:
         - Introduction: libraries/index.md
-        - Cape Python:
+        - PyCape:
+              - Overview: libraries/pycape/index.md
+              - Usage:
+                    - Login: libraries/pycape/usage/login.md
+                    - Projects: libraries/pycape/usage/project.md
+                    - DataViews: libraries/pycape/usage/dataview.md
+                    - Jobs: libraries/pycape/usage/job.md
+              - Tutorials:
+                    - Train Linear Regression: libraries/pycape/tutorials/submit_linear_regression_job.md
+              - Reference: libraries/pycape/reference.md
+        - Cape Python (Archived):
             - Overview: libraries/cape-python/index.md
             - Quickstart: libraries/cape-python/quickstart.md
             - Coordinator quickstart: libraries/cape-python/coordinator-quickstart.md
@@ -70,11 +68,16 @@ nav:
                 - v1: '!include ./pythonv1/mkdocs.yml'
     - Release notes:
         - Introduction: release-notes/index.md
-        - July 2020: release-notes/30072020.md
         - June 2020: release-notes/26062020.md
 plugins:
     - search
     - monorepo
+    - mkdocstrings:
+        handlers:
+            python:
+                setup_commands:
+                    - import sys
+                    - sys.path.append("ref-src")
 markdown_extensions:
     - admonition
     - pymdownx.highlight:
