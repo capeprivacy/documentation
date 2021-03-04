@@ -15,7 +15,7 @@
     
     
       
-        <title>Login - Documentation</title>
+        <title>DataViews - Documentation</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#login-to-cape-ds" class="md-skip">
+        <a href="#managing-dataviews" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Login
+              DataViews
             
           </span>
         </div>
@@ -1377,17 +1377,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
     
     <label class="md-nav__link" for="nav-4-3">
-      Cape DS
+      Pycape
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Cape DS" data-md-level="2">
+    <nav class="md-nav" aria-label="Pycape" data-md-level="2">
       <label class="md-nav__title" for="nav-4-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Cape DS
+        Pycape
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1435,20 +1435,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Login" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../login/" title="Login" class="md-nav__link">
       Login
     </a>
-    
   </li>
 
         
@@ -1468,11 +1459,87 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../dataview/" title="DataViews" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        DataViews
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="DataViews" class="md-nav__link md-nav__link--active">
       DataViews
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-list-of-data-views-for-a-project" class="md-nav__link">
+    Get list of data views for a project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-a-data-view" class="md-nav__link">
+    Get a data view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-data-view-to-a-project" class="md-nav__link">
+    Add a data view to a project
+  </a>
+  
+    <nav class="md-nav" aria-label="Add a data view to a project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specifying-a-schema-for-your-dataview" class="md-nav__link">
+    Specifying a Schema for your DataView
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-dataview" class="md-nav__link">
+    Delete a DataView
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1640,6 +1707,57 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-list-of-data-views-for-a-project" class="md-nav__link">
+    Get list of data views for a project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-a-data-view" class="md-nav__link">
+    Get a data view
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-data-view-to-a-project" class="md-nav__link">
+    Add a data view to a project
+  </a>
+  
+    <nav class="md-nav" aria-label="Add a data view to a project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specifying-a-schema-for-your-dataview" class="md-nav__link">
+    Specifying a Schema for your DataView
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delete-a-dataview" class="md-nav__link">
+    Delete a DataView
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1654,22 +1772,66 @@
                   
                 
                 
-                <h1 id="login-to-cape-ds">Login to Cape DS<a class="headerlink" href="#login-to-cape-ds" title="Permanent link">#</a></h1>
-<p>To use Cape DS, you'll need to generate a <a href="/understand/features/tokens/">user token</a>. You'll use this token to authenticate requests to Cape.</p>
-<p>After setting up an account in <a href="https://demo.capeprivacy.com">Cape</a>, ensure you are
-working within your user context and navigate to <em>Account Settings</em> to generate a user token.</p>
-<p><img alt="" src="./img/create_user_token.gif" /></p>
-<p>Take note of this value as you cannot recover it after you reload the page.</p>
-<div class="highlight"><pre><span></span><code>    <span class="n">c</span> <span class="o">=</span> <span class="n">Cape</span><span class="p">()</span>
-    <span class="n">c</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="s2">&quot;abc,123&quot;</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;http://cape.com&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p>It is also possible to set your Auth Token and Coordinator endpoint via the environment variables <code>CAPE_TOKEN</code> and <code>CAPE_COORDINATOR</code>.</p>
-<div class="highlight"><pre><span></span><code>    <span class="c1"># Call the login method after exporting CAPE_TOKEN and CAPE_COORDINATOR.</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="n">Cape</span><span class="p">()</span>
-    <span class="n">c</span><span class="o">.</span><span class="n">login</span><span class="p">()</span>
+                <h1 id="managing-dataviews">Managing DataViews<a class="headerlink" href="#managing-dataviews" title="Permanent link">#</a></h1>
+<h2 id="get-list-of-data-views-for-a-project">Get list of data views for a project<a class="headerlink" href="#get-list-of-data-views-for-a-project" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>    <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
+
+    <span class="n">my_project</span><span class="o">.</span><span class="n">list_dataviews</span><span class="p">()</span>
 </code></pre></div>
 <p>Default response:</p>
-<div class="highlight"><pre><span></span><code>    Login successful
+<div class="highlight"><pre><span></span><code>    DATAVIEW ID                 NAME           LOCATION         OWNER
+    --------------------------  -------------  ---------------  -----------
+    01EY48EFT4H7PWAN45SG2AEZ81  armazorn-data  s3://mydata.csv  armazorn <span class="o">(</span>You<span class="o">)</span>
+    01EY49J86722ENT9JSMKTE65EX  gorgle-data                     gorgle 
+</code></pre></div>
+<h2 id="get-a-data-view">Get a data view<a class="headerlink" href="#get-a-data-view" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>    <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
+
+    <span class="c1"># get by id</span>
+    <span class="n">my_project</span><span class="o">.</span><span class="n">get_dataview</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;dataview_123&quot;</span><span class="p">)</span>
+
+    <span class="c1"># get by uri</span>
+    <span class="n">my_project</span><span class="o">.</span><span class="n">get_dataview</span><span class="p">(</span><span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://my-data.csv&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Default response:</p>
+<div class="highlight"><pre><span></span><code>    DataView<span class="o">(</span><span class="nv">id</span><span class="o">=</span>dataview_123, <span class="nv">name</span><span class="o">=</span>my-data, <span class="nv">location</span><span class="o">=</span>s3://my-data.csv<span class="o">)</span>
+</code></pre></div>
+<h2 id="add-a-data-view-to-a-project">Add a data view to a project<a class="headerlink" href="#add-a-data-view-to-a-project" title="Permanent link">#</a></h2>
+<p>Initialize a <code>DataView</code> class and pass the instance to the <code>create_dataview</code> method.</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
+
+    <span class="n">my_project</span><span class="o">.</span><span class="n">create_dataview</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-data&quot;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://my-data.csv&quot;</span><span class="p">,</span> <span class="n">owner_label</span><span class="o">=</span><span class="s2">&quot;my-org&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Default response:</p>
+<div class="highlight"><pre><span></span><code>    DataView<span class="o">(</span><span class="nv">id</span><span class="o">=</span>dataview_123, <span class="nv">name</span><span class="o">=</span>my-data, <span class="nv">location</span><span class="o">=</span>s3://my-data.csv<span class="o">)</span>
+</code></pre></div>
+<h3 id="specifying-a-schema-for-your-dataview">Specifying a Schema for your DataView<a class="headerlink" href="#specifying-a-schema-for-your-dataview" title="Permanent link">#</a></h3>
+<p><code>DataView</code> schemas allow you to clarify the data types of your dataset. They will be visible for other project contributors - even ones from other organiations - to your project to query and inspect. By inspecting the schema property, other project contributors are able to identify which data columns should be used to train the model. </p>
+<p>If you provide a dataset to Cape that is publically accessible via http, Cape will attempt to preview your data and create a schema. </p>
+<p>However if your dataset is not publically accessible you'll have to specify your data's schema yourself. You can do so using the <code>schema</code> parameter. DataViews can be instatiated with a <a href="https://pandas.pydata.org/pandas-docs/stable/index.html">pandas</a> Series schema of type <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dtypes.html"><code>dataframe.dftypes</code></a>:</p>
+<div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;col_1&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;col_2&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]})</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">dataview</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">create_dataview</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-data&quot;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://my-data.csv&quot;</span><span class="p">,</span> <span class="n">owner_label</span><span class="o">=</span><span class="s2">&quot;my-org&quot;</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">dataview</span><span class="o">.</span><span class="n">schema</span>
+    <span class="p">{</span><span class="s1">&#39;col_1&#39;</span><span class="p">:</span> <span class="s1">&#39;integer&#39;</span><span class="p">,</span> <span class="s1">&#39;col_2&#39;</span><span class="p">:</span> <span class="s1">&#39;integer&#39;</span><span class="p">}</span>
+</code></pre></div>
+<p>DataViews can also be instantiated as a list of data types. Accepted schema data types include: <code>string</code>, <code>integer</code>, <code>number</code>, <code>datetime</code>, and <code>any</code>.</p>
+<div class="highlight"><pre><span></span><code>    <span class="o">&gt;&gt;&gt;</span> <span class="n">schema</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;col_1&quot;</span><span class="p">,</span> <span class="s2">&quot;schema_type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;col_2&quot;</span><span class="p">,</span> <span class="s2">&quot;schema_type&quot;</span><span class="p">:</span> <span class="s2">&quot;integer&quot;</span><span class="p">}]</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">data_view</span> <span class="o">=</span> <span class="n">DataView</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-data&quot;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://my-data.csv&quot;</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">)</span>
+
+    <span class="o">&gt;&gt;&gt;</span> <span class="n">dataview</span><span class="o">.</span><span class="n">schema</span>
+    <span class="p">{</span><span class="s1">&#39;col_1&#39;</span><span class="p">:</span> <span class="s1">&#39;integer&#39;</span><span class="p">,</span> <span class="s1">&#39;col_2&#39;</span><span class="p">:</span> <span class="s1">&#39;integer&#39;</span><span class="p">}</span>
+</code></pre></div>
+<h2 id="delete-a-dataview">Delete a DataView<a class="headerlink" href="#delete-a-dataview" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>    <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
+
+    <span class="n">my_project</span><span class="o">.</span><span class="n">delete_dataview</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;dataview_123&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Default response:</p>
+<div class="highlight"><pre><span></span><code>    DataView <span class="o">(</span>dataview_123<span class="o">)</span> deleted
 </code></pre></div>
                 
               
@@ -1695,11 +1857,30 @@ working within your user context and navigate to <em>Account Settings</em> to ge
 
         <!-- Link to previous page -->
         
+          <a href="../project/"
+              title="Projects"
+              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+              rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Projects
+              </span>
+            </div>
+          </a>
+        
 
         <!-- Link to next page -->
         
-          <a href="../project/"
-              title="Projects"
+          <a href="../job/"
+              title="Jobs"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -1708,7 +1889,7 @@ working within your user context and navigate to <em>Account Settings</em> to ge
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Projects
+                Jobs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
