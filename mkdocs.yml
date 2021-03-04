@@ -68,7 +68,6 @@ nav:
             - Reference: libraries/pycape/reference.md
     - Release notes:
         - Introduction: release-notes/index.md
-        - July 2020: release-notes/30072020.md
         - June 2020: release-notes/26062020.md
 plugins:
     - search
