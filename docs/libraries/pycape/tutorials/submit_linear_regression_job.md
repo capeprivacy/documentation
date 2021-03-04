@@ -56,10 +56,10 @@ Next we will set up these `DataViews` and `Jobs` in `pycape`.
 Before you can make requests to Cape Cloud, you'll need to authenticate with the API. Follow [these instructions to authenticate](/libraries/pycape/usage/login) with our API using `pycape`. Once you've logged in successfully, you should see a success message.
 
 ```python
-	>>> c = Cape()
-    >>> c.login()
+>>> c = Cape()
+>>> c.login()
 
-	Login successful
+Login successful
 ```
 
 ### Add a DataView to your project
@@ -67,23 +67,23 @@ Before you can make requests to Cape Cloud, you'll need to authenticate with the
 Use the `list_projects` method defined on the main `Cape` class to query a list of projects that belong to your organization.
 
 ```python
-    >>> my_projects = c.list_projects()
+>>> my_projects = c.list_projects()
 
-    PROJECT ID   NAME                     LABEL
-    -----------  -----------------------  -----------------------
-    project_123  Default Risk Assessment  default-risk-assessment
+PROJECT ID   NAME                     LABEL
+-----------  -----------------------  -----------------------
+project_123  Default Risk Assessment  default-risk-assessment
 
-	>>> my_projects
+>>> my_projects
 
-	[Project(id=project_123, name=Default Risk Assessment, label=default-risk-assessment)]
+[Project(id=project_123, name=Default Risk Assessment, label=default-risk-assessment)]
 ```
 
 To create a [`DataView`](/libraries/pycape/reference#pycapedataview) and add it to your project, simply call the `create_dataview` method defined on the `Project` class.
 
 ```python
-    >>> my_project = c.get_project(id="project_123")
+>>> my_project = c.get_project(id="project_123")
 
-    >>> my_project.create_dataview(name="my-data", uri="s3://my-data.csv", owner_label="my-org")
+>>> my_project.create_dataview(name="my-data", uri="s3://my-data.csv", owner_label="my-org")
 ```
 All `DataViews` must be associated with an organization. This association can be made by passing either an `owner_label` or an `owner_id` to the `create_dataview` method.
 
@@ -100,14 +100,14 @@ Before we can submit a job to train our linear regression model, we'll need to r
 Use the `list_dataviews` method defined on the `Project` class to inspect the name, owner (organization) and location of `DataViews` added to the project:
 
 ```python
-    >>> my_project = c.get_project(id="project_123")
+>>> my_project = c.get_project(id="project_123")
 
-    >>> dataviews = my_project.list_dataviews()
+>>> dataviews = my_project.list_dataviews()
 
-    DATAVIEW ID  NAME          LOCATION         OWNER
-    -----------  ------------  ---------------  -------------
-    01EY48       orgacle-data  s3://mydata.csv  orgacle (You)
-    01EY49       atlas-data                     atlas 
+DATAVIEW ID  NAME          LOCATION         OWNER
+-----------  ------------  ---------------  -------------
+01EY48       orgacle-data  s3://mydata.csv  orgacle (You)
+01EY49       atlas-data                     atlas 
 ```
 
 !!! note
@@ -116,12 +116,12 @@ Use the `list_dataviews` method defined on the `Project` class to inspect the na
 You can also inspect the schema of each `Dataview` in your project in order to see the data types of the columns, and to assess which data columns should be used to train the linear regression model.
 
 ```python
-    >>> dataviews[1].schema
-    {
-        'debt equity ratio': 'number',
-        'operating margin': 'number',
-        'working capital': 'integer'
-    }
+>>> dataviews[1].schema
+{
+    'debt equity ratio': 'number',
+    'operating margin': 'number',
+    'working capital': 'integer'
+}
 ```
 
 You can also review the dataviews added to your project in the UI.
@@ -135,26 +135,26 @@ Now that we've added our own `DataView` to the project, and vetted the `DataView
 Pass the `DataView` that contains training data to `x_train_dataview`, and the `DataView` that contains the target values to `y_train_dataview`.
 
 ```python
-    >>> dataview_1 = my_project.get_dataview(id="01EY48")
-    >>> dataview_2 = my_project.get_dataview(id="01EY49")
+>>> dataview_1 = my_project.get_dataview(id="01EY48")
+>>> dataview_2 = my_project.get_dataview(id="01EY49")
 
-    >>> vlr = VerticallyPartitionedLinearRegression(
-    >>>     x_train_dataview=dataview_1,
-    >>>     y_train_dataview=dataview_2,
-    >>> )
+>>> vlr = VerticallyPartitionedLinearRegression(
+>>>     x_train_dataview=dataview_1,
+>>>     y_train_dataview=dataview_2,
+>>> )
 
-    >>> my_project.submit_job(job=vlr)
+>>> my_project.submit_job(job=vlr)
 ```
 
 You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/pycape/reference#pycapeverticallypartitionedlinearregression) class like so:
 
 ```python
-    >>> VerticallyPartitionedLinearRegression(
-    >>>     x_train_dataview=dataview_1["debt equity ratio"],
-    >>>     y_train_dataview=dataview_2["debt equity ratio"],
-    >>> )
+>>> VerticallyPartitionedLinearRegression(
+>>>     x_train_dataview=dataview_1["debt equity ratio"],
+>>>     y_train_dataview=dataview_2["debt equity ratio"],
+>>> )
 
-    VerticallyPartitionedLinearRegression(x_train_dataview=Orgacle Dataview['debt equity ratio'], y_train_dataview=Atlas Dataview['debt equity ratio'])
+VerticallyPartitionedLinearRegression(x_train_dataview=Orgacle Dataview['debt equity ratio'], y_train_dataview=Atlas Dataview['debt equity ratio'])
 ```
 
 !!!note
@@ -168,10 +168,10 @@ After submitting your job, you should be able to see the status and details of y
 
 To check the status of your submitted linear regression job using `pycape`, use the [`get_status`](/reference/#pycape.api.job.job.Job.get_status) method:
 ```python
-    >>> lr_job = my_project.get_job(id="abc_123")
+>>> lr_job = my_project.get_job(id="abc_123")
 
-    >>> lr_job.get_status()
-    Success
+>>> lr_job.get_status()
+Success
 ```
 
 ### Approving Jobs
@@ -194,15 +194,15 @@ Whether you can view the weights or metrics of the trained model (or both!) depe
 To view the weights and metrics of a job, use the [`get_results`](/libraries/pycape/reference/#pycape.api.job.job.Job.get_results) method:
 
 ```python
-    >>> lr_job = my_project.get_job(id="abc_123")
+>>> lr_job = my_project.get_job(id="abc_123")
 
-    >>> weights, metrics = lr_job.get_results()
+>>> weights, metrics = lr_job.get_results()
 
-    >>> weights
-    array([12.14955139,  1.96560669])
+>>> weights
+array([12.14955139,  1.96560669])
 
-    >>> metrics
-    {'r_squared_result': [0.8804865768463074], 'mse_result': [37.94773864746094]}
+>>> metrics
+{'r_squared_result': [0.8804865768463074], 'mse_result': [37.94773864746094]}
 ```
 
 If you are the model owner, the first value in the returned tuple will be populated with a numpy array of weights from your trained model.

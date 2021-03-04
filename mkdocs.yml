@@ -45,7 +45,17 @@ nav:
         - Roadmap: understand/roadmap.md
     - Libraries:
         - Introduction: libraries/index.md
-        - Cape Python:
+        - PyCape:
+              - Overview: libraries/pycape/index.md
+              - Usage:
+                    - Login: libraries/pycape/usage/login.md
+                    - Projects: libraries/pycape/usage/project.md
+                    - DataViews: libraries/pycape/usage/dataview.md
+                    - Jobs: libraries/pycape/usage/job.md
+              - Tutorials:
+                    - Train Linear Regression: libraries/pycape/tutorials/submit_linear_regression_job.md
+              - Reference: libraries/pycape/reference.md
+        - Cape Python (Archived):
             - Overview: libraries/cape-python/index.md
             - Quickstart: libraries/cape-python/quickstart.md
             - Coordinator quickstart: libraries/cape-python/coordinator-quickstart.md
@@ -56,16 +66,6 @@ nav:
                 - Reversible Tokenization: libraries/cape-python/tutorials/reversible-tokenization.md
             - API documentation:
                 - v1: '!include ./pythonv1/mkdocs.yml'
-        - PyCape:
-            - Overview: libraries/pycape/index.md
-            - Usage:
-                - Login: 'libraries/pycape/usage/login.md'
-                - Projects: 'libraries/pycape/usage/project.md'
-                - DataViews: 'libraries/pycape/usage/dataview.md'
-                - Jobs: 'libraries/pycape/usage/job.md'
-            - Tutorials:
-                - Train Linear Regression: libraries/pycape/tutorials/submit_linear_regression_job.md
-            - Reference: libraries/pycape/reference.md
     - Release notes:
         - Introduction: release-notes/index.md
         - June 2020: release-notes/26062020.md

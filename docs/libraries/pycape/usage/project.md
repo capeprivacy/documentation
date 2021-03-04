@@ -19,39 +19,39 @@ Default response:
 ## Get Project
 
 ```python
-    # Get project by ID
-    c.get_project(id="project_123")
+# Get project by ID
+c.get_project(id="project_123")
 
-    # Get project by label
-    c.get_project(label="my-project")
+# Get project by label
+c.get_project(label="my-project")
 ```
 
 Default response:
 
 ```shell
-    Project(id=project_123, name=My Project, label=my-project)
+Project(id=project_123, name=My Project, label=my-project)
 ```
 
 ## Create a Project
 
 ```python
-    c.create_project(name="My Project" owner="org_123" description="Linear Regression model with amazorn.")
+c.create_project(name="My Project" owner="org_123" description="Linear Regression model with amazorn.")
 ```
 
 Default response:
 
 ```shell
-    Project(id=project_123, name=My Project, label=my-project)
+Project(id=project_123, name=My Project, label=my-project)
 ```
 
 ## Delete a Project
 
 ```python
-    c.delete_project(id="project_123")
+c.delete_project(id="project_123")
 ```
 
 Default response:
 
 ```shell
-    Project (project_123) deleted
+Project (project_123) deleted
 ```
