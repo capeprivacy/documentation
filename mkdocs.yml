@@ -71,16 +71,16 @@ nav:
                 - Reversible Tokenization: libraries/cape-python/tutorials/reversible-tokenization.md
             - API documentation:
                 - v1: '!include ./pythonv1/mkdocs.yml'
-        - Cape DS:
-            - Overview: libraries/cape-ds/index.md
+        - Pycape:
+            - Overview: libraries/pycape/index.md
             - Usage:
-                - Login: 'libraries/cape-ds/usage/login.md'
-                - Projects: 'libraries/cape-ds/usage/project.md'
-                - DataViews: 'libraries/cape-ds/usage/dataview.md'
-                - Jobs: 'libraries/cape-ds/usage/job.md'
+                - Login: 'libraries/pycape/usage/login.md'
+                - Projects: 'libraries/pycape/usage/project.md'
+                - DataViews: 'libraries/pycape/usage/dataview.md'
+                - Jobs: 'libraries/pycape/usage/job.md'
             - Tutorials:
-                - Train Linear Regression: libraries/cape-ds/tutorials/submit_linear_regression_job.md
-            - Reference: libraries/cape-ds/reference.md
+                - Train Linear Regression: libraries/pycape/tutorials/submit_linear_regression_job.md
+            - Reference: libraries/pycape/reference.md
     - Release notes:
         - Introduction: release-notes/index.md
         - July 2020: release-notes/30072020.md

@@ -1,7 +1,7 @@
 # API Reference
 
-## cape.Cape
-::: cape-ds.cape.Cape
+## pycape.Cape
+::: cape-ds.pycape.Cape
     handler: python
     selection:
         members:
@@ -15,8 +15,8 @@
         show_source: false
         show_root_toc_entry: false
 
-## cape.Project
-::: cape-ds.cape.Project
+## pycape.Project
+::: cape-ds.pycape.Project
     handler: python
     selection:
         members:
@@ -32,8 +32,8 @@
         show_source: false
         show_root_toc_entry: false
 
-## cape.Organization
-::: cape-ds.cape.api.organization.organization.Organization
+## pycape.Organization
+::: cape-ds.pycape.api.organization.organization.Organization
     handler: python
     rendering:
         heading_level: 4
@@ -41,8 +41,8 @@
         show_source: false
         show_root_toc_entry: false
 
-## cape.DataView
-::: cape-ds.cape.DataView
+## pycape.DataView
+::: cape-ds.pycape.DataView
     handler: python
     selection:
         members:
@@ -53,8 +53,8 @@
         show_source: false
         show_root_toc_entry: false
 
-## cape.Job
-::: cape-ds.cape.Job
+## pycape.Job
+::: cape-ds.pycape.Job
     handler: python
     rendering:
         heading_level: 4
@@ -62,8 +62,8 @@
         show_source: false
         show_root_toc_entry: false
 
-## cape.Task
-::: cape-ds.cape.api.task.task.Task
+## pycape.Task
+::: cape-ds.pycape.api.task.task.Task
     handler: python
     rendering:
         heading_level: 4
@@ -71,8 +71,8 @@
         show_source: false
         show_root_toc_entry: false
 
-## cape.VerticallyPartitionedLinearRegressionJob
-::: cape-ds.cape.VerticallyPartitionedLinearRegression
+## pycape.VerticallyPartitionedLinearRegressionJob
+::: cape-ds.pycape.VerticallyPartitionedLinearRegression
     handler: python
     selection:
         filters:
