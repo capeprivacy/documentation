@@ -1,11 +1,11 @@
-# Login to Cape DS
+# Login to PyCape
 
-To use Cape DS, you'll need to generate a [user token](/understand/features/tokens/). You'll use this token to authenticate requests to Cape.
+To use **`pycape`**, you'll need to generate a [user token](/understand/features/tokens/). You'll use this token to authenticate requests to Cape Cloud.
 
 After setting up an account in [Cape](https://demo.capeprivacy.com), ensure you are
 working within your user context and navigate to _Account Settings_ to generate a user token.
 
-![](./img/create_user_token.gif)
+![](./img/user-token.gif)
 
 Take note of this value as you cannot recover it after you reload the page.
 

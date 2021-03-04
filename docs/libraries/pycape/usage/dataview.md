@@ -53,13 +53,14 @@ Default response:
 
 ### Specifying a Schema for your DataView
 
-`DataView` schemas allow you to clarify the data types of your dataset. They will be visible for other project contributors - even ones from other organiations - to your project to query and inspect. By inspecting the schema property, other project contributors are able to identify which data columns should be used to train the model. 
+`DataView` schemas allow you to clarify the data types of your dataset. They will be visible for other project contributors - even ones from other organizations - to your project to query and inspect. By inspecting the schema property, other project contributors are able to identify which data columns should be used to train the model. 
 
-If you provide a dataset to Cape that is publically accessible via http, Cape will attempt to preview your data and create a schema. 
+If you provide a dataset to Cape that is publicly accessible via HTTP, Cape will attempt to preview your data and create a schema. 
 
-However if your dataset is not publically accessible you'll have to specify your data's schema yourself. You can do so using the `schema` parameter. DataViews can be instatiated with a [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) Series schema of type [`dataframe.dftypes`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dtypes.html):
+However, if your dataset is not publicly accessible you'll have to specify your data's schema yourself. You can do so using the `schema` parameter. DataViews can be instantiated with a [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) Series schema of type [`dataframe.dftypes`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dtypes.html):
 
 ```python
+
     >>> import pandas as pd
     >>> df = pd.DataFrame(data={"col_1": [1, 2], "col_2": [3, 4]})
 

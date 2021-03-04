@@ -1377,17 +1377,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
     
     <label class="md-nav__link" for="nav-4-3">
-      Pycape
+      PyCape
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Pycape" data-md-level="2">
+    <nav class="md-nav" aria-label="PyCape" data-md-level="2">
       <label class="md-nav__title" for="nav-4-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Pycape
+        PyCape
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1772,13 +1772,13 @@
                 
                 <h1 id="pycape">pycape<a class="headerlink" href="#pycape" title="Permanent link">#</a></h1>
 <p><a href="https://codecov.io/gh/capeprivacy/cape-ds"><img alt="codecov" src="https://codecov.io/gh/capeprivacy/cape-ds/branch/main/graph/badge.svg?token=nimecXcQzo" /></a></p>
-<p><strong>pycape</strong> is a set of Python modules for interacting with your Cape data. Using <code>pycape</code>, you can:</p>
+<p><strong>pycape</strong> is a set of Python modules for interacting with your Cape Privacy data. Using <code>pycape</code>, you can:</p>
 <ul>
-<li>Create and query <a href="/libraries/pytest/reference#capedataview">dataviews</a>, or pointers to the data that you want to use to train a model using Cape's encrypted learning protocol.</li>
-<li>Submit and track <a href="/libraries/pytest/reference#capedataview">jobs</a>, which are computational sessions which contain instructions for how to train your model.</li>
+<li>Create and query <a href="/libraries/pycape/reference#pycapedataview">dataviews</a>, or pointers to the data that you want to use to train a model using Cape's encrypted learning protocol.</li>
+<li>Submit and track <a href="/libraries/pycape/reference#pycapedataview">jobs</a>, which are computational sessions which contain instructions for how to train your model.</li>
 </ul>
 <h2 id="short-tutorial">Short Tutorial<a class="headerlink" href="#short-tutorial" title="Permanent link">#</a></h2>
-<p>Access your Cape projects by creating a instance of the main <a href="/libraries/pytest/reference#capecape"><code>Cape</code></a> class:</p>
+<p>Access your Cape projects by creating an instance of the main <a href="/libraries/pycape/reference#pycapecape"><code>Cape</code></a> class:</p>
 <div class="highlight"><pre><span></span><code>    from pycape import Cape
 
     c = Cape()
@@ -1802,7 +1802,7 @@
 
     <span class="n">my_project</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">vlr_job</span><span class="p">)</span>
 </code></pre></div>
-See our example <a href="/libraries/pytest/usage/">usage</a> or a more in-depth <a href="/libraries/pytest/tutorials/submit_linear_regression_job/">tutorial</a>.</p>
+See our example <a href="/libraries/pycape/usage/">usage</a> or a more in-depth <a href="/libraries/pycape/tutorials/submit_linear_regression_job/">tutorial</a>.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h3>
 <ul>

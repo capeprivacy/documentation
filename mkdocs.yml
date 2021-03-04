@@ -71,7 +71,7 @@ nav:
                 - Reversible Tokenization: libraries/cape-python/tutorials/reversible-tokenization.md
             - API documentation:
                 - v1: '!include ./pythonv1/mkdocs.yml'
-        - Pycape:
+        - PyCape:
             - Overview: libraries/pycape/index.md
             - Usage:
                 - Login: 'libraries/pycape/usage/login.md'

@@ -1,6 +1,6 @@
 # Manage Projects
 
-You can create, delete, or query for projects in Cape DS. 
+Using **`pycape`** you can create, delete, or query for your Cape projects. 
 
 ## List Projects
 

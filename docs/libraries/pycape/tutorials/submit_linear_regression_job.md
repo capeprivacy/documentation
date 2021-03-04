@@ -9,7 +9,7 @@ This tutorial will walk you through the process of training an encrypted linear 
 
 We'll use the [Cape UI](https://demo.capeprivacy.com) to set up and review activity in the project. 
 
-We'll also use the [`pytest`](https://github.com/capeprivacy/pytest) Python library to create and review pointers to datasets or [`DataViews`](/libraries/pycape/reference#capedataview), create [`Tasks`](/libraries/pycape/reference#capetask), which are Cape Python objects that contain instructions on how to train a model using the data provided, and review [`Jobs`](/libraries/pycape/reference#capejob) in order to track the status of the training, and view the results of the trained model.
+We'll also use the [`pytest`](https://github.com/capeprivacy/pytest) Python library to create and review pointers to datasets or [`DataViews`](/libraries/pycape/reference#pycapedataview), create [`Tasks`](/libraries/pycape/reference#pycapetask), which are Cape Python objects that contain instructions on how to train a model using the data provided, and review [`Jobs`](/libraries/pycape/reference#pycapejob) in order to track the status of the training, and view the results of the trained model.
 
 ## Project Setup
 
@@ -27,7 +27,7 @@ Take note of this value as you cannot recover it after you reload the page.
 
 ### Create a Project
 
-Next, create a [`Project`](/libraries/pycape/reference#capeproject) within one of the organizations you just created.
+Next, create a [`Project`](/libraries/pycape/reference#pycapeproject) within one of the organizations you just created.
 
 `Projects` serve as the context in which you can define and review `Jobs` with other organizations.
 
@@ -50,8 +50,8 @@ That is it for the UI for now! We'll return later to review `DataViews` and appr
 
 Next we will set up these `DataViews` and `Jobs` in `pycape`.
 
-## Working with the Cape DS Python Library
-### Login to Cape DS
+## Working with the PyCape Python Library
+### Login to PyCape
 
 Before you can make requests to Cape Cloud, you'll need to authenticate with the API. Follow [these instructions to authenticate](/libraries/pycape/usage/login) with our API using `pycape`. Once you've logged in successfully, you should see a success message.
 
@@ -78,7 +78,7 @@ Use the `list_projects` method defined on the main `Cape` class to query a list 
 	[Project(id=project_123, name=Default Risk Assessment, label=default-risk-assessment)]
 ```
 
-To create a [`DataView`](/libraries/pycape/reference#capedataview) and add it to your project, simply call the `create_dataview` method defined on the `Project` class.
+To create a [`DataView`](/libraries/pycape/reference#pycapedataview) and add it to your project, simply call the `create_dataview` method defined on the `Project` class.
 
 ```python
     >>> my_project = c.get_project(id="project_123")
@@ -146,7 +146,7 @@ Pass the `DataView` that contains training data to `x_train_dataview`, and the `
     >>> my_project.submit_job(job=vlr)
 ```
 
-You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/pycape/reference#capeverticallypartitionedlinearregression) class like so:
+You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/pycape/reference#pycapeverticallypartitionedlinearregression) class like so:
 
 ```python
     >>> VerticallyPartitionedLinearRegression(
@@ -166,7 +166,7 @@ After submitting your job, you should be able to see the status and details of y
 
 ![](../img/job-details.gif)
 
-To check the status of your submitted linear regression job using Cape DS, use the [`get_status`](/reference/#cape.api.job.job.Job.get_status) method:
+To check the status of your submitted linear regression job using `pycape`, use the [`get_status`](/reference/#pycape.api.job.job.Job.get_status) method:
 ```python
     >>> lr_job = my_project.get_job(id="abc_123")
 
@@ -191,7 +191,7 @@ Once your job has successfully completed, you can view the results of the traine
 
 Whether you can view the weights or metrics of the trained model (or both!) depends on the role you and your organization play in the project.
 
-To view the weights and metrics of a job, use the [`get_results`](/libraries/pycape/reference/#cape.api.job.job.Job.get_results) method:
+To view the weights and metrics of a job, use the [`get_results`](/libraries/pycape/reference/#pycape.api.job.job.Job.get_results) method:
 
 ```python
     >>> lr_job = my_project.get_job(id="abc_123")

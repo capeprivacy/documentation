@@ -51,9 +51,9 @@ Default response:
 ```
 
 ### Accessing Weights as a Model Owner in Cape
-**pycape** uses [`boto`](https://boto3.amazonaws.com/) to access the model weights in your S3 bucket. You'll need to inform pycape about your IAM authentication credentials. Cape expects values for the following AWS configuration keys: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION`. 
+**`pycape`** uses [`boto`](https://boto3.amazonaws.com/) to access the model weights in your S3 bucket. You'll need to inform pycape about your IAM authentication credentials. Cape expects values for the following AWS configuration keys: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION`. 
 
-You can set these keys as environment variables in the interpreter running pycape:
+You can set these keys as environment variables in the interpreter running `pycape`:
 ```shell
     export AWS_ACCESS_KEY_ID=<Access-Key>
     export AWS_SECRET_ACCESS_KEY=<Secret-Key>

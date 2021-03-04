@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#login-to-cape-ds" class="md-skip">
+        <a href="#login-to-pycape" class="md-skip">
           Skip to content
         </a>
       
@@ -1377,17 +1377,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3" checked>
     
     <label class="md-nav__link" for="nav-4-3">
-      Pycape
+      PyCape
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Pycape" data-md-level="2">
+    <nav class="md-nav" aria-label="PyCape" data-md-level="2">
       <label class="md-nav__title" for="nav-4-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Pycape
+        PyCape
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1654,11 +1654,11 @@
                   
                 
                 
-                <h1 id="login-to-cape-ds">Login to Cape DS<a class="headerlink" href="#login-to-cape-ds" title="Permanent link">#</a></h1>
-<p>To use Cape DS, you'll need to generate a <a href="/understand/features/tokens/">user token</a>. You'll use this token to authenticate requests to Cape.</p>
+                <h1 id="login-to-pycape">Login to PyCape<a class="headerlink" href="#login-to-pycape" title="Permanent link">#</a></h1>
+<p>To use <strong><code>pycape</code></strong>, you'll need to generate a <a href="/understand/features/tokens/">user token</a>. You'll use this token to authenticate requests to Cape Cloud.</p>
 <p>After setting up an account in <a href="https://demo.capeprivacy.com">Cape</a>, ensure you are
 working within your user context and navigate to <em>Account Settings</em> to generate a user token.</p>
-<p><img alt="" src="./img/create_user_token.gif" /></p>
+<p><img alt="" src="./img/user-token.gif" /></p>
 <p>Take note of this value as you cannot recover it after you reload the page.</p>
 <div class="highlight"><pre><span></span><code>    <span class="n">c</span> <span class="o">=</span> <span class="n">Cape</span><span class="p">()</span>
     <span class="n">c</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">token</span><span class="o">=</span><span class="s2">&quot;abc,123&quot;</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="s2">&quot;http://cape.com&quot;</span><span class="p">)</span>
