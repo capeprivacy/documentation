@@ -1,6 +1,6 @@
 # pycape
 
-[![codecov](https://codecov.io/gh/capeprivacy/cape-ds/branch/main/graph/badge.svg?token=nimecXcQzo)](https://codecov.io/gh/capeprivacy/cape-ds)
+[![codecov](https://codecov.io/gh/capeprivacy/pycape/branch/main/graph/badge.svg?token=nimecXcQzo)](https://codecov.io/gh/capeprivacy/cape-ds)
 
 **pycape** is a set of Python modules for interacting with your Cape Privacy data. Using `pycape`, you can:
 

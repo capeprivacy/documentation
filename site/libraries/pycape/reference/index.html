@@ -2226,7 +2226,7 @@ A string value for each column's datatype. Possible datatypes:
 </thead>
 <tbody>
 <tr>
-<td><code>Job</code></td>
+<td><code>List[pycape.pycape.api.job.job.Job]</code></td>
 <td>
 <p>A <code>Job</code> instance.</p>
 </td>
@@ -2646,7 +2646,30 @@ metrics: A dictionary of different metric values.</p>
 <div class="doc doc-object doc-class">
 <div class="doc doc-contents first">
 <p>Tasks contain the instructions for how a Cape worker should run a job.</p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>model_location</code></td>
+<td><code>str</code></td>
+<td>
+<p>The AWS S3 bucket name to which Cape will write the output of the model training.</p>
+</td>
+<td><em>required</em></td>
+</tr>
+</tbody>
+</table>
 <div class="doc doc-children">
+
+
 
 
 
@@ -2667,8 +2690,8 @@ metrics: A dictionary of different metric values.</p>
 <div class="doc doc-object doc-class">
 <div class="doc doc-contents first">
 <p>Inherits from: <code>Task</code>.</p>
-<p>Contains instructions for training linear regression models using     verically-partioned datasets.</p>
-<p>Verically-partioned datasets refer to the joining of columns (i.e. features) from     serveral parties.</p>
+<p>Contains instructions for training linear regression models using     vertically-partitioned datasets.</p>
+<p>Vertically-partitioned datasets refer to the joining of columns (i.e. features) from     several parties.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2696,9 +2719,18 @@ metrics: A dictionary of different metric values.</p>
 </td>
 <td><em>required</em></td>
 </tr>
+<tr>
+<td><code>model_location</code></td>
+<td><code>str</code></td>
+<td>
+<p>The AWS S3 bucket name to which Cape will write the output of the model training.</p>
+</td>
+<td><em>required</em></td>
+</tr>
 </tbody>
 </table>
 <div class="doc doc-children">
+
 
 
 

@@ -8,10 +8,6 @@ Cape Privacy aims to enable better and more privacy compliant data science, and 
 
 Through our open source approach, we ensure our own code and tools are transparent and auditable.
 
-### Architecture
-
-Cape Privacy provides [Cape Coordinator](/cape-core/coordinator/), to manage policy and users. This will interact with the Cape Privacy libraries (such as [Cape Python](/libraries/cape-python/)) through a workers interface, and with your own data services through an API.
-
 ### Data flow
 
 Data will flow between the following elements of Cape Privacy's architecture:

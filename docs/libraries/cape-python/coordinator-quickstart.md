@@ -1,6 +1,6 @@
 # Cape Python API with Coordinator
 
-This document describes how to use Cape Python with Cape Coordinator. It builds on the [Cape Python quickstart guide](/libraries/cape-python/quickstart/) and the [Cape Coordinator](/cape-core/coordinator/) installation guides.
+This document describes how to use Cape Python with Cape Coordinator. It builds on the [Cape Python quickstart guide](/libraries/cape-python/quickstart/) installation guide.
 
 ## Quickstart
 
@@ -9,7 +9,7 @@ This document describes how to use Cape Python with Cape Coordinator. It builds 
 * [Cape Coordinator](/cape-core/coordinator/) installed. You need the password and email that you set during Cape Coordinator installation.
 * [Cape Python](/libraries/cape-python/quickstart/#installation) installed.
 
-We recommend working through the [Cape Python quickstart guide](/libraries/cape-python/quickstart/) and reading the [Cape Coordinator](/cape-core/coordinator/) documentation before following the steps below.
+We recommend working through the [Cape Python quickstart guide](/libraries/cape-python/quickstart/) before following the steps below.
 
 ### Create your first project
 

@@ -6,9 +6,9 @@ Cape Privacy's architecture is a collection of services and libraries that work 
 
 Cape Privacy currently offers three components:
 
-* [Cape Coordinator](/cape-core/coordinator/). This provides policy management, and can integrate with Cape Privacy's libraries.
+* The Cape UI, from which you can set up data-science projects to collaborate on with other organizations.
+* The Python libary [pycape](/libraries/pycape/). With **pycape** you can interact with your Cape projects, view and update details of your project, and manipulate and upload your datasets to Cape. 
 * [Cape Python](/libraries/cape-python/). The first Cape Privacy library to be released, providing Python-based data transformations for Pandas and Apache Spark (PySpark).
-* The [command line interface](/cape-core/cli/). A CLI to allow users to interact with Cape Coordinator.
 
 
 ## Roadmap
