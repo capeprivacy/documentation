@@ -1698,12 +1698,14 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <h3 id="submitting-a-linear-regression-job">Submitting a Linear Regression Job<a class="headerlink" href="#submitting-a-linear-regression-job" title="Permanent link">#</a></h3>
 <p>Now that we've added our own <code>DataView</code> to the project, and vetted the <code>DataView</code> of our collaborator, we are ready to submit our Cape linear regression job.</p>
 <p>Pass the <code>DataView</code> that contains training data to <code>x_train_dataview</code>, and the <code>DataView</code> that contains the target values to <code>y_train_dataview</code>.</p>
+<p>You'll also need to specify the <a href="/libraries/pycape/usage/job/#setting-the-storage-location-as-a-model-owner-in-cape">S3 Bucket location that you would like Cape to save your model results to</a>.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">dataview_1</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_dataview</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;01EY48&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">dataview_2</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_dataview</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;01EY49&quot;</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">vlr</span> <span class="o">=</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="n">x_train_dataview</span><span class="o">=</span><span class="n">dataview_1</span><span class="p">,</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">dataview_2</span><span class="p">,</span>
+<span class="o">&gt;&gt;&gt;</span>     <span class="n">model_location</span><span class="o">=</span><span class="s2">&quot;s3://my-bucket&quot;</span><span class="p">,</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">my_project</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">job</span><span class="o">=</span><span class="n">vlr</span><span class="p">)</span>
@@ -1712,9 +1714,10 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="n">x_train_dataview</span><span class="o">=</span><span class="n">dataview_1</span><span class="p">[</span><span class="s2">&quot;debt equity ratio&quot;</span><span class="p">],</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">dataview_2</span><span class="p">[</span><span class="s2">&quot;debt equity ratio&quot;</span><span class="p">],</span>
+<span class="o">&gt;&gt;&gt;</span>     <span class="n">model_location</span><span class="o">=</span><span class="s2">&quot;s3://my-bucket&quot;</span><span class="p">,</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">)</span>
 
-<span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span><span class="n">x_train_dataview</span><span class="o">=</span><span class="n">Orgacle</span> <span class="n">Dataview</span><span class="p">[</span><span class="s1">&#39;debt equity ratio&#39;</span><span class="p">],</span> <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">Atlas</span> <span class="n">Dataview</span><span class="p">[</span><span class="s1">&#39;debt equity ratio&#39;</span><span class="p">])</span>
+<span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span><span class="n">x_train_dataview</span><span class="o">=</span><span class="n">Orgacle</span> <span class="n">Dataview</span><span class="p">[</span><span class="s1">&#39;debt equity ratio&#39;</span><span class="p">],</span> <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">Atlas</span> <span class="n">Dataview</span><span class="p">[</span><span class="s1">&#39;debt equity ratio&#39;</span><span class="p">],</span> <span class="n">model_location</span><span class="o">=</span><span class="n">s3</span><span class="p">:</span><span class="o">//</span><span class="n">my</span><span class="o">-</span><span class="n">bucket</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

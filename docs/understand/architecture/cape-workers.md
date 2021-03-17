@@ -47,10 +47,10 @@ This is your Cape organization token. You can generate Cape organization tokens 
 
 Refer to our [tokens usage documentation](/understand/features/tokens/) for more information on how tokens are used in Cape.
 
-### **`CAPE_BUCKET`** (required)
-Set this variable to the URI of the S3 bucket that you would like Cape to write the results of the computation to. 
+### **`CAPE_BUCKET`**
+Set this variable to the URI of the S3 bucket that you would like Cape to write the results of the computation to. By setting this variable, you will overwrite the [S3 bucket model location specified when submitting your job using **pycape**](/libraries/pycape/usage/job/#setting-the-storage-location-as-a-model-owner-in-cape).
 
-Currently Cape only supports writing to Amazon S3 blob storage. In order for your cape-worker to authenticate and communicate with your S3 bucket, you'll need to let your instance know about the following AWS configuration variables.
+Currently, Cape only supports writing to Amazon S3 blob storage. In order for your cape-worker to authenticate and communicate with your S3 bucket, you'll need to let your instance know about the following AWS configuration variables.
 
 ### **`AWS_ACCESS_KEY_ID`**
 Set this to the AWS access key associated with an IAM user that has s3 write permissions to the location specified by `CAPE_BUCKET`.

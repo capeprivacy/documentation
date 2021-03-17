@@ -701,6 +701,19 @@
     Submit a job
   </a>
   
+    <nav class="md-nav" aria-label="Submit a job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-storage-location-as-a-model-owner-in-cape" class="md-nav__link">
+    Setting the Storage Location as a Model Owner in Cape
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1436,6 +1449,19 @@
     Submit a job
   </a>
   
+    <nav class="md-nav" aria-label="Submit a job">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-storage-location-as-a-model-owner-in-cape" class="md-nav__link">
+    Setting the Storage Location as a Model Owner in Cape
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1491,12 +1517,19 @@
 <span class="n">vlr</span> <span class="o">=</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>
     <span class="n">x_train_dataview</span><span class="o">=</span><span class="n">dataview_1</span><span class="p">,</span>
     <span class="n">y_train_dataview</span><span class="o">=</span><span class="n">dataview_2</span><span class="p">,</span>
+    <span class="n">model_location</span><span class="o">=</span><span class="s2">&quot;s3://my-bucket&quot;</span>
 <span class="p">)</span>
 <span class="n">my_project</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">job</span><span class="o">=</span><span class="n">vlr</span><span class="p">)</span>
 </code></pre></div>
 <p>Default response:</p>
 <div class="highlight"><pre><span></span><code>Job<span class="o">(</span><span class="nv">id</span><span class="o">=</span>abc_123, <span class="nv">job_type</span><span class="o">=</span>LINEAR_REGRESSION, <span class="nv">status</span><span class="o">=</span>Created<span class="o">)</span>
 </code></pre></div>
+<h3 id="setting-the-storage-location-as-a-model-owner-in-cape">Setting the Storage Location as a Model Owner in Cape<a class="headerlink" href="#setting-the-storage-location-as-a-model-owner-in-cape" title="Permanent link">#</a></h3>
+<p>The results of the trained model will be saved to an S3 bucket location that you notify Cape about. This can be done in two ways:</p>
+<ul>
+<li>Pass the S3 Bucket URI via the <code>model_location</code> parameter on the <code>VerticallyPartitionedLinearRegression</code> instance that is used to submit the job.</li>
+<li>Pass the S3 Bucket URI <a href="/understand/architecture/cape-workers/#cape_bucket">via an environment variable to your Cape Worker Docker image</a>. This will overwrite the model_location set by <strong>pycape</strong>.</li>
+</ul>
 <h2 id="get-a-jobs-status">Get a Job's Status<a class="headerlink" href="#get-a-jobs-status" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">lr_job</span> <span class="o">=</span> <span class="n">my_project</span><span class="o">.</span><span class="n">get_job</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;abc_123&quot;</span><span class="p">)</span>
 
