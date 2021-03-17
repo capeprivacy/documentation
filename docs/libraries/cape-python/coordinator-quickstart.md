@@ -6,7 +6,7 @@ This document describes how to use Cape Python with Cape Coordinator. It builds 
 
 ### Prerequisites
 
-* [Cape Coordinator](/cape-core/coordinator/) installed. You need the password and email that you set during Cape Coordinator installation.
+* Cape Coordinator installed. You need the password and email that you set during Cape Coordinator installation.
 * [Cape Python](/libraries/cape-python/quickstart/#installation) installed.
 
 We recommend working through the [Cape Python quickstart guide](/libraries/cape-python/quickstart/) before following the steps below.
