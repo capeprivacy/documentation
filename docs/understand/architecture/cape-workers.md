@@ -22,13 +22,15 @@ Cape workers are designed to facilitate the sharing of datasets between each oth
 Starting your Cape worker is as simple as running a Docker image using `docker run`:
 ```shell
   export CAPE_TOKEN=my-cape-org-token
-  docker run -d --rm                     \
-    --name cape-worker                   \
-    -e CAPE_TOKEN                        \
-    -e CAPE_BUCKET=my-s3-bucket-location \
-    -e AWS_ACCESS_KEY_ID                 \
-    -e AWS_SECRET_ACCESS_KEY             \
-    -e AWS_REGION                        \
+  docker run -d --rm                                  \
+    --name cape-worker                                \
+    -e CAPE_TOKEN                                     \
+    -e CAPE_BUCKET=my-s3-bucket-location              \
+    -e CAPE_COORDINATOR=https://app.capeprivacy.com   \
+    -e CAPE_BROKER=https://app.capeprivacy.com/broker \
+    -e AWS_ACCESS_KEY_ID                              \
+    -e AWS_SECRET_ACCESS_KEY                          \
+    -e AWS_REGION                                     \
     capeprivacy/cape-worker:sha-1234567
 ```
 
