@@ -1606,13 +1606,15 @@
 <h2 id="starting-your-cape-worker-instance">Starting your <code>cape-worker</code> instance<a class="headerlink" href="#starting-your-cape-worker-instance" title="Permanent link">#</a></h2>
 <p>Starting your Cape worker is as simple as running a Docker image using <code>docker run</code>:
 <div class="highlight"><pre><span></span><code>  <span class="nb">export</span> <span class="nv">CAPE_TOKEN</span><span class="o">=</span>my-cape-org-token
-  docker run -d --rm                     <span class="se">\</span>
-    --name cape-worker                   <span class="se">\</span>
-    -e CAPE_TOKEN                        <span class="se">\</span>
-    -e <span class="nv">CAPE_BUCKET</span><span class="o">=</span>my-s3-bucket-location <span class="se">\</span>
-    -e AWS_ACCESS_KEY_ID                 <span class="se">\</span>
-    -e AWS_SECRET_ACCESS_KEY             <span class="se">\</span>
-    -e AWS_REGION                        <span class="se">\</span>
+  docker run -d --rm                                  <span class="se">\</span>
+    --name cape-worker                                <span class="se">\</span>
+    -e CAPE_TOKEN                                     <span class="se">\</span>
+    -e <span class="nv">CAPE_BUCKET</span><span class="o">=</span>my-s3-bucket-location              <span class="se">\</span>
+    -e <span class="nv">CAPE_COORDINATOR</span><span class="o">=</span>https://app.capeprivacy.com   <span class="se">\</span>
+    -e <span class="nv">CAPE_BROKER</span><span class="o">=</span>https://app.capeprivacy.com/broker <span class="se">\</span>
+    -e AWS_ACCESS_KEY_ID                              <span class="se">\</span>
+    -e AWS_SECRET_ACCESS_KEY                          <span class="se">\</span>
+    -e AWS_REGION                                     <span class="se">\</span>
     capeprivacy/cape-worker:sha-1234567
 </code></pre></div></p>
 <p>In this command:</p>

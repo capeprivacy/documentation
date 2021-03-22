@@ -41,7 +41,7 @@ python -m venv ./venv
 . venv/Scripts/activate
 ```
 
-4. Install the [Material theme](https://squidfunk.github.io/mkdocs-material/), [MkDocs](https://www.mkdocs.org/) and [Pydoc-markdown](https://github.com/NiklasRosenstein/pydoc-markdown):
+4. Install the [Material theme](https://squidfunk.github.io/mkdocs-material), [MkDocs](https://www.mkdocs.org/) and [Pydoc-markdown](https://github.com/NiklasRosenstein/pydoc-markdown):
 
 ```
 make boostrap
