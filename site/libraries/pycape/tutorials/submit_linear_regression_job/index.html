@@ -1608,8 +1608,8 @@
                 <h1 id="train-a-linear-regression-model-using-cape-dataviews-jobs">Train a Linear Regression Model using Cape DataViews &amp; Jobs<a class="headerlink" href="#train-a-linear-regression-model-using-cape-dataviews-jobs" title="Permanent link">#</a></h1>
 <p>This tutorial will walk you through the process of training an encrypted linear regression model in collaboration with another organization using Cape Privacy. You'll learn how to:</p>
 <ul>
-<li>Send datasets securely to Cape Cloud.</li>
-<li>Review the dataset schemas of other organizations in your project.</li>
+<li>Register dataset pointers (i.e. DataViews) with Cape Cloud.</li>
+<li>Review DataViews from other organizations in your project.</li>
 <li>Approve and reject model computation jobs.</li>
 <li>View the metrics or weights of the trained model, depending on your role in the project.</li>
 </ul>
@@ -1723,6 +1723,14 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <p class="admonition-title">Note</p>
 <p>In order for your linear regression job to train a model using Cape's encrypted learning protocol, you'll need to run your own Cape workers. Read <a href="/understand/architecture/cape-workers">our documentation to get set up with Cape workers</a>.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>VerticallyPartitionedLinearRegression</code> currently expects a bound on its input data in order to avoid precision loss during model training. See <a href="/reference/#pycapeverticallypartitionedlinearregression">its reference documentation</a> for more details.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>DataView</code> indices must be aligned across parties before being used for a <code>VerticallyPartitionedLinearRegression</code>.</p>
+</div>
 <h3 id="tracking-job-status">Tracking Job Status<a class="headerlink" href="#tracking-job-status" title="Permanent link">#</a></h3>
 <p>After submitting your job, you should be able to see the status and details of your <code>Job</code> in the UI.</p>
 <p><img alt="" src="../../img/job-details.gif" /></p>
@@ -1754,7 +1762,7 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <span class="o">&gt;&gt;&gt;</span> <span class="n">metrics</span>
 <span class="p">{</span><span class="s1">&#39;r_squared_result&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.8804865768463074</span><span class="p">],</span> <span class="s1">&#39;mse_result&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">37.94773864746094</span><span class="p">]}</span>
 </code></pre></div>
-<p>If you are the model owner, the first value in the returned tuple will be populated with a numpy array of weights from your trained model.</p>
+<p>If you are the model owner, the first value in the returned tuple will be populated with a numpy array of weights from your trained model. The first element in the <code>weights</code> array is the intercept of the linear model, and subsequent elements are its feature coefficients.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To access model weights you'll need to <a href="/libraries/pycape/usage/job#accessing-weights-as-a-model-owner-in-cape">inform <strong>pycape</strong> about your AWS IAM authentication credentials</a>.</p>

@@ -2690,8 +2690,21 @@ metrics: A dictionary of different metric values.</p>
 <div class="doc doc-object doc-class">
 <div class="doc doc-contents first">
 <p>Inherits from: <code>Task</code>.</p>
-<p>Contains instructions for training linear regression models using     vertically-partitioned datasets.</p>
+<p>Contains instructions for encrypted training of linear regression models using     vertically-partitioned datasets.</p>
 <p>Vertically-partitioned datasets refer to the joining of columns (i.e. features) from     several parties.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This task expects <code>DataViews</code> with floating-point inputs. Internally, values will be         re-encoded by the Cape Worker into the         <a href="https://en.wikipedia.org/wiki/Fixed-point_arithmetic">fixed-point numbers</a> necessary         for encrypted computation.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This task expects its input <code>DataViews</code> to be aligned by index (although indexing         columns need not be present in either of the DataViews or their underlying datasets).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This task expects its input <code>DataViews</code> to have max values scaled between 1.0 and 10.0.</p>
+</div>
+<p>Currently, input data must be scaled to single digits; for any floating-point vector <code>c</code> in     the input data views <code>x</code> and <code>y</code>, <code>c</code> must be scaled such that <code>1.0 &lt;= max(c) &lt; 10.0.</code>     This bound allows the Cape Worker to allocate all of its precision for significant digits     throughout the linear regression computation, while still maintaining the guarantee that     fixed-point numbers won't overflow. For logarithimically-distributed vectors, we recommend     applying a log-transform before scaling to this bound.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
