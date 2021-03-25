@@ -4,7 +4,7 @@ Cape Privacy's software is currently in alpha state. This document describes Cap
 
 ## The goal
 
-Cape Privacy aims to enable better and more privacy compliant data science, and to make this accessible to a wide range of users (not just engineers). 
+Cape Privacy's goal is to make encrypted learning available for everyone. We believe the future of machine learning is encrypted -- to offer more privacy, more security and provide the right data for solving real world problems.
 
 Through our open source approach, we ensure our own code and tools are transparent and auditable.
 
@@ -12,20 +12,20 @@ Through our open source approach, we ensure our own code and tools are transpare
 
 Data will flow between the following elements of Cape Privacy's architecture:
 
-* Cape workers pass policy information to Cape libraries.
-* Cape Coordinator has an internal policy management workflow, from a request for new policy, through collaborating review, to using the policy to control how the libraries transform your data.
-* The Cape API will exchange information relevant to auditors with your own monitoring tools.
+* Cape workers access local data, encrypt it using multi-party computation and connect with the broker and coordinator to execute encrypted learning jobs.
+* The broker (maintained by Cape) allows two or more organizations to work together on encrypted computations by acting as a secure bridge when jobs are running.
+* The pycape library is built for data scientists: allowing data scientists to view projects they are a part of, add or remove data views, create and check status of jobs and pull model metrics and results (if permitted). If approved, these jobs are then sent to the workers to be run.
 
 ## Upcoming features
 
-### Cape Python
+### pycape
 
-* Reversible tokenisation: allow reversing of tokenization to reveal the raw value.
-* Policy audit logging: create logging hooks to allow audit logs for policy downloads and usage in Cape Python.
-* Expand pipeline integrations: add Apache Beam, Apache Flink, Apache Arrow Flight, or Dask integration as another pipeline we can support, either as part of Cape Python or in its own separate project.
+* Debug encrypted learning jobs more easily with shape and schema checking 
+* Define a model_owner for a job explicitly in the Job declaration
+* Enhanced roles and permissions for data scientists and operators
 
-### Cape Core
+### Cape workers
 
-* Audit logging configuration: set up configuration for how and where you log actions in Cape Coordinator, such as project and policy creation, user changes, and user actions in Cape.
-* Governance tooling: integrate basic data governance information to be used within Cape Coordinator for writing better policy, with a possible integration with Apache Atlas or other open-source governance tools.
-* Pipeline orchestrator integration: ability to connect with Spark orchestration tools (such as YARN, Mesos, and Airflow) and pull information on jobs that are running for easier management of running Spark installations.
+* Performance enhancements
+* Networking improvements
+* Enhanced roles and permissions for operators
