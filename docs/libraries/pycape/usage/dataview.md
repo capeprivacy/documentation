@@ -57,7 +57,7 @@ DataView(id=dataview_123, name=my-data, location=s3://my-data.csv)
 
 If you provide a dataset to Cape that is publicly accessible via HTTP, Cape will attempt to preview your data and create a schema. 
 
-However, if your dataset is not publicly accessible you'll have to specify your data's schema yourself. You can do so using the `schema` parameter. DataViews can be instantiated with a [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) Series schema of type [`dataframe.dftypes`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dtypes.html):
+However, if your dataset is not publicly accessible you'll have to specify your data's schema yourself. You can do so using the `schema` parameter. DataViews can be instantiated with a [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) Series schema of type [`dataframe.dtypes`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dtypes.html):
 
 ```python
 >>> import pandas as pd

@@ -2,8 +2,8 @@
 
 This tutorial will walk you through the process of training an encrypted linear regression model in collaboration with another organization using Cape Privacy. You'll learn how to:
 
-- Send datasets securely to Cape Cloud.
-- Review the dataset schemas of other organizations in your project.
+- Register dataset pointers (i.e. DataViews) with Cape Cloud.
+- Review DataViews from other organizations in your project.
 - Approve and reject model computation jobs.
 - View the metrics or weights of the trained model, depending on your role in the project.
 
@@ -164,6 +164,12 @@ VerticallyPartitionedLinearRegression(x_train_dataview=Orgacle Dataview['debt eq
 !!!note
     In order for your linear regression job to train a model using Cape's encrypted learning protocol, you'll need to run your own Cape workers. Read [our documentation to get set up with Cape workers](/understand/architecture/cape-workers).
 
+!!!note
+    `VerticallyPartitionedLinearRegression` currently expects a bound on its input data in order to avoid precision loss during model training. See [its reference documentation](/reference/#pycapeverticallypartitionedlinearregression) for more details.
+
+!!! note
+    `DataView` indices must be aligned across parties before being used for a `VerticallyPartitionedLinearRegression`.
+
 ### Tracking Job Status
 
 After submitting your job, you should be able to see the status and details of your `Job` in the UI.
@@ -209,7 +215,7 @@ array([12.14955139,  1.96560669])
 {'r_squared_result': [0.8804865768463074], 'mse_result': [37.94773864746094]}
 ```
 
-If you are the model owner, the first value in the returned tuple will be populated with a numpy array of weights from your trained model.
+If you are the model owner, the first value in the returned tuple will be populated with a numpy array of weights from your trained model. The first element in the `weights` array is the intercept of the linear model, and subsequent elements are its feature coefficients.
 
 !!!note
     To access model weights you'll need to [inform **pycape** about your AWS IAM authentication credentials](/libraries/pycape/usage/job#accessing-weights-as-a-model-owner-in-cape).
