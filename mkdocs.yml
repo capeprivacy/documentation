@@ -32,14 +32,12 @@ nav:
             - Cape Workers: understand/architecture/cape-workers.md
         - Best practices:
             - Overview: understand/best-practices/index.md
-            - Running transformations: understand/best-practices/running-transformations.md
+            - Linear Regression: understand/best-practices/linear-regression.md
         - Features & Concepts:
             - Overview: understand/features/index.md
             - Users: understand/features/users.md
             - Roles: understand/features/roles.md
             - Projects: understand/features/projects.md
-            - Policy: understand/features/policy.md
-            - Auditing: understand/features/auditing.md
             - Tokens: understand/features/tokens.md
         - Support matrix: understand/support.md
         - Roadmap: understand/roadmap.md
@@ -47,6 +45,7 @@ nav:
         - Introduction: libraries/index.md
         - PyCape:
               - Overview: libraries/pycape/index.md
+              - Quickstart: libraries/pycape/quickstart.md
               - Usage:
                     - Login: libraries/pycape/usage/login.md
                     - Projects: libraries/pycape/usage/project.md
@@ -68,6 +67,8 @@ nav:
                 - v1: '!include ./pythonv1/mkdocs.yml'
     - Release notes:
         - Introduction: release-notes/index.md
+        - March 2021: release-notes/04032021.md
+        - July 2020: release-notes/30072020.md
         - June 2020: release-notes/26062020.md
 plugins:
     - search

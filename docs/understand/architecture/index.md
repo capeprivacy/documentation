@@ -7,7 +7,7 @@ Cape Privacy's architecture is a collection of services and libraries that work 
 Cape Privacy currently offers three components:
 
 * The Cape Cloud Service (referred to as "Cape"), where you can set up data-science projects to collaborate on with other organizations. This service also includes the Cape broker, allowing you to easily and securely work across different clouds.
-* [Cape Workers](/understand/cape-workers/), which are run by your organization to orchestrate and run encrypted learning jobs.
+* [Cape Workers](/understand/architecture/cape-workers/), which are run by your organization to orchestrate and run encrypted learning jobs.
 * The Python libary [pycape](/libraries/pycape/). With **pycape** you can interact with your Cape projects, view and update details of your project, and manipulate and upload your datasets to Cape. 
 
 
