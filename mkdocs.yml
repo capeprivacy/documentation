@@ -39,7 +39,6 @@ nav:
             - Roles: understand/features/roles.md
             - Projects: understand/features/projects.md
             - Tokens: understand/features/tokens.md
-        - Support matrix: understand/support.md
         - Roadmap: understand/roadmap.md
     - Libraries:
         - Introduction: libraries/index.md
