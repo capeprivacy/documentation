@@ -15,7 +15,7 @@
     
     
       
-        <title>Running transformations - Documentation</title>
+        <title>Linear Regression - Documentation</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#applying-transformations-to-your-data" class="md-skip">
+        <a href="#linear-regression-best-practices" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Running transformations
+              Linear Regression
             
           </span>
         </div>
@@ -370,25 +370,21 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
-      
-    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Running transformations
+        Linear Regression
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Running transformations" class="md-nav__link md-nav__link--active">
-      Running transformations
+    <a href="./" title="Linear Regression" class="md-nav__link md-nav__link--active">
+      Linear Regression
     </a>
     
       
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -400,8 +396,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#recommendations" class="md-nav__link">
-    Recommendations
+  <a href="#linear-regression-best-practices" class="md-nav__link">
+    Linear Regression Best Practices
   </a>
   
 </li>
@@ -497,30 +493,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../features/policy/" title="Policy" class="md-nav__link">
-      Policy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../features/auditing/" title="Auditing" class="md-nav__link">
-      Auditing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../features/tokens/" title="Tokens" class="md-nav__link">
       Tokens
     </a>
@@ -529,18 +501,6 @@
         
       </ul>
     </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../support/" title="Support matrix" class="md-nav__link">
-      Support matrix
-    </a>
   </li>
 
         
@@ -640,18 +600,30 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../libraries/pycape/quickstart/" title="Quickstart" class="md-nav__link">
+      Quickstart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
     
-    <label class="md-nav__link" for="nav-3-2-2">
+    <label class="md-nav__link" for="nav-3-2-3">
       Usage
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Usage" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-2">
+      <label class="md-nav__title" for="nav-3-2-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -720,16 +692,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4">
     
-    <label class="md-nav__link" for="nav-3-2-3">
+    <label class="md-nav__link" for="nav-3-2-4">
       Tutorials
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tutorials" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-3">
+      <label class="md-nav__title" for="nav-3-2-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -1366,6 +1338,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../release-notes/04032021/" title="March 2021" class="md-nav__link">
+      March 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release-notes/30072020/" title="July 2020" class="md-nav__link">
+      July 2020
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../release-notes/26062020/" title="June 2020" class="md-nav__link">
       June 2020
     </a>
@@ -1391,8 +1387,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -1403,8 +1397,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#recommendations" class="md-nav__link">
-    Recommendations
+  <a href="#linear-regression-best-practices" class="md-nav__link">
+    Linear Regression Best Practices
   </a>
   
 </li>
@@ -1425,14 +1419,13 @@
                   
                 
                 
-                <h1 id="applying-transformations-to-your-data">Applying transformations to your data<a class="headerlink" href="#applying-transformations-to-your-data" title="Permanent link">#</a></h1>
-<p>Cape Privacy's libraries include built-in transformations. This document provides recommendations on how to use them. We encourage community contributions to this guidance as the transformation techniques grow.</p>
-<h2 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">#</a></h2>
+                  <h1>Linear Regression</h1>
+                
+                <h3 id="linear-regression-best-practices">Linear Regression Best Practices<a class="headerlink" href="#linear-regression-best-practices" title="Permanent link">#</a></h3>
 <ul>
-<li>Ensure that you have your data collected and joined before applying transformations, especially in the case of multiple sensitive columns.</li>
-<li>Some transformations require sensitive data to be contained in the policy files. For this reason, keep your policy files stored securely. In a future release, we will support pulling transformation keys from key storage software, such as Hashicorp Vault.</li>
-<li>Consider using transformations as the final step in your pre-processing before creating a "clean sink" or "safe dataset". This means that you can begin your work on that clean dataset. </li>
-<li>Experiment with the transformations directly on your data to learn how they impact your data utility. Figure out the right utility vs. privacy tradeoff for the task at hand, and amend your policy accordingly.</li>
+<li>When training using <code>VerticallyPartitionedLinearRegression</code>, the algorithm expects a bound on its input data in order to avoid precision loss during model training. This means you will need to preprocess your data with attention to numeric precision, standardizing or normalizing it around the origin. See <a href="/libraries/pycape/reference/#pycapeverticallypartitionedlinearregression">its reference documentation</a> for more details. </li>
+<li><code>DataView</code> indices must be aligned across parties before being used for a <code>VerticallyPartitionedLinearRegression</code>. We recommend coordinating this offline with the other parties you will be training with.</li>
+<li>Before running a large amount of data, try a smaller dummy data view, to quickly learn if there are any issues with alignment, precision or worker connectivity.</li>
 </ul>
                 
               

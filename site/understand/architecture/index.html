@@ -347,6 +347,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#archived-projects" class="md-nav__link">
+    Archived Projects
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -414,8 +421,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../best-practices/running-transformations/" title="Running transformations" class="md-nav__link">
-      Running transformations
+    <a href="../best-practices/linear-regression/" title="Linear Regression" class="md-nav__link">
+      Linear Regression
     </a>
   </li>
 
@@ -504,30 +511,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../features/policy/" title="Policy" class="md-nav__link">
-      Policy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../features/auditing/" title="Auditing" class="md-nav__link">
-      Auditing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../features/tokens/" title="Tokens" class="md-nav__link">
       Tokens
     </a>
@@ -536,18 +519,6 @@
         
       </ul>
     </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../support/" title="Support matrix" class="md-nav__link">
-      Support matrix
-    </a>
   </li>
 
         
@@ -647,18 +618,30 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../libraries/pycape/quickstart/" title="Quickstart" class="md-nav__link">
+      Quickstart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
     
-    <label class="md-nav__link" for="nav-3-2-2">
+    <label class="md-nav__link" for="nav-3-2-3">
       Usage
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Usage" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-2">
+      <label class="md-nav__title" for="nav-3-2-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -727,16 +710,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4">
     
-    <label class="md-nav__link" for="nav-3-2-3">
+    <label class="md-nav__link" for="nav-3-2-4">
       Tutorials
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tutorials" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-3">
+      <label class="md-nav__title" for="nav-3-2-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -1373,6 +1356,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../release-notes/04032021/" title="March 2021" class="md-nav__link">
+      March 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/30072020/" title="July 2020" class="md-nav__link">
+      July 2020
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../release-notes/26062020/" title="June 2020" class="md-nav__link">
       June 2020
     </a>
@@ -1423,6 +1430,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#archived-projects" class="md-nav__link">
+    Archived Projects
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1444,12 +1458,16 @@
 <h2 id="components">Components<a class="headerlink" href="#components" title="Permanent link">#</a></h2>
 <p>Cape Privacy currently offers three components:</p>
 <ul>
-<li>The Cape UI, from which you can set up data-science projects to collaborate on with other organizations.</li>
+<li>The Cape Cloud Service (referred to as "Cape"), where you can set up data-science projects to collaborate on with other organizations. This service also includes the Cape broker, allowing you to easily and securely work across different clouds.</li>
+<li><a href="/understand/architecture/cape-workers/">Cape Workers</a>, which are run by your organization to orchestrate and run encrypted learning jobs.</li>
 <li>The Python libary <a href="/libraries/pycape/">pycape</a>. With <strong>pycape</strong> you can interact with your Cape projects, view and update details of your project, and manipulate and upload your datasets to Cape. </li>
-<li><a href="/libraries/cape-python/">Cape Python</a>. The first Cape Privacy library to be released, providing Python-based data transformations for Pandas and Apache Spark (PySpark).</li>
 </ul>
 <h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">#</a></h2>
 <p>More services and libraries are coming soon. Refer to the <a href="/understand/roadmap/">roadmap</a> for more information.</p>
+<h2 id="archived-projects">Archived Projects<a class="headerlink" href="#archived-projects" title="Permanent link">#</a></h2>
+<ul>
+<li><a href="/libraries/cape-python/">Cape Python</a>. The first Cape Privacy library to be released, providing Python-based data transformations for Pandas and Apache Spark (PySpark). This project is now archived and may later be removed.</li>
+</ul>
                 
               
               

@@ -363,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../best-practices/running-transformations/" title="Running transformations" class="md-nav__link">
-      Running transformations
+    <a href="../../best-practices/linear-regression/" title="Linear Regression" class="md-nav__link">
+      Linear Regression
     </a>
   </li>
 
@@ -464,30 +464,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../policy/" title="Policy" class="md-nav__link">
-      Policy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../auditing/" title="Auditing" class="md-nav__link">
-      Auditing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../tokens/" title="Tokens" class="md-nav__link">
       Tokens
     </a>
@@ -496,18 +472,6 @@
         
       </ul>
     </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../support/" title="Support matrix" class="md-nav__link">
-      Support matrix
-    </a>
   </li>
 
         
@@ -607,18 +571,30 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../libraries/pycape/quickstart/" title="Quickstart" class="md-nav__link">
+      Quickstart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
     
-    <label class="md-nav__link" for="nav-3-2-2">
+    <label class="md-nav__link" for="nav-3-2-3">
       Usage
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Usage" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-2">
+      <label class="md-nav__title" for="nav-3-2-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -687,16 +663,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4">
     
-    <label class="md-nav__link" for="nav-3-2-3">
+    <label class="md-nav__link" for="nav-3-2-4">
       Tutorials
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tutorials" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-3">
+      <label class="md-nav__title" for="nav-3-2-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -1333,6 +1309,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../release-notes/04032021/" title="March 2021" class="md-nav__link">
+      March 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release-notes/30072020/" title="July 2020" class="md-nav__link">
+      July 2020
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../release-notes/26062020/" title="June 2020" class="md-nav__link">
       June 2020
     </a>
@@ -1376,48 +1376,8 @@
                 
                 
                 <h1 id="projects">Projects<a class="headerlink" href="#projects" title="Permanent link">#</a></h1>
-<p>Projects are the building block for Policy within Cape. In the real world, most
-data access is granted depending on the use case and what the user is trying
-to achieve. Cape groups all of those different use cases into projects.</p>
-<p>For example, if you are a data scientist working for a bank in the fraud department who is
-tasked with creating a model to detect fraud. You may be able to train a better
-model if you can use other customer data that belongs to the sales department. In this context,
-you would create a project for this use case, and grant access (with whatever privacy
-guarantees you need) to the scientists tasked with training a model.</p>
-<p>Projects have the following attributes:</p>
-<ul>
-<li><code>ID</code>: A unique identifier for the project</li>
-<li><code>Name</code>: The name of the project</li>
-<li><code>Label</code>: A url safe version of the name</li>
-<li><code>Description</code>: A blob describing what this project is for</li>
-<li><code>Created At</code>: When this project was first created</li>
-<li><code>Updated At</code>: When any attributes about this project last changed</li>
-</ul>
-<p>Commands to interact with projects exist under the <code>cape projects</code> namespace on the CLI.</p>
-<div class="highlight"><pre><span></span><code>$ cape projects
-
-NAME:
-   cape projects - Commands for interacting with Cape projects.
-
-USAGE:
-   cape projects command [command options] [arguments...]
-
-DESCRIPTION:
-   Commands for interacting with Cape projects.
-
-COMMANDS:
-   contributors  Commands for interacting with Cape Project Contributors.
-   create        Creates a project in Cape.
-   list          List your Cape projects.
-   update        Update a projects attributes.
-   get           Get a details of a project.
-   policy        Commands for interacting with Cape Policy within a Project.
-   help, h       Shows a list of commands or help for one command
-
-OPTIONS:
-   --help, -h     Display documentation and examples for this command. (default: false)
-   --version, -v  Display the current version of Cape. (default: false)
-</code></pre></div>
+<p>Projects are the building block for encrypted learning within Cape. </p>
+<p>In the real world, most machine learning experiments are run for a specific use case with a set amount of data. On Cape, organizations can work together on a project to build a model using encrypted data that is spread within an organization or across organizations and clouds. Cape Project's allow your organization to register data for usage, create, approve and run encrypted learning jobs and manage the variety of data science tasks necessary for keeping your experiment successful.</p>
                 
               
               
@@ -1464,8 +1424,8 @@ OPTIONS:
 
         <!-- Link to next page -->
         
-          <a href="../policy/"
-              title="Policy"
+          <a href="../tokens/"
+              title="Tokens"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -1474,7 +1434,7 @@ OPTIONS:
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Policy
+                Tokens
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

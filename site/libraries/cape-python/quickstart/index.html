@@ -361,8 +361,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../understand/best-practices/running-transformations/" title="Running transformations" class="md-nav__link">
-      Running transformations
+    <a href="../../../understand/best-practices/linear-regression/" title="Linear Regression" class="md-nav__link">
+      Linear Regression
     </a>
   </li>
 
@@ -451,30 +451,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../understand/features/policy/" title="Policy" class="md-nav__link">
-      Policy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../understand/features/auditing/" title="Auditing" class="md-nav__link">
-      Auditing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../../understand/features/tokens/" title="Tokens" class="md-nav__link">
       Tokens
     </a>
@@ -483,18 +459,6 @@
         
       </ul>
     </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../understand/support/" title="Support matrix" class="md-nav__link">
-      Support matrix
-    </a>
   </li>
 
         
@@ -596,18 +560,30 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../pycape/quickstart/" title="Quickstart" class="md-nav__link">
+      Quickstart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
     
-    <label class="md-nav__link" for="nav-3-2-2">
+    <label class="md-nav__link" for="nav-3-2-3">
       Usage
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Usage" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-2">
+      <label class="md-nav__title" for="nav-3-2-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -676,16 +652,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4">
     
-    <label class="md-nav__link" for="nav-3-2-3">
+    <label class="md-nav__link" for="nav-3-2-4">
       Tutorials
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tutorials" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-3">
+      <label class="md-nav__title" for="nav-3-2-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -846,6 +822,13 @@
           <li class="md-nav__item">
   <a href="#run-your-transformations" class="md-nav__link">
     Run your transformations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-best-practices" class="md-nav__link">
+    Usage Best Practices
   </a>
   
 </li>
@@ -1407,6 +1390,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../release-notes/04032021/" title="March 2021" class="md-nav__link">
+      March 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release-notes/30072020/" title="July 2020" class="md-nav__link">
+      July 2020
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../release-notes/26062020/" title="June 2020" class="md-nav__link">
       June 2020
     </a>
@@ -1482,6 +1489,13 @@
           <li class="md-nav__item">
   <a href="#run-your-transformations" class="md-nav__link">
     Run your transformations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-best-practices" class="md-nav__link">
+    Usage Best Practices
   </a>
   
 </li>
@@ -1579,10 +1593,13 @@
 <p>The quickstart example creates a dataset programatically, so you can run the policy application script and view the output:</p>
 <div class="highlight"><pre><span></span><code>python test-transformation.py
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can choose where in your workflow to run your transformation scripts. Refer to <a href="/understand/best-practices/running-transformations/">Best practices - Running transformations</a> for guidance.</p>
-</div>
+<h3 id="usage-best-practices">Usage Best Practices<a class="headerlink" href="#usage-best-practices" title="Permanent link">#</a></h3>
+<ul>
+<li>Ensure that you have your data collected and joined before applying transformations, especially in the case of multiple sensitive columns.</li>
+<li>Some transformations require sensitive data to be contained in the policy files. For this reason, keep your policy files stored securely. In a future release, we will support pulling transformation keys from key storage software, such as Hashicorp Vault.</li>
+<li>Consider using transformations as the final step in your pre-processing before creating a "clean sink" or "safe dataset". This means that you can begin your work on that clean dataset. </li>
+<li>Experiment with the transformations directly on your data to learn how they impact your data utility. Figure out the right utility vs. privacy tradeoff for the task at hand, and amend your policy accordingly.</li>
+</ul>
                 
               
               
