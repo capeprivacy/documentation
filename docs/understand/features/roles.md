@@ -11,15 +11,16 @@ An organizational administrator has full permissions for all features on Cape Pr
 
 Organizational Administrator Actions:
 
-- Full permissions for organization
-- Can add or remove persons from the organization
-- Can change roles for any members of the organization
-- Can delete the organization
-- Full permissions for all projects that organization is a part of
-- Can join or leave projects on behalf of an organization
-- Can add or edit contributors on all projects
-- Can add, remove data views for all projects
-- Can approve and run encrypted learning jobs for all projects
+- Full permissions for organization, including:
+    - Can add or remove persons from the organization
+    - Can change roles for any members of the organization
+    - Can delete the organization
+
+- Full permissions for all projects that organization is a part of, including:
+    - Can join or leave projects on behalf of an organization
+    - Can add or edit contributors on all projects
+    - Can add, remove data views for all projects
+    - Can approve and run encrypted learning jobs for all projects
 
 
 ## Project Administrator
@@ -28,11 +29,11 @@ A project administrator has full permissions for their organization's projects o
 
 Project Administrator Actions:
 
-- Full permissions for all projects that organization is a part of
-- Can join or leave projects on behalf of an organization
-- Can add or edit contributors on all projects
-- Can add, remove data views for all projects
-- Can approve and run encrypted learning jobs for all projects
+- Full permissions for all projects that organization is a part of, including:
+    - Can join or leave projects on behalf of an organization
+    - Can add or edit contributors on all projects
+    - Can add, remove data views for all projects
+    - Can approve and run encrypted learning jobs for all projects
 
 
 ## Operator
