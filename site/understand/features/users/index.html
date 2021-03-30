@@ -363,8 +363,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../best-practices/running-transformations/" title="Running transformations" class="md-nav__link">
-      Running transformations
+    <a href="../../best-practices/linear-regression/" title="Linear Regression" class="md-nav__link">
+      Linear Regression
     </a>
   </li>
 
@@ -464,30 +464,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../policy/" title="Policy" class="md-nav__link">
-      Policy
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../auditing/" title="Auditing" class="md-nav__link">
-      Auditing
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../tokens/" title="Tokens" class="md-nav__link">
       Tokens
     </a>
@@ -496,18 +472,6 @@
         
       </ul>
     </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../support/" title="Support matrix" class="md-nav__link">
-      Support matrix
-    </a>
   </li>
 
         
@@ -607,18 +571,30 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../../libraries/pycape/quickstart/" title="Quickstart" class="md-nav__link">
+      Quickstart
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-2" type="checkbox" id="nav-3-2-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
     
-    <label class="md-nav__link" for="nav-3-2-2">
+    <label class="md-nav__link" for="nav-3-2-3">
       Usage
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Usage" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-2">
+      <label class="md-nav__title" for="nav-3-2-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -687,16 +663,16 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4">
     
-    <label class="md-nav__link" for="nav-3-2-3">
+    <label class="md-nav__link" for="nav-3-2-4">
       Tutorials
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Tutorials" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-2-3">
+      <label class="md-nav__title" for="nav-3-2-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -1333,6 +1309,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../../release-notes/04032021/" title="March 2021" class="md-nav__link">
+      March 2021
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../release-notes/30072020/" title="July 2020" class="md-nav__link">
+      July 2020
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../../release-notes/26062020/" title="June 2020" class="md-nav__link">
       June 2020
     </a>
@@ -1378,34 +1378,9 @@
                 <h1 id="users">Users<a class="headerlink" href="#users" title="Permanent link">#</a></h1>
 <p>Users in Cape are much like users in other applications. All actions performed
 within Cape must be performed by an authenticated user.</p>
-<p>Users have the following attributes:</p>
-<ul>
-<li><code>ID</code>: A unique identifier for the user</li>
-<li><code>Name</code>: The full name of the user</li>
-<li><code>Email</code>: An email address associated with the user</li>
-<li><code>Created At</code>: When this user was first created</li>
-<li><code>Updated At</code>: When any attributes about this user last changed</li>
-</ul>
-<p>Commands to interact with users exists under the <code>cape users</code> namespace on the CLI.</p>
-<div class="highlight"><pre><span></span><code>$ cape users
-
-NAME:
-   cape users - Commands for querying information about users and modifying them.
-
-USAGE:
-   cape users command [command options] [arguments...]
-
-DESCRIPTION:
-   Commands for querying information about users and modifying them.
-
-COMMANDS:
-   create   Create a new user.
-   help, h  Shows a list of commands or help for one command
-
-OPTIONS:
-   --help, -h     Display documentation and examples for this command. (default: false)
-   --version, -v  Display the current version of Cape. (default: false)
-</code></pre></div>
+<p>Users are added to organizations via an organizational administrator and
+have the ability to create tokens identifying themselves and their role 
+to the Cape Cloud service.</p>
                 
               
               
