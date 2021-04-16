@@ -20,6 +20,7 @@
     handler: python
     selection:
         members:
+            - list_organizations
             - list_dataviews
             - get_dataview
             - create_dataview

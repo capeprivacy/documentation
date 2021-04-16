@@ -12,6 +12,7 @@ vlr = VerticallyPartitionedLinearRegression(
     x_train_dataview=dataview_1,
     y_train_dataview=dataview_2,
     model_location="s3://my-bucket"
+    model_owner="org_123",
 )
 my_project.submit_job(job=vlr)
 ```

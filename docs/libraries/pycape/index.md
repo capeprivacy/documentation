@@ -31,7 +31,8 @@ dvs = my_project.list_dataviews()
 
 vlr_job = VerticallyPartitionedLinearRegression(
     train_dataview_x=dvs[0],
-    train_dataview_y=dvs[1]
+    train_dataview_y=dvs[1],
+    model_owner="org_123",
 )
 
 my_project.submit_job(vlr_job)

@@ -1520,7 +1520,8 @@
 
 <span class="n">vlr_job</span> <span class="o">=</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>
     <span class="n">train_dataview_x</span><span class="o">=</span><span class="n">dvs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-    <span class="n">train_dataview_y</span><span class="o">=</span><span class="n">dvs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">train_dataview_y</span><span class="o">=</span><span class="n">dvs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+    <span class="n">model_owner</span><span class="o">=</span><span class="s2">&quot;org_123&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
 <span class="n">my_project</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">vlr_job</span><span class="p">)</span>

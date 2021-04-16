@@ -814,6 +814,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pycape.pycape.api.project.project.Project.list_organizations" class="md-nav__link">
+    list_organizations()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pycape.pycape.api.project.project.Project.submit_job" class="md-nav__link">
     submit_job()
   </a>
@@ -1638,6 +1645,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#pycape.pycape.api.project.project.Project.list_organizations" class="md-nav__link">
+    list_organizations()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#pycape.pycape.api.project.project.Project.submit_job" class="md-nav__link">
     submit_job()
   </a>
@@ -2014,7 +2028,7 @@
 <div class="doc doc-object doc-method">
 <h4 class="doc doc-heading" id="pycape.pycape.api.project.project.Project.create_dataview">
 
-<code class="highlight language-python"><span class="n">create_dataview</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">owner_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">owner_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">create_dataview</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">owner_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">owner_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">development</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></code>
 
 
       <a class="headerlink" href="#pycape.pycape.api.project.project.Project.create_dataview" title="Permanent link">#</a></h4>
@@ -2075,6 +2089,14 @@ A string value for each column's datatype. Possible datatypes:
     datetime</p>
 </td>
 <td><code>None</code></td>
+</tr>
+<tr>
+<td><code>development</code></td>
+<td><code>bool</code></td>
+<td>
+<p>Whether the created dataview is in development mode or not.</p>
+</td>
+<td><code>False</code></td>
 </tr>
 </tbody>
 </table>
@@ -2264,6 +2286,34 @@ A string value for each column's datatype. Possible datatypes:
 </div>
 </div>
 <div class="doc doc-object doc-method">
+<h4 class="doc doc-heading" id="pycape.pycape.api.project.project.Project.list_organizations">
+
+<code class="highlight language-python"><span class="n">list_organizations</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+      <a class="headerlink" href="#pycape.pycape.api.project.project.Project.list_organizations" title="Permanent link">#</a></h4>
+<div class="doc doc-contents ">
+<p>Returns all list of organizations that requesting user is a contributor of.</p>
+<p><strong>Returns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str</code></td>
+<td>
+<p>A list of <code>Organization</code> instances.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="doc doc-object doc-method">
 <h4 class="doc doc-heading" id="pycape.pycape.api.project.project.Project.submit_job">
 
 <code class="highlight language-python"><span class="n">submit_job</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span></code>
@@ -2444,6 +2494,14 @@ A string value for each column's datatype. Possible datatypes:
 </td>
 <td><em>required</em></td>
 </tr>
+<tr>
+<td><code>development</code></td>
+<td><code>bool</code></td>
+<td>
+<p>Whether this dataview is in development mode or not.</p>
+</td>
+<td><em>required</em></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -2498,7 +2556,7 @@ A string value for each column's datatype. Possible datatypes:
 
       <a class="headerlink" href="#pycape.pycape.api.job.job.Job.approve" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
-<p>Approve the Job on behalf of your organizations. Once all organizations         approve a job, the computation will run.</p>
+<p>Approve the Job on behalf of your organization. Once all organizations         approve a job, the computation will run.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>
@@ -2547,7 +2605,7 @@ A string value for each column's datatype. Possible datatypes:
 
       <a class="headerlink" href="#pycape.pycape.api.job.job.Job.get_results" title="Permanent link">#</a></h4>
 <div class="doc doc-contents ">
-<p>Given the requester's project role and authorization level, returns the trained model's weights and metrics.</p>
+<p>Given the requesters project role and authorization level, returns the trained model's weights and metrics.</p>
 <p><strong>Returns:</strong></p>
 <table>
 <thead>
@@ -2599,13 +2657,13 @@ metrics: A dictionary of different metric values.</p>
 <thead>
 <tr>
 <th>Status</th>
-<th>Desciption</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong><code>Initialized</code></strong></td>
-<td>Job has been intialized.</td>
+<td>Job has been initialized.</td>
 </tr>
 <tr>
 <td><strong><code>NeedsApproval</code></strong></td>
@@ -2665,9 +2723,18 @@ metrics: A dictionary of different metric values.</p>
 </td>
 <td><em>required</em></td>
 </tr>
+<tr>
+<td><code>model_owner</code></td>
+<td><code>str</code></td>
+<td>
+<p>The ID of the organization participating in the computation that will own the</p>
+</td>
+<td><em>required</em></td>
+</tr>
 </tbody>
 </table>
 <div class="doc doc-children">
+
 
 
 
@@ -2740,9 +2807,18 @@ metrics: A dictionary of different metric values.</p>
 </td>
 <td><em>required</em></td>
 </tr>
+<tr>
+<td><code>model_owner</code></td>
+<td><code>str</code></td>
+<td>
+<p>The ID of the organization participating in the computation that will own the</p>
+</td>
+<td><em>required</em></td>
+</tr>
 </tbody>
 </table>
 <div class="doc doc-children">
+
 
 
 
