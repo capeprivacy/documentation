@@ -88,7 +88,7 @@ To create a [`DataView`](/libraries/pycape/reference#pycapedataview) and add it 
 All `DataViews` must be associated with an organization. This association can be made by passing either an `owner_label` or an `owner_id` to the `create_dataview` method.
 
 !!! note
-    Use the `organization` attribute on your `Project` class instance to verify the metadata of organizations that are contributing to the project.
+    Use the [`list_organizations`](/libraries/pycape/reference#pycape.api.project.project.Project.list_organizations) method defined on the `Project` class to get the metadata of the organizations collaborating on the project that you are a member of.
 
 !!! note
     Unless your dataset is accessible via HTTP, you'll need to [specify your schema](/libraries/pycape/usage/dataview#specifying-a-schema-for-your-dataview).
@@ -134,6 +134,8 @@ Now that we've added our own `DataView` to the project, and vetted the `DataView
 
 Pass the `DataView` that contains training data to `x_train_dataview`, and the `DataView` that contains the target values to `y_train_dataview`.
 
+To specify which organization participating in the computation will own the results of the trained model, pass the ID of the intended organization to the `model_owner` parameter. You can view the IDs of organizations collaborating on the project using the [`list_organizations`](/libraries/pycape/reference#pycape.api.project.project.Project.list_organizations) method defined on the `Project` class. You must be a member of the organization to specify them as the `model_owner`.
+
 You'll also need to specify the [S3 Bucket location that you would like Cape to save your model results to](/libraries/pycape/usage/job/#setting-the-storage-location-as-a-model-owner-in-cape).
 
 ```python
@@ -144,18 +146,20 @@ You'll also need to specify the [S3 Bucket location that you would like Cape to 
 >>>     x_train_dataview=dataview_1,
 >>>     y_train_dataview=dataview_2,
 >>>     model_location="s3://my-bucket",
+>>>     model_owner="org_123",
 >>> )
 
 >>> my_project.submit_job(job=vlr)
 ```
 
-You can also specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/pycape/reference#pycapeverticallypartitionedlinearregression) class like so:
+You can specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/pycape/reference#pycapeverticallypartitionedlinearregression) class like so:
 
 ```python
 >>> VerticallyPartitionedLinearRegression(
 >>>     x_train_dataview=dataview_1["debt equity ratio"],
 >>>     y_train_dataview=dataview_2["debt equity ratio"],
 >>>     model_location="s3://my-bucket",
+>>>     model_owner="org_123",
 >>> )
 
 VerticallyPartitionedLinearRegression(x_train_dataview=Orgacle Dataview['debt equity ratio'], y_train_dataview=Atlas Dataview['debt equity ratio'], model_location=s3://my-bucket)
