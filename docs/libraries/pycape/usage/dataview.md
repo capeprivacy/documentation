@@ -51,13 +51,29 @@ Default response:
 DataView(id=dataview_123, name=my-data, location=s3://my-data.csv)
 ```
 
-### Specifying a Schema for your DataView
+## DataViews and Schemas
 
 `DataView` schemas allow you to clarify the data types of your dataset. They will be visible for other project contributors - even ones from other organizations - to your project to query and inspect. By inspecting the schema property, other project contributors are able to identify which data columns should be used to train the model. 
 
-If you provide a dataset to Cape that is publicly accessible via HTTP, Cape will attempt to preview your data and create a schema. 
+If you provide a dataset to Cape that is accessible via HTTP or S3, Cape will download your data's column headers and create a schema. 
 
-However, if your dataset is not publicly accessible you'll have to specify your data's schema yourself. You can do so using the `schema` parameter. DataViews can be instantiated with a [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) Series schema of type [`dataframe.dtypes`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dtypes.html):
+### Providing S3 read access for your DataView
+In order to make your dataset accessible in S3 you'll need to inform pycape about your S3 bucket's IAM authentication credentials. 
+
+Cape expects values for the following AWS configuration keys: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION`. 
+
+You can set these keys as environment variables in the interpreter running `pycape`:
+```shell
+export AWS_ACCESS_KEY_ID=<Access-Key>
+export AWS_SECRET_ACCESS_KEY=<Secret-Key>
+export AWS_REGION=<Region>
+```
+
+Alternatively you can simply add these keys to your [AWS Configuration file](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#configuration).
+
+### Specifying a Schema for your DataView
+
+However, if your dataset is not accessible you'll have to specify your data's schema yourself. You can do so using the `schema` parameter. DataViews can be instantiated with a [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) Series schema of type [`dataframe.dtypes`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.dtypes.html):
 
 ```python
 >>> import pandas as pd
