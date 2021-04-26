@@ -73,9 +73,4 @@ Data Scientist Actions:
 
 ## User
 
-A Cape user can look at projects they are a member of and join and leave projects that they are invited to. They can only see and join projects they have been invited to by a Cape organization or project administrator.
-
-User Actions:
-
-- Join and leave projects I am invited to by an organizational or project administrator
-- Can view projects pages and logs, but cannot change data views or jobs or approve or reject jobs
+A user for a project has the same permissions as a user for an organization (see above).
