@@ -42,12 +42,17 @@ See our example [usage](/libraries/pycape/usage/) or a more in-depth [tutorial](
 ## Installation 
 
 ### Prerequisites
-
-* Python 3.6 or above, and pip
-* [Make](https://www.gnu.org/software/make/) (if installing from source)
+* Python 3.6+
+* [pip](https://pip.pypa.io/en/stable/installing/)
 
 ### Install via pip
-```shell
+We recommend that you use a [Python "Virtual Environment"](https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments) when running applications with `pycape`.
+
+Also ensure that your developement enviroment can access the Python Package Index (PyPI) via https.
+
+Once you've activated your virtual enviroment, use `pip` to install pycape and it's dependencies:
+
+```sh
 $ pip install pycape
 ```
 
