@@ -1636,6 +1636,8 @@ working within your user context and navigate to <em>Account Settings</em> to cr
 <p>That is it for the UI for now! We'll return later to review <code>DataViews</code> and approve <code>Jobs</code>. </p>
 <p>Next we will set up these <code>DataViews</code> and <code>Jobs</code> in <code>pycape</code>.</p>
 <h2 id="working-with-the-pycape-python-library">Working with the PyCape Python Library<a class="headerlink" href="#working-with-the-pycape-python-library" title="Permanent link">#</a></h2>
+<p><strong>pycape</strong> is a set of Python modules for interacting with your Cape Privacy data.</p>
+<p>First, <a href="/libraries/pycape/#installation">install <code>pycape</code></a>.</p>
 <h3 id="login-to-pycape">Login to PyCape<a class="headerlink" href="#login-to-pycape" title="Permanent link">#</a></h3>
 <p>Before you can make requests to Cape Cloud, you'll need to authenticate with the API. Follow <a href="/libraries/pycape/usage/login">these instructions to authenticate</a> with our API using <code>pycape</code>. Once you've logged in successfully, you should see a success message.</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Cape</span><span class="p">()</span>
@@ -1710,7 +1712,7 @@ All <code>DataViews</code> must be associated with an organization. This associa
 <span class="o">&gt;&gt;&gt;</span>     <span class="n">model_owner</span><span class="o">=</span><span class="s2">&quot;org_123&quot;</span><span class="p">,</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">)</span>
 
-<span class="o">&gt;&gt;&gt;</span> <span class="n">my_project</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">job</span><span class="o">=</span><span class="n">vlr</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">my_project</span><span class="o">.</span><span class="n">submit_job</span><span class="p">(</span><span class="n">vlr</span><span class="p">)</span>
 </code></pre></div>
 <p>You can specify which data columns the model should be trained on or evaluated against by passing the dataview to the <a href="/libraries/pycape/reference#pycapeverticallypartitionedlinearregression"><code>VerticallyPartitionedLinearRegression</code></a> class like so:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">VerticallyPartitionedLinearRegression</span><span class="p">(</span>

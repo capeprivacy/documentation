@@ -51,6 +51,10 @@ That is it for the UI for now! We'll return later to review `DataViews` and appr
 Next we will set up these `DataViews` and `Jobs` in `pycape`.
 
 ## Working with the PyCape Python Library
+**pycape** is a set of Python modules for interacting with your Cape Privacy data.
+
+First, [install `pycape`](/libraries/pycape/#installation).
+
 ### Login to PyCape
 
 Before you can make requests to Cape Cloud, you'll need to authenticate with the API. Follow [these instructions to authenticate](/libraries/pycape/usage/login) with our API using `pycape`. Once you've logged in successfully, you should see a success message.
@@ -149,7 +153,7 @@ You'll also need to specify the [S3 Bucket location that you would like Cape to 
 >>>     model_owner="org_123",
 >>> )
 
->>> my_project.submit_job(job=vlr)
+>>> my_project.submit_job(vlr)
 ```
 
 You can specify which data columns the model should be trained on or evaluated against by passing the dataview to the [`VerticallyPartitionedLinearRegression`](/libraries/pycape/reference#pycapeverticallypartitionedlinearregression) class like so:

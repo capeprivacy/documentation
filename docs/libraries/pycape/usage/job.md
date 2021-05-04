@@ -14,7 +14,7 @@ vlr = VerticallyPartitionedLinearRegression(
     model_location="s3://my-bucket"
     model_owner="org_123",
 )
-my_project.submit_job(job=vlr)
+my_project.submit_job(vlr)
 ```
 
 Default response:

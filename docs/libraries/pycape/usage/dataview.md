@@ -57,7 +57,7 @@ DataView(id=dataview_123, name=my-data, location=s3://my-data.csv)
 
 If you provide a dataset to Cape that is accessible via HTTP or S3, Cape will download your data's column headers and create a schema. 
 
-### Providing S3 read access for your DataView
+### Providing S3 read access to your DataView
 In order to make your dataset accessible in S3 you'll need to inform pycape about your S3 bucket's IAM authentication credentials. 
 
 Cape expects values for the following AWS configuration keys: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION`. 

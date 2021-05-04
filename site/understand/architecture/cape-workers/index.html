@@ -388,13 +388,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cape_bucket" class="md-nav__link">
-    CAPE_BUCKET
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#aws_access_key_id" class="md-nav__link">
     AWS_ACCESS_KEY_ID
   </a>
@@ -1527,13 +1520,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cape_bucket" class="md-nav__link">
-    CAPE_BUCKET
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#aws_access_key_id" class="md-nav__link">
     AWS_ACCESS_KEY_ID
   </a>
@@ -1601,8 +1587,14 @@
 <li>A Cape Cloud <a href="/understand/features/tokens">organization token</a></li>
 <li>An S3 bucket for retrieving data</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>In order to create the <code>cape-worker</code> docker container, you will need to pull the image from <a href="https://hub.docker.com/repository/docker/capeprivacy/cape-worker">Docker Hub</a>. You will need to be granted access to Cape Privacy's private <code>cape-worker</code> Docker Hub repo, and your development environment will need HTTP access to <a href="https://hub.docker.com/">hub.docker.com</a>.</p>
 <h3 id="supported-sha-commits">Supported SHA Commits<a class="headerlink" href="#supported-sha-commits" title="Permanent link">#</a></h3>
-<p><code>bcc4e3b</code></p>
+<ul>
+<li><code>sha-d68d933</code>, <code>latest</code></li>
+</ul>
 <h2 id="starting-your-cape-worker-instance">Starting your <code>cape-worker</code> instance<a class="headerlink" href="#starting-your-cape-worker-instance" title="Permanent link">#</a></h2>
 <p>Starting your Cape worker is as simple as running a Docker image using <code>docker run</code>:
 <div class="highlight"><pre><span></span><code>  <span class="nb">export</span> <span class="nv">CAPE_TOKEN</span><span class="o">=</span>my-cape-org-token
@@ -1624,14 +1616,15 @@
 <li><code>s3-bucket-location</code> is the URI of the S3 bucket that you would like Cape to write the results of the computation to.</li>
 <li><code>sha-1234567</code> is the commit SHA specifying the commit you would like to use to run your worker.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>In order for your worker to communicate with Cape's API and other workers, your <code>cape-worker</code> docker container will need HTTP access to the endpoints specified in the <code>CAPE_COORDINATOR</code> and <code>CAPE_BROKER</code> environment variables.</p>
 <h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">#</a></h2>
 <p>When you run the cape-worker image, you can specify the following environment variables, either by passing on the <code>docker run</code> command, or by setting them in a separate <code>.env</code> file. Refer to the Docker documentation for options for <a href="https://docs.docker.com/compose/environment-variables/#pass-environment-variables-to-containers">configuring Docker environment variables</a>.</p>
 <h3 id="cape_token-required"><strong><code>CAPE_TOKEN</code></strong> (required)<a class="headerlink" href="#cape_token-required" title="Permanent link">#</a></h3>
 <p>This is your Cape organization token. You can generate Cape organization tokens from your "Organization Settings"  in the Cape UI.</p>
 <p>Refer to our <a href="/understand/features/tokens/">tokens usage documentation</a> for more information on how tokens are used in Cape.</p>
-<h3 id="cape_bucket"><strong><code>CAPE_BUCKET</code></strong><a class="headerlink" href="#cape_bucket" title="Permanent link">#</a></h3>
-<p>Set this variable to the URI of the S3 bucket that you would like Cape to write the results of the computation to. By setting this variable, you will overwrite the <a href="/libraries/pycape/usage/job/#setting-the-storage-location-as-a-model-owner-in-cape">S3 bucket model location specified when submitting your job using <strong>pycape</strong></a>.</p>
-<p>Currently, Cape only supports writing to Amazon S3 blob storage. In order for your cape-worker to authenticate and communicate with your S3 bucket, you'll need to let your instance know about the following AWS configuration variables.</p>
 <h3 id="aws_access_key_id"><strong><code>AWS_ACCESS_KEY_ID</code></strong><a class="headerlink" href="#aws_access_key_id" title="Permanent link">#</a></h3>
 <p>Set this to the AWS access key associated with an IAM user that has s3 write permissions to the location specified by <code>CAPE_BUCKET</code>.</p>
 <p>This variable is only required if your container doesn't already have S3 permissions, for example if you run your container on an EC2 instance using an IAM role that has the correct permissions.</p>

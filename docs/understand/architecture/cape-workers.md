@@ -14,8 +14,11 @@ Cape workers are designed to facilitate the sharing of datasets between each oth
 - A Cape Cloud [organization token](/understand/features/tokens)
 - An S3 bucket for retrieving data
 
+!!!note
+  In order to create the `cape-worker` docker container, you will need to pull the image from [Docker Hub](https://hub.docker.com/repository/docker/capeprivacy/cape-worker). You will need to be granted access to Cape Privacy's private `cape-worker` Docker Hub repo, and your development environment will need HTTP access to [hub.docker.com](https://hub.docker.com/).
+
 ### Supported SHA Commits
-`bcc4e3b`
+- `sha-d68d933`, `latest`
 
 ## Starting your `cape-worker` instance
 
@@ -41,6 +44,9 @@ In this command:
 - `s3-bucket-location` is the URI of the S3 bucket that you would like Cape to write the results of the computation to.
 - `sha-1234567` is the commit SHA specifying the commit you would like to use to run your worker.
 
+!!!note
+  In order for your worker to communicate with Cape's API and other workers, your `cape-worker` docker container will need HTTP access to the endpoints specified in the `CAPE_COORDINATOR` and `CAPE_BROKER` environment variables.
+
 ## Environment Variables
 When you run the cape-worker image, you can specify the following environment variables, either by passing on the `docker run` command, or by setting them in a separate `.env` file. Refer to the Docker documentation for options for [configuring Docker environment variables](https://docs.docker.com/compose/environment-variables/#pass-environment-variables-to-containers).
 
@@ -48,11 +54,6 @@ When you run the cape-worker image, you can specify the following environment va
 This is your Cape organization token. You can generate Cape organization tokens from your "Organization Settings"  in the Cape UI.
 
 Refer to our [tokens usage documentation](/understand/features/tokens/) for more information on how tokens are used in Cape.
-
-### **`CAPE_BUCKET`**
-Set this variable to the URI of the S3 bucket that you would like Cape to write the results of the computation to. By setting this variable, you will overwrite the [S3 bucket model location specified when submitting your job using **pycape**](/libraries/pycape/usage/job/#setting-the-storage-location-as-a-model-owner-in-cape).
-
-Currently, Cape only supports writing to Amazon S3 blob storage. In order for your cape-worker to authenticate and communicate with your S3 bucket, you'll need to let your instance know about the following AWS configuration variables.
 
 ### **`AWS_ACCESS_KEY_ID`**
 Set this to the AWS access key associated with an IAM user that has s3 write permissions to the location specified by `CAPE_BUCKET`.
