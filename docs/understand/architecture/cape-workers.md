@@ -28,7 +28,6 @@ Starting your Cape worker is as simple as running a Docker image using `docker r
   docker run -d --rm                                  \
     --name cape-worker                                \
     -e CAPE_TOKEN                                     \
-    -e CAPE_BUCKET=my-s3-bucket-location              \
     -e CAPE_COORDINATOR=https://app.capeprivacy.com   \
     -e CAPE_BROKER=https://app.capeprivacy.com/broker \
     -e AWS_ACCESS_KEY_ID                              \
