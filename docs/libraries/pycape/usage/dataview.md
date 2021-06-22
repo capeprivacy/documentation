@@ -55,7 +55,7 @@ DataView(id=dataview_123, name=my-data, location=s3://my-data.csv)
 
 `DataView` schemas allow you to clarify the data types of your dataset. They will be visible for other project contributors - even ones from other organizations - to your project to query and inspect. By inspecting the schema property, other project contributors are able to identify which data columns should be used to train the model. 
 
-If you provide a dataset to Cape that is accessible via HTTP or S3, Cape will download your data's column headers and create a schema. 
+If you provide a dataset to Cape that is accessible via S3, Cape will download your data's column headers and create a schema. 
 
 ### Providing S3 read access to your DataView
 In order to make your dataset accessible in S3 you'll need to inform pycape about your S3 bucket's IAM authentication credentials. 

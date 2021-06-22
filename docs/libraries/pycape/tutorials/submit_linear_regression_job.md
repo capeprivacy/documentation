@@ -95,7 +95,7 @@ All `DataViews` must be associated with an organization. This association can be
     Use the [`list_organizations`](/libraries/pycape/reference#pycape.api.project.project.Project.list_organizations) method defined on the `Project` class to get the metadata of the organizations collaborating on the project that you are a member of.
 
 !!! note
-    Unless your dataset is accessible via HTTP or you've [provided access to your S3 bucket](/libraries/pycape/usage/dataview#providing-s3-read-access-to-your-dataview) you'll need to [specify your schema](/libraries/pycape/usage/dataview#specifying-a-schema-for-your-dataview).
+    Unless you've [provided access to your dataset's S3 bucket](/libraries/pycape/usage/dataview#providing-s3-read-access-to-your-dataview) you'll need to [specify your schema](/libraries/pycape/usage/dataview#specifying-a-schema-for-your-dataview).
 
 ### Review Your Collaborator's DataView
 

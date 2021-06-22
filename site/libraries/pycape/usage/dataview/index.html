@@ -1558,7 +1558,7 @@
 </code></pre></div>
 <h2 id="dataviews-and-schemas">DataViews and Schemas<a class="headerlink" href="#dataviews-and-schemas" title="Permanent link">#</a></h2>
 <p><code>DataView</code> schemas allow you to clarify the data types of your dataset. They will be visible for other project contributors - even ones from other organizations - to your project to query and inspect. By inspecting the schema property, other project contributors are able to identify which data columns should be used to train the model. </p>
-<p>If you provide a dataset to Cape that is accessible via HTTP or S3, Cape will download your data's column headers and create a schema. </p>
+<p>If you provide a dataset to Cape that is accessible via S3, Cape will download your data's column headers and create a schema. </p>
 <h3 id="providing-s3-read-access-to-your-dataview">Providing S3 read access to your DataView<a class="headerlink" href="#providing-s3-read-access-to-your-dataview" title="Permanent link">#</a></h3>
 <p>In order to make your dataset accessible in S3 you'll need to inform pycape about your S3 bucket's IAM authentication credentials. </p>
 <p>Cape expects values for the following AWS configuration keys: <code>AWS_ACCESS_KEY_ID</code>, <code>AWS_SECRET_ACCESS_KEY</code>, and <code>AWS_REGION</code>. </p>
