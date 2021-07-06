@@ -23,7 +23,7 @@ Organizational Administrator Actions:
 - Full permissions for all projects that organization is a part of, including:
     - Can join or leave projects on behalf of an organization
     - Can add or edit contributors on all projects
-    - Can add, remove data views for all projects
+    - Can add, remove dataviews for all projects
     - Can approve and run encrypted learning jobs for all projects
 
 ## Operator
@@ -43,30 +43,30 @@ A Cape user can look at projects they are a member of and join and leave project
 User Actions:
 
 - Join and leave projects I am invited to by an organizational or project administrator
-- Can view projects pages and logs, but cannot change data views or jobs or approve or reject jobs
+- Can view projects pages and logs, but cannot change dataviews or jobs or approve or reject jobs
 
 
 # Project-Level Roles
 
 ## Administrator (Project-Level)
 
-A project administrator has full permissions for their organization's projects on Cape Privacy, add and edit contributors on projects they are a part of and perform necessary project actions like adding and removing data views or approving and running encrypted learning jobs.
+A project administrator has full permissions for their organization's projects on Cape Privacy, add and edit contributors on projects they are a part of and perform necessary project actions like adding and removing dataviews or approving and running encrypted learning jobs.
 
 Project Administrator Actions:
 
 - Full permissions for all projects that organization is a part of, including:
     - Can add or edit contributors on all projects
-    - Can add, remove data views for all projects
+    - Can add, remove dataviews for all projects
     - Can approve and run encrypted learning jobs for all projects
 
 ## Data Scientist
 
-A Data Scientist can add, remove and edit data views and create, run, reject and approve encrypted learning jobs for projects. They can only see and join projects they have been invited to by a Cape organization or project administrator
+A Data Scientist can add, remove and edit dataviews and create, run, reject and approve encrypted learning jobs for projects. They can only see and join projects they have been invited to by a Cape organization or project administrator
 
 Data Scientist Actions:
 
 - Join and leave projects I am invited to by an organizational or project administrator
-- Can add, remove data views for projects I am a part of
+- Can add, remove dataviews for projects I am a part of
 - Can create, approve, run encrypted learning jobs for projects I am a part of
 - Can access metrics and model weights for jobs if my organization is the model owner
 

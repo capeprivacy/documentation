@@ -2769,7 +2769,7 @@ metrics: A dictionary of different metric values.</p>
 <p class="admonition-title">Note</p>
 <p>This task expects its input <code>DataViews</code> to have max values scaled between 1.0 and 10.0.</p>
 </div>
-<p>Currently, input data must be scaled to single digits; for any floating-point vector <code>c</code> in     the input data views <code>x</code> and <code>y</code>, <code>c</code> must be scaled such that <code>1.0 &lt;= max(c) &lt; 10.0.</code>     This bound allows the Cape Worker to allocate all of its precision for significant digits     throughout the linear regression computation, while still maintaining the guarantee that     fixed-point numbers won't overflow. For logarithimically-distributed vectors, we recommend     applying a log-transform before scaling to this bound.</p>
+<p>Currently, input data must be scaled to single digits; for any floating-point vector <code>c</code> in     the input dataviews <code>x</code> and <code>y</code>, <code>c</code> must be scaled such that <code>1.0 &lt;= max(c) &lt; 10.0.</code>     This bound allows the Cape Worker to allocate all of its precision for significant digits     throughout the linear regression computation, while still maintaining the guarantee that     fixed-point numbers won't overflow. For logarithimically-distributed vectors, we recommend     applying a log-transform before scaling to this bound.</p>
 <p><strong>Parameters:</strong></p>
 <table>
 <thead>

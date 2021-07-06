@@ -661,22 +661,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-list-of-data-views-for-a-project" class="md-nav__link">
-    Get list of data views for a project
+  <a href="#get-list-of-dataviews-for-a-project" class="md-nav__link">
+    Get list of dataviews for a project
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#get-a-data-view" class="md-nav__link">
-    Get a data view
+    Get a dataview
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#add-a-data-view-to-a-project" class="md-nav__link">
-    Add a data view to a project
+    Add a dataview to a project
   </a>
   
 </li>
@@ -1453,22 +1453,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-list-of-data-views-for-a-project" class="md-nav__link">
-    Get list of data views for a project
+  <a href="#get-list-of-dataviews-for-a-project" class="md-nav__link">
+    Get list of dataviews for a project
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#get-a-data-view" class="md-nav__link">
-    Get a data view
+    Get a dataview
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#add-a-data-view-to-a-project" class="md-nav__link">
-    Add a data view to a project
+    Add a dataview to a project
   </a>
   
 </li>
@@ -1524,7 +1524,7 @@
                 
                 
                 <h1 id="managing-dataviews">Managing DataViews<a class="headerlink" href="#managing-dataviews" title="Permanent link">#</a></h1>
-<h2 id="get-list-of-data-views-for-a-project">Get list of data views for a project<a class="headerlink" href="#get-list-of-data-views-for-a-project" title="Permanent link">#</a></h2>
+<h2 id="get-list-of-dataviews-for-a-project">Get list of dataviews for a project<a class="headerlink" href="#get-list-of-dataviews-for-a-project" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code>    <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
 
     <span class="n">my_project</span><span class="o">.</span><span class="n">list_dataviews</span><span class="p">()</span>
@@ -1535,7 +1535,7 @@
     01EY48EFT4H7PWAN45SG2AEZ81  armazorn-data  s3://mydata.csv  armazorn <span class="o">(</span>You<span class="o">)</span>
     01EY49J86722ENT9JSMKTE65EX  gorgle-data                     gorgle 
 </code></pre></div>
-<h2 id="get-a-data-view">Get a data view<a class="headerlink" href="#get-a-data-view" title="Permanent link">#</a></h2>
+<h2 id="get-a-data-view">Get a dataview<a class="headerlink" href="#get-a-data-view" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code>    <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
 
     <span class="c1"># get by id</span>
@@ -1547,7 +1547,7 @@
 <p>Default response:</p>
 <div class="highlight"><pre><span></span><code>    DataView<span class="o">(</span><span class="nv">id</span><span class="o">=</span>dataview_123, <span class="nv">name</span><span class="o">=</span>my-data, <span class="nv">location</span><span class="o">=</span>s3://my-data.csv<span class="o">)</span>
 </code></pre></div>
-<h2 id="add-a-data-view-to-a-project">Add a data view to a project<a class="headerlink" href="#add-a-data-view-to-a-project" title="Permanent link">#</a></h2>
+<h2 id="add-a-data-view-to-a-project">Add a dataview to a project<a class="headerlink" href="#add-a-data-view-to-a-project" title="Permanent link">#</a></h2>
 <p>Initialize a <code>DataView</code> class and pass the instance to the <code>create_dataview</code> method.</p>
 <div class="highlight"><pre><span></span><code>    <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
 

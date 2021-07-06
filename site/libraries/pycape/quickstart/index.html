@@ -641,8 +641,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#login-and-register-your-data-views" class="md-nav__link">
-    Login and Register Your Data Views
+  <a href="#login-and-register-your-dataviews" class="md-nav__link">
+    Login and Register Your Dataviews
   </a>
   
 </li>
@@ -1501,8 +1501,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#login-and-register-your-data-views" class="md-nav__link">
-    Login and Register Your Data Views
+  <a href="#login-and-register-your-dataviews" class="md-nav__link">
+    Login and Register Your Dataviews
   </a>
   
 </li>
@@ -1558,18 +1558,18 @@
 <p>If you are working alongside an operator, ensure they set up the Cape worker able to reach the Cape Cloud and the Amazon S3 bucket you would like to use. They will also need the organizational token to identify the worker to the Cape Cloud service. More information can be found in the <a href="/understand/architecture/cape-workers">Cape Worker documentation</a>.</p>
 <h3 id="prepare-and-add-data-to-storage">Prepare and Add Data to Storage<a class="headerlink" href="#prepare-and-add-data-to-storage" title="Permanent link">#</a></h3>
 <p>Once the Cape worker is deployed, you'll want to add any files you plan on using for your project to the Amazon S3 bucket storage or another persistent storage that the worker can access. You will want to coordinate on indeces and aggregation with the other organization to ensure they line up when encrypted learning jobs are running. For more tips, please see our <a href="/understand/best-practices/linear-regression/">Linear Regression best practices</a>.</p>
-<h3 id="login-and-register-your-data-views">Login and Register Your Data Views<a class="headerlink" href="#login-and-register-your-data-views" title="Permanent link">#</a></h3>
-<p>First, you'll need to login to Cape by following <a href="/libraries/pycape/usage/login">the library's login method and variables</a>. Once you are logged in, you can register data views using a few short commands.</p>
+<h3 id="login-and-register-your-dataviews">Login and Register Your Dataviews<a class="headerlink" href="#login-and-register-your-dataviews" title="Permanent link">#</a></h3>
+<p>First, you'll need to login to Cape by following <a href="/libraries/pycape/usage/login">the library's login method and variables</a>. Once you are logged in, you can register dataviews using a few short commands.</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># List projects</span>
 <span class="n">my_projects</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">list_projects</span><span class="p">()</span>
 
-<span class="c1"># Register a Data View</span>
+<span class="c1"># Register a Dataview</span>
 <span class="n">my_project</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">get_project</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;project_123&quot;</span><span class="p">)</span>
 <span class="n">my_project</span><span class="o">.</span><span class="n">create_dataview</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my-data&quot;</span><span class="p">,</span> <span class="n">uri</span><span class="o">=</span><span class="s2">&quot;s3://my-data.csv&quot;</span><span class="p">,</span> <span class="n">owner_label</span><span class="o">=</span><span class="s2">&quot;my-org&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="run-your-first-encrypted-learning-job">Run Your First Encrypted Learning Job<a class="headerlink" href="#run-your-first-encrypted-learning-job" title="Permanent link">#</a></h3>
 <p>To create and run your first encrypted learning job, you'll use the <code>pycape</code> library. </p>
-<div class="highlight"><pre><span></span><code><span class="c1"># List all data views</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># List all dataviews</span>
 <span class="n">my_project</span><span class="o">.</span><span class="n">list_dataviews</span><span class="p">()</span>
 
 <span class="c1"># Select the ones you want to use</span>
