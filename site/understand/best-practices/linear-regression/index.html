@@ -1425,7 +1425,7 @@
 <ul>
 <li>When training using <code>VerticallyPartitionedLinearRegression</code>, the algorithm expects a bound on its input data in order to avoid precision loss during model training. This means you will need to preprocess your data with attention to numeric precision, standardizing or normalizing it around the origin. See <a href="/libraries/pycape/reference/#pycapeverticallypartitionedlinearregression">its reference documentation</a> for more details. </li>
 <li><code>DataView</code> indices must be aligned across parties before being used for a <code>VerticallyPartitionedLinearRegression</code>. We recommend coordinating this offline with the other parties you will be training with.</li>
-<li>Before running a large amount of data, try a smaller dummy data view, to quickly learn if there are any issues with alignment, precision or worker connectivity.</li>
+<li>Before running a large amount of data, try a smaller dummy dataview, to quickly learn if there are any issues with alignment, precision or worker connectivity.</li>
 </ul>
                 
               

@@ -36,15 +36,15 @@ If you are working alongside an operator, ensure they set up the Cape worker abl
 
 Once the Cape worker is deployed, you'll want to add any files you plan on using for your project to the Amazon S3 bucket storage or another persistent storage that the worker can access. You will want to coordinate on indeces and aggregation with the other organization to ensure they line up when encrypted learning jobs are running. For more tips, please see our [Linear Regression best practices](/understand/best-practices/linear-regression/).
 
-### Login and Register Your Data Views
+### Login and Register Your Dataviews
 
-First, you'll need to login to Cape by following [the library's login method and variables](/libraries/pycape/usage/login). Once you are logged in, you can register data views using a few short commands.
+First, you'll need to login to Cape by following [the library's login method and variables](/libraries/pycape/usage/login). Once you are logged in, you can register dataviews using a few short commands.
 
 ```python
 # List projects
 my_projects = c.list_projects()
 
-# Register a Data View
+# Register a Dataview
 my_project = c.get_project(id="project_123")
 my_project.create_dataview(name="my-data", uri="s3://my-data.csv", owner_label="my-org")
 ```
@@ -54,7 +54,7 @@ my_project.create_dataview(name="my-data", uri="s3://my-data.csv", owner_label="
 To create and run your first encrypted learning job, you'll use the `pycape` library. 
 
 ```python
-# List all data views
+# List all dataviews
 my_project.list_dataviews()
 
 # Select the ones you want to use
